@@ -6,6 +6,9 @@
   <meta name="description" content="ARIDES — лаборатория разработки сайтов и приложений. Websites, mobile apps, UI/UX, automation." />
   <title>ARIDES</title>
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- EmailJS (no backend) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
   <header class="topbar">
@@ -206,6 +209,12 @@
             <label class="field">
               <span data-i18n="formName">Имя</span>
               <input type="text" name="name" autocomplete="name" required placeholder="Arides" data-i18n-ph="formNamePh" />
+            </label>
+
+            <!-- NEW: Email -->
+            <label class="field">
+              <span data-i18n="formEmail">Email</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="name@email.com" data-i18n-ph="formEmailPh" />
             </label>
 
             <label class="field">

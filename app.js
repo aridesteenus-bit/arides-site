@@ -18,8 +18,7 @@
       servicesSubtitle:
         "We craft a solution end-to-end: design → development → launch.",
       svc1Title: "Websites & landing pages",
-      svc1Text:
-        "Modern responsive sites, fast pages, forms and analytics.",
+      svc1Text: "Modern responsive sites, fast pages, forms and analytics.",
       svc2Title: "Android & iOS apps",
       svc2Text:
         "Development and publishing to Google Play and App Store. Stable and user-friendly.",
@@ -48,13 +47,20 @@
       waTitle: "WhatsApp",
       phTitle: "Phone",
       emTitle: "Email",
+
       formName: "Name",
       formNamePh: "Your name",
+      formEmail: "Email",
+      formEmailPh: "your@email.com",
       formMsg: "Message",
       formMsgPh: "Describe your task...",
       formSend: "Send",
+      formSending: "Sending...",
       formNote: "No spam. We'll respond soon.",
+
       toastThanks: "Thanks! We'll get back to you.",
+      toastError: "Sending failed. Please try again.",
+      toastConfigError: "Email service is not configured yet.",
 
       footerLeft: "© ARIDES, 2026",
       footerRight: "Tallinn, Estonia"
@@ -89,33 +95,37 @@
       svc4Text:
         "Подключаем сервисы, автоматизируем процессы, делаем интеграции и бэкенд-логику.",
       svc5Title: "Поддержка и развитие",
-      svc5Text:
-        "Обновления, улучшения и новые функции после запуска.",
+      svc5Text: "Обновления, улучшения и новые функции после запуска.",
 
       stackTitle: "Стек",
       stackSubtitle: "Подбираем стек под задачу: быстро, безопасно, масштабируемо.",
 
       worksTitle: "Наши работы",
-      worksSubtitle:
-        "Несколько примеров. Нажми на картинку, чтобы увеличить.",
+      worksSubtitle: "Несколько примеров. Нажми на картинку, чтобы увеличить.",
       workCap1: "Лендинг",
       workCap2: "Приложение",
       workCap3: "Дизайн",
       workCap4: "Прототип",
 
       contactTitle: "Контакты",
-      contactSubtitle:
-        "Напиши — ответим и предложим решение под твою задачу.",
+      contactSubtitle: "Напиши — ответим и предложим решение под твою задачу.",
       waTitle: "WhatsApp",
       phTitle: "Телефон",
       emTitle: "Почта",
+
       formName: "Имя",
       formNamePh: "Ваше имя",
+      formEmail: "Email",
+      formEmailPh: "ваш@email.com",
       formMsg: "Сообщение",
       formMsgPh: "Опиши задачу...",
       formSend: "Отправить",
+      formSending: "Отправляем...",
       formNote: "Без спама. Ответим в ближайшее время.",
+
       toastThanks: "Спасибо! Мы свяжемся с вами.",
+      toastError: "Не удалось отправить. Попробуйте ещё раз.",
+      toastConfigError: "Почтовый сервис ещё не настроен.",
 
       footerLeft: "© ARIDES, 2026",
       footerRight: "Таллин, Эстония"
@@ -151,33 +161,37 @@
       svc4Text:
         "Ühendame teenuseid, automatiseerime protsesse, teeme integratsioone ja backend-loogikat.",
       svc5Title: "Tugi ja arendus",
-      svc5Text:
-        "Uuendused, parandused ja uued funktsioonid pärast lansseerimist.",
+      svc5Text: "Uuendused, parandused ja uued funktsioonid pärast lansseerimist.",
 
       stackTitle: "Tehnoloogia",
       stackSubtitle: "Valime õige stack’i: kiire, turvaline, skaleeritav.",
 
       worksTitle: "Meie tööd",
-      worksSubtitle:
-        "Mõned näited. Suurendamiseks klõpsa pildil.",
+      worksSubtitle: "Mõned näited. Suurendamiseks klõpsa pildil.",
       workCap1: "Landing",
       workCap2: "Rakendus",
       workCap3: "Disain",
       workCap4: "Prototüüp",
 
       contactTitle: "Kontakt",
-      contactSubtitle:
-        "Kirjuta — vastame ja pakume sobiva lahenduse.",
+      contactSubtitle: "Kirjuta — vastame ja pakume sobiva lahenduse.",
       waTitle: "WhatsApp",
       phTitle: "Telefon",
       emTitle: "E-post",
+
       formName: "Nimi",
       formNamePh: "Sinu nimi",
+      formEmail: "E-post",
+      formEmailPh: "sinu@email.com",
       formMsg: "Sõnum",
       formMsgPh: "Kirjelda ülesannet...",
       formSend: "Saada",
+      formSending: "Saadan...",
       formNote: "Ei mingit spämmi. Vastame peagi.",
+
       toastThanks: "Aitäh! Võtame ühendust.",
+      toastError: "Saatmine ebaõnnestus. Proovi uuesti.",
+      toastConfigError: "E-posti teenus pole veel seadistatud.",
 
       footerLeft: "© ARIDES, 2026",
       footerRight: "Tallinn, Eesti"
@@ -227,7 +241,6 @@
       el.setAttribute("placeholder", t(lang, key));
     });
 
-    // Update modal caption if open
     if ($("#modal")?.classList.contains("open")) {
       const capKey = $("#modal")?.getAttribute("data-caption-key");
       if (capKey) $("#modalCaption").textContent = t(lang, capKey);
@@ -290,13 +303,11 @@
     });
   }
 
-  // Works carousel: non-infinite (no cloning)
   function initMarqueeLoop() {
     // disabled on purpose
   }
 
   function initGallery(langGetter) {
-    // Now we open per-project gallery from data-images
     const works = $$("[data-images]");
     const modal = $("#modal");
     const img = $("#modalImage");
@@ -331,7 +342,6 @@
         .map((s) => s.trim())
         .filter(Boolean);
 
-      // fallback: if data-images is missing, use cover
       if (!projectImages.length) {
         const cover = $("img", el)?.getAttribute("src");
         projectImages = cover ? [cover] : [];
@@ -397,7 +407,6 @@
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
 
-      // focus trap
       if (e.key === "Tab") {
         const focusable = $$(".iconBtn, .modal__panel button", modal).filter(
           (el) => !el.disabled
@@ -416,7 +425,8 @@
     });
   }
 
-  function initFormToast(langGetter) {
+  // ===== Contact form (EmailJS) + Toast =====
+  function initFormEmail(langGetter) {
     const form = $("#contactForm");
     const toast = $("#toast");
     if (!form || !toast) return;
@@ -430,10 +440,53 @@
       timer = setTimeout(() => toast.classList.remove("show"), 2600);
     };
 
-    form.addEventListener("submit", (e) => {
+    const btn = form.querySelector('button[type="submit"]');
+
+    // ✅ Your EmailJS config
+    const EMAILJS_PUBLIC_KEY = "ifm_c_GUeWOaCGmBj";
+    const EMAILJS_SERVICE_ID = "service_47367zl";
+    const EMAILJS_TEMPLATE_ID = "template_g7o6hle";
+
+    const isConfigured = Boolean(
+      EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID
+    );
+
+    if (window.emailjs && isConfigured) {
+      try {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+      } catch (e) {}
+    }
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      form.reset();
-      show(t(langGetter(), "toastThanks"));
+
+      const lang = langGetter();
+      const oldBtnText = btn ? btn.textContent : "";
+
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = t(lang, "formSending") || oldBtnText;
+      }
+
+      try {
+        if (!window.emailjs || !isConfigured) {
+          show(t(lang, "toastConfigError"));
+          return;
+        }
+
+        await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+
+        form.reset();
+        show(t(lang, "toastThanks"));
+      } catch (err) {
+        console.error(err);
+        show(t(lang, "toastError"));
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = t(lang, "formSend") || oldBtnText;
+        }
+      }
     });
   }
 
@@ -460,10 +513,9 @@
 
     initMarqueeLoop(); // no-op
     initGallery(getLang);
-    initFormToast(getLang);
+    initFormEmail(getLang);
     initSmoothScroll();
 
-    // Update currentLang after selection
     $("#langMenu")?.addEventListener("click", (e) => {
       const b = e.target.closest("button[data-lang]");
       if (!b) return;
