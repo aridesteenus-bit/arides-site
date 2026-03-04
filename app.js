@@ -198,6 +198,11 @@
     }
   };
 
+  // ===== EmailJS config (YOUR REAL VALUES) =====
+  const EMAILJS_PUBLIC_KEY = "ifm_c_GUeWOaCGmBj";
+  const EMAILJS_SERVICE_ID = "service_47367zl";
+  const EMAILJS_TEMPLATE_ID = "template_g7o6hle";
+
   const supported = ["ru", "en", "et"];
   const LS_KEY = "lang";
 
@@ -253,7 +258,6 @@
     const wrap = $("#lang");
     const btn = $("#langBtn");
     const menu = $("#langMenu");
-
     if (!wrap || !btn || !menu) return;
 
     const open = () => {
@@ -267,9 +271,9 @@
       btn.setAttribute("aria-expanded", "false");
     };
 
-    const toggle = () => (menu.classList.contains("open") ? close() : open());
-
-    btn.addEventListener("click", toggle);
+    btn.addEventListener("click", () =>
+      menu.classList.contains("open") ? close() : open()
+    );
 
     menu.addEventListener("click", (e) => {
       const b = e.target.closest("button[data-lang]");
@@ -303,10 +307,6 @@
     });
   }
 
-  function initMarqueeLoop() {
-    // disabled on purpose
-  }
-
   function initGallery(langGetter) {
     const works = $$("[data-images]");
     const modal = $("#modal");
@@ -318,9 +318,7 @@
 
     if (!works.length || !modal || !img || !btnClose) return;
 
-    let projectIndex = 0;
     let lastFocus = null;
-
     let projectImages = [];
     let imgIndex = 0;
 
@@ -332,9 +330,7 @@
     };
 
     const openAt = (i) => {
-      projectIndex = (i + works.length) % works.length;
-      const el = works[projectIndex];
-
+      const el = works[(i + works.length) % works.length];
       const capKey = el.getAttribute("data-caption-key");
 
       projectImages = (el.getAttribute("data-images") || "")
@@ -346,14 +342,12 @@
         const cover = $("img", el)?.getAttribute("src");
         projectImages = cover ? [cover] : [];
       }
-
       if (!projectImages.length) return;
 
       imgIndex = 0;
       lastFocus = document.activeElement;
 
       renderImage();
-
       modal.setAttribute("data-caption-key", capKey || "");
       cap.textContent = capKey ? t(getLang(), capKey) : "";
 
@@ -402,30 +396,13 @@
 
     document.addEventListener("keydown", (e) => {
       if (!modal.classList.contains("open")) return;
-
       if (e.key === "Escape") close();
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
-
-      if (e.key === "Tab") {
-        const focusable = $$(".iconBtn, .modal__panel button", modal).filter(
-          (el) => !el.disabled
-        );
-        if (!focusable.length) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
     });
   }
 
-  // ===== Contact form (EmailJS) + Toast =====
+  // ===== Contact form: EmailJS sendForm + Toast =====
   function initFormEmail(langGetter) {
     const form = $("#contactForm");
     const toast = $("#toast");
@@ -442,19 +419,13 @@
 
     const btn = form.querySelector('button[type="submit"]');
 
-    // ✅ Your EmailJS config
-    const EMAILJS_PUBLIC_KEY = "ifm_c_GUeWOaCGmBj";
-    const EMAILJS_SERVICE_ID = "service_47367zl";
-    const EMAILJS_TEMPLATE_ID = "template_g7o6hle";
+    const configured =
+      EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID;
 
-    const isConfigured = Boolean(
-      EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID
-    );
-
-    if (window.emailjs && isConfigured) {
+    if (window.emailjs && configured) {
       try {
         emailjs.init(EMAILJS_PUBLIC_KEY);
-      } catch (e) {}
+      } catch (_) {}
     }
 
     form.addEventListener("submit", async (e) => {
@@ -469,17 +440,18 @@
       }
 
       try {
-        if (!window.emailjs || !isConfigured) {
+        if (!window.emailjs || !configured) {
           show(t(lang, "toastConfigError"));
           return;
         }
 
+        // sendForm автоматически возьмёт поля name/email/message из формы
         await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
 
         form.reset();
         show(t(lang, "toastThanks"));
       } catch (err) {
-        console.error(err);
+        console.error("EmailJS error:", err);
         show(t(lang, "toastError"));
       } finally {
         if (btn) {
@@ -511,7 +483,6 @@
 
     const getLang = () => localStorage.getItem(LS_KEY) || currentLang;
 
-    initMarqueeLoop(); // no-op
     initGallery(getLang);
     initFormEmail(getLang);
     initSmoothScroll();
