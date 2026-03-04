@@ -1,99 +1,280 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARIDES LAB</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f0f0f;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f6f7fb;
+color:#1f2937;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 80px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+}
+
+.logo span{
+color:#ff7a18;
+margin-right:8px;
+}
+
+.menu a{
+margin:0 20px;
+text-decoration:none;
+color:#555;
+font-weight:500;
+}
+
+.menu a:hover{
+color:#111;
+}
+
+.start{
+background:#2563eb;
 color:white;
-text-align:center;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
 }
 
-header{
-padding:80px 20px;
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px;
+gap:40px;
 }
 
-h1{
-font-size:48px;
-letter-spacing:3px;
+.hero-text{
+max-width:520px;
 }
 
-.subtitle{
-color:#9aa0a6;
-font-size:20px;
-margin-top:10px;
+.hero h1{
+font-size:56px;
+margin-bottom:10px;
 }
+
+.hero h2{
+font-weight:400;
+margin-bottom:20px;
+color:#444;
+}
+
+.hero p{
+color:#555;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+}
+
+.btn1{
+background:#ff7a18;
+color:white;
+padding:14px 26px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn1:hover{
+background:#e5650d;
+}
+
+.btn2{
+background:#2563eb;
+color:white;
+padding:14px 26px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn2:hover{
+background:#1e4ed8;
+}
+
+.hero img{
+width:650px;
+border-radius:20px;
+}
+
+/* SERVICES */
 
 .services{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
-padding:40px;
+margin-top:30px;
+padding:40px 80px 80px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
 }
 
 .card{
-background:#1b1b1b;
+background:white;
 padding:30px;
-border-radius:10px;
-width:250px;
+border-radius:14px;
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
+text-align:center;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-background:#222;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-footer{
-padding:40px;
+.card h3{
+margin-top:10px;
+margin-bottom:8px;
+}
+
+.card p{
 color:#777;
 font-size:14px;
 }
-</style>
 
+/* CODE BACKGROUND SECTION */
+
+.code-section{
+margin-top:40px;
+height:300px;
+background-image:url("code-bg.jpg");
+background-size:cover;
+background-position:center;
+filter:blur(0px);
+position:relative;
+}
+
+.code-overlay{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(255,255,255,0.85);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+font-weight:600;
+color:#333;
+}
+
+</style>
 </head>
+
 
 <body>
 
-<header>
+<nav>
+
+<div class="logo">
+<span>●</span>ARIDES LAB
+</div>
+
+<div class="menu">
+<a href="#">Services</a>
+<a href="#">Projects</a>
+<a href="#">Process</a>
+<a href="#">Contact</a>
+</div>
+
+<a class="start" href="#">Start a Project</a>
+
+</nav>
+
+
+
+<section class="hero">
+
+<div class="hero-text">
+
 <h1>ARIDES LAB</h1>
-<div class="subtitle">Development Laboratory</div>
-<p>Android · iOS · Web · AI · Automation</p>
-</header>
+<h2>Mobile & Web Development</h2>
+
+<p>
+We build Android, iOS and web applications
+with automation and AI integration.
+</p>
+
+<div class="buttons">
+
+<a class="btn1" href="#">View Projects</a>
+<a class="btn2" href="#">Start a Project</a>
+
+</div>
+
+</div>
+
+<img src="hero.jpg">
+
+</section>
+
+
 
 <section class="services">
 
 <div class="card">
 <h3>Mobile Apps</h3>
-<p>Android ja iOS rakenduste arendus.</p>
+<p>Android / iOS development</p>
 </div>
 
 <div class="card">
-<h3>Web Development</h3>
-<p>Kaasaegsed veebilehed ja platvormid.</p>
+<h3>Web Platforms</h3>
+<p>Modern scalable websites</p>
 </div>
 
 <div class="card">
 <h3>Automation</h3>
-<p>Äriprotsesside automatiseerimine.</p>
+<p>Business process automation</p>
 </div>
 
 <div class="card">
 <h3>AI Tools</h3>
-<p>Tehisintellekti lahendused ettevõtetele.</p>
+<p>Artificial intelligence solutions</p>
 </div>
 
 </section>
 
-<footer>
-ARIDES OÜ · Tallinn · Estonia
-</footer>
+
+<section class="code-section">
+
+<div class="code-overlay">
+Clean code. Fast apps. Smart automation.
+</div>
+
+</section>
+
 
 </body>
-</html>
+</html><img src="images/banner_mac.png">

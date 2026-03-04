@@ -1,0 +1,29 @@
+/* Minimal responsive styles for Arides site */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter, system-ui, -apple-system,"Helvetica Neue",Arial,sans-serif;color:#111;line-height:1.45;background:#fff}
+.container{max-width:1000px;margin:0 auto;padding:2rem}
+
+.hero{position:relative;height:48vh;min-height:320px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.25));display:flex;align-items:center;justify-content:center;padding:1rem}
+.hero__content{color:#fff;text-align:center;max-width:90%;padding:1rem}
+.hero__content h1{font-size:clamp(2rem,6vw,3.5rem);letter-spacing:0.06em;margin-bottom:.4rem}
+.hero__content p{font-size:clamp(1rem,2.2vw,1.25rem);margin-bottom:1rem}
+
+.btn{display:inline-block;background:#ff7a18;color:#fff;padding:.65rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.18);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,0.2)}
+
+section{padding:1rem 0}
+section h2{font-size:1.5rem;margin:1rem 0 .5rem}
+section p{color:#333}
+
+@media(min-width:1000px){
+  .hero{height:60vh}
+  .container{padding:3rem}
+}
+
+@media(max-width:420px){
+  .hero__content h1{font-size:1.8rem}
+  .hero{min-height:280px}
+}
