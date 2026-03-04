@@ -1,280 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARIDES LAB</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-body{
-background:#f6f7fb;
-color:#1f2937;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:22px 80px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.logo{
-font-size:22px;
-font-weight:700;
-}
-
-.logo span{
-color:#ff7a18;
-margin-right:8px;
-}
-
-.menu a{
-margin:0 20px;
-text-decoration:none;
-color:#555;
-font-weight:500;
-}
-
-.menu a:hover{
-color:#111;
-}
-
-.start{
-background:#2563eb;
-color:white;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-
-/* HERO */
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px;
-gap:40px;
-}
-
-.hero-text{
-max-width:520px;
-}
-
-.hero h1{
-font-size:56px;
-margin-bottom:10px;
-}
-
-.hero h2{
-font-weight:400;
-margin-bottom:20px;
-color:#444;
-}
-
-.hero p{
-color:#555;
-margin-bottom:30px;
-line-height:1.6;
-}
-
-.buttons{
-display:flex;
-gap:15px;
-}
-
-.btn1{
-background:#ff7a18;
-color:white;
-padding:14px 26px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-}
-
-.btn1:hover{
-background:#e5650d;
-}
-
-.btn2{
-background:#2563eb;
-color:white;
-padding:14px 26px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-}
-
-.btn2:hover{
-background:#1e4ed8;
-}
-
-.hero img{
-width:650px;
-border-radius:20px;
-}
-
-/* SERVICES */
-
-.services{
-margin-top:30px;
-padding:40px 80px 80px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:14px;
-box-shadow:0 6px 20px rgba(0,0,0,0.06);
-text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.card h3{
-margin-top:10px;
-margin-bottom:8px;
-}
-
-.card p{
-color:#777;
-font-size:14px;
-}
-
-/* CODE BACKGROUND SECTION */
-
-.code-section{
-margin-top:40px;
-height:300px;
-background-image:url("code-bg.jpg");
-background-size:cover;
-background-position:center;
-filter:blur(0px);
-position:relative;
-}
-
-.code-overlay{
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:rgba(255,255,255,0.85);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-font-weight:600;
-color:#333;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ARIDES — лаборатория разработки сайтов и приложений. Websites, mobile apps, UI/UX, automation." />
+  <title>ARIDES</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
-
 <body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="ARIDES">
+      <span class="brand__mark">ARIDES</span>
+      <span class="brand__tag" data-i18n="brandTag">LAB</span>
+    </a>
 
-<nav>
+    <nav class="nav" aria-label="Primary">
+      <a href="#services" data-i18n="navServices">Услуги</a>
+      <a href="#stack" data-i18n="navStack">Стек</a>
+      <a href="#works" data-i18n="navWorks">Работы</a>
+      <a href="#contact" data-i18n="navContact">Контакты</a>
+    </nav>
 
-<div class="logo">
-<span>●</span>ARIDES LAB
-</div>
+    <div class="actions">
+      <div class="lang" id="lang">
+        <button class="lang__btn" id="langBtn" type="button" aria-haspopup="menu" aria-expanded="false">
+          <span class="lang__icon" aria-hidden="true">🌐</span>
+          <span class="lang__label" id="langLabel">EN</span>
+        </button>
+        <div class="lang__menu" id="langMenu" role="menu" aria-label="Language">
+          <button role="menuitem" type="button" data-lang="ru">RU</button>
+          <button role="menuitem" type="button" data-lang="en">EN</button>
+          <button role="menuitem" type="button" data-lang="et">ET</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="menu">
-<a href="#">Services</a>
-<a href="#">Projects</a>
-<a href="#">Process</a>
-<a href="#">Contact</a>
-</div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero__wrap">
+        <div class="hero__media">
+          <img class="hero__img" src="./img/banner_mac.png" alt="ARIDES banner" />
+        </div>
 
-<a class="start" href="#">Start a Project</a>
+        <div class="hero__content">
+          <h1 data-i18n="heroTitle">ARIDES — лаборатория разработки сайтов и приложений</h1>
+          <p class="lead" data-i18n="heroSubtitle">
+            Мы создаём сайты, мобильные приложения и автоматизацию бизнеса. От идеи до публикации в App Store и Google Play.
+          </p>
 
-</nav>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact" data-i18n="ctaContact">Связаться</a>
+            <a class="btn btn--ghost" href="#works" data-i18n="ctaWorks">Посмотреть работы</a>
+          </div>
 
+          <div class="hero__meta" data-i18n="heroMeta">
+            Быстро • аккуратно • по делу
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="servicesTitle">Услуги</h2>
+          <p data-i18n="servicesSubtitle">Делаем продукт под задачу: дизайн → разработка → запуск.</p>
+        </div>
 
-<section class="hero">
+        <div class="grid">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🧩</div>
+            <h3 data-i18n="svc1Title">Разработка сайтов и лендингов</h3>
+            <p data-i18n="svc1Text">Современные сайты, адаптивная верстка, быстрые страницы, формы и аналитика.</p>
+          </article>
 
-<div class="hero-text">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">📱</div>
+            <h3 data-i18n="svc2Title">Приложения Android и iOS</h3>
+            <p data-i18n="svc2Text">Разработка и публикация в Google Play и App Store. Удобный интерфейс и стабильность.</p>
+          </article>
 
-<h1>ARIDES LAB</h1>
-<h2>Mobile & Web Development</h2>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🎨</div>
+            <h3 data-i18n="svc3Title">UI/UX дизайн и прототипирование</h3>
+            <p data-i18n="svc3Text">Прототипы, дизайн-системы, понятные сценарии. Красиво и понятно пользователю.</p>
+          </article>
 
-<p>
-We build Android, iOS and web applications
-with automation and AI integration.
-</p>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">⚙️</div>
+            <h3 data-i18n="svc4Title">Интеграции, платежи, API</h3>
+            <p data-i18n="svc4Text">Подключаем сервисы, автоматизируем процессы, делаем интеграции и бэкенд-логику.</p>
+          </article>
 
-<div class="buttons">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🛠️</div>
+            <h3 data-i18n="svc5Title">Поддержка и развитие</h3>
+            <p data-i18n="svc5Text">Обновления, улучшения, новые функции. Не бросаем проект после запуска.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<a class="btn1" href="#">View Projects</a>
-<a class="btn2" href="#">Start a Project</a>
+    <section class="section section--alt" id="stack">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="stackTitle">Стек</h2>
+          <p data-i18n="stackSubtitle">Подбираем стек под задачу: быстро, безопасно, масштабируемо.</p>
+        </div>
 
-</div>
+        <div class="chips" aria-label="Tech stack">
+          <span class="chip">Flutter</span>
+          <span class="chip">Dart</span>
+          <span class="chip">Android Studio</span>
+          <span class="chip">Xcode</span>
+          <span class="chip">Visual Studio Code</span>
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">Firebase</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Figma</span>
+          <span class="chip">REST API</span>
+          <span class="chip">App Store</span>
+          <span class="chip">Google Play</span>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="worksTitle">Наши работы</h2>
+          <p data-i18n="worksSubtitle">Несколько примеров. Нажми на картинку, чтобы увеличить.</p>
+        </div>
+      </div>
 
-<img src="hero.jpg">
+      <div class="marquee" aria-label="Works carousel">
+        <div class="marquee__track" id="worksTrack">
+          <!-- duplicated in JS for seamless loop -->
+          <figure class="work" tabindex="0" data-gallery="work" data-index="0" data-caption-key="workCap1">
+            <img src="./img/works/work1.jpg" alt="Work 1" />
+            <figcaption data-i18n="workCap1">Лендинг</figcaption>
+          </figure>
+          <figure class="work" tabindex="0" data-gallery="work" data-index="1" data-caption-key="workCap2">
+            <img src="./img/works/work2.jpg" alt="Work 2" />
+            <figcaption data-i18n="workCap2">Приложение</figcaption>
+          </figure>
+          <figure class="work" tabindex="0" data-gallery="work" data-index="2" data-caption-key="workCap3">
+            <img src="./img/works/work3.jpg" alt="Work 3" />
+            <figcaption data-i18n="workCap3">Дизайн</figcaption>
+          </figure>
+          <figure class="work" tabindex="0" data-gallery="work" data-index="3" data-caption-key="workCap4">
+            <img src="./img/works/work4.jpg" alt="Work 4" />
+            <figcaption data-i18n="workCap4">Прототип</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="contactTitle">Контакты</h2>
+          <p data-i18n="contactSubtitle">Напиши — ответим и предложим решение под твою задачу.</p>
+        </div>
 
+        <div class="contactGrid">
+          <div class="contactCards">
+            <a class="contactCard" href="https://wa.me/37256845377" target="_blank" rel="noreferrer">
+              <div class="contactCard__icon" aria-hidden="true">💬</div>
+              <div class="contactCard__title" data-i18n="waTitle">WhatsApp</div>
+              <div class="contactCard__value">+372 56845377</div>
+            </a>
 
+            <a class="contactCard" href="tel:+37256845377">
+              <div class="contactCard__icon" aria-hidden="true">📞</div>
+              <div class="contactCard__title" data-i18n="phTitle">Телефон</div>
+              <div class="contactCard__value">+372 56845377</div>
+            </a>
 
-<section class="services">
+            <a class="contactCard" href="mailto:aridesteenus@gmail.com">
+              <div class="contactCard__icon" aria-hidden="true">✉️</div>
+              <div class="contactCard__title" data-i18n="emTitle">Почта</div>
+              <div class="contactCard__value">aridesteenus@gmail.com</div>
+            </a>
+          </div>
 
-<div class="card">
-<h3>Mobile Apps</h3>
-<p>Android / iOS development</p>
-</div>
+          <form class="form" id="contactForm">
+            <label class="field">
+              <span data-i18n="formName">Имя</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="Arides" data-i18n-ph="formNamePh" />
+            </label>
 
-<div class="card">
-<h3>Web Platforms</h3>
-<p>Modern scalable websites</p>
-</div>
+            <label class="field">
+              <span data-i18n="formMsg">Сообщение</span>
+              <textarea name="message" rows="5" required placeholder="Опиши задачу..." data-i18n-ph="formMsgPh"></textarea>
+            </label>
 
-<div class="card">
-<h3>Automation</h3>
-<p>Business process automation</p>
-</div>
+            <button class="btn btn--primary" type="submit" data-i18n="formSend">Отправить</button>
+            <p class="form__note" data-i18n="formNote">Без спама. Ответим в ближайшее время.</p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>AI Tools</h3>
-<p>Artificial intelligence solutions</p>
-</div>
+    <footer class="footer">
+      <div class="container footer__row">
+        <div class="footer__left" data-i18n="footerLeft">© ARIDES, 2026</div>
+        <div class="footer__right" data-i18n="footerRight">Таллин, Эстония</div>
+      </div>
+    </footer>
+  </main>
 
-</section>
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery">
+    <div class="modal__panel" role="document">
+      <button class="iconBtn modal__close" id="modalClose" type="button" aria-label="Close">✕</button>
+      <button class="iconBtn modal__nav modal__prev" id="modalPrev" type="button" aria-label="Previous">←</button>
+      <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
 
+      <figure class="modal__figure">
+        <img id="modalImage" alt="Selected work" />
+        <figcaption class="modal__caption" id="modalCaption"></figcaption>
+      </figure>
+    </div>
+  </div>
 
-<section class="code-section">
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<div class="code-overlay">
-Clean code. Fast apps. Smart automation.
-</div>
-
-</section>
-
-
+  <script src="./app.js"></script>
 </body>
-</html><img src="img/banner_mac.png">
+</html>
