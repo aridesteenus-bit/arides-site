@@ -36,9 +36,9 @@
 
       worksTitle: "Our work",
       worksSubtitle: "Open a project to view screenshots, delivery scope and the live link.",
-      workCap1: "Talcon.ee",
+      workCap1: "talcon.ee",
       workTag1: "Accounting services website",
-      workTitle1: "Talcon.ee — accounting services project",
+      workTitle1: "talcon.ee — Accounting",
       workSummary1:
         "A full-cycle launch for an accounting services company: domain, hosting, deployment, custom website design, responsive layouts and print-ready business card assets.",
       workItems1: [
@@ -115,9 +115,9 @@
 
       worksTitle: "Наши работы",
       worksSubtitle: "Открой проект, чтобы посмотреть экраны, объём работ и живую ссылку.",
-      workCap1: "Talcon.ee",
+      workCap1: "talcon.ee",
       workTag1: "Сайт бухгалтерских услуг",
-      workTitle1: "Talcon.ee — проект для бухгалтерских услуг",
+      workTitle1: "talcon.ee — Бухгалтерия",
       workSummary1:
         "Полный запуск проекта для бухгалтерской компании: домен, хостинг, размещение на сервере, дизайн сайта с нуля, адаптация под устройства и подготовка векторных файлов для визиток.",
       workItems1: [
@@ -194,9 +194,9 @@
 
       worksTitle: "Meie tööd",
       worksSubtitle: "Ava projekt, et vaadata ekraane, tehtud töid ja live-linki.",
-      workCap1: "Talcon.ee",
-      workTag1: "Raamatupidamisteenuste veebileht",
-      workTitle1: "Talcon.ee — raamatupidamisteenuste projekt",
+      workCap1: "talcon.ee",
+      workTag1: "Raamatupidamine",
+      workTitle1: "talcon.ee — Raamatupidamine",
       workSummary1:
         "Täislahendus raamatupidamisteenuste ettevõttele: domeen, hosting, serverisse paigaldus, nullist loodud disain, eri seadmete tugi ja trükivalmis visiitkaartide vektorfailid.",
       workItems1: [

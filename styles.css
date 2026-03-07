@@ -390,6 +390,10 @@ h1{
   margin:0;
   font-size: clamp(24px, 2.2vw, 30px);
   line-height:1.08;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  hyphens:auto;
 }
 .modal__caption{
   margin:0;
@@ -486,8 +490,32 @@ h1{
   .nav{display:none}
   .grid{grid-template-columns:1fr}
   .contactGrid{grid-template-columns:1fr}
-  .modal__layout{grid-template-columns:1fr}
-  .modal__figure img{max-height:52vh}
+  .modal__panel{
+    display:flex;
+    flex-direction:column;
+    max-height:calc(100vh - 24px);
+    max-height:calc(100dvh - 24px);
+    overflow:hidden;
+  }
+  .modal__layout{
+    grid-template-columns:1fr;
+    grid-template-rows:auto minmax(0, 1fr);
+    min-height:0;
+    height:100%;
+  }
+  .modal__figure img{max-height:min(42vh, 360px); max-height:min(42dvh, 360px)}
+  .modal__sidebar{
+    min-height:0;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1180px){
+  .modal__layout{
+    grid-template-columns: minmax(0, 1fr) minmax(300px, .9fr);
+  }
 }
 
 @media (max-width: 640px){
