@@ -1,0 +1,174 @@
+<svg width="1536" height="1024" viewBox="0 0 1536 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1536" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8E8999"/>
+      <stop offset="1" stop-color="#6F6978"/>
+    </linearGradient>
+    <linearGradient id="cardDark" x1="130" y1="134" x2="130" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12355D"/>
+      <stop offset="1" stop-color="#0A1E37"/>
+    </linearGradient>
+    <linearGradient id="cardLight" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#F6F8FC"/>
+      <stop offset="1" stop-color="#EEF2F9"/>
+    </linearGradient>
+    <linearGradient id="waveBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#73EDFF"/>
+      <stop offset="1" stop-color="#2ABAD7"/>
+    </linearGradient>
+    <filter id="shadow" x="62" y="96" width="466" height="758" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#10131C" flood-opacity="0.35"/>
+    </filter>
+    <filter id="shadow2" x="531" y="96" width="474" height="758" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#10131C" flood-opacity="0.28"/>
+    </filter>
+    <filter id="shadow3" x="1008" y="96" width="466" height="758" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#10131C" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1536" height="1024" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="98" y="128" width="394" height="686" rx="28" fill="url(#cardDark)"/>
+    <rect x="98" y="128" width="394" height="686" rx="28" stroke="#99D8F0" stroke-opacity="0.16"/>
+  </g>
+
+  <g filter="url(#shadow2)">
+    <rect x="567" y="128" width="402" height="686" rx="28" fill="url(#cardLight)"/>
+  </g>
+
+  <g filter="url(#shadow3)">
+    <rect x="1044" y="128" width="394" height="686" rx="28" fill="url(#cardDark)"/>
+    <rect x="1044" y="128" width="394" height="686" rx="28" stroke="#99D8F0" stroke-opacity="0.16"/>
+  </g>
+
+  <rect x="98" y="128" width="394" height="686" rx="28" fill="url(#cardDark)"/>
+  <rect x="567" y="128" width="402" height="686" rx="28" fill="url(#cardLight)"/>
+  <rect x="1044" y="128" width="394" height="686" rx="28" fill="url(#cardDark)"/>
+
+  <path d="M98 540C207 521 266 550 347 537C427 523 455 495 492 470V814H98V540Z" fill="#0E2747"/>
+  <path d="M98 499C203 484 265 519 344 508C419 498 450 468 492 442" stroke="url(#waveBlue)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M98 517C205 502 278 534 362 523C433 514 456 486 492 463" stroke="#7FF6FF" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+
+  <path d="M567 307C650 281 709 261 799 271C875 278 923 252 969 222V128H567V307Z" fill="#E5EFF8"/>
+  <path d="M567 273C668 239 729 233 816 247C887 259 927 241 969 212" stroke="#9ADFEA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M567 292C660 267 734 260 807 272C884 285 926 269 969 244" stroke="#C7F2F7" stroke-width="2" stroke-linecap="round"/>
+
+  <path d="M1044 560C1144 538 1210 558 1286 546C1361 534 1398 506 1438 482V814H1044V560Z" fill="#0E2747"/>
+  <path d="M1044 520C1150 504 1216 534 1291 524C1365 515 1403 486 1438 462" stroke="url(#waveBlue)" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="136" y="285" fill="#F7FAFF" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">Talcon</text>
+  <text x="324" y="285" fill="#34C7D9" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">Grupp</text>
+
+  <text x="612" y="420" fill="#172B4D" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700">Talcon</text>
+  <text x="815" y="420" fill="#2FBAC7" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="700">Grupp</text>
+
+  <text x="1082" y="285" fill="#F7FAFF" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">Talcon</text>
+  <text x="1270" y="285" fill="#34C7D9" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">Grupp</text>
+  <text x="1082" y="405" fill="#D6E4F3" font-family="Arial, Helvetica, sans-serif" font-size="28">Accounting Services in Estonia</text>
+
+  <g fill="#F7FAFF" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    <text x="152" y="584">+372 56963434</text>
+    <text x="152" y="640">talcon.grupp@gmail.com</text>
+    <text x="152" y="748">Punane tn 14a-504,</text>
+    <text x="152" y="790">Tallinn</text>
+  </g>
+
+  <g fill="#213557" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    <text x="621" y="560">+372 56963434</text>
+    <text x="621" y="618">talcon.grupp@gmail.com</text>
+    <text x="621" y="725">Punane tn 14a-504,</text>
+    <text x="621" y="767">Tallinn</text>
+  </g>
+
+  <g fill="#F7FAFF" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    <text x="1098" y="584">+372 56963434</text>
+    <text x="1098" y="640">talcon.grupp@gmail.com</text>
+    <text x="1098" y="748">Punane tn 14a-504,</text>
+    <text x="1098" y="790">Tallinn</text>
+  </g>
+
+  <g stroke="#D9E5F4" stroke-width="2" stroke-linecap="round">
+    <line x1="152" y1="674" x2="356" y2="674"/>
+    <line x1="621" y1="652" x2="841" y2="652"/>
+    <line x1="1098" y1="674" x2="1290" y2="674"/>
+  </g>
+
+  <g fill="#34C7D9">
+    <circle cx="132" cy="576" r="7"/>
+    <circle cx="132" cy="632" r="7"/>
+    <circle cx="132" cy="740" r="7"/>
+    <circle cx="601" cy="552" r="7"/>
+    <circle cx="601" cy="610" r="7"/>
+    <circle cx="601" cy="718" r="7"/>
+    <circle cx="1078" cy="576" r="7"/>
+    <circle cx="1078" cy="632" r="7"/>
+    <circle cx="1078" cy="740" r="7"/>
+  </g>
+
+  <g transform="translate(369 646)">
+    <rect width="92" height="92" rx="4" fill="#F5F9FF"/>
+    <g fill="#0B1E37">
+      <rect x="8" y="8" width="12" height="12"/>
+      <rect x="24" y="8" width="12" height="12"/>
+      <rect x="40" y="8" width="12" height="12"/>
+      <rect x="8" y="24" width="12" height="12"/>
+      <rect x="40" y="24" width="12" height="12"/>
+      <rect x="56" y="24" width="12" height="12"/>
+      <rect x="8" y="40" width="12" height="12"/>
+      <rect x="24" y="40" width="12" height="12"/>
+      <rect x="56" y="40" width="12" height="12"/>
+      <rect x="72" y="40" width="12" height="12"/>
+      <rect x="24" y="56" width="12" height="12"/>
+      <rect x="40" y="56" width="12" height="12"/>
+      <rect x="72" y="56" width="12" height="12"/>
+      <rect x="8" y="72" width="12" height="12"/>
+      <rect x="24" y="72" width="12" height="12"/>
+      <rect x="56" y="72" width="12" height="12"/>
+    </g>
+  </g>
+
+  <g transform="translate(844 642)">
+    <rect width="92" height="92" rx="4" fill="#FFFFFF"/>
+    <g fill="#172B4D">
+      <rect x="8" y="8" width="12" height="12"/>
+      <rect x="24" y="8" width="12" height="12"/>
+      <rect x="40" y="8" width="12" height="12"/>
+      <rect x="8" y="24" width="12" height="12"/>
+      <rect x="40" y="24" width="12" height="12"/>
+      <rect x="56" y="24" width="12" height="12"/>
+      <rect x="24" y="40" width="12" height="12"/>
+      <rect x="40" y="40" width="12" height="12"/>
+      <rect x="72" y="40" width="12" height="12"/>
+      <rect x="8" y="56" width="12" height="12"/>
+      <rect x="56" y="56" width="12" height="12"/>
+      <rect x="72" y="56" width="12" height="12"/>
+      <rect x="8" y="72" width="12" height="12"/>
+      <rect x="24" y="72" width="12" height="12"/>
+      <rect x="56" y="72" width="12" height="12"/>
+    </g>
+  </g>
+
+  <g transform="translate(1308 646)">
+    <rect width="92" height="92" rx="4" fill="#F5F9FF"/>
+    <g fill="#0B1E37">
+      <rect x="8" y="8" width="12" height="12"/>
+      <rect x="24" y="8" width="12" height="12"/>
+      <rect x="56" y="8" width="12" height="12"/>
+      <rect x="72" y="8" width="12" height="12"/>
+      <rect x="8" y="24" width="12" height="12"/>
+      <rect x="40" y="24" width="12" height="12"/>
+      <rect x="72" y="24" width="12" height="12"/>
+      <rect x="24" y="40" width="12" height="12"/>
+      <rect x="56" y="40" width="12" height="12"/>
+      <rect x="8" y="56" width="12" height="12"/>
+      <rect x="24" y="56" width="12" height="12"/>
+      <rect x="40" y="56" width="12" height="12"/>
+      <rect x="72" y="56" width="12" height="12"/>
+      <rect x="24" y="72" width="12" height="12"/>
+      <rect x="56" y="72" width="12" height="12"/>
+      <rect x="72" y="72" width="12" height="12"/>
+    </g>
+  </g>
+</svg>

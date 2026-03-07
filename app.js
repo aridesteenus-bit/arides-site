@@ -35,8 +35,21 @@
       stackSubtitle: "We choose the right stack: fast, secure, scalable.",
 
       worksTitle: "Our work",
-      worksSubtitle: "A few examples. Click to enlarge.",
-      workCap1: "Landing page",
+      worksSubtitle: "Open a project to view screenshots, delivery scope and the live link.",
+      workCap1: "Talcon.ee",
+      workTag1: "Accounting services website",
+      workTitle1: "Talcon.ee — accounting services project",
+      workSummary1:
+        "A full-cycle launch for an accounting services company: domain, hosting, deployment, custom website design, responsive layouts and print-ready business card assets.",
+      workItems1: [
+        "Domain registration and connection",
+        "Hosting setup and server deployment",
+        "Website design and page structure from scratch",
+        "Optimization for desktop, tablet and mobile screens",
+        "Preparation of vector print files for business cards"
+      ],
+      workDetailsLabel: "What we delivered",
+      workVisitSite: "Visit live site",
       workCap2: "Mobile app",
       workCap3: "Design",
       workCap4: "Prototype",
@@ -101,8 +114,21 @@
       stackSubtitle: "Подбираем стек под задачу: быстро, безопасно, масштабируемо.",
 
       worksTitle: "Наши работы",
-      worksSubtitle: "Несколько примеров. Нажми на картинку, чтобы увеличить.",
-      workCap1: "Лендинг",
+      worksSubtitle: "Открой проект, чтобы посмотреть экраны, объём работ и живую ссылку.",
+      workCap1: "Talcon.ee",
+      workTag1: "Сайт бухгалтерских услуг",
+      workTitle1: "Talcon.ee — проект для бухгалтерских услуг",
+      workSummary1:
+        "Полный запуск проекта для бухгалтерской компании: домен, хостинг, размещение на сервере, дизайн сайта с нуля, адаптация под устройства и подготовка векторных файлов для визиток.",
+      workItems1: [
+        "Регистрация и подключение домена",
+        "Настройка хостинга и размещение на сервере",
+        "Дизайн сайта и структура страниц с нуля",
+        "Оптимизация под десктоп, планшеты и смартфоны",
+        "Подготовка векторных файлов для печати визиток"
+      ],
+      workDetailsLabel: "Что сделали",
+      workVisitSite: "Открыть сайт",
       workCap2: "Приложение",
       workCap3: "Дизайн",
       workCap4: "Прототип",
@@ -167,8 +193,21 @@
       stackSubtitle: "Valime õige stack’i: kiire, turvaline, skaleeritav.",
 
       worksTitle: "Meie tööd",
-      worksSubtitle: "Mõned näited. Suurendamiseks klõpsa pildil.",
-      workCap1: "Landing",
+      worksSubtitle: "Ava projekt, et vaadata ekraane, tehtud töid ja live-linki.",
+      workCap1: "Talcon.ee",
+      workTag1: "Raamatupidamisteenuste veebileht",
+      workTitle1: "Talcon.ee — raamatupidamisteenuste projekt",
+      workSummary1:
+        "Täislahendus raamatupidamisteenuste ettevõttele: domeen, hosting, serverisse paigaldus, nullist loodud disain, eri seadmete tugi ja trükivalmis visiitkaartide vektorfailid.",
+      workItems1: [
+        "Domeeni registreerimine ja ühendamine",
+        "Hostingu seadistus ja paigaldus serverisse",
+        "Veebilehe disain ja struktuur nullist",
+        "Optimeerimine desktopi, tahvli ja mobiili jaoks",
+        "Trükivalmis visiitkaartide vektorfailide ettevalmistus"
+      ],
+      workDetailsLabel: "Mida tegime",
+      workVisitSite: "Ava live-sait",
       workCap2: "Rakendus",
       workCap3: "Disain",
       workCap4: "Prototüüp",
@@ -205,6 +244,7 @@
 
   const supported = ["ru", "en", "et"];
   const LS_KEY = "lang";
+  let refreshGalleryText = () => {};
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -224,10 +264,15 @@
     return "en";
   }
 
-  function t(lang, key) {
+  function v(lang, key) {
     const base = i18n.en || {};
     const dict = i18n[lang] || base;
-    return dict[key] ?? base[key] ?? "";
+    return dict[key] ?? base[key];
+  }
+
+  function t(lang, key) {
+    const value = v(lang, key);
+    return typeof value === "string" ? value : "";
   }
 
   function applyLang(lang) {
@@ -246,12 +291,8 @@
       el.setAttribute("placeholder", t(lang, key));
     });
 
-    if ($("#modal")?.classList.contains("open")) {
-      const capKey = $("#modal")?.getAttribute("data-caption-key");
-      if (capKey) $("#modalCaption").textContent = t(lang, capKey);
-    }
-
     localStorage.setItem(LS_KEY, lang);
+    refreshGalleryText();
   }
 
   function initLangMenu() {
@@ -311,7 +352,16 @@
     const works = $$("[data-images]");
     const modal = $("#modal");
     const img = $("#modalImage");
+    const eyebrow = $("#modalEyebrow");
+    const title = $("#modalTitle");
     const cap = $("#modalCaption");
+    const counter = $("#modalCounter");
+    const details = $("#modalDetails");
+    const detailsLabel = $("#modalDetailsLabel");
+    const list = $("#modalList");
+    const link = $("#modalLink");
+    const linkLabel = $("#modalLinkLabel");
+    const linkValue = $("#modalLinkValue");
     const btnClose = $("#modalClose");
     const btnPrev = $("#modalPrev");
     const btnNext = $("#modalNext");
@@ -319,19 +369,75 @@
     if (!works.length || !modal || !img || !btnClose) return;
 
     let lastFocus = null;
+    let currentWork = null;
     let projectImages = [];
     let imgIndex = 0;
 
     const getLang = () => langGetter();
 
+    const renderMeta = () => {
+      if (!currentWork) return;
+
+      const lang = getLang();
+      const capKey = currentWork.getAttribute("data-caption-key");
+      const tagKey = currentWork.getAttribute("data-tag-key");
+      const titleKey = currentWork.getAttribute("data-title-key");
+      const summaryKey = currentWork.getAttribute("data-summary-key");
+      const listKey = currentWork.getAttribute("data-list-key");
+      const linkHref = currentWork.getAttribute("data-link") || "";
+      const linkText = currentWork.getAttribute("data-link-text") || linkHref;
+      const items = Array.isArray(v(lang, listKey)) ? v(lang, listKey) : [];
+
+      if (eyebrow) {
+        eyebrow.textContent = tagKey ? t(lang, tagKey) : "";
+        eyebrow.hidden = !eyebrow.textContent;
+      }
+
+      if (title) {
+        title.textContent = titleKey ? t(lang, titleKey) : capKey ? t(lang, capKey) : "";
+      }
+
+      if (cap) {
+        cap.textContent = summaryKey ? t(lang, summaryKey) : capKey ? t(lang, capKey) : "";
+      }
+
+      if (detailsLabel) detailsLabel.textContent = t(lang, "workDetailsLabel");
+      if (details) details.hidden = !items.length;
+
+      if (list) {
+        list.replaceChildren();
+        items.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          list.appendChild(li);
+        });
+      }
+
+      if (link) {
+        const showLink = Boolean(linkHref);
+        link.hidden = !showLink;
+        if (showLink) link.href = linkHref;
+      }
+      if (linkLabel) linkLabel.textContent = t(lang, "workVisitSite");
+      if (linkValue) linkValue.textContent = linkText;
+    };
+
     const renderImage = () => {
       if (!projectImages.length) return;
       img.src = projectImages[imgIndex];
+      img.alt = title?.textContent || cap?.textContent || "Selected work";
+
+      if (counter) {
+        counter.hidden = projectImages.length < 2;
+        counter.textContent = `${imgIndex + 1} / ${projectImages.length}`;
+      }
+
+      if (btnPrev) btnPrev.hidden = projectImages.length < 2;
+      if (btnNext) btnNext.hidden = projectImages.length < 2;
     };
 
     const openAt = (i) => {
       const el = works[(i + works.length) % works.length];
-      const capKey = el.getAttribute("data-caption-key");
 
       projectImages = (el.getAttribute("data-images") || "")
         .split(",")
@@ -345,11 +451,11 @@
       if (!projectImages.length) return;
 
       imgIndex = 0;
+      currentWork = el;
       lastFocus = document.activeElement;
 
+      renderMeta();
       renderImage();
-      modal.setAttribute("data-caption-key", capKey || "");
-      cap.textContent = capKey ? t(getLang(), capKey) : "";
 
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
@@ -361,6 +467,7 @@
       modal.classList.remove("open");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
+      currentWork = null;
       if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
     };
 
@@ -377,6 +484,9 @@
     };
 
     works.forEach((el, i) => {
+      el.setAttribute("draggable", "false");
+      el.addEventListener("contextmenu", (e) => e.preventDefault());
+      $("img", el)?.setAttribute("draggable", "false");
       el.addEventListener("click", () => openAt(i));
       el.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -389,6 +499,14 @@
     btnClose.addEventListener("click", close);
     btnPrev?.addEventListener("click", prev);
     btnNext?.addEventListener("click", next);
+    img.addEventListener("contextmenu", (e) => e.preventDefault());
+    img.addEventListener("dragstart", (e) => e.preventDefault());
+
+    refreshGalleryText = () => {
+      if (!modal.classList.contains("open")) return;
+      renderMeta();
+      renderImage();
+    };
 
     modal.addEventListener("click", (e) => {
       if (e.target === modal) close();

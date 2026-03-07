@@ -137,31 +137,40 @@
 
       <div class="marquee" aria-label="Works carousel">
         <div class="marquee__track" id="worksTrack">
-          <figure class="work" tabindex="0"
+          <figure class="work work--featured" tabindex="0"
             data-caption-key="workCap1"
-            data-images="img/works/project1/1.jpg,img/works/project1/2.jpg,img/works/project1/3.jpg,img/works/project1/4.jpg">
-            <img src="./img/works/project1/cover.jpg" alt="Project 1" />
-            <figcaption data-i18n="workCap1">Лендинг</figcaption>
+            data-tag-key="workTag1"
+            data-title-key="workTitle1"
+            data-summary-key="workSummary1"
+            data-list-key="workItems1"
+            data-link="https://talcon.ee"
+            data-link-text="talcon.ee"
+            data-images="img/works/project1/cover.jpg,img/works/project1/1.jpg,img/works/project1/2.jpg,img/works/project1/3.svg">
+            <img src="./img/works/project1/cover.jpg" alt="Talcon.ee project preview" draggable="false" />
+            <figcaption class="work__caption work__caption--stacked">
+              <span class="work__title" data-i18n="workCap1">Talcon.ee</span>
+              <span class="work__meta" data-i18n="workTag1">Сайт бухгалтерских услуг</span>
+            </figcaption>
           </figure>
 
           <figure class="work" tabindex="0"
             data-caption-key="workCap2"
-            data-images="img/works/project2/1.jpg,img/works/project2/2.jpg,img/works/project2/3.jpg,img/works/project2/4.jpg">
-            <img src="./img/works/project2/cover.jpg" alt="Project 2" />
+            data-images="img/works/project-placeholder.svg">
+            <img src="./img/works/project-placeholder.svg" alt="Project 2" draggable="false" />
             <figcaption data-i18n="workCap2">Приложение</figcaption>
           </figure>
 
           <figure class="work" tabindex="0"
             data-caption-key="workCap3"
-            data-images="img/works/project3/1.jpg,img/works/project3/2.jpg,img/works/project3/3.jpg,img/works/project3/4.jpg">
-            <img src="./img/works/project3/cover.jpg" alt="Project 3" />
+            data-images="img/works/project-placeholder.svg">
+            <img src="./img/works/project-placeholder.svg" alt="Project 3" draggable="false" />
             <figcaption data-i18n="workCap3">Дизайн</figcaption>
           </figure>
 
           <figure class="work" tabindex="0"
             data-caption-key="workCap4"
-            data-images="img/works/project4/1.jpg,img/works/project4/2.jpg,img/works/project4/3.jpg,img/works/project4/4.jpg">
-            <img src="./img/works/project4/cover.jpg" alt="Project 4" />
+            data-images="img/works/project-placeholder.svg">
+            <img src="./img/works/project-placeholder.svg" alt="Project 4" draggable="false" />
             <figcaption data-i18n="workCap4">Прототип</figcaption>
           </figure>
         </div>
@@ -231,13 +240,33 @@
   <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery">
     <div class="modal__panel" role="document">
       <button class="iconBtn modal__close" id="modalClose" type="button" aria-label="Close">✕</button>
-      <button class="iconBtn modal__nav modal__prev" id="modalPrev" type="button" aria-label="Previous">←</button>
-      <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
 
-      <figure class="modal__figure">
-        <img id="modalImage" alt="Selected work" />
-        <figcaption class="modal__caption" id="modalCaption"></figcaption>
-      </figure>
+      <div class="modal__layout">
+        <figure class="modal__figure">
+          <button class="iconBtn modal__nav modal__prev" id="modalPrev" type="button" aria-label="Previous">←</button>
+          <div class="modal__imageFrame">
+            <img id="modalImage" alt="Selected work" draggable="false" />
+            <div class="modal__counter" id="modalCounter" aria-live="polite"></div>
+          </div>
+          <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
+        </figure>
+
+        <aside class="modal__sidebar">
+          <div class="modal__eyebrow" id="modalEyebrow"></div>
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <p class="modal__caption" id="modalCaption"></p>
+
+          <section class="modal__details" id="modalDetails">
+            <div class="modal__detailsLabel" id="modalDetailsLabel"></div>
+            <ul class="modal__list" id="modalList"></ul>
+          </section>
+
+          <a class="btn btn--primary modal__link" id="modalLink" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            <span class="modal__linkLabel" id="modalLinkLabel"></span>
+            <span class="modal__linkValue" id="modalLinkValue"></span>
+          </a>
+        </aside>
+      </div>
     </div>
   </div>
 

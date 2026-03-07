@@ -1,0 +1,29 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="101" y1="64" x2="1038" y2="847" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152741"/>
+      <stop offset="1" stop-color="#0B1423"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FF7A18"/>
+      <stop offset="1" stop-color="#52D8FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="227" cy="170" r="180" fill="#FF7A18" fill-opacity="0.08"/>
+  <circle cx="986" cy="160" r="220" fill="#52D8FF" fill-opacity="0.08"/>
+  <rect x="118" y="128" width="964" height="644" rx="30" fill="#101C2D" stroke="#314663"/>
+
+  <rect x="204" y="228" width="792" height="42" rx="14" fill="#18283F"/>
+  <rect x="204" y="308" width="474" height="42" rx="14" fill="#18283F"/>
+  <rect x="204" y="432" width="792" height="192" rx="20" fill="#142235" stroke="#2A4261"/>
+
+  <path d="M177 664C339 627 437 704 594 677C738 652 883 556 1023 515" stroke="url(#glow)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M177 706C367 670 474 741 642 714C797 689 919 618 1023 578" stroke="#7BE8FF" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+
+  <text x="204" y="176" fill="#F7F9FC" font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="700">Project Preview</text>
+  <text x="204" y="387" fill="#C8D5E6" font-family="Arial, Helvetica, sans-serif" font-size="32">
+    Screens and details will be replaced with the final case materials.
+  </text>
+</svg>
