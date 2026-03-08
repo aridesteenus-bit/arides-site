@@ -38,15 +38,15 @@
       worksSubtitle: "Open a project to view screenshots, delivery scope and the live link.",
       workCap1: "talcon.ee",
       workTag1: "Accounting services website",
-      workTitle1: "talcon.ee — Accounting",
+      workTitle1: "talcon.ee — Accounting site",
       workSummary1:
-        "A full-cycle launch for an accounting services company: domain, hosting, deployment, custom website design, responsive layouts and print-ready business card assets.",
+        "An Estonian accounting services website with business calculators, an apartment association pricing flow, a payroll calculator, inquiry forms, responsive screens and print-ready business card assets.",
       workItems1: [
-        "Domain registration and connection",
-        "Hosting setup and server deployment",
-        "Website design and page structure from scratch",
-        "Optimization for desktop, tablet and mobile screens",
-        "Preparation of vector print files for business cards"
+        "Domain registration, hosting setup and server deployment",
+        "Website structure and visual design for the Estonian market",
+        "Business client service configurator with inquiry form",
+        "Apartment association calculator, quick contact flow and payroll calculator",
+        "Responsive mobile layouts and print-ready vector files for business cards"
       ],
       workDetailsLabel: "What we delivered",
       workVisitSite: "Visit live site",
@@ -117,15 +117,15 @@
       worksSubtitle: "Открой проект, чтобы посмотреть экраны, объём работ и живую ссылку.",
       workCap1: "talcon.ee",
       workTag1: "Сайт бухгалтерских услуг",
-      workTitle1: "talcon.ee — Бухгалтерия",
+      workTitle1: "talcon.ee — сайт бухгалтерии",
       workSummary1:
-        "Полный запуск проекта для бухгалтерской компании: домен, хостинг, размещение на сервере, дизайн сайта с нуля, адаптация под устройства и подготовка векторных файлов для визиток.",
+        "Эстонский сайт бухгалтерских услуг с калькулятором для бизнес-клиентов, отдельным потоком для квартирных товариществ, палгакалькулятором, формами заявок, адаптацией под мобильные устройства и векторными файлами визиток.",
       workItems1: [
-        "Регистрация и подключение домена",
-        "Настройка хостинга и размещение на сервере",
-        "Дизайн сайта и структура страниц с нуля",
-        "Оптимизация под десктоп, планшеты и смартфоны",
-        "Подготовка векторных файлов для печати визиток"
+        "Регистрация домена, настройка хостинга и размещение на сервере",
+        "Структура сайта и визуальный дизайн под рынок Эстонии",
+        "Конфигуратор услуг для бизнес-клиентов и форма заявки",
+        "Отдельный калькулятор и форма запроса для квартирных товариществ, плюс палгакалькулятор",
+        "Мобильная адаптация и подготовка векторных файлов для печати визиток"
       ],
       workDetailsLabel: "Что сделали",
       workVisitSite: "Открыть сайт",
@@ -195,16 +195,16 @@
       worksTitle: "Meie tööd",
       worksSubtitle: "Ava projekt, et vaadata ekraane, tehtud töid ja live-linki.",
       workCap1: "talcon.ee",
-      workTag1: "Raamatupidamine",
+      workTag1: "Raamatupidamisteenused",
       workTitle1: "talcon.ee — Raamatupidamine",
       workSummary1:
-        "Täislahendus raamatupidamisteenuste ettevõttele: domeen, hosting, serverisse paigaldus, nullist loodud disain, eri seadmete tugi ja trükivalmis visiitkaartide vektorfailid.",
+        "Eesti turule loodud raamatupidamisteenuste veebileht äriklientide kalkulaatori, korteriühistute hinnavoo, palgakalkulaatori, päringuvormide, mobiilivaadete ja trükivalmis visiitkaartidega.",
       workItems1: [
-        "Domeeni registreerimine ja ühendamine",
-        "Hostingu seadistus ja paigaldus serverisse",
-        "Veebilehe disain ja struktuur nullist",
-        "Optimeerimine desktopi, tahvli ja mobiili jaoks",
-        "Trükivalmis visiitkaartide vektorfailide ettevalmistus"
+        "Domeeni registreerimine, hostingu seadistus ja paigaldus serverisse",
+        "Veebilehe struktuur ja visuaalne disain Eesti turu jaoks",
+        "Äriklientide teenusekalkulaator koos päringuvormiga",
+        "Korteriühistute kalkulaator, kiire kontakt ja palgakalkulaator",
+        "Mobiilivaate optimeerimine ning trükivalmid visiitkaartide vektorfailid"
       ],
       workDetailsLabel: "Mida tegime",
       workVisitSite: "Ava live-sait",
