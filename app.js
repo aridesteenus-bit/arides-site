@@ -40,12 +40,12 @@
       workTag1: "Accounting services website",
       workTitle1: "talcon.ee — Accounting site",
       workSummary1:
-        "An Estonian accounting services website with business calculators, an apartment association pricing flow, a payroll calculator, inquiry forms, responsive screens and print-ready business card assets.",
+        "An Estonian accounting services website with business calculators, an apartment association pricing flow, a salary calculator, inquiry forms, responsive screens and print-ready business card assets.",
       workItems1: [
         "Domain registration, hosting setup and server deployment",
         "Website structure and visual design for the Estonian market",
         "Business client service configurator with inquiry form",
-        "Apartment association calculator, quick contact flow and payroll calculator",
+        "Apartment association calculator, quick contact flow and salary calculator",
         "Responsive mobile layouts and print-ready vector files for business cards"
       ],
       workDetailsLabel: "What we delivered",
@@ -119,12 +119,12 @@
       workTag1: "Сайт бухгалтерских услуг",
       workTitle1: "talcon.ee — сайт бухгалтерии",
       workSummary1:
-        "Эстонский сайт бухгалтерских услуг с калькулятором для бизнес-клиентов, отдельным потоком для квартирных товариществ, палгакалькулятором, формами заявок, адаптацией под мобильные устройства и векторными файлами визиток.",
+        "Эстонский сайт бухгалтерских услуг с калькулятором для бизнес-клиентов, отдельным потоком для квартирных товариществ, калькулятором зарплат, формами заявок, адаптацией под мобильные устройства и векторными файлами визиток.",
       workItems1: [
         "Регистрация домена, настройка хостинга и размещение на сервере",
         "Структура сайта и визуальный дизайн под рынок Эстонии",
         "Конфигуратор услуг для бизнес-клиентов и форма заявки",
-        "Отдельный калькулятор и форма запроса для квартирных товариществ, плюс палгакалькулятор",
+        "Отдельный калькулятор и форма запроса для квартирных товариществ, плюс калькулятор зарплат",
         "Мобильная адаптация и подготовка векторных файлов для печати визиток"
       ],
       workDetailsLabel: "Что сделали",
