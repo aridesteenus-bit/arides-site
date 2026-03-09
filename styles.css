@@ -457,12 +457,14 @@ h1{
 }
 .iconBtn{
   position:absolute;
+  z-index:3;
   border:1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.06);
   color: var(--text);
   border-radius: 14px;
   padding:10px 12px;
   cursor:pointer;
+  pointer-events:auto;
 }
 .iconBtn:hover{background: rgba(255,255,255,.10)}
 .modal__close{top:10px; right:10px}
