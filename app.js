@@ -239,7 +239,7 @@
 
   // ===== EmailJS config (YOUR REAL VALUES) =====
   const EMAILJS_PUBLIC_KEY = "ifm_c_GUeWOaCGmBj";
-  const EMAILJS_SERVICE_ID = "service_47367zl";
+  const EMAILJS_SERVICE_ID = "service_iab26he";
   const EMAILJS_TEMPLATE_ID = "template_8idq3n2";
 
   const supported = ["ru", "en", "et"];
