@@ -50,7 +50,18 @@
       ],
       workDetailsLabel: "What we delivered",
       workVisitSite: "Visit live site",
-      workCap2: "Mobile app",
+      workCap2: "stiimulehitus.ee",
+      workTag2: "Services website and product catalog",
+      workTitle2: "stiimulehitus.ee — renovation and catalog platform",
+      workSummary2:
+        "A multi-page storefront for renovation services and building products built on HTML, CSS and JavaScript, with a generated catalog, product pages, a request API and a product base prepared for warehouse and supplier data.",
+      workItems2: [
+        "Homepage, service sections and a structured multi-page storefront",
+        "Product catalog with categories, filters and generated product pages",
+        "Product database in JSON with a backend API for requests and analytics",
+        "PostgreSQL-ready schema for products, variants, suppliers and stock data",
+        "Contact and quote forms plus ET, RU and EN language support"
+      ],
       workCap3: "Design",
       workCap4: "Prototype",
 
@@ -129,7 +140,18 @@
       ],
       workDetailsLabel: "Что сделали",
       workVisitSite: "Открыть сайт",
-      workCap2: "Приложение",
+      workCap2: "stiimulehitus.ee",
+      workTag2: "Сайт услуг и каталог товаров",
+      workTitle2: "stiimulehitus.ee — платформа услуг и каталога",
+      workSummary2:
+        "Многостраничный сайт для ремонтных услуг и строительных товаров на HTML, CSS и JavaScript с генерацией каталога, карточками товаров, API для заявок и товарной базой, подготовленной под склад и поставщиков.",
+      workItems2: [
+        "Главная страница, сервисные блоки и многостраничная структура сайта",
+        "Каталог товаров с категориями, фильтрами и отдельными карточками",
+        "Товарная база в JSON и backend API для заявок и аналитики",
+        "Подготовленная схема PostgreSQL для товаров, вариантов, поставщиков и остатков",
+        "Формы связи и расчёта, плюс поддержка ET, RU и EN версий"
+      ],
       workCap3: "Дизайн",
       workCap4: "Прототип",
 
@@ -208,7 +230,18 @@
       ],
       workDetailsLabel: "Mida tegime",
       workVisitSite: "Ava live-sait",
-      workCap2: "Rakendus",
+      workCap2: "stiimulehitus.ee",
+      workTag2: "Teenuste veebileht ja tootekataloog",
+      workTitle2: "stiimulehitus.ee — teenuste ja kataloogi platvorm",
+      workSummary2:
+        "Mitmeleheline remondi- ja tootemüügi platvorm HTML-i, CSS-i ja JavaScripti peal: genereeritud kataloog, tootelehed, päringute API ning tooteandmestik, mis on valmis lao- ja tarnijainfo jaoks.",
+      workItems2: [
+        "Avaleht, teenuseplokid ja läbimõeldud mitmeleheline struktuur",
+        "Tootekataloog kategooriate, filtrite ja eraldi tootelehtedega",
+        "JSON-põhine tooteandmestik ja backend API päringute ning analüütika jaoks",
+        "PostgreSQL-iks ette valmistatud skeem toodete, variantide, tarnijate ja laoseisu jaoks",
+        "Kontakt- ja hinnapäringuvormid ning ET, RU ja EN keeletoetus"
+      ],
       workCap3: "Disain",
       workCap4: "Prototüüp",
 
