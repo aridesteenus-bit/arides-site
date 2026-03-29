@@ -236,6 +236,7 @@ h1{
 }
 .work--featured{width:320px}
 .work--featured img{height:200px}
+.work--project2 img{object-position:center 62%}
 .work__caption{display:grid; gap:4px}
 .work__caption--stacked{min-height:68px}
 .work__title{
