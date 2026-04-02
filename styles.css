@@ -328,34 +328,50 @@ h1{
 .modal.open{display:flex}
 .modal__panel{
   position:relative;
-  width:min(960px, 100%);
+  width:min(1120px, 100%);
+  max-height:calc(100vh - 32px);
+  max-height:calc(100dvh - 32px);
   border-radius: 22px;
   background: rgba(10,14,22,.94);
   border:1px solid rgba(255,255,255,.12);
   box-shadow: var(--shadow);
   padding:14px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
 }
 .modal__layout{
   display:grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
   gap:16px;
   align-items:stretch;
+  min-height:0;
+  flex:1;
 }
 .modal__figure{
   position:relative;
   margin:0;
   min-width:0;
+  min-height:0;
+  display:flex;
 }
 .modal__imageFrame{
   position:relative;
+  flex:1;
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
   border-radius: 18px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.10);
   background: rgba(0,0,0,.25);
 }
 .modal__figure img{
-  width:100%;
-  max-height: 70vh;
+  width:auto;
+  max-width:100%;
+  max-height: min(72vh, calc(100dvh - 120px));
   object-fit: contain;
   display:block;
   user-select:none;
@@ -378,6 +394,10 @@ h1{
   display:flex;
   flex-direction:column;
   gap:14px;
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
   padding:18px;
   border-radius:18px;
   border:1px solid rgba(255,255,255,.08);
@@ -510,12 +530,12 @@ h1{
     min-height:0;
     height:100%;
   }
+  .modal__imageFrame{
+    padding:12px;
+  }
   .modal__figure img{max-height:min(42vh, 360px); max-height:min(42dvh, 360px)}
   .modal__sidebar{
-    min-height:0;
-    overflow-y:auto;
-    overscroll-behavior:contain;
-    -webkit-overflow-scrolling:touch;
+    padding-right:14px;
   }
 }
 

@@ -398,6 +398,7 @@
     const btnClose = $("#modalClose");
     const btnPrev = $("#modalPrev");
     const btnNext = $("#modalNext");
+    const sidebar = $(".modal__sidebar", modal);
 
     if (!works.length || !modal || !img || !btnClose) return;
 
@@ -489,6 +490,10 @@
 
       renderMeta();
       renderImage();
+
+      if (sidebar) sidebar.scrollTop = 0;
+      const panel = $(".modal__panel", modal);
+      if (panel) panel.scrollTop = 0;
 
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
