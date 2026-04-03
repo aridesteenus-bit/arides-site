@@ -319,8 +319,6 @@ h1{
 }
 .contactCard__title{font-weight:700}
 .contactCard__value{color:var(--muted); margin-top:2px; word-break:break-word}
-.contactCard--static{cursor:default}
-.contactCard--static:hover{transform:none; background:var(--card)}
 
 .form{
   padding:16px;
