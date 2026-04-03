@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ARIDES — лаборатория разработки сайтов и приложений. Websites, mobile apps, UI/UX, automation." />
+  <meta name="theme-color" content="#0b0714" />
   <title>ARIDES</title>
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -196,21 +202,64 @@
         <div class="contactGrid">
           <div class="contactCards">
             <a class="contactCard" href="https://wa.me/37256845377" target="_blank" rel="noreferrer">
-              <div class="contactCard__icon" aria-hidden="true">💬</div>
-              <div class="contactCard__title" data-i18n="waTitle">WhatsApp</div>
-              <div class="contactCard__value">+372 56845377</div>
+              <div class="contactCard__icon contactCard__icon--wa" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M19.05 4.94A9.77 9.77 0 0 0 12.09 2C6.69 2 2.3 6.38 2.3 11.79c0 1.73.45 3.42 1.31 4.91L2 22l5.45-1.57a9.83 9.83 0 0 0 4.64 1.18h.01c5.4 0 9.79-4.39 9.79-9.8a9.71 9.71 0 0 0-2.84-6.87ZM12.1 19.96h-.01a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.23.93.95-3.15-.2-.32a8.14 8.14 0 0 1-1.25-4.31 8.19 8.19 0 0 1 8.18-8.18 8.14 8.14 0 0 1 5.82 2.41 8.11 8.11 0 0 1 2.39 5.77 8.19 8.19 0 0 1-8.2 8.17Zm4.49-6.14c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.55.13-.16.24-.63.8-.77.97-.14.16-.28.18-.52.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.01-.38.11-.5.11-.11.25-.28.36-.42.12-.14.16-.24.24-.41.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.24-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.16 1.72 2.63 4.17 3.69.58.25 1.03.4 1.38.52.58.18 1.11.15 1.52.09.46-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.3Z"/>
+                </svg>
+              </div>
+              <div class="contactCard__body">
+                <div class="contactCard__title" data-i18n="waTitle">WhatsApp</div>
+                <div class="contactCard__value">+372 56845377</div>
+              </div>
             </a>
 
+            <div class="contactCard contactCard--static" aria-label="Telegram">
+              <div class="contactCard__icon contactCard__icon--tg" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M21.44 4.84c.32-.13.63.16.54.5l-3.05 14.37c-.08.38-.5.53-.79.3l-4.59-3.65-2.34 2.25c-.23.22-.62.06-.62-.26V15.1l7.73-7.08a.35.35 0 0 0-.42-.56l-9.36 5.92-4.05-1.31a.46.46 0 0 1-.02-.87l16.97-6.36Z"/>
+                </svg>
+              </div>
+              <div class="contactCard__body">
+                <div class="contactCard__title" data-i18n="tgTitle">Telegram</div>
+                <div class="contactCard__value">+372 56845377</div>
+              </div>
+            </div>
+
             <a class="contactCard" href="tel:+37256845377">
-              <div class="contactCard__icon" aria-hidden="true">📞</div>
-              <div class="contactCard__title" data-i18n="phTitle">Телефон</div>
-              <div class="contactCard__value">+372 56845377</div>
+              <div class="contactCard__icon contactCard__icon--phone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.49c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.24 1.01l-2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contactCard__body">
+                <div class="contactCard__title" data-i18n="phTitle">Телефон</div>
+                <div class="contactCard__value">+372 56845377</div>
+              </div>
             </a>
 
             <a class="contactCard" href="mailto:aridesteenus@gmail.com">
-              <div class="contactCard__icon" aria-hidden="true">✉️</div>
-              <div class="contactCard__title" data-i18n="emTitle">Почта</div>
-              <div class="contactCard__value">aridesteenus@gmail.com</div>
+              <div class="contactCard__icon contactCard__icon--mail" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="m22 8-8.97 5.7a2 2 0 0 1-2.06 0L2 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contactCard__body">
+                <div class="contactCard__title" data-i18n="emTitle">Почта</div>
+                <div class="contactCard__value">aridesteenus@gmail.com</div>
+              </div>
+            </a>
+
+            <a class="contactCard" href="https://www.facebook.com/profile.php?id=61587739392605" target="_blank" rel="noreferrer">
+              <div class="contactCard__icon contactCard__icon--fb" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M13.45 21v-7.18h2.42l.36-2.8h-2.78V9.24c0-.81.22-1.37 1.39-1.37H16V5.36c-.2-.03-.9-.08-1.72-.08-1.7 0-2.86 1.04-2.86 2.95v1.79H9v2.8h2.42V21h2.03Z"/>
+                </svg>
+              </div>
+              <div class="contactCard__body">
+                <div class="contactCard__title" data-i18n="fbTitle">Facebook</div>
+                <div class="contactCard__value">ARIDES</div>
+              </div>
             </a>
           </div>
 

@@ -264,11 +264,12 @@ h1{
 }
 .contactCards{
   display:grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap:12px;
 }
 .contactCard{
   display:flex;
+  align-items:center;
   gap:12px;
   padding:14px;
   border-radius: var(--radius);
@@ -277,9 +278,49 @@ h1{
   transition: transform .14s ease, background .14s ease;
 }
 .contactCard:hover{transform: translateY(-2px); background: var(--card2)}
-.contactCard__icon{font-size:20px}
+.contactCard__icon{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+}
+.contactCard__icon svg{
+  width:22px;
+  height:22px;
+  display:block;
+}
+.contactCard__icon--wa{
+  background:rgba(37,211,102,.12);
+  color:#25d366;
+}
+.contactCard__icon--tg{
+  background:rgba(39,167,231,.12);
+  color:#27a7e7;
+}
+.contactCard__icon--phone{
+  background:rgba(255,122,24,.12);
+  color:var(--accent);
+}
+.contactCard__icon--mail{
+  background:rgba(255,255,255,.06);
+  color:#f5f7fb;
+}
+.contactCard__icon--fb{
+  background:rgba(24,119,242,.14);
+  color:#1877f2;
+}
+.contactCard__body{
+  min-width:0;
+}
 .contactCard__title{font-weight:700}
-.contactCard__value{color:var(--muted); margin-top:2px}
+.contactCard__value{color:var(--muted); margin-top:2px; word-break:break-word}
+.contactCard--static{cursor:default}
+.contactCard--static:hover{transform:none; background:var(--card)}
 
 .form{
   padding:16px;
@@ -517,6 +558,7 @@ h1{
   .nav{display:none}
   .grid{grid-template-columns:1fr}
   .contactGrid{grid-template-columns:1fr}
+  .contactCards{grid-template-columns:1fr}
   .modal__panel{
     display:flex;
     flex-direction:column;

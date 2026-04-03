@@ -69,8 +69,10 @@
       contactSubtitle:
         "Message us — we’ll reply and propose the best approach.",
       waTitle: "WhatsApp",
+      tgTitle: "Telegram",
       phTitle: "Phone",
       emTitle: "Email",
+      fbTitle: "Facebook",
 
       formName: "Name",
       formNamePh: "Your name",
@@ -158,8 +160,10 @@
       contactTitle: "Контакты",
       contactSubtitle: "Напиши — ответим и предложим решение под твою задачу.",
       waTitle: "WhatsApp",
+      tgTitle: "Telegram",
       phTitle: "Телефон",
       emTitle: "Почта",
+      fbTitle: "Facebook",
 
       formName: "Имя",
       formNamePh: "Ваше имя",
@@ -248,8 +252,10 @@
       contactTitle: "Kontakt",
       contactSubtitle: "Kirjuta — vastame ja pakume sobiva lahenduse.",
       waTitle: "WhatsApp",
+      tgTitle: "Telegram",
       phTitle: "Telefon",
       emTitle: "E-post",
+      fbTitle: "Facebook",
 
       formName: "Nimi",
       formNamePh: "Sinu nimi",
