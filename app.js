@@ -182,8 +182,8 @@
       formSending: "Saadan...",
       formNote:
         "Pärast saatmist võtame ühendust, kinnitame marsruudi, aja ja hinna.",
-      progressEyebrow: "Tellimuse progress",
-      progressTitle: "Täida andmed ja buss liigub finiši poole",
+      progressEyebrow: "Kiire eelhind",
+      progressTitle: "Täida väljad ja saa esialgne hinnang kohe kätte",
       progressStart: "Start",
       progressEnd: "Finiš",
       estimateEyebrow: "Eelhind",
@@ -434,8 +434,8 @@
       formSending: "Отправляем...",
       formNote:
         "После отправки мы свяжемся, чтобы подтвердить маршрут, время и стоимость.",
-      progressEyebrow: "Прогресс заказа",
-      progressTitle: "Заполняйте данные, а ваш бус едет к финишу",
+      progressEyebrow: "Быстрый расчет",
+      progressTitle: "Заполните поля и получите предварительную стоимость уже сейчас",
       progressStart: "Старт",
       progressEnd: "Финиш",
       estimateEyebrow: "Предварительная цена",
@@ -688,8 +688,8 @@
       formSending: "Sending...",
       formNote:
         "After you send the request, we will contact you to confirm the route, time and price.",
-      progressEyebrow: "Booking progress",
-      progressTitle: "Fill in the details and watch the van drive to the finish",
+      progressEyebrow: "Quick estimate",
+      progressTitle: "Fill in the fields and get an estimated price right away",
       progressStart: "Start",
       progressEnd: "Finish",
       estimateEyebrow: "Preliminary price",
