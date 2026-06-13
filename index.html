@@ -554,6 +554,30 @@
               <input type="text" name="to_address" required placeholder="Näiteks Pärnu mnt 120, Tallinn" data-i18n-ph="formToPh" />
             </label>
 
+            <label class="field">
+              <span data-i18n="formPickupFloor">Korrus laadimisel</span>
+              <input type="number" name="pickup_floor" min="0" max="20" step="1" value="0" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="formDeliveryFloor">Korrus kohaletoimetamisel</span>
+              <input type="number" name="delivery_floor" min="0" max="20" step="1" value="0" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="formHelpers">Abi laadimisel / kandmisel</span>
+              <select name="loader_count">
+                <option value="0" data-i18n="helperOption0">Abi ei ole vaja</option>
+                <option value="1" data-i18n="helperOption1">1 abiline</option>
+                <option value="2" data-i18n="helperOption2">2 abilist</option>
+              </select>
+            </label>
+
+            <label class="checkRow checkRow--boxed">
+              <input type="checkbox" name="has_elevator" />
+              <span data-i18n="formElevator">Molemas aadressis on lift olemas</span>
+            </label>
+
             <label class="field field--full">
               <span data-i18n="formCargo">Mida on vaja vedada</span>
               <textarea name="cargo_details" rows="4" required placeholder="Kirjelda koormat: mööbel, kastid, tehnika, materjalid..." data-i18n-ph="formCargoPh"></textarea>
@@ -572,13 +596,10 @@
                 <strong class="estimatePanel__value" id="estimateValue" data-i18n="estimatePendingValue">Alusta vormi täitmist</strong>
               </div>
               <p class="estimatePanel__text" id="estimateText" data-i18n="estimatePendingText">Lisame siia esialgse hinnaloogika kohe, kui marsruut ja teenus on sisestatud.</p>
+              <p class="estimatePanel__meta" id="estimateMeta" data-i18n="estimateMetaPending">Sisesta aadressid ja valikud, et näha ligikaudset marsruuti ning hinnaloogikat.</p>
+              <a class="estimatePanel__link" id="estimateMapLink" href="#" target="_blank" rel="noreferrer" hidden data-i18n="estimateMapLink">Ava marsruut Google Mapsis</a>
             </div>
           </section>
-
-          <label class="checkRow">
-            <input type="checkbox" name="need_help" />
-            <span data-i18n="formNeedHelp">Vajan abi peale- või mahalaadimisel</span>
-          </label>
 
           <label class="checkRow checkRow--legal">
             <input type="checkbox" name="privacy_consent" required />

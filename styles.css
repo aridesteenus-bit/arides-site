@@ -1036,6 +1036,14 @@ h1{
 .checkRow--legal{
   align-items:flex-start;
 }
+.checkRow--boxed{
+  margin:0;
+  padding:14px 15px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:var(--accent-soft);
+  color:var(--slate);
+}
 .checkRow__legalText{
   color:var(--ink-soft);
   font-size:13px;
@@ -1090,6 +1098,20 @@ h1{
   color:rgba(255,255,255,.82);
   font-size:14px;
   line-height:1.58;
+}
+.estimatePanel__meta{
+  margin:10px 0 0;
+  color:rgba(214,231,255,.72);
+  font-size:13px;
+  line-height:1.55;
+}
+.estimatePanel__link{
+  display:inline-flex;
+  margin-top:12px;
+  color:var(--white);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
 .footer{

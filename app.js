@@ -166,6 +166,13 @@
       formStops: "Lisapeatused",
       formTo: "Aadress, kuhu viia",
       formToPh: "Näiteks Pärnu mnt 120, Tallinn",
+      formPickupFloor: "Korrus laadimisel",
+      formDeliveryFloor: "Korrus kohaletoimetamisel",
+      formHelpers: "Abi laadimisel / kandmisel",
+      formElevator: "Molemas aadressis on lift olemas",
+      helperOption0: "Abi ei ole vaja",
+      helperOption1: "1 abiline",
+      helperOption2: "2 abilist",
       formCargo: "Mida on vaja vedada",
       formCargoPh: "Kirjelda koormat: mööbel, kastid, tehnika, materjalid...",
       formComment: "Lisainfo",
@@ -183,12 +190,23 @@
       quoteTitle: "Ligikaudne hind ja tellimuse detailid",
       estimatePendingValue: "Alusta vormi täitmist",
       estimatePendingText: "Lisame siia esialgse hinnaloogika kohe, kui marsruut ja teenus on sisestatud.",
-      estimateCityValue: "alates 30 EUR",
-      estimateCityText: "Kui vedu toimub Tallinna piires, arvestame alates 30 EUR / tund. Lõplik hind sõltub ajakulust, peatustest ja koorma iseloomust.",
-      estimateDistanceValue: "alates 0.90 EUR / km",
-      estimateDistanceText: "Kui marsruut läheb Tallinnast välja, lähtume kilometraažist alates 0.90 EUR / km. Täpse summa kinnitame pärast ülevaatust.",
-      estimateHelpSuffix: "Lisaks sooviti abi peale- või mahalaadimisel, mis võib hinda mõjutada.",
-      estimateStopsSuffix: "Marsruudil on lisapeatused, seega lõplik hind võib olla kõrgem.",
+      estimateMetaPending: "Sisesta aadressid ja valikud, et näha ligikaudset marsruuti ning hinnaloogikat.",
+      estimateMapLink: "Ava marsruut Google Mapsis",
+      estimateCalculatingValue: "Arvutan marsruuti...",
+      estimateCalculatingText: "Kontrollime aadresse ja proovime hinnata marsruuti Eesti kaardil.",
+      estimateCityValue: "~ {price} EUR",
+      estimateCityText: "Tallinna piires arvestame tunnihinda. Arvestusse lähevad marsruudi aeg, lisapeatused, korrused ja vajadusel abiline.",
+      estimateDistanceValue: "~ {price} EUR",
+      estimateDistanceText: "Tallinnast väljaspool lähtume peamiselt kilometraažist. Arvestusse lähevad marsruut, lisapeatused, korrused ja vajadusel abiline.",
+      estimateRouteText: "Marsruut ~ {km} km • sõiduaeg ~ {time}",
+      estimateCityBreakdown: "Tallinna tsoon • tööaeg ~ {hours} h • kaubik {van} EUR • abilised {helpers} EUR",
+      estimateDistanceBreakdown: "Väljaspool Tallinna • {km} km × 0.90 EUR • kaubik {van} EUR • abilised {helpers} EUR",
+      estimateFloorsSuffix: "Korruste lisatasu: {amount} EUR.",
+      estimateStopsSuffix: "Lisapeatuste lisatasu: {amount} EUR.",
+      estimateUnavailableText: "Aadresse ei õnnestunud automaatselt kaardilt tuvastada. Näitame baashinda ja kinnitame täpse summa pärast päringu ülevaatust.",
+      estimateFallbackMeta: "Automaatne marsruudiarvutus ei vastanud. Lõplik hind kinnitatakse käsitsi.",
+      estimateNoServiceSelected: "Vali teenus ja sisesta vähemalt lähte- ning sihtaadress.",
+      estimateHelperLine: "Abiliste lisatasu: {amount} EUR.",
       summaryServiceLabel: "Teenuse liik",
       summaryDateLabel: "Kuupäev",
       summaryTimeLabel: "Kellaaeg",
@@ -400,6 +418,13 @@
       formStops: "Дополнительные точки",
       formTo: "Адрес доставки",
       formToPh: "Например Pärnu mnt 120, Tallinn",
+      formPickupFloor: "Этаж погрузки",
+      formDeliveryFloor: "Этаж доставки",
+      formHelpers: "Помощь с погрузкой / переносом",
+      formElevator: "На обоих адресах есть лифт",
+      helperOption0: "Помощь не нужна",
+      helperOption1: "1 помощник",
+      helperOption2: "2 помощника",
       formCargo: "Что нужно перевезти",
       formCargoPh: "Опишите груз: мебель, коробки, техника, материалы...",
       formComment: "Комментарии",
@@ -417,12 +442,23 @@
       quoteTitle: "Примерная стоимость и детали заказа",
       estimatePendingValue: "Начните заполнять форму",
       estimatePendingText: "Как только будут указаны услуга и маршрут, здесь появится ориентировочная стоимость.",
-      estimateCityValue: "от 30 EUR",
-      estimateCityText: "Если перевозка проходит в пределах Таллинна, расчет идет от 30 EUR / час. Итоговая цена зависит от времени, точек и характера груза.",
-      estimateDistanceValue: "от 0.90 EUR / km",
-      estimateDistanceText: "Если маршрут выходит за пределы Таллинна, ориентир идет от 0.90 EUR / km. Точную сумму подтвердим после уточнения деталей.",
-      estimateHelpSuffix: "Также отмечена помощь с погрузкой или разгрузкой, это может повлиять на цену.",
-      estimateStopsSuffix: "В маршруте есть дополнительные точки, поэтому итоговая цена может быть выше.",
+      estimateMetaPending: "Укажите адреса и параметры заказа, чтобы увидеть примерный маршрут и логику расчета.",
+      estimateMapLink: "Открыть маршрут в Google Maps",
+      estimateCalculatingValue: "Считаем маршрут...",
+      estimateCalculatingText: "Проверяем адреса и пытаемся оценить маршрут по карте Эстонии.",
+      estimateCityValue: "~ {price} EUR",
+      estimateCityText: "В пределах Таллинна действует почасовая логика. В расчет входят время маршрута, дополнительные точки, этажи и при необходимости помощник.",
+      estimateDistanceValue: "~ {price} EUR",
+      estimateDistanceText: "За пределами Таллинна расчет строится в основном по километражу. Учитываются маршрут, дополнительные точки, этажи и при необходимости помощник.",
+      estimateRouteText: "Маршрут ~ {km} км • время в пути ~ {time}",
+      estimateCityBreakdown: "Таллинн • работа ~ {hours} ч • фургон {van} EUR • помощники {helpers} EUR",
+      estimateDistanceBreakdown: "За пределами Таллинна • {km} км × 0.90 EUR • фургон {van} EUR • помощники {helpers} EUR",
+      estimateFloorsSuffix: "Доплата за этажи: {amount} EUR.",
+      estimateStopsSuffix: "Доплата за дополнительные точки: {amount} EUR.",
+      estimateUnavailableText: "Не удалось автоматически определить адреса на карте. Показываем базовую оценку, а точную сумму подтвердим после просмотра заявки.",
+      estimateFallbackMeta: "Автоматический расчет маршрута не ответил. Финальная цена подтверждается вручную.",
+      estimateNoServiceSelected: "Выберите услугу и укажите хотя бы адрес загрузки и адрес доставки.",
+      estimateHelperLine: "Доплата за помощников: {amount} EUR.",
       summaryServiceLabel: "Тип услуги",
       summaryDateLabel: "Дата",
       summaryTimeLabel: "Время",
@@ -636,6 +672,13 @@
       formStops: "Extra stops",
       formTo: "Delivery address",
       formToPh: "For example Parnu mnt 120, Tallinn",
+      formPickupFloor: "Pickup floor",
+      formDeliveryFloor: "Delivery floor",
+      formHelpers: "Loading / carrying help",
+      formElevator: "There is an elevator at both addresses",
+      helperOption0: "No helper needed",
+      helperOption1: "1 helper",
+      helperOption2: "2 helpers",
       formCargo: "What needs to be transported",
       formCargoPh: "Describe the cargo: furniture, boxes, appliances, materials...",
       formComment: "Additional details",
@@ -653,12 +696,23 @@
       quoteTitle: "Approximate price and order details",
       estimatePendingValue: "Start filling out the form",
       estimatePendingText: "Once the service and route details are added, an approximate price will appear here.",
-      estimateCityValue: "from 30 EUR",
-      estimateCityText: "If the job stays within Tallinn, pricing starts from 30 EUR / hour. The final amount depends on time, stops and cargo type.",
-      estimateDistanceValue: "from 0.90 EUR / km",
-      estimateDistanceText: "If the route goes outside Tallinn, we use distance-based pricing from 0.90 EUR / km. We confirm the final amount after review.",
-      estimateHelpSuffix: "Loading or unloading help was also requested, which may affect the final price.",
-      estimateStopsSuffix: "There are extra stops in the route, so the final price may be higher.",
+      estimateMetaPending: "Enter the addresses and job options to see an approximate route and pricing logic.",
+      estimateMapLink: "Open route in Google Maps",
+      estimateCalculatingValue: "Calculating route...",
+      estimateCalculatingText: "We are checking the addresses and trying to estimate the route on an Estonia map.",
+      estimateCityValue: "~ {price} EUR",
+      estimateCityText: "Inside Tallinn we use hourly logic. The estimate includes route time, extra stops, floors and helper cost when needed.",
+      estimateDistanceValue: "~ {price} EUR",
+      estimateDistanceText: "Outside Tallinn the estimate is mainly distance-based. The route, extra stops, floors and helper cost are included.",
+      estimateRouteText: "Route ~ {km} km • drive time ~ {time}",
+      estimateCityBreakdown: "Tallinn zone • work ~ {hours} h • van {van} EUR • helpers {helpers} EUR",
+      estimateDistanceBreakdown: "Outside Tallinn • {km} km × 0.90 EUR • van {van} EUR • helpers {helpers} EUR",
+      estimateFloorsSuffix: "Floor surcharge: {amount} EUR.",
+      estimateStopsSuffix: "Extra stop surcharge: {amount} EUR.",
+      estimateUnavailableText: "We could not automatically resolve the addresses on the map. We are showing a base estimate and will confirm the exact amount after review.",
+      estimateFallbackMeta: "Automatic route lookup did not respond. Final pricing is confirmed manually.",
+      estimateNoServiceSelected: "Choose a service and enter at least a pickup and delivery address.",
+      estimateHelperLine: "Helper surcharge: {amount} EUR.",
       summaryServiceLabel: "Service type",
       summaryDateLabel: "Date",
       summaryTimeLabel: "Time",
@@ -1199,7 +1253,23 @@
     const percent = $("#progressPercent");
     const estimateValue = $("#estimateValue");
     const estimateText = $("#estimateText");
-    if (!form || !road || !percent || !estimateValue || !estimateText) return;
+    const estimateMeta = $("#estimateMeta");
+    const estimateMapLink = $("#estimateMapLink");
+    if (!form || !road || !percent || !estimateValue || !estimateText || !estimateMeta || !estimateMapLink) return;
+
+    const PRICE = {
+      cityHourly: 30,
+      outsideKm: 0.9,
+      helperHourly: 12,
+      minimumCityHours: 1,
+      minimumOutsideBase: 35,
+      floorSurcharge: 4,
+      stopSurcharge: 5
+    };
+
+    const routeCache = new Map();
+    const geocodeCache = new Map();
+    let routeSeq = 0;
 
     const requiredNames = [
       "name",
@@ -1217,49 +1287,285 @@
       return typeof el?.value === "string" ? el.value.trim() : "";
     };
 
-    const isTallinnRoute = (from, to, stops) => {
-      const points = [from, to, ...stops].map((value) => value.toLowerCase());
-      if (!points.every(Boolean)) return false;
-      return points.every((value) =>
-        value.includes("tallinn") ||
-        value.includes("tln") ||
-        value.includes("харью") ||
-        value.includes("harju")
-      ) && points.some((value) => value.includes("tallinn") || value.includes("tln"));
+    const getNumberField = (name) => {
+      const value = Number(getFieldValue(name));
+      return Number.isFinite(value) && value >= 0 ? value : 0;
     };
 
-    const updateEstimate = (lang, from, to, stops) => {
-      const serviceType = getFieldValue("service_type");
-      const needHelp = Boolean(form.elements.namedItem("need_help")?.checked);
-      const hasRoute = Boolean(from && to);
-      const hasStops = stops.length > 0;
+    const normalizeAddress = (value) => {
+      const trimmed = value.trim();
+      if (!trimmed) return "";
+      if (/estonia|eesti/i.test(trimmed)) return trimmed;
+      return `${trimmed}, Estonia`;
+    };
 
-      if (!serviceType || !hasRoute) {
-        estimateValue.textContent = t(lang, "estimatePendingValue");
-        estimateText.textContent = t(lang, "estimatePendingText");
+    const roundMoney = (value) => Math.max(0, Math.ceil(value));
+    const roundQuarter = (value) => Math.ceil(value * 4) / 4;
+
+    const formatNumber = (lang, value, digits = 0) =>
+      new Intl.NumberFormat(getLocale(lang), {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits
+      }).format(value);
+
+    const formatDuration = (lang, minutes) => {
+      const total = Math.max(1, Math.round(minutes));
+      const hours = Math.floor(total / 60);
+      const mins = total % 60;
+
+      if (lang === "ru") {
+        if (!hours) return `${mins} мин`;
+        if (!mins) return `${hours} ч`;
+        return `${hours} ч ${mins} мин`;
+      }
+
+      if (lang === "et") {
+        if (!hours) return `${mins} min`;
+        if (!mins) return `${hours} h`;
+        return `${hours} h ${mins} min`;
+      }
+
+      if (!hours) return `${mins} min`;
+      if (!mins) return `${hours} h`;
+      return `${hours} h ${mins} min`;
+    };
+
+    const setMapLink = (points) => {
+      if (points.length < 2) {
+        estimateMapLink.hidden = true;
+        estimateMapLink.removeAttribute("href");
         return;
       }
 
-      const cityRoute = hasRoute && isTallinnRoute(from, to, stops);
-      let description = cityRoute
-        ? t(lang, "estimateCityText")
-        : t(lang, "estimateDistanceText");
+      const [origin, ...rest] = points;
+      const destination = rest[rest.length - 1];
+      const waypoints = rest.slice(0, -1);
+      const params = new URLSearchParams({
+        api: "1",
+        origin,
+        destination,
+        travelmode: "driving"
+      });
 
-      if (needHelp) {
-        description += ` ${t(lang, "estimateHelpSuffix")}`;
-      }
+      if (waypoints.length) params.set("waypoints", waypoints.join("|"));
 
-      if (hasStops) {
-        description += ` ${t(lang, "estimateStopsSuffix")}`;
-      }
-
-      estimateValue.textContent = cityRoute
-        ? t(lang, "estimateCityValue")
-        : t(lang, "estimateDistanceValue");
-      estimateText.textContent = description;
+      estimateMapLink.href = `https://www.google.com/maps/dir/?${params.toString()}`;
+      estimateMapLink.hidden = false;
     };
 
-    const update = () => {
+    const geocodeAddress = async (address) => {
+      const query = normalizeAddress(address);
+      if (!query) return null;
+      if (geocodeCache.has(query)) return geocodeCache.get(query);
+
+      const url = new URL("https://nominatim.openstreetmap.org/search");
+      url.searchParams.set("format", "jsonv2");
+      url.searchParams.set("limit", "1");
+      url.searchParams.set("countrycodes", "ee");
+      url.searchParams.set("q", query);
+
+      const promise = fetch(url.toString(), {
+        headers: { Accept: "application/json" }
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("geocode");
+          return res.json();
+        })
+        .then((items) => {
+          const first = Array.isArray(items) ? items[0] : null;
+          if (!first) return null;
+          return {
+            lat: Number(first.lat),
+            lon: Number(first.lon),
+            label: first.display_name || query
+          };
+        })
+        .catch(() => null);
+
+      geocodeCache.set(query, promise);
+      return promise;
+    };
+
+    const getRouteData = async (addresses) => {
+      const key = addresses.map((value) => normalizeAddress(value)).join(" -> ");
+      if (routeCache.has(key)) return routeCache.get(key);
+
+      const promise = Promise.all(addresses.map((address) => geocodeAddress(address))).then(async (points) => {
+        if (points.some((point) => !point)) return null;
+
+        const coordinates = points.map((point) => `${point.lon},${point.lat}`).join(";");
+        const url = new URL(`https://router.project-osrm.org/route/v1/driving/${coordinates}`);
+        url.searchParams.set("overview", "false");
+        url.searchParams.set("steps", "false");
+
+        try {
+          const res = await fetch(url.toString(), {
+            headers: { Accept: "application/json" }
+          });
+          if (!res.ok) throw new Error("route");
+          const data = await res.json();
+          const route = Array.isArray(data.routes) ? data.routes[0] : null;
+          if (!route) return null;
+
+          return {
+            distanceKm: route.distance / 1000,
+            durationMin: route.duration / 60,
+            geocoded: points
+          };
+        } catch {
+          return null;
+        }
+      });
+
+      routeCache.set(key, promise);
+      return promise;
+    };
+
+    const isTallinnOnly = (routeData) => {
+      const points = routeData?.geocoded || [];
+      if (points.length < 2) return false;
+
+      return points.every((point) => {
+        const label = (point?.label || "").toLowerCase();
+        const lat = Number(point?.lat);
+        const lon = Number(point?.lon);
+        const byName =
+          label.includes("tallinn") ||
+          label.includes("kesklinna") ||
+          label.includes("mustamäe") ||
+          label.includes("lasnamäe") ||
+          label.includes("haabersti") ||
+          label.includes("pirita") ||
+          label.includes("nõmme") ||
+          label.includes("kristiine") ||
+          label.includes("põhja-tallinn");
+        const byBounds =
+          Number.isFinite(lat) &&
+          Number.isFinite(lon) &&
+          lat >= 59.34 &&
+          lat <= 59.49 &&
+          lon >= 24.54 &&
+          lon <= 24.93;
+        return byName || byBounds;
+      });
+    };
+
+    const buildEstimate = (lang, routeData, stops) => {
+      const loaderCount = getNumberField("loader_count");
+      const pickupFloor = getNumberField("pickup_floor");
+      const deliveryFloor = getNumberField("delivery_floor");
+      const hasElevator = Boolean(form.elements.namedItem("has_elevator")?.checked);
+      const floorSum = pickupFloor + deliveryFloor;
+      const floorSurcharge = hasElevator ? 0 : floorSum * PRICE.floorSurcharge;
+      const stopSurcharge = stops.length * PRICE.stopSurcharge;
+      const cityRoute = isTallinnOnly(routeData);
+      const distanceKm = routeData.distanceKm || 0;
+      const durationMin = routeData.durationMin || 0;
+
+      let helpersCost = 0;
+      let vanCost = 0;
+      let total = 0;
+      let mainText = "";
+      let metaText = "";
+
+      if (cityRoute) {
+        const routeHours = roundQuarter(
+          Math.max(
+            PRICE.minimumCityHours,
+            0.75 + durationMin / 60 + stops.length * 0.25 + floorSum * 0.12 + loaderCount * 0.15
+          )
+        );
+
+        vanCost = routeHours * PRICE.cityHourly;
+        helpersCost = routeHours * loaderCount * PRICE.helperHourly;
+        total = roundMoney(vanCost + helpersCost + floorSurcharge + stopSurcharge);
+        mainText = t(lang, "estimateCityText");
+        metaText = t(lang, "estimateCityBreakdown")
+          .replace("{hours}", formatNumber(lang, routeHours, routeHours % 1 ? 2 : 0))
+          .replace("{van}", formatNumber(lang, roundMoney(vanCost)))
+          .replace("{helpers}", formatNumber(lang, roundMoney(helpersCost)));
+      } else {
+        vanCost = Math.max(PRICE.minimumOutsideBase, distanceKm * PRICE.outsideKm);
+        const helperHours = roundQuarter(Math.max(1, durationMin / 60));
+        helpersCost = helperHours * loaderCount * PRICE.helperHourly;
+        total = roundMoney(vanCost + helpersCost + floorSurcharge + stopSurcharge);
+        mainText = t(lang, "estimateDistanceText");
+        metaText = t(lang, "estimateDistanceBreakdown")
+          .replace("{km}", formatNumber(lang, distanceKm, 1))
+          .replace("{van}", formatNumber(lang, roundMoney(vanCost)))
+          .replace("{helpers}", formatNumber(lang, roundMoney(helpersCost)));
+      }
+
+      if (floorSurcharge) {
+        mainText += ` ${t(lang, "estimateFloorsSuffix").replace("{amount}", formatNumber(lang, floorSurcharge))}`;
+      }
+      if (stopSurcharge) {
+        mainText += ` ${t(lang, "estimateStopsSuffix").replace("{amount}", formatNumber(lang, stopSurcharge))}`;
+      }
+      if (helpersCost) {
+        mainText += ` ${t(lang, "estimateHelperLine").replace("{amount}", formatNumber(lang, roundMoney(helpersCost)))}`;
+      }
+
+      return {
+        value: (cityRoute ? t(lang, "estimateCityValue") : t(lang, "estimateDistanceValue")).replace(
+          "{price}",
+          formatNumber(lang, total)
+        ),
+        text: mainText,
+        meta: `${t(lang, "estimateRouteText")
+          .replace("{km}", formatNumber(lang, distanceKm, 1))
+          .replace("{time}", formatDuration(lang, durationMin))} • ${metaText}`
+      };
+    };
+
+    const updateEstimate = async (lang, from, to, stops) => {
+      const serviceType = getFieldValue("service_type");
+      const hasRoute = Boolean(from && to);
+      const routePoints = [from, ...stops, to].filter(Boolean);
+      setMapLink(routePoints);
+
+      if (!serviceType || !hasRoute) {
+        estimateValue.textContent = t(lang, "estimatePendingValue");
+        estimateText.textContent = t(lang, "estimateNoServiceSelected");
+        estimateMeta.textContent = t(lang, "estimateMetaPending");
+        estimateMapLink.hidden = true;
+        return;
+      }
+
+      const currentSeq = ++routeSeq;
+      estimateValue.textContent = t(lang, "estimateCalculatingValue");
+      estimateText.textContent = t(lang, "estimateCalculatingText");
+      estimateMeta.textContent = t(lang, "estimateMetaPending");
+
+      const routeData = await getRouteData(routePoints);
+      if (currentSeq !== routeSeq) return;
+
+      if (!routeData || !routeData.distanceKm) {
+        const loaderCount = getNumberField("loader_count");
+        const floorSum = getNumberField("pickup_floor") + getNumberField("delivery_floor");
+        const floorSurcharge = Boolean(form.elements.namedItem("has_elevator")?.checked)
+          ? 0
+          : floorSum * PRICE.floorSurcharge;
+        const fallbackTotal = roundMoney(
+          PRICE.minimumOutsideBase +
+          loaderCount * PRICE.helperHourly +
+          floorSurcharge +
+          stops.length * PRICE.stopSurcharge
+        );
+
+        estimateValue.textContent = t(lang, "estimateDistanceValue").replace("{price}", formatNumber(lang, fallbackTotal));
+        estimateText.textContent = t(lang, "estimateUnavailableText");
+        estimateMeta.textContent = t(lang, "estimateFallbackMeta");
+        return;
+      }
+
+      const result = buildEstimate(lang, routeData, stops);
+      estimateValue.textContent = result.value;
+      estimateText.textContent = result.text;
+      estimateMeta.textContent = result.meta;
+    };
+
+    const update = async () => {
       const lang = langGetter();
       const completed = requiredNames.filter((name) => getFieldValue(name)).length;
       const total = requiredNames.length;
@@ -1270,7 +1576,7 @@
       const from = getFieldValue("from_address");
       const to = getFieldValue("to_address");
       const stops = stopsApi.getValues();
-      updateEstimate(lang, from, to, stops);
+      await updateEstimate(lang, from, to, stops);
     };
 
     form.addEventListener("input", update);
@@ -1309,9 +1615,12 @@
         `${t(lang, "extraStopLabel").replace("{n}", String(index + 1))}: ${stop}`
       ),
       `${t(lang, "formTo")}: ${data.get("to_address") || "-"}`,
+      `${t(lang, "formPickupFloor")}: ${data.get("pickup_floor") || "0"}`,
+      `${t(lang, "formDeliveryFloor")}: ${data.get("delivery_floor") || "0"}`,
+      `${t(lang, "formHelpers")}: ${data.get("loader_count") || "0"}`,
+      `${t(lang, "formElevator")}: ${data.get("has_elevator") ? t(lang, "commonYes") : t(lang, "commonNo")}`,
       `${t(lang, "formCargo")}: ${data.get("cargo_details") || "-"}`,
-      `${t(lang, "formComment")}: ${data.get("comment") || "-"}`,
-      `${t(lang, "summaryNeedHelp")}: ${data.get("need_help") ? t(lang, "commonYes") : t(lang, "commonNo")}`
+      `${t(lang, "formComment")}: ${data.get("comment") || "-"}`
     ];
 
     return lines.join("\n");
