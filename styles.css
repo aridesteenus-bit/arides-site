@@ -1036,40 +1036,18 @@ h1{
 .quotePanel{
   margin-top:18px;
   margin-bottom:16px;
-  padding:18px;
-  border-radius:24px;
-  background:
-    radial-gradient(220px 120px at 100% 0%, rgba(124,181,255,.14), transparent 58%),
-    linear-gradient(180deg, rgba(243,248,255,.98), rgba(231,241,254,.94));
-  border:1px solid rgba(125,177,255,.2);
-}
-.quotePanel__head{
-  display:flex;
-  gap:16px;
-  align-items:flex-start;
-  margin-bottom:16px;
-}
-.quotePanel__eyebrow{
-  margin:0 0 6px;
-  font-size:11px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#8bb8ff;
-}
-.quotePanel h3{
-  margin:0;
-  font-size:20px;
-  line-height:1.2;
-  color:var(--blue-deep);
+  padding:0;
+  background:none;
+  border:0;
 }
 .estimatePanel{
-  padding:16px 18px;
-  border-radius:20px;
+  padding:18px 18px 16px;
+  border-radius:22px;
   background:
-    radial-gradient(220px 120px at 100% 0%, rgba(80,147,255,.14), transparent 58%),
-    linear-gradient(180deg, rgba(255,255,255,.92), rgba(242,247,255,.96));
-  border:1px solid rgba(125,177,255,.18);
-  margin-bottom:14px;
+    radial-gradient(220px 120px at 100% 0%, rgba(111,173,255,.22), transparent 58%),
+    linear-gradient(145deg, rgba(22,35,61,.98), rgba(43,76,137,.94));
+  border:1px solid rgba(117,170,255,.22);
+  box-shadow:0 18px 34px rgba(18,34,68,.16);
 }
 .estimatePanel__head{
   display:flex;
@@ -1084,10 +1062,10 @@ h1{
   font-weight:800;
   letter-spacing:.18em;
   text-transform:uppercase;
-  color:#7297c9;
+  color:#95bbff;
 }
 .estimatePanel__value{
-  color:var(--blue-deep);
+  color:var(--white);
   font-family:"Space Grotesk", sans-serif;
   font-size:clamp(20px, 2.2vw, 28px);
   line-height:1.05;
@@ -1095,33 +1073,9 @@ h1{
 }
 .estimatePanel__text{
   margin:0;
-  color:#385170;
+  color:rgba(255,255,255,.82);
   font-size:14px;
   line-height:1.58;
-}
-.orderSummary{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  gap:10px;
-}
-.orderSummary__item{
-  padding:14px 15px;
-  border-radius:18px;
-  background:rgba(255,255,255,.84);
-  border:1px solid rgba(125,177,255,.14);
-}
-.orderSummary__label{
-  display:block;
-  margin-bottom:8px;
-  font-size:12px;
-  color:var(--ink-soft);
-}
-.orderSummary__value{
-  color:var(--blue-deep);
-  font-size:15px;
-  line-height:1.45;
-  font-weight:700;
-  word-break:break-word;
 }
 
 .footer{
@@ -1310,8 +1264,7 @@ h1{
   .serviceGrid,
   .pricingGrid,
   .specGrid,
-  .formGrid,
-  .orderSummary{
+  .formGrid{
     grid-template-columns:1fr;
   }
   .hero__visual{
@@ -1333,7 +1286,6 @@ h1{
   .footer__row{
     flex-direction:column;
   }
-  .quotePanel__head,
   .progressPanel__head,
   .estimatePanel__head{
     flex-direction:column;

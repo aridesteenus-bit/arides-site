@@ -90,7 +90,7 @@
 
       vanEyebrow: "Kaubik",
       vanTitle:
-        "Peugeot Boxer 2012, millega on mugav vedada nii mööblit kui materjali",
+        "Peugeot Boxer, millega on mugav vedada nii mööblit kui materjali",
       vanSubtitle:
         "Kaubaruumi pikkus on 3.6 meetrit ning koorma kinnitamiseks on kaubikus olemas rihmad. See tähendab, et vedu on korrastatud, puhas ja turvaline.",
       spec1Title: "3.6 m kaubaruumi pikkus",
@@ -171,7 +171,7 @@
       formComment: "Lisainfo",
       formCommentPh: "Korrus, lift, parkimine, erisoovid, mitu peatust jne.",
       formNeedHelp: "Vajan abi peale- või mahalaadimisel",
-      formSend: "Saada tellimus",
+      formSend: "Saada tellimus arutamisele",
       formSending: "Saadan...",
       formNote:
         "Pärast saatmist võtame ühendust, kinnitame marsruudi, aja ja hinna.",
@@ -321,7 +321,7 @@
         "Оставьте online-заказ, и мы отдельно подтвердим время, маршрут и финальную цену.",
 
       vanEyebrow: "Фургон",
-      vanTitle: "Peugeot Boxer 2012, подходит и для мебели, и для материалов",
+      vanTitle: "Peugeot Boxer, подходит и для мебели, и для материалов",
       vanSubtitle:
         "Длина грузового отсека составляет 3.6 метра, а для фиксации груза внутри есть ремни. Перевозка получается аккуратной, чистой и надежной.",
       spec1Title: "3.6 м внутри грузового отсека",
@@ -401,7 +401,7 @@
       formComment: "Комментарии",
       formCommentPh: "Этаж, лифт, парковка, особые пожелания, сколько точек и т.д.",
       formNeedHelp: "Нужна помощь с погрузкой или разгрузкой",
-      formSend: "Отправить заказ",
+      formSend: "Отправить заявку на рассмотрение",
       formSending: "Отправляем...",
       formNote:
         "После отправки мы свяжемся, чтобы подтвердить маршрут, время и стоимость.",
@@ -552,7 +552,7 @@
 
       vanEyebrow: "Van",
       vanTitle:
-        "Peugeot Boxer 2012 that works well for both furniture and building materials",
+        "Peugeot Boxer that works well for both furniture and building materials",
       vanSubtitle:
         "The cargo area is 3.6 metres long and includes straps for securing the load. That means clean, organised and safer transport for everyday jobs.",
       spec1Title: "3.6 m cargo length",
@@ -633,7 +633,7 @@
       formComment: "Additional details",
       formCommentPh: "Floor, elevator, parking, special notes, number of stops, etc.",
       formNeedHelp: "I need help with loading or unloading",
-      formSend: "Send booking request",
+      formSend: "Send request for review",
       formSending: "Sending...",
       formNote:
         "After you send the request, we will contact you to confirm the route, time and price.",
@@ -1121,13 +1121,7 @@
     const percent = $("#progressPercent");
     const estimateValue = $("#estimateValue");
     const estimateText = $("#estimateText");
-    const summaryService = $("#summaryService");
-    const summaryDate = $("#summaryDate");
-    const summaryTime = $("#summaryTime");
-    const summaryFrom = $("#summaryFrom");
-    const summaryTo = $("#summaryTo");
-    const summaryExtra = $("#summaryExtra");
-    if (!form || !road || !percent || !estimateValue || !estimateText || !summaryService || !summaryDate || !summaryTime || !summaryFrom || !summaryTo || !summaryExtra) return;
+    if (!form || !road || !percent || !estimateValue || !estimateText) return;
 
     const requiredNames = [
       "name",
@@ -1187,37 +1181,6 @@
       estimateText.textContent = description;
     };
 
-    const updateSummary = (lang, from, to, stops) => {
-      const serviceSelect = $('select[name="service_type"]', form);
-      const serviceText = serviceSelect?.selectedOptions?.[0]?.textContent?.trim() || t(lang, "summaryPending");
-      const dateText = getFieldValue("move_date") || t(lang, "summaryPending");
-      const timeText = getFieldValue("move_time") || "--:--";
-      const needHelp = Boolean(form.elements.namedItem("need_help")?.checked);
-
-      summaryService.textContent = serviceText;
-      summaryDate.textContent = dateText;
-      summaryTime.textContent = timeText;
-      summaryFrom.textContent = from || t(lang, "summaryPending");
-      summaryTo.textContent = to || t(lang, "summaryPending");
-
-      if (stops.length && needHelp) {
-        summaryExtra.textContent = t(lang, "summaryExtraBoth").replace("{n}", String(stops.length));
-        return;
-      }
-
-      if (stops.length) {
-        summaryExtra.textContent = t(lang, "summaryExtraStops").replace("{n}", String(stops.length));
-        return;
-      }
-
-      if (needHelp) {
-        summaryExtra.textContent = t(lang, "summaryExtraHelp");
-        return;
-      }
-
-      summaryExtra.textContent = t(lang, "summaryExtraEmpty");
-    };
-
     const update = () => {
       const lang = langGetter();
       const completed = requiredNames.filter((name) => getFieldValue(name)).length;
@@ -1230,7 +1193,6 @@
       const to = getFieldValue("to_address");
       const stops = stopsApi.getValues();
       updateEstimate(lang, from, to, stops);
-      updateSummary(lang, from, to, stops);
     };
 
     form.addEventListener("input", update);
