@@ -1,9 +1,9 @@
 (() => {
   const i18n = {
     et: {
-      metaTitle: "Kaubavedu Tallinnas ja Harjumaal | Kolimine, mööblivedu ja Peugeot Boxer 3.6 m",
+      metaTitle: "Kaubavedu Tallinnas, Harjumaal ja üle Eesti | Kolimine, mööblivedu ja Peugeot Boxer 3.6 m",
       metaDescription:
-        "Kaubavedu ja kolimine Tallinnas ning Harjumaal. Mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga. Kiire kontakt ja online-broneerimine.",
+        "Kaubavedu ja kolimine Tallinnas ning Harjumaal, kokkuleppel ka üle Eesti. Mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga. Kiire kontakt ja online-broneerimine.",
       brandTag: "KAUBAVEDU",
       navServices: "Teenused",
       navPricing: "Hinnad",
@@ -14,12 +14,12 @@
       callNow: "Helista kohe",
 
       heroEyebrow: "Peugeot Boxer • 3.6 m kaubaruum • iga päev",
-      heroTitle: "Kaubavedu ja kolimine Tallinnas ja Harjumaal",
+      heroTitle: "Kaubavedu ja kolimine Tallinnas, Harjumaal ja üle Eesti",
       heroSubtitle:
         "Puhas ja mahukas Peugeot Boxer aitab kolimiste, mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transportimisel. Töötame kiiresti, hoolikalt ja ilma puhkepäevadeta.",
       heroCta: "Broneeri online",
       heroCall: "Helista +372 5684 5377",
-      heroBadge1: "Tallinn ja Harjumaa",
+      heroBadge1: "Tallinn, Harjumaa ja Eesti kokkuleppel",
       heroBadge2: "Mitme peatusega marsruudid",
       heroBadge3: "Kinnitusrihmad kaubikus",
       metric1Value: "3.6 m",
@@ -45,7 +45,7 @@
         "Vedame nii üksikuid suuremaid esemeid kui ka terve kolimise. Vajadusel saab marsruudile lisada mitu peatust: pood, ladu, objekt või jäätmejaam.",
       service1Title: "Korterite ja kontorite kolimine",
       service1Text:
-        "Kiire ja rahulik kolimise abi Tallinnas ning Harjumaal. Sobib kastidele, mööblile, tehnikale ja töövahenditele.",
+        "Kiire ja rahulik kolimise abi Tallinnas ning Harjumaal, kokkuleppel ka mujal Eestis. Sobib kastidele, mööblile, tehnikale ja töövahenditele.",
       service2Title: "Mööbli ja kodutehnika vedu poodidest",
       service2Text:
         "Toome kauba IKEA-st, Depo-st, Bauhofist ja teistest kauplustest otse koju, kontorisse või objektile.",
@@ -73,7 +73,7 @@
       price2Label: "Linnast välja",
       price2Value: "0.90 EUR / km",
       price2Text:
-        "Hea lahendus, kui vaja liikuda Harjumaal või vedada kaupa mitme asukoha vahel.",
+        "Hea lahendus, kui vaja liikuda Harjumaal, sõita üle Eesti või siduda mitu asukohta ühe tellimusega.",
       pricingAsideTitle: "Mis on teenuses juba olemas",
       pricingFeat1: "Puhas ja mahukas Peugeot Boxer",
       pricingFeat2: "Kinnitusrihmad koorma turvaliseks kinnitamiseks",
@@ -84,7 +84,7 @@
       pricingFeat7: "Töötame nii eraklientide kui ettevõtetega",
       pricingFeat8: "Väljastame kviitungi osutatud teenuse kohta",
       euTitle: "Võimalikud veod ka Euroopa Liidu sees",
-      euText: "Rahvusvahelised veod EL piires on võimalikud kokkuleppel. Kirjuta oma marsruut ja vastame eraldi.",
+      euText: "Veod üle Eesti ja rahvusvahelised veod EL piires on võimalikud kokkuleppel. Kirjuta oma marsruut ja vastame eraldi.",
       pricingNote:
         "Kui soovid, saada tellimus läbi vormi ja me kinnitame hinna ning aja eraldi üle.",
 
@@ -217,7 +217,7 @@
       commonNo: "Ei",
 
       footerText:
-        "Kaubavedu ja kolimine Tallinnas ning Harjumaal. Kiire kontakt telefoni, WhatsAppi, Telegrami või online-vormi kaudu.",
+        "Kaubavedu ja kolimine Tallinnas ning Harjumaal, kokkuleppel ka üle Eesti. Kiire kontakt telefoni, WhatsAppi, Telegrami või online-vormi kaudu.",
 
       toastThanks: "Aitäh! Võtame peagi ühendust.",
       toastError: "Saatmine ebaõnnestus. Proovi uuesti.",
@@ -233,9 +233,9 @@
     },
 
     ru: {
-      metaTitle: "Грузоперевозки в Таллинне и Harjumaa | Переезды, мебель и Peugeot Boxer 3.6 м",
+      metaTitle: "Грузоперевозки в Таллинне, Harjumaa и по Эстонии | Переезды, мебель и Peugeot Boxer 3.6 м",
       metaDescription:
-        "Грузоперевозки и переезды в Таллинне и Harjumaa. Перевозка мебели, техники, стройматериалов и других грузов на Peugeot Boxer 3.6 м. Быстрый контакт и online-заказ.",
+        "Грузоперевозки и переезды в Таллинне и Harjumaa, а также по договоренности по всей Эстонии. Перевозка мебели, техники, стройматериалов и других грузов на Peugeot Boxer 3.6 м. Быстрый контакт и online-заказ.",
       brandTag: "KAUBAVEDU",
       navServices: "Услуги",
       navPricing: "Цены",
@@ -246,12 +246,12 @@
       callNow: "Позвонить сейчас",
 
       heroEyebrow: "Peugeot Boxer • грузовой отсек 3.6 м • работаем каждый день",
-      heroTitle: "Грузоперевозки и переезды по Таллинну и Harjumaa",
+      heroTitle: "Грузоперевозки и переезды по Таллинну, Harjumaa и всей Эстонии",
       heroSubtitle:
         "Чистый и вместительный Peugeot Boxer подходит для переездов, доставки мебели, бытовой техники, стройматериалов и других грузов. Работаем быстро, аккуратно и без выходных.",
       heroCta: "Заказать online",
       heroCall: "Позвонить +372 5684 5377",
-      heroBadge1: "Таллинн и Harjumaa",
+      heroBadge1: "Таллинн, Harjumaa и вся Эстония по договоренности",
       heroBadge2: "Маршруты с несколькими точками",
       heroBadge3: "Крепежные ремни в фургоне",
       metric1Value: "3.6 m",
@@ -277,7 +277,7 @@
         "Везем как отдельные крупные предметы, так и полный переезд. При необходимости в маршрут можно добавить магазин, склад, объект или пункт утилизации.",
       service1Title: "Переезды квартир и офисов",
       service1Text:
-        "Быстрая и спокойная помощь при переезде по Таллинну и Harjumaa. Подходит для коробок, мебели, техники и рабочего инвентаря.",
+        "Быстрая и спокойная помощь при переезде по Таллинну и Harjumaa, а по договоренности и по всей Эстонии. Подходит для коробок, мебели, техники и рабочего инвентаря.",
       service2Title: "Доставка мебели и техники из магазинов",
       service2Text:
         "Привезем покупки из IKEA, Depo, Bauhof и других магазинов домой, в офис или на объект.",
@@ -305,7 +305,7 @@
       price2Label: "За пределами города",
       price2Value: "0.90 EUR / km",
       price2Text:
-        "Удобно, если надо ехать по Harjumaa или связать несколько адресов в одном заказе.",
+        "Удобно, если нужно ехать по Harjumaa, по Эстонии или связать несколько адресов в одном заказе.",
       pricingAsideTitle: "Что уже есть в услуге",
       pricingFeat1: "Чистый и вместительный Peugeot Boxer",
       pricingFeat2: "Крепежные ремни для безопасного крепления груза",
@@ -316,7 +316,7 @@
       pricingFeat7: "Работаем как с частными лицами, так и с компаниями",
       pricingFeat8: "Выдаем квитанцию об оказанной услуге",
       euTitle: "Возможны перевозки и внутри Европейского Союза",
-      euText: "Международные перевозки по ЕС возможны по договоренности. Отправьте маршрут, и мы ответим отдельно.",
+      euText: "Перевозки по всей Эстонии и международные перевозки по ЕС возможны по договоренности. Отправьте маршрут, и мы ответим отдельно.",
       pricingNote:
         "Оставьте online-заказ, и мы отдельно подтвердим время, маршрут и финальную цену.",
 
@@ -447,7 +447,7 @@
       commonNo: "Нет",
 
       footerText:
-        "Грузоперевозки и переезды по Таллинну и Harjumaa. Быстрая связь по телефону, WhatsApp, Telegram или через online-форму.",
+        "Грузоперевозки и переезды по Таллинну и Harjumaa, а также по договоренности по всей Эстонии. Быстрая связь по телефону, WhatsApp, Telegram или через online-форму.",
 
       toastThanks: "Спасибо! Мы скоро свяжемся с вами.",
       toastError: "Не удалось отправить форму. Попробуйте еще раз.",
@@ -463,9 +463,9 @@
     },
 
     en: {
-      metaTitle: "Cargo transport and moving in Tallinn and Harjumaa | Furniture, removals and Peugeot Boxer 3.6 m",
+      metaTitle: "Cargo transport in Tallinn, Harjumaa and across Estonia | Furniture, removals and Peugeot Boxer 3.6 m",
       metaDescription:
-        "Cargo transport and moving services in Tallinn and Harjumaa. Furniture, appliance and building material delivery with a clean Peugeot Boxer 3.6 m cargo van, fast contact and online booking.",
+        "Cargo transport and moving services in Tallinn and Harjumaa, and across Estonia by agreement. Furniture, appliance and building material delivery with a clean Peugeot Boxer 3.6 m cargo van, fast contact and online booking.",
       brandTag: "TRANSPORT",
       navServices: "Services",
       navPricing: "Prices",
@@ -476,12 +476,12 @@
       callNow: "Call now",
 
       heroEyebrow: "Peugeot Boxer • 3.6 m cargo area • every day",
-      heroTitle: "Cargo transport and moving in Tallinn and Harjumaa",
+      heroTitle: "Cargo transport and moving in Tallinn, Harjumaa and across Estonia",
       heroSubtitle:
         "A clean and spacious Peugeot Boxer is ready for moves, furniture delivery, home appliances, building materials and custom transport jobs. We work fast, carefully and without days off.",
       heroCta: "Book online",
       heroCall: "Call +372 5684 5377",
-      heroBadge1: "Tallinn and Harjumaa",
+      heroBadge1: "Tallinn, Harjumaa and Estonia by agreement",
       heroBadge2: "Routes with multiple stops",
       heroBadge3: "Tie-down straps in the van",
       metric1Value: "3.6 m",
@@ -507,7 +507,7 @@
         "We handle everything from one large item to a full move. If needed, the route can include a shop, warehouse, worksite or recycling station stop.",
       service1Title: "Apartment and office moving",
       service1Text:
-        "Fast and careful moving help across Tallinn and Harjumaa. Good for boxes, furniture, electronics and work equipment.",
+        "Fast and careful moving help across Tallinn and Harjumaa, and by agreement elsewhere in Estonia. Good for boxes, furniture, electronics and work equipment.",
       service2Title: "Furniture and appliance pickup from stores",
       service2Text:
         "We deliver purchases from IKEA, Depo, Bauhof and other stores straight to your home, office or worksite.",
@@ -535,7 +535,7 @@
       price2Label: "Outside the city",
       price2Value: "0.90 EUR / km",
       price2Text:
-        "A good option if you need transport around Harjumaa or between several locations in one trip.",
+        "A good option if you need transport around Harjumaa, across Estonia or between several locations in one trip.",
       pricingAsideTitle: "What is already included",
       pricingFeat1: "Clean and spacious Peugeot Boxer",
       pricingFeat2: "Tie-down straps for safe cargo securing",
@@ -546,7 +546,7 @@
       pricingFeat7: "We work with both private clients and companies",
       pricingFeat8: "We provide a receipt for the completed service",
       euTitle: "Transport inside the European Union is also possible",
-      euText: "International transport within the EU is available by agreement. Send your route and we will reply separately.",
+      euText: "Transport across Estonia and international transport within the EU are available by agreement. Send your route and we will reply separately.",
       pricingNote:
         "Send the order through the form and we will confirm the route, time and final price with you directly.",
 
@@ -679,7 +679,7 @@
       commonNo: "No",
 
       footerText:
-        "Cargo transport and moving in Tallinn and Harjumaa. Fast contact by phone, WhatsApp, Telegram or the online booking form.",
+        "Cargo transport and moving in Tallinn and Harjumaa, and across Estonia by agreement. Fast contact by phone, WhatsApp, Telegram or the online booking form.",
 
       toastThanks: "Thank you! We will contact you shortly.",
       toastError: "Sending failed. Please try again.",
