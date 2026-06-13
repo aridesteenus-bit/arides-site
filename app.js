@@ -218,6 +218,9 @@
 
       footerText:
         "Kaubavedu ja kolimine Tallinnas ning Harjumaal, kokkuleppel ka üle Eesti. Kiire kontakt telefoni, WhatsAppi, Telegrami või online-vormi kaudu.",
+      legalPrivacy: "Privaatsus",
+      legalCookies: "Küpsised",
+      legalTerms: "Tingimused",
 
       toastThanks: "Aitäh! Võtame peagi ühendust.",
       toastError: "Saatmine ebaõnnestus. Proovi uuesti.",
@@ -225,6 +228,7 @@
       validationRequired: "Palun täitke see väli.",
       validationEmail: "Palun sisestage korrektne e-posti aadress.",
       validationPhone: "Palun sisestage korrektne telefoninumber.",
+      validationConsentRequired: "Palun nõustuge privaatsustingimuste ja kasutustingimustega.",
       validationDateRequired: "Palun valige kuupäev.",
       validationTimeRequired: "Palun valige kellaaeg.",
       validationDateInvalid: "Palun sisestage kuupäev kujul pp.kk.aaaa.",
@@ -448,6 +452,9 @@
 
       footerText:
         "Грузоперевозки и переезды по Таллинну и Harjumaa, а также по договоренности по всей Эстонии. Быстрая связь по телефону, WhatsApp, Telegram или через online-форму.",
+      legalPrivacy: "Конфиденциальность",
+      legalCookies: "Cookies",
+      legalTerms: "Правила",
 
       toastThanks: "Спасибо! Мы скоро свяжемся с вами.",
       toastError: "Не удалось отправить форму. Попробуйте еще раз.",
@@ -455,6 +462,7 @@
       validationRequired: "Пожалуйста, заполните это поле.",
       validationEmail: "Пожалуйста, введите корректный e-mail.",
       validationPhone: "Пожалуйста, введите корректный номер телефона.",
+      validationConsentRequired: "Пожалуйста, подтвердите согласие с политикой конфиденциальности и правилами сайта.",
       validationDateRequired: "Пожалуйста, выберите дату.",
       validationTimeRequired: "Пожалуйста, выберите время.",
       validationDateInvalid: "Пожалуйста, введите дату в формате дд.мм.гггг.",
@@ -680,6 +688,9 @@
 
       footerText:
         "Cargo transport and moving in Tallinn and Harjumaa, and across Estonia by agreement. Fast contact by phone, WhatsApp, Telegram or the online booking form.",
+      legalPrivacy: "Privacy",
+      legalCookies: "Cookies",
+      legalTerms: "Terms",
 
       toastThanks: "Thank you! We will contact you shortly.",
       toastError: "Sending failed. Please try again.",
@@ -687,6 +698,7 @@
       validationRequired: "Please fill out this field.",
       validationEmail: "Please enter a valid email address.",
       validationPhone: "Please enter a valid phone number.",
+      validationConsentRequired: "Please confirm that you agree to the privacy policy and site terms.",
       validationDateRequired: "Please choose a date.",
       validationTimeRequired: "Please choose a time.",
       validationDateInvalid: "Please enter the date in the format dd/mm/yyyy.",
@@ -777,14 +789,80 @@
     const metaDescription = $('meta[name="description"]');
     if (metaDescription) metaDescription.setAttribute("content", t(lang, "metaDescription"));
 
+    syncLangBlocks(lang);
     refreshStopsText();
     refreshGalleryText();
+  }
+
+  function syncLangBlocks(lang) {
+    $$("[data-lang-block]").forEach((el) => {
+      el.hidden = el.getAttribute("data-lang-block") !== lang;
+    });
+  }
+
+  function initLegalModal(langGetter) {
+    const modal = $("#legalModal");
+    const closeBtn = $("#legalClose");
+    const tabs = $$("[data-legal-tab]", modal);
+    const sections = $$("[data-legal-section]", modal);
+    const openers = $$("[data-legal-open]");
+    if (!modal || !closeBtn || !tabs.length || !sections.length) return;
+
+    const setSection = (sectionId) => {
+      const target = sectionId || "privacy";
+      tabs.forEach((tab) => {
+        const active = tab.getAttribute("data-legal-tab") === target;
+        tab.classList.toggle("is-active", active);
+        tab.setAttribute("aria-selected", String(active));
+      });
+      sections.forEach((section) => {
+        const active = section.getAttribute("data-legal-section") === target;
+        section.classList.toggle("is-active", active);
+        section.hidden = !active;
+      });
+    };
+
+    const open = (sectionId) => {
+      setSection(sectionId);
+      syncLangBlocks(langGetter());
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const close = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    openers.forEach((opener) => {
+      opener.addEventListener("click", (e) => {
+        e.preventDefault();
+        open(opener.getAttribute("data-legal-open"));
+      });
+    });
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        setSection(tab.getAttribute("data-legal-tab"));
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) close();
+    });
   }
 
   function getValidationMessage(input, lang) {
     if (!input?.validity) return "";
 
     if (input.validity.valueMissing) {
+      if (input.name === "privacy_consent") return t(lang, "validationConsentRequired");
       if (input.name === "move_date") return t(lang, "validationDateRequired");
       if (input.name === "move_time") return t(lang, "validationTimeRequired");
       return t(lang, "validationRequired");
@@ -1328,6 +1406,7 @@
     initBookingAssist(getLang, stopsApi);
     initFormEmail(getLang, stopsApi);
     initLocalizedValidation(getLang);
+    initLegalModal(getLang);
     initSmoothScroll();
     applyLang(currentLang);
 

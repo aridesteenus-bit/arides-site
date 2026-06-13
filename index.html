@@ -580,6 +580,15 @@
             <span data-i18n="formNeedHelp">Vajan abi peale- või mahalaadimisel</span>
           </label>
 
+          <label class="checkRow checkRow--legal">
+            <input type="checkbox" name="privacy_consent" required />
+            <span class="checkRow__legalText">
+              <span data-lang-block="et">Nõustun <a href="#legal" class="legalInlineLink" data-legal-open="privacy">privaatsustingimustega</a> ja <a href="#legal" class="legalInlineLink" data-legal-open="terms">kasutustingimustega</a>. Esitatud andmeid kasutatakse ainult päringu töötlemiseks ja kliendiga ühenduse võtmiseks.</span>
+              <span data-lang-block="ru">Я соглашаюсь с <a href="#legal" class="legalInlineLink" data-legal-open="privacy">политикой конфиденциальности</a> и <a href="#legal" class="legalInlineLink" data-legal-open="terms">правилами сайта</a>. Указанные данные используются только для обработки заявки и связи с клиентом.</span>
+              <span data-lang-block="en">I agree to the <a href="#legal" class="legalInlineLink" data-legal-open="privacy">privacy policy</a> and the <a href="#legal" class="legalInlineLink" data-legal-open="terms">site terms</a>. The submitted data is used only to process the request and contact the customer.</span>
+            </span>
+          </label>
+
           <input type="hidden" name="email" value="" />
           <textarea name="message" hidden></textarea>
 
@@ -601,6 +610,12 @@
           <a href="mailto:aridesteenus@gmail.com">aridesteenus@gmail.com</a>
           <a href="https://t.me/aridesitlab" target="_blank" rel="noreferrer">@aridesitlab</a>
         </div>
+
+        <div class="footer__legal">
+          <a href="#legal" data-legal-open="privacy" data-i18n="legalPrivacy">Privaatsus</a>
+          <a href="#legal" data-legal-open="cookies" data-i18n="legalCookies">Küpsised</a>
+          <a href="#legal" data-legal-open="terms" data-i18n="legalTerms">Tingimused</a>
+        </div>
       </div>
     </footer>
   </main>
@@ -615,6 +630,123 @@
       </div>
       <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
       <p class="modal__caption" id="modalCaption"></p>
+    </div>
+  </div>
+
+  <div class="modal legalModal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Legal information">
+    <div class="modal__panel legalModal__panel">
+      <button class="iconBtn modal__close" id="legalClose" type="button" aria-label="Close">✕</button>
+
+      <div class="legalModal__header">
+        <p class="legalModal__eyebrow">
+          <span data-lang-block="et">Oluline info</span>
+          <span data-lang-block="ru">Важная информация</span>
+          <span data-lang-block="en">Important information</span>
+        </p>
+        <h3 class="legalModal__title">
+          <span data-lang-block="et">Privaatsus, küpsised ja kasutustingimused</span>
+          <span data-lang-block="ru">Конфиденциальность, cookies и правила сайта</span>
+          <span data-lang-block="en">Privacy, cookies and site terms</span>
+        </h3>
+
+        <div class="legalTabs" role="tablist" aria-label="Legal sections">
+          <button class="legalTab is-active" id="legalTabPrivacy" type="button" role="tab" aria-selected="true" data-legal-tab="privacy" data-i18n="legalPrivacy">Privaatsus</button>
+          <button class="legalTab" id="legalTabCookies" type="button" role="tab" aria-selected="false" data-legal-tab="cookies" data-i18n="legalCookies">Küpsised</button>
+          <button class="legalTab" id="legalTabTerms" type="button" role="tab" aria-selected="false" data-legal-tab="terms" data-i18n="legalTerms">Tingimused</button>
+        </div>
+      </div>
+
+      <div class="legalBody">
+        <section class="legalSection is-active" data-legal-section="privacy" role="tabpanel" aria-labelledby="legalTabPrivacy">
+          <div data-lang-block="et">
+            <p>ARIDES kasutab kliendi andmeid ainult päringu töötlemiseks, kliendiga ühenduse võtmiseks, marsruudi täpsustamiseks, hinna kinnitamiseks ja teenuse osutamiseks.</p>
+            <ul>
+              <li>Kogume ainult tellimuse jaoks vajalikke andmeid: nimi, telefon, e-post soovi korral, aadressid, kuupäev, kellaaeg ja tellimuse kirjeldus.</li>
+              <li>Andmeid ei müüda ega jagata reklaami või kõrvaliste turunduskanalite jaoks.</li>
+              <li>Tehnilised teenusepakkujad võivad andmeid töödelda ainult ulatuses, mis on vajalik päringu saatmiseks, vastuse edastamiseks või töökorralduseks.</li>
+              <li>Andmeid säilitatakse ainult nii kaua, kui see on vajalik päringu menetlemiseks, suhtluseks ja vajadusel seadusest tulenevate kohustuste täitmiseks.</li>
+              <li>Kui soovid oma andmeid parandada või kustutada, võta ühendust: <a href="mailto:aridesteenus@gmail.com">aridesteenus@gmail.com</a>.</li>
+            </ul>
+          </div>
+          <div data-lang-block="ru">
+            <p>ARIDES использует данные клиента только для обработки заявки, связи с клиентом, уточнения маршрута, подтверждения цены и оказания услуги.</p>
+            <ul>
+              <li>Мы собираем только те данные, которые нужны для заказа: имя, телефон, e-mail при желании, адреса, дату, время и описание перевозки.</li>
+              <li>Данные не продаются и не передаются для рекламы или стороннего маркетинга.</li>
+              <li>Технические сервисы могут обрабатывать данные только в той мере, в которой это нужно для отправки заявки, передачи ответа или организации работы.</li>
+              <li>Данные хранятся только столько, сколько нужно для обработки заявки, связи с клиентом и, при необходимости, выполнения обязательств по закону.</li>
+              <li>Если вы хотите исправить или удалить свои данные, свяжитесь с нами: <a href="mailto:aridesteenus@gmail.com">aridesteenus@gmail.com</a>.</li>
+            </ul>
+          </div>
+          <div data-lang-block="en">
+            <p>ARIDES uses customer data only to process the request, contact the customer, clarify the route, confirm pricing and provide the service.</p>
+            <ul>
+              <li>We collect only the data needed for the order: name, phone, optional email, addresses, date, time and cargo description.</li>
+              <li>Data is not sold or shared for advertising or unrelated marketing purposes.</li>
+              <li>Technical service providers may process data only to the extent required to send the request, deliver a response or organize the service.</li>
+              <li>Data is kept only as long as necessary for request handling, customer communication and, where required, compliance with legal obligations.</li>
+              <li>If you want to correct or delete your data, contact us at <a href="mailto:aridesteenus@gmail.com">aridesteenus@gmail.com</a>.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="legalSection" data-legal-section="cookies" role="tabpanel" aria-labelledby="legalTabCookies" hidden>
+          <div data-lang-block="et">
+            <p>Praegu ei kasuta see veebileht reklaami- ega analüütikaküpsiseid. Veebileht kasutab ainult tehnilisi lahendusi, mis on vajalikud saidi toimimiseks ja keelevaliku meelespidamiseks.</p>
+            <ul>
+              <li>Keelesätet võidakse salvestada brauseri lokaalsesse salvestusse, et järgmine külastus oleks mugavam.</li>
+              <li>Ilma selliste tehniliste salvestusteta ei pruugi keelevalik või osa vormi mugavusfunktsioone õigesti toimida.</li>
+              <li>Kui tulevikus lisame analüütika või reklaamiküpsised, uuendame seda teavet eraldi.</li>
+            </ul>
+          </div>
+          <div data-lang-block="ru">
+            <p>Сейчас этот сайт не использует рекламные или аналитические cookies. Сайт использует только технические механизмы, необходимые для работы страницы и запоминания выбранного языка.</p>
+            <ul>
+              <li>Выбранный язык может сохраняться в локальном хранилище браузера, чтобы сайт открывался удобнее при следующем посещении.</li>
+              <li>Без такого технического хранения настройка языка и часть удобных функций формы могут работать некорректно.</li>
+              <li>Если в будущем будут добавлены аналитические или рекламные cookies, эта информация будет обновлена отдельно.</li>
+            </ul>
+          </div>
+          <div data-lang-block="en">
+            <p>This website currently does not use advertising or analytics cookies. It only uses technical storage needed for the site to function and to remember the selected language.</p>
+            <ul>
+              <li>Your language preference may be stored in the browser's local storage to make future visits more convenient.</li>
+              <li>Without such technical storage, language settings and some form convenience features may not work correctly.</li>
+              <li>If analytics or advertising cookies are added in the future, this information will be updated separately.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="legalSection" data-legal-section="terms" role="tabpanel" aria-labelledby="legalTabTerms" hidden>
+          <div data-lang-block="et">
+            <p>Veebilehel kuvatud hinnad ja kirjeldused on informatiivsed. Lõplik hind, aeg ja marsruut kinnitatakse pärast päringu ülevaatamist.</p>
+            <ul>
+              <li>Klient peab esitama õiged kontaktandmed, aadressid ja koorma kirjelduse.</li>
+              <li>Kui tellimus sisaldab eritingimusi, lisapeatusi, raskemat koormat või pikemat marsruuti, täpsustatakse hind eraldi.</li>
+              <li>Veod üle Eesti ja Euroopa Liidu sees toimuvad kokkuleppel.</li>
+              <li>Teenusepakkuja võib keelduda tellimusest, kui see on ohtlik, ebaseaduslik või ei vasta tegelikele võimalustele.</li>
+            </ul>
+          </div>
+          <div data-lang-block="ru">
+            <p>Цены и описания на сайте носят ориентировочный и информационный характер. Финальная цена, время и маршрут подтверждаются после рассмотрения заявки.</p>
+            <ul>
+              <li>Клиент должен указать корректные контактные данные, адреса и описание груза.</li>
+              <li>Если заказ включает особые условия, дополнительные точки, более тяжёлый груз или длинный маршрут, цена уточняется отдельно.</li>
+              <li>Перевозки по Эстонии и внутри Европейского Союза выполняются по договоренности.</li>
+              <li>Исполнитель вправе отказаться от заказа, если он является опасным, незаконным или не соответствует фактическим возможностям перевозки.</li>
+            </ul>
+          </div>
+          <div data-lang-block="en">
+            <p>Prices and descriptions on the website are indicative and informational. The final price, time and route are confirmed after the request is reviewed.</p>
+            <ul>
+              <li>The customer must provide correct contact details, addresses and cargo information.</li>
+              <li>If the order includes special conditions, extra stops, heavier cargo or a longer route, pricing is confirmed separately.</li>
+              <li>Transport across Estonia and within the European Union is provided by agreement.</li>
+              <li>The service provider may refuse an order if it is unsafe, unlawful or does not match the actual transport capabilities.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 
