@@ -938,6 +938,14 @@ h1{
   flex-direction:column;
   gap:9px;
 }
+.field__control{
+  position:relative;
+}
+.field__control--picker .pickerInput,
+.field__control--picker input{
+  padding-right:56px;
+  cursor:pointer;
+}
 .field--full{
   grid-column:1 / -1;
 }
@@ -969,6 +977,63 @@ h1{
 .field textarea{
   resize:vertical;
   min-height:112px;
+}
+.pickerButton{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:rgba(47,100,203,.1);
+  color:#2f64cb;
+  cursor:pointer;
+  transition:background .16s ease, color .16s ease, transform .16s ease;
+}
+.pickerButton:hover{
+  background:rgba(47,100,203,.16);
+}
+.pickerButton:focus-visible{
+  outline:2px solid rgba(47,100,203,.34);
+  outline-offset:2px;
+}
+.pickerButton svg{
+  width:19px;
+  height:19px;
+}
+.flatpickr-calendar{
+  border:1px solid rgba(28,52,96,.12);
+  border-radius:18px;
+  box-shadow:0 24px 60px rgba(15,35,72,.18);
+  font-family:"Manrope", sans-serif;
+}
+.flatpickr-months .flatpickr-month,
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year{
+  font-family:"Space Grotesk", sans-serif;
+  font-weight:700;
+}
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-time input:hover,
+.flatpickr-time .flatpickr-am-pm:hover{
+  background:#2f64cb;
+  border-color:#2f64cb;
+}
+.flatpickr-day.today{
+  border-color:#2f64cb;
+}
+.flatpickr-time input.flatpickr-hour,
+.flatpickr-time input.flatpickr-minute{
+  font-weight:800;
 }
 .field__topline{
   display:flex;

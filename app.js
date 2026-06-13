@@ -161,6 +161,8 @@
       formDatePh: "pp.kk.aaaa",
       formTime: "Kellaaeg",
       formTimePh: "hh:mm",
+      pickerDateAria: "Ava kuupäevakalender",
+      pickerTimeAria: "Ava kellaaja valik",
       formFrom: "Aadress, kust laadida",
       formFromPh: "Näiteks Mustamäe tee 10, Tallinn",
       formStops: "Lisapeatused",
@@ -413,6 +415,8 @@
       formDatePh: "дд.мм.гггг",
       formTime: "Время",
       formTimePh: "чч:мм",
+      pickerDateAria: "Открыть календарь даты",
+      pickerTimeAria: "Открыть выбор времени",
       formFrom: "Адрес погрузки",
       formFromPh: "Например Mustamäe tee 10, Tallinn",
       formStops: "Дополнительные точки",
@@ -667,6 +671,8 @@
       formDatePh: "dd/mm/yyyy",
       formTime: "Time",
       formTimePh: "hh:mm",
+      pickerDateAria: "Open date picker",
+      pickerTimeAria: "Open time picker",
       formFrom: "Pickup address",
       formFromPh: "For example Mustamae tee 10, Tallinn",
       formStops: "Extra stops",
@@ -776,6 +782,8 @@
 
   let refreshGalleryText = () => {};
   let refreshStopsText = () => {};
+  let refreshDateTimePickers = () => {};
+  let resetDateTimePickers = () => {};
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -807,6 +815,17 @@
 
   function getLocale(lang) {
     return localeMap[lang] || localeMap.et;
+  }
+
+  function getPickerLocale(lang) {
+    if (!window.flatpickr) return "default";
+    if (lang === "ru" && window.flatpickr.l10ns?.ru) return window.flatpickr.l10ns.ru;
+    if (lang === "et" && window.flatpickr.l10ns?.et) return window.flatpickr.l10ns.et;
+    return window.flatpickr.l10ns?.default || "default";
+  }
+
+  function getDateAltFormat(lang) {
+    return lang === "en" ? "d/m/Y" : "d.m.Y";
   }
 
   function applyNativeLocale(lang) {
@@ -846,6 +865,7 @@
     syncLangBlocks(lang);
     refreshStopsText();
     refreshGalleryText();
+    refreshDateTimePickers();
   }
 
   function syncLangBlocks(lang) {
@@ -937,6 +957,25 @@
   function parseDateValue(value, lang) {
     const trimmed = value.trim();
     if (!trimmed) return null;
+
+    const isoMatch = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (isoMatch) {
+      const [, rawYear, rawMonth, rawDay] = isoMatch;
+      const year = Number(rawYear);
+      const month = Number(rawMonth);
+      const day = Number(rawDay);
+      const parsed = new Date(year, month - 1, day);
+      if (
+        parsed.getFullYear() !== year ||
+        parsed.getMonth() !== month - 1 ||
+        parsed.getDate() !== day
+      ) {
+        return null;
+      }
+
+      parsed.setHours(0, 0, 0, 0);
+      return parsed;
+    }
 
     const match = trimmed.match(/^(\d{2})[./-](\d{2})[./-](\d{4})$/);
     if (!match) return null;
@@ -1054,6 +1093,110 @@
 
       applyFieldValidationState(input, langGetter());
     });
+  }
+
+  function formatDateForSummary(value, lang) {
+    if (!value) return "-";
+
+    const parsedDate = parseDateValue(value, lang);
+    if (!parsedDate) return value;
+
+    return new Intl.DateTimeFormat(getLocale(lang), {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric"
+    }).format(parsedDate);
+  }
+
+  function initDateTimePickers(langGetter) {
+    const dateInput = $("#moveDate");
+    const timeInput = $("#moveTime");
+    if (!dateInput || !timeInput || !window.flatpickr) return;
+
+    const pickerButtons = $$("[data-picker-target]");
+    const prevArrow =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 6.3a1 1 0 0 1 0 1.4L10.41 12l4.3 4.3a1 1 0 1 1-1.42 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.42 0Z"/></svg>';
+    const nextArrow =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.3 17.7a1 1 0 0 1 0-1.4l4.29-4.3-4.3-4.3a1 1 0 1 1 1.42-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.42 0Z"/></svg>';
+
+    const datePicker = window.flatpickr(dateInput, {
+      altInput: true,
+      altInputClass: "pickerInput",
+      altFormat: getDateAltFormat(langGetter()),
+      dateFormat: "Y-m-d",
+      minDate: "today",
+      disableMobile: true,
+      allowInput: false,
+      monthSelectorType: "static",
+      locale: getPickerLocale(langGetter()),
+      prevArrow,
+      nextArrow,
+      onChange: () => applyFieldValidationState(dateInput, langGetter())
+    });
+
+    const timePicker = window.flatpickr(timeInput, {
+      altInput: true,
+      altInputClass: "pickerInput",
+      altFormat: "H:i",
+      dateFormat: "H:i",
+      enableTime: true,
+      noCalendar: true,
+      time_24hr: true,
+      minuteIncrement: 15,
+      disableMobile: true,
+      allowInput: false,
+      locale: getPickerLocale(langGetter()),
+      prevArrow,
+      nextArrow,
+      onChange: () => applyFieldValidationState(timeInput, langGetter())
+    });
+
+    const syncPickerUi = (lang) => {
+      const locale = getLocale(lang);
+
+      datePicker.set("locale", getPickerLocale(lang));
+      datePicker.set("altFormat", getDateAltFormat(lang));
+      timePicker.set("locale", getPickerLocale(lang));
+
+      if (datePicker.altInput) {
+        datePicker.altInput.placeholder = t(lang, "formDatePh");
+        datePicker.altInput.setAttribute("lang", locale);
+      }
+
+      if (timePicker.altInput) {
+        timePicker.altInput.placeholder = t(lang, "formTimePh");
+        timePicker.altInput.setAttribute("lang", locale);
+      }
+
+      const dateButton = $('[data-picker-target="moveDate"]');
+      const timeButton = $('[data-picker-target="moveTime"]');
+      if (dateButton) dateButton.setAttribute("aria-label", t(lang, "pickerDateAria"));
+      if (timeButton) timeButton.setAttribute("aria-label", t(lang, "pickerTimeAria"));
+
+      if (datePicker.selectedDates.length) {
+        datePicker.setDate(datePicker.selectedDates, false);
+      }
+
+      if (timePicker.selectedDates.length) {
+        timePicker.setDate(timeInput.value, false, "H:i");
+      }
+    };
+
+    pickerButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-picker-target");
+        if (targetId === "moveDate") datePicker.open();
+        if (targetId === "moveTime") timePicker.open();
+      });
+    });
+
+    refreshDateTimePickers = () => syncPickerUi(langGetter());
+    resetDateTimePickers = () => {
+      datePicker.clear();
+      timePicker.clear();
+    };
+
+    syncPickerUi(langGetter());
   }
 
   function initLangMenu() {
@@ -1608,7 +1751,7 @@
       `${t(lang, "formName")}: ${data.get("name") || "-"}`,
       `${t(lang, "formPhone")}: ${data.get("phone") || "-"}`,
       `${t(lang, "formEmail")}: ${data.get("customer_email") || "-"}`,
-      `${t(lang, "formDate")}: ${data.get("move_date") || "-"}`,
+      `${t(lang, "formDate")}: ${formatDateForSummary(data.get("move_date"), lang)}`,
       `${t(lang, "formTime")}: ${data.get("move_time") || "-"}`,
       `${t(lang, "formFrom")}: ${data.get("from_address") || "-"}`,
       ...extraStops.map((stop, index) =>
@@ -1676,6 +1819,7 @@
 
         await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
         form.reset();
+        resetDateTimePickers();
         $('input[name="email"]', form).value = "";
         $('textarea[name="message"]', form).value = "";
         stopsApi.clear();
@@ -1712,6 +1856,7 @@
     initLangMenu();
     const stopsApi = initStops(getLang);
     initGallery(getLang);
+    initDateTimePickers(getLang);
     initBookingAssist(getLang, stopsApi);
     initFormEmail(getLang, stopsApi);
     initLocalizedValidation(getLang);
