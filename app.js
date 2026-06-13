@@ -1,289 +1,715 @@
 (() => {
   const i18n = {
-    en: {
-      brandTag: "LAB",
-      navServices: "Services",
-      navStack: "Stack",
-      navWorks: "Work",
-      navContact: "Contacts",
+    et: {
+      metaTitle: "Kaubavedu Tallinnas ja Harjumaal | Kolimine, mööblivedu ja Peugeot Boxer 3.6 m",
+      metaDescription:
+        "Kaubavedu ja kolimine Tallinnas ning Harjumaal. Mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga. Kiire kontakt ja online-broneerimine.",
+      brandTag: "KAUBAVEDU",
+      navServices: "Teenused",
+      navPricing: "Hinnad",
+      navVan: "Kaubik",
+      navGallery: "Galerii",
+      navBooking: "Broneeri",
+      navContact: "Kontakt",
+      callNow: "Helista kohe",
 
-      heroTitle: "ARIDES — lab for websites & app development",
+      heroEyebrow: "Peugeot Boxer • 3.6 m kaubaruum • iga päev",
+      heroTitle: "Kaubavedu ja kolimine Tallinnas ja Harjumaal",
       heroSubtitle:
-        "We build websites, mobile apps and business automation. From idea to publishing on the App Store and Google Play.",
-      ctaContact: "Contact us",
-      ctaWorks: "View work",
-      heroMeta: "Fast • neat • on point",
+        "Puhas ja mahukas Peugeot Boxer aitab kolimiste, mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transportimisel. Töötame kiiresti, hoolikalt ja ilma puhkepäevadeta.",
+      heroCta: "Broneeri online",
+      heroCall: "Helista +372 5684 5377",
+      heroBadge1: "Tallinn ja Harjumaa",
+      heroBadge2: "Mitme peatusega marsruudid",
+      heroBadge3: "Kinnitusrihmad kaubikus",
+      metric1Value: "3.6 m",
+      metric1Label: "kaubaruumi pikkus",
+      metric2Value: "30 EUR / h",
+      metric2Label: "alates linnas",
+      metric3Value: "0.90 EUR / km",
+      metric3Label: "linnast välja",
+      heroImgAlt: "Peugeot Boxer kaubik Tallinnas",
+      heroSideAlt: "Puitmaterjali laadimine kaubikusse",
+      heroNotePriceTitle: "Linnas",
+      heroNotePriceText: "alates 30 EUR / tund",
+      heroNoteRouteTitle: "Paindlik marsruut",
+      heroNoteRouteText: "Lisa online mitu peatust",
 
-      servicesTitle: "Services",
+      trust1: "Korterite ja kontorite kolimine",
+      trust2: "Mööbli, tehnika ja ehitusmaterjalide vedu",
+      trust3: "Töötame nii eraklientide kui ettevõtetega ja väljastame kviitungi",
+
+      servicesEyebrow: "Teenused",
+      servicesTitle: "Millega saame aidata",
       servicesSubtitle:
-        "We craft a solution end-to-end: design → development → launch.",
-      svc1Title: "Websites & landing pages",
-      svc1Text: "Modern responsive sites, fast pages, forms and analytics.",
-      svc2Title: "Android & iOS apps",
-      svc2Text:
-        "Development and publishing to Google Play and App Store. Stable and user-friendly.",
-      svc3Title: "UI/UX design & prototyping",
-      svc3Text:
-        "Prototypes, design systems, clear flows. Beautiful and usable.",
-      svc4Title: "Integrations, payments, API",
-      svc4Text:
-        "Connect services, automate processes, build integrations and backend logic.",
-      svc5Title: "Support & growth",
-      svc5Text: "Updates, improvements and new features after launch.",
+        "Vedame nii üksikuid suuremaid esemeid kui ka terve kolimise. Vajadusel saab marsruudile lisada mitu peatust: pood, ladu, objekt või jäätmejaam.",
+      service1Title: "Korterite ja kontorite kolimine",
+      service1Text:
+        "Kiire ja rahulik kolimise abi Tallinnas ning Harjumaal. Sobib kastidele, mööblile, tehnikale ja töövahenditele.",
+      service2Title: "Mööbli ja kodutehnika vedu poodidest",
+      service2Text:
+        "Toome kauba IKEA-st, Depo-st, Bauhofist ja teistest kauplustest otse koju, kontorisse või objektile.",
+      service3Title: "Ehitusmaterjalide kohaletoimetamine",
+      service3Text:
+        "Pikem materjal, plaadid, pakid ja töövahendid liiguvad turvaliselt. Kaubikus on kinnitusrihmad koorma fikseerimiseks.",
+      service4Title: "Vana mööbli ja prügi äravedu",
+      service4Text:
+        "Viime vanad esemed või ehitusprahi jäätmejaama, et objekt või kodu saaks kiiresti puhtaks.",
+      service5Title: "Mitme peatusega tellimused",
+      service5Text:
+        "Võimalik on sõita vahepeal poodi, lattu või teisele aadressile ja alles siis lõpp-punkti. Online-vormis saad kõik peatused lisada.",
+      service6Title: "Puhas kaubik ja kindel teenindus",
+      service6Text:
+        "Peugeot Boxer on puhas, mahukas ja sobib hästi nii kodukolimiseks kui ka igapäevasteks vedudeks ettevõtetele.",
 
-      stackTitle: "Stack",
-      stackSubtitle: "We choose the right stack: fast, secure, scalable.",
+      pricingEyebrow: "Hinnad",
+      pricingTitle: "Selged hinnad ilma keerutamata",
+      pricingSubtitle:
+        "Lõplik hind sõltub marsruudist, koorma iseloomust ja peatuste arvust, kuid baashinnad on kohe nähtavad.",
+      price1Label: "Tallinnas ja lähiümbruses",
+      price1Value: "alates 30 EUR / tund",
+      price1Text:
+        "Miinimumtellimus 1 tund. Sobib kolimiseks, mööbliveoks ja poeostude transpordiks.",
+      price2Label: "Linnast välja",
+      price2Value: "0.90 EUR / km",
+      price2Text:
+        "Hea lahendus, kui vaja liikuda Harjumaal või vedada kaupa mitme asukoha vahel.",
+      pricingAsideTitle: "Mis on teenuses juba olemas",
+      pricingFeat1: "Puhas ja mahukas Peugeot Boxer",
+      pricingFeat2: "Kinnitusrihmad koorma turvaliseks kinnitamiseks",
+      pricingFeat3: "Võimalus lisada marsruudile mitu peatust",
+      pricingFeat4: "Kiire kinnitus telefoni, WhatsAppi või Telegrami kaudu",
+      pricingFeat5: "Transportkäru kuni 250 kg raskema kauba liigutamiseks",
+      pricingFeat6: "Kaks mugavat kõrvalistet kliendile kabiinis",
+      pricingFeat7: "Töötame nii eraklientide kui ettevõtetega",
+      pricingFeat8: "Väljastame kviitungi osutatud teenuse kohta",
+      euTitle: "Võimalikud veod ka Euroopa Liidu sees",
+      euText: "Rahvusvahelised veod EL piires on võimalikud kokkuleppel. Kirjuta oma marsruut ja vastame eraldi.",
+      pricingNote:
+        "Kui soovid, saada tellimus läbi vormi ja me kinnitame hinna ning aja eraldi üle.",
 
-      worksTitle: "Our work",
-      worksSubtitle: "Open a project to view screenshots, delivery scope and the live link.",
-      workCap1: "talcon.ee",
-      workTag1: "Accounting services website",
-      workTitle1: "talcon.ee — Accounting site",
-      workSummary1:
-        "An Estonian accounting services website with business calculators, an apartment association pricing flow, a salary calculator, inquiry forms, responsive screens and print-ready business card assets.",
-      workItems1: [
-        "Domain registration, hosting setup and server deployment",
-        "Website structure and visual design for the Estonian market",
-        "Business client service configurator with inquiry form",
-        "Apartment association calculator, quick contact flow and salary calculator",
-        "Responsive mobile layouts and print-ready vector files for business cards"
-      ],
-      workDetailsLabel: "What we delivered",
-      workVisitSite: "Visit live site",
-      workCap2: "stiimulehitus.ee",
-      workTag2: "Services website and product catalog",
-      workTitle2: "stiimulehitus.ee — renovation and catalog platform",
-      workSummary2:
-        "A multi-page storefront for renovation services and building products built on HTML, CSS and JavaScript, with a generated catalog, product pages, a request API and a product base prepared for warehouse and supplier data.",
-      workItems2: [
-        "Homepage, service sections and a structured multi-page storefront",
-        "Product catalog with categories, filters and generated product pages",
-        "Product database in JSON with a backend API for requests and analytics",
-        "PostgreSQL-ready schema for products, variants, suppliers and stock data",
-        "Contact and quote forms plus ET, RU and EN language support"
-      ],
-      workCap3: "Design",
-      workCap4: "Prototype",
+      vanEyebrow: "Kaubik",
+      vanTitle:
+        "Peugeot Boxer 2012, millega on mugav vedada nii mööblit kui materjali",
+      vanSubtitle:
+        "Kaubaruumi pikkus on 3.6 meetrit ning koorma kinnitamiseks on kaubikus olemas rihmad. See tähendab, et vedu on korrastatud, puhas ja turvaline.",
+      spec1Title: "3.6 m kaubaruumi pikkus",
+      spec1Text:
+        "Sobib pikemate esemete, mööbli, materjalide ja suuremate poeostude jaoks.",
+      spec2Title: "Puhas ja avar sisu",
+      spec2Text:
+        "Korralik kaubaruum jätab hea mulje ning aitab vedada koormat ilma liigse segaduseta.",
+      spec3Title: "Kinnitusrihmad olemas",
+      spec3Text:
+        "Koorem saab kindlalt fikseeritud, et transport oleks turvalisem ka pikemal marsruudil.",
+      spec4Title: "Sobib igapäevasteks töödeks",
+      spec4Text:
+        "Korterid, laod, poed, kontorid, objektid ja jäätmejaam mahuvad ühe teenuse sisse.",
+      spec5Title: "Transportkäru kuni 250 kg",
+      spec5Text:
+        "Aitab liigutada raskemaid pakke, tehnikat, kaste ja muid esemeid mugavamalt ning ohutumalt.",
+      spec6Title: "Kaks mugavat kohta kabiinis",
+      spec6Text:
+        "Vajadusel saavad kaks reisijat sõita koos juhiga, mis teeb kolimise ja kauba saatmise lihtsamaks.",
+      vanImgAlt: "Kaubaruumi sisemus koos koormaga",
 
-      contactTitle: "Contacts",
-      contactSubtitle:
-        "Message us — we’ll reply and propose the best approach.",
+      galleryEyebrow: "Galerii",
+      galleryTitle: "Päris kaubik, päris veod",
+      gallerySubtitle:
+        "Kasuta fotosid orientiirina, millisteks vedudeks kaubik sobib. Vajuta pildile, et suuremalt vaadata.",
+      galleryCap1: "Puhas ja esinduslik kaubik igapäevaseks veoteenuseks.",
+      galleryCap2:
+        "Kõrge kaubik, mis sobib hästi kolimisteks ja suuremate esemete veoks.",
+      galleryCap3: "Pikem materjal ja ehitustarbed mahuvad mugavalt peale.",
+      galleryCap4: "Koorma saab rihmadega kindlalt paika panna.",
+      galleryCap5: "Vedame ka raskemaid ehitusmaterjale ja objektikaupa.",
+      galleryAlt1: "Peugeot Boxer kõrvalvaates",
+      galleryAlt2: "Peugeot Boxer eestvaates",
+      galleryAlt3: "Puitmaterjal kaubikus",
+      galleryAlt4: "Ehitusmaterjalid kaubaruumis",
+      galleryAlt5: "Sillutiskivid ja käsikäru kaubikus",
+
+      bookingEyebrow: "Online tellimus",
+      bookingTitle: "Saada tellimus koos kuupäeva, kellaaja ja aadressidega",
+      bookingSubtitle:
+        "Täida vorm, lisa algus- ja lõpp-aadress ning vajadusel vahepeatused. Vastame telefoni või sõnumi teel ja kinnitame tellimuse.",
+      step1Title: "Täida marsruut",
+      step1Text:
+        "Lisa kuupäev, kellaaeg, alguspunkt, sihtpunkt ja kõik vajalikud lisapeatused.",
+      step2Title: "Kirjelda koormat",
+      step2Text:
+        "Kirjuta, mida on vaja vedada, et oskaksime marsruudi ja aja täpsemalt üle vaadata.",
+      step3Title: "Kinnitame tellimuse",
+      step3Text:
+        "Võtame ühendust telefoni, WhatsAppi või Telegrami kaudu ja lepime kõik detailid kokku.",
+      contactTitle: "Võta ühendust ka otse",
+      contactSubtitle: "Kui on kiire, helista või kirjuta kohe sõnumitesse.",
       waTitle: "WhatsApp",
       tgTitle: "Telegram",
-      phTitle: "Phone",
-      emTitle: "Email",
+      phTitle: "Telefon",
+      emTitle: "E-mail",
       fbTitle: "Facebook",
 
-      formName: "Name",
-      formNamePh: "Your name",
-      formEmail: "Email",
-      formEmailPh: "your@email.com",
-      formMsg: "Message",
-      formMsgPh: "Describe your task...",
-      formSend: "Send",
-      formSending: "Sending...",
-      formNote: "No spam. We'll respond soon.",
+      formName: "Nimi",
+      formNamePh: "Teie nimi",
+      formPhone: "Telefon",
+      formPhonePh: "+372...",
+      formEmail: "E-mail (soovi korral)",
+      formEmailPh: "name@email.com",
+      formService: "Teenus",
+      formDate: "Kuupäev",
+      formDatePh: "pp.kk.aaaa",
+      formTime: "Kellaaeg",
+      formTimePh: "hh:mm",
+      formFrom: "Aadress, kust laadida",
+      formFromPh: "Näiteks Mustamäe tee 10, Tallinn",
+      formStops: "Lisapeatused",
+      formTo: "Aadress, kuhu viia",
+      formToPh: "Näiteks Pärnu mnt 120, Tallinn",
+      formCargo: "Mida on vaja vedada",
+      formCargoPh: "Kirjelda koormat: mööbel, kastid, tehnika, materjalid...",
+      formComment: "Lisainfo",
+      formCommentPh: "Korrus, lift, parkimine, erisoovid, mitu peatust jne.",
+      formNeedHelp: "Vajan abi peale- või mahalaadimisel",
+      formSend: "Saada tellimus",
+      formSending: "Saadan...",
+      formNote:
+        "Pärast saatmist võtame ühendust, kinnitame marsruudi, aja ja hinna.",
+      progressEyebrow: "Tellimuse progress",
+      progressTitle: "Täida andmed ja buss liigub finiši poole",
+      progressStart: "Start",
+      progressEnd: "Finiš",
+      estimateEyebrow: "Eelhind",
+      quoteTitle: "Ligikaudne hind ja tellimuse detailid",
+      estimatePendingValue: "Alusta vormi täitmist",
+      estimatePendingText: "Lisame siia esialgse hinnaloogika kohe, kui marsruut ja teenus on sisestatud.",
+      estimateCityValue: "alates 30 EUR",
+      estimateCityText: "Kui vedu toimub Tallinna piires, arvestame alates 30 EUR / tund. Lõplik hind sõltub ajakulust, peatustest ja koorma iseloomust.",
+      estimateDistanceValue: "alates 0.90 EUR / km",
+      estimateDistanceText: "Kui marsruut läheb Tallinnast välja, lähtume kilometraažist alates 0.90 EUR / km. Täpse summa kinnitame pärast ülevaatust.",
+      estimateHelpSuffix: "Lisaks sooviti abi peale- või mahalaadimisel, mis võib hinda mõjutada.",
+      estimateStopsSuffix: "Marsruudil on lisapeatused, seega lõplik hind võib olla kõrgem.",
+      summaryServiceLabel: "Teenuse liik",
+      summaryDateLabel: "Kuupäev",
+      summaryTimeLabel: "Kellaaeg",
+      summaryFromLabel: "Laadimisaadress",
+      summaryToLabel: "Sihtaadress",
+      summaryExtraLabel: "Lisad",
+      summaryPending: "Täidetakse vormist",
+      summaryExtraEmpty: "Ilma lisadeta",
+      summaryExtraStops: "Lisapeatused: {n}",
+      summaryExtraHelp: "Abi peale- või mahalaadimisel",
+      summaryExtraBoth: "Lisapeatused: {n} • Abi laadimisel",
+      addStop: "+ Lisa peatus",
+      removeStop: "Eemalda",
+      extraStopLabel: "Lisapeatus {n}",
+      extraStopPlaceholder: "Näiteks ladu, pood või vaheaadress",
+      serviceOptionDefault: "Vali teenus",
+      serviceOptionMoving: "Korteri või kontori kolimine",
+      serviceOptionStore: "Kauba toomine poest või laost",
+      serviceOptionMaterials: "Ehitusmaterjalide vedu",
+      serviceOptionWaste: "Prügi või vana mööbli äravedu",
+      serviceOptionCustom: "Muu vedu",
 
-      toastThanks: "Thanks! We'll get back to you.",
-      toastError: "Sending failed. Please try again.",
-      toastConfigError: "Email service is not configured yet.",
+      summaryRequestType: "Teenuse liik",
+      summaryNeedHelp: "Abi peale- või mahalaadimisel",
+      commonYes: "Jah",
+      commonNo: "Ei",
 
-      footerLeft: "© ARIDES, 2026",
-      footerRight: "Tallinn, Estonia"
+      footerText:
+        "Kaubavedu ja kolimine Tallinnas ning Harjumaal. Kiire kontakt telefoni, WhatsAppi, Telegrami või online-vormi kaudu.",
+
+      toastThanks: "Aitäh! Võtame peagi ühendust.",
+      toastError: "Saatmine ebaõnnestus. Proovi uuesti.",
+      toastConfigError: "Vormi saatmine ei ole veel seadistatud.",
+      validationRequired: "Palun täitke see väli.",
+      validationEmail: "Palun sisestage korrektne e-posti aadress.",
+      validationPhone: "Palun sisestage korrektne telefoninumber.",
+      validationDateRequired: "Palun valige kuupäev.",
+      validationTimeRequired: "Palun valige kellaaeg.",
+      validationDateInvalid: "Palun sisestage kuupäev kujul pp.kk.aaaa.",
+      validationDatePast: "Palun sisestage tänane või tulevane kuupäev.",
+      validationTimeInvalid: "Palun sisestage kellaaeg kujul hh:mm."
     },
 
     ru: {
-      brandTag: "LAB",
+      metaTitle: "Грузоперевозки в Таллинне и Harjumaa | Переезды, мебель и Peugeot Boxer 3.6 м",
+      metaDescription:
+        "Грузоперевозки и переезды в Таллинне и Harjumaa. Перевозка мебели, техники, стройматериалов и других грузов на Peugeot Boxer 3.6 м. Быстрый контакт и online-заказ.",
+      brandTag: "KAUBAVEDU",
       navServices: "Услуги",
-      navStack: "Стек",
-      navWorks: "Работы",
+      navPricing: "Цены",
+      navVan: "Фургон",
+      navGallery: "Галерея",
+      navBooking: "Заказ",
       navContact: "Контакты",
+      callNow: "Позвонить сейчас",
 
-      heroTitle: "ARIDES — лаборатория разработки сайтов и приложений",
+      heroEyebrow: "Peugeot Boxer • грузовой отсек 3.6 м • работаем каждый день",
+      heroTitle: "Грузоперевозки и переезды по Таллинну и Harjumaa",
       heroSubtitle:
-        "Мы создаём сайты, мобильные приложения и автоматизацию бизнеса. От идеи до публикации в App Store и Google Play.",
-      ctaContact: "Связаться",
-      ctaWorks: "Посмотреть работы",
-      heroMeta: "Быстро • аккуратно • по делу",
+        "Чистый и вместительный Peugeot Boxer подходит для переездов, доставки мебели, бытовой техники, стройматериалов и других грузов. Работаем быстро, аккуратно и без выходных.",
+      heroCta: "Заказать online",
+      heroCall: "Позвонить +372 5684 5377",
+      heroBadge1: "Таллинн и Harjumaa",
+      heroBadge2: "Маршруты с несколькими точками",
+      heroBadge3: "Крепежные ремни в фургоне",
+      metric1Value: "3.6 m",
+      metric1Label: "длина грузового отсека",
+      metric2Value: "от 30 EUR / ч",
+      metric2Label: "по городу",
+      metric3Value: "0.90 EUR / km",
+      metric3Label: "за городом",
+      heroImgAlt: "Фургон Peugeot Boxer в Таллинне",
+      heroSideAlt: "Погрузка деревянного материала в фургон",
+      heroNotePriceTitle: "По городу",
+      heroNotePriceText: "от 30 EUR / час",
+      heroNoteRouteTitle: "Гибкий маршрут",
+      heroNoteRouteText: "Добавляйте несколько точек в форме",
 
-      servicesTitle: "Услуги",
-      servicesSubtitle: "Делаем решение под задачу: дизайн → разработка → запуск.",
-      svc1Title: "Разработка сайтов и лендингов",
-      svc1Text:
-        "Современные сайты, адаптивная верстка, быстрые страницы, формы и аналитика.",
-      svc2Title: "Приложения Android и iOS",
-      svc2Text:
-        "Разработка и публикация в Google Play и App Store. Удобный интерфейс и стабильность.",
-      svc3Title: "UI/UX дизайн и прототипирование",
-      svc3Text:
-        "Прототипы, дизайн-системы, понятные сценарии. Красиво и удобно пользователю.",
-      svc4Title: "Интеграции, платежи, API",
-      svc4Text:
-        "Подключаем сервисы, автоматизируем процессы, делаем интеграции и бэкенд-логику.",
-      svc5Title: "Поддержка и развитие",
-      svc5Text: "Обновления, улучшения и новые функции после запуска.",
+      trust1: "Переезды квартир и офисов",
+      trust2: "Перевозка мебели, техники и стройматериалов",
+      trust3: "Работаем и с частными лицами, и с компаниями, выдаем квитанцию",
 
-      stackTitle: "Стек",
-      stackSubtitle: "Подбираем стек под задачу: быстро, безопасно, масштабируемо.",
+      servicesEyebrow: "Услуги",
+      servicesTitle: "Чем мы можем помочь",
+      servicesSubtitle:
+        "Везем как отдельные крупные предметы, так и полный переезд. При необходимости в маршрут можно добавить магазин, склад, объект или пункт утилизации.",
+      service1Title: "Переезды квартир и офисов",
+      service1Text:
+        "Быстрая и спокойная помощь при переезде по Таллинну и Harjumaa. Подходит для коробок, мебели, техники и рабочего инвентаря.",
+      service2Title: "Доставка мебели и техники из магазинов",
+      service2Text:
+        "Привезем покупки из IKEA, Depo, Bauhof и других магазинов домой, в офис или на объект.",
+      service3Title: "Доставка стройматериалов",
+      service3Text:
+        "Длинные материалы, пакеты, плиты и инструменты перевозятся надежно. В фургоне есть ремни для фиксации груза.",
+      service4Title: "Вывоз старой мебели и мусора",
+      service4Text:
+        "Вывезем старые вещи или строительный мусор на пункт утилизации, чтобы быстро освободить дом или объект.",
+      service5Title: "Заказы с несколькими точками",
+      service5Text:
+        "Можно заехать в магазин, на склад или по другому адресу, а потом доставить в конечную точку. В форме все адреса добавляются отдельно.",
+      service6Title: "Чистый фургон и надежная подача",
+      service6Text:
+        "Peugeot Boxer чистый, вместительный и хорошо подходит как для домашних переездов, так и для постоянных доставок бизнесу.",
 
-      worksTitle: "Наши работы",
-      worksSubtitle: "Открой проект, чтобы посмотреть экраны, объём работ и живую ссылку.",
-      workCap1: "talcon.ee",
-      workTag1: "Сайт бухгалтерских услуг",
-      workTitle1: "talcon.ee — сайт бухгалтерии",
-      workSummary1:
-        "Эстонский сайт бухгалтерских услуг с калькулятором для бизнес-клиентов, отдельным потоком для квартирных товариществ, калькулятором зарплат, формами заявок, адаптацией под мобильные устройства и векторными файлами визиток.",
-      workItems1: [
-        "Регистрация домена, настройка хостинга и размещение на сервере",
-        "Структура сайта и визуальный дизайн под рынок Эстонии",
-        "Конфигуратор услуг для бизнес-клиентов и форма заявки",
-        "Отдельный калькулятор и форма запроса для квартирных товариществ, плюс калькулятор зарплат",
-        "Мобильная адаптация и подготовка векторных файлов для печати визиток"
-      ],
-      workDetailsLabel: "Что сделали",
-      workVisitSite: "Открыть сайт",
-      workCap2: "stiimulehitus.ee",
-      workTag2: "Сайт услуг и каталог товаров",
-      workTitle2: "stiimulehitus.ee — платформа услуг и каталога",
-      workSummary2:
-        "Многостраничный сайт для ремонтных услуг и строительных товаров на HTML, CSS и JavaScript с генерацией каталога, карточками товаров, API для заявок и товарной базой, подготовленной под склад и поставщиков.",
-      workItems2: [
-        "Главная страница, сервисные блоки и многостраничная структура сайта",
-        "Каталог товаров с категориями, фильтрами и отдельными карточками",
-        "Товарная база в JSON и backend API для заявок и аналитики",
-        "Подготовленная схема PostgreSQL для товаров, вариантов, поставщиков и остатков",
-        "Формы связи и расчёта, плюс поддержка ET, RU и EN версий"
-      ],
-      workCap3: "Дизайн",
-      workCap4: "Прототип",
+      pricingEyebrow: "Цены",
+      pricingTitle: "Понятные цены без скрытых условий",
+      pricingSubtitle:
+        "Итоговая стоимость зависит от маршрута, груза и количества точек, но базовые цены видны сразу.",
+      price1Label: "Таллинн и ближайшие районы",
+      price1Value: "от 30 EUR / час",
+      price1Text:
+        "Минимальный заказ 1 час. Подходит для переездов, доставки мебели и покупок из магазинов.",
+      price2Label: "За пределами города",
+      price2Value: "0.90 EUR / km",
+      price2Text:
+        "Удобно, если надо ехать по Harjumaa или связать несколько адресов в одном заказе.",
+      pricingAsideTitle: "Что уже есть в услуге",
+      pricingFeat1: "Чистый и вместительный Peugeot Boxer",
+      pricingFeat2: "Крепежные ремни для безопасного крепления груза",
+      pricingFeat3: "Возможность добавить несколько точек по маршруту",
+      pricingFeat4: "Быстрое подтверждение по телефону, WhatsApp или Telegram",
+      pricingFeat5: "Транспортировочная тележка до 250 кг для тяжелых грузов",
+      pricingFeat6: "Два уютных пассажирских места в кабине",
+      pricingFeat7: "Работаем как с частными лицами, так и с компаниями",
+      pricingFeat8: "Выдаем квитанцию об оказанной услуге",
+      euTitle: "Возможны перевозки и внутри Европейского Союза",
+      euText: "Международные перевозки по ЕС возможны по договоренности. Отправьте маршрут, и мы ответим отдельно.",
+      pricingNote:
+        "Оставьте online-заказ, и мы отдельно подтвердим время, маршрут и финальную цену.",
 
-      contactTitle: "Контакты",
-      contactSubtitle: "Напиши — ответим и предложим решение под твою задачу.",
+      vanEyebrow: "Фургон",
+      vanTitle: "Peugeot Boxer 2012, подходит и для мебели, и для материалов",
+      vanSubtitle:
+        "Длина грузового отсека составляет 3.6 метра, а для фиксации груза внутри есть ремни. Перевозка получается аккуратной, чистой и надежной.",
+      spec1Title: "3.6 м внутри грузового отсека",
+      spec1Text:
+        "Подходит для длинномеров, мебели, материалов и крупных покупок из магазинов.",
+      spec2Title: "Чистый и просторный отсек",
+      spec2Text:
+        "Аккуратный грузовой отсек хорошо подходит для домашних и коммерческих перевозок.",
+      spec3Title: "Есть крепежные ремни",
+      spec3Text:
+        "Груз можно надежно закрепить, чтобы перевозка была спокойной и безопасной.",
+      spec4Title: "Подходит для повседневных задач",
+      spec4Text:
+        "Квартиры, склады, магазины, офисы, объекты и пункт утилизации можно совместить в одном заказе.",
+      spec5Title: "Транспортировочная тележка до 250 кг",
+      spec5Text:
+        "Удобно перемещать тяжелые коробки, технику, упаковки и другие вещи с меньшей нагрузкой и безопаснее.",
+      spec6Title: "Два уютных места в кабине",
+      spec6Text:
+        "При необходимости два пассажира могут ехать вместе с водителем, что упрощает переезд и сопровождение груза.",
+      vanImgAlt: "Внутри грузового отсека с грузом",
+
+      galleryEyebrow: "Галерея",
+      galleryTitle: "Реальный фургон, реальные работы",
+      gallerySubtitle:
+        "На фотографиях можно посмотреть, для каких грузов подходит этот фургон. Нажмите на фото, чтобы увеличить.",
+      galleryCap1: "Чистый и представительный фургон для ежедневных перевозок.",
+      galleryCap2: "Высокий фургон, удобный для переездов и крупных вещей.",
+      galleryCap3: "Длинные материалы и строительный товар загружаются без проблем.",
+      galleryCap4: "Груз можно закрепить ремнями для более безопасной доставки.",
+      galleryCap5: "Возим также тяжелые стройматериалы и товар на объект.",
+      galleryAlt1: "Peugeot Boxer сбоку",
+      galleryAlt2: "Peugeot Boxer спереди",
+      galleryAlt3: "Деревянный материал в фургоне",
+      galleryAlt4: "Стройматериалы в грузовом отсеке",
+      galleryAlt5: "Брусчатка и ручная тележка в фургоне",
+
+      bookingEyebrow: "Online-заказ",
+      bookingTitle: "Отправьте заказ с датой, временем и адресами",
+      bookingSubtitle:
+        "Заполните форму, укажите откуда забрать, куда доставить и нужны ли дополнительные точки. Мы свяжемся и подтвердим заказ.",
+      step1Title: "Укажите маршрут",
+      step1Text:
+        "Добавьте дату, время, стартовый адрес, адрес доставки и при необходимости все промежуточные точки.",
+      step2Title: "Опишите груз",
+      step2Text:
+        "Напишите, что нужно везти, чтобы мы быстрее оценили маршрут и время.",
+      step3Title: "Мы подтвердим заказ",
+      step3Text:
+        "Свяжемся по телефону, WhatsApp или Telegram и согласуем все детали.",
+      contactTitle: "Можно связаться и сразу",
+      contactSubtitle: "Если нужно быстро, звоните или пишите прямо в мессенджеры.",
       waTitle: "WhatsApp",
       tgTitle: "Telegram",
       phTitle: "Телефон",
-      emTitle: "Почта",
+      emTitle: "E-mail",
       fbTitle: "Facebook",
 
       formName: "Имя",
       formNamePh: "Ваше имя",
-      formEmail: "Email",
-      formEmailPh: "ваш@email.com",
-      formMsg: "Сообщение",
-      formMsgPh: "Опиши задачу...",
-      formSend: "Отправить",
+      formPhone: "Телефон",
+      formPhonePh: "+372...",
+      formEmail: "E-mail (по желанию)",
+      formEmailPh: "name@email.com",
+      formService: "Услуга",
+      formDate: "Дата",
+      formDatePh: "дд.мм.гггг",
+      formTime: "Время",
+      formTimePh: "чч:мм",
+      formFrom: "Адрес погрузки",
+      formFromPh: "Например Mustamäe tee 10, Tallinn",
+      formStops: "Дополнительные точки",
+      formTo: "Адрес доставки",
+      formToPh: "Например Pärnu mnt 120, Tallinn",
+      formCargo: "Что нужно перевезти",
+      formCargoPh: "Опишите груз: мебель, коробки, техника, материалы...",
+      formComment: "Комментарии",
+      formCommentPh: "Этаж, лифт, парковка, особые пожелания, сколько точек и т.д.",
+      formNeedHelp: "Нужна помощь с погрузкой или разгрузкой",
+      formSend: "Отправить заказ",
       formSending: "Отправляем...",
-      formNote: "Без спама. Ответим в ближайшее время.",
+      formNote:
+        "После отправки мы свяжемся, чтобы подтвердить маршрут, время и стоимость.",
+      progressEyebrow: "Прогресс заказа",
+      progressTitle: "Заполняйте данные, а ваш бус едет к финишу",
+      progressStart: "Старт",
+      progressEnd: "Финиш",
+      estimateEyebrow: "Предварительная цена",
+      quoteTitle: "Примерная стоимость и детали заказа",
+      estimatePendingValue: "Начните заполнять форму",
+      estimatePendingText: "Как только будут указаны услуга и маршрут, здесь появится ориентировочная стоимость.",
+      estimateCityValue: "от 30 EUR",
+      estimateCityText: "Если перевозка проходит в пределах Таллинна, расчет идет от 30 EUR / час. Итоговая цена зависит от времени, точек и характера груза.",
+      estimateDistanceValue: "от 0.90 EUR / km",
+      estimateDistanceText: "Если маршрут выходит за пределы Таллинна, ориентир идет от 0.90 EUR / km. Точную сумму подтвердим после уточнения деталей.",
+      estimateHelpSuffix: "Также отмечена помощь с погрузкой или разгрузкой, это может повлиять на цену.",
+      estimateStopsSuffix: "В маршруте есть дополнительные точки, поэтому итоговая цена может быть выше.",
+      summaryServiceLabel: "Тип услуги",
+      summaryDateLabel: "Дата",
+      summaryTimeLabel: "Время",
+      summaryFromLabel: "Адрес погрузки",
+      summaryToLabel: "Адрес доставки",
+      summaryExtraLabel: "Дополнительно",
+      summaryPending: "Заполнится из формы",
+      summaryExtraEmpty: "Без дополнительных условий",
+      summaryExtraStops: "Доп. точки: {n}",
+      summaryExtraHelp: "Нужна помощь с погрузкой или разгрузкой",
+      summaryExtraBoth: "Доп. точки: {n} • Нужна помощь с погрузкой",
+      addStop: "+ Добавить точку",
+      removeStop: "Удалить",
+      extraStopLabel: "Дополнительная точка {n}",
+      extraStopPlaceholder: "Например склад, магазин или промежуточный адрес",
+      serviceOptionDefault: "Выберите услугу",
+      serviceOptionMoving: "Переезд квартиры или офиса",
+      serviceOptionStore: "Доставка из магазина или со склада",
+      serviceOptionMaterials: "Перевозка стройматериалов",
+      serviceOptionWaste: "Вывоз мусора или старой мебели",
+      serviceOptionCustom: "Другая перевозка",
 
-      toastThanks: "Спасибо! Мы свяжемся с вами.",
-      toastError: "Не удалось отправить. Попробуйте ещё раз.",
-      toastConfigError: "Почтовый сервис ещё не настроен.",
+      summaryRequestType: "Тип услуги",
+      summaryNeedHelp: "Помощь с погрузкой или разгрузкой",
+      commonYes: "Да",
+      commonNo: "Нет",
 
-      footerLeft: "© ARIDES, 2026",
-      footerRight: "Таллин, Эстония"
+      footerText:
+        "Грузоперевозки и переезды по Таллинну и Harjumaa. Быстрая связь по телефону, WhatsApp, Telegram или через online-форму.",
+
+      toastThanks: "Спасибо! Мы скоро свяжемся с вами.",
+      toastError: "Не удалось отправить форму. Попробуйте еще раз.",
+      toastConfigError: "Отправка формы еще не настроена.",
+      validationRequired: "Пожалуйста, заполните это поле.",
+      validationEmail: "Пожалуйста, введите корректный e-mail.",
+      validationPhone: "Пожалуйста, введите корректный номер телефона.",
+      validationDateRequired: "Пожалуйста, выберите дату.",
+      validationTimeRequired: "Пожалуйста, выберите время.",
+      validationDateInvalid: "Пожалуйста, введите дату в формате дд.мм.гггг.",
+      validationDatePast: "Пожалуйста, укажите сегодняшнюю или будущую дату.",
+      validationTimeInvalid: "Пожалуйста, введите время в формате чч:мм."
     },
 
-    et: {
-      brandTag: "LAB",
-      navServices: "Teenused",
-      navStack: "Tehnoloogia",
-      navWorks: "Tööd",
-      navContact: "Kontakt",
+    en: {
+      metaTitle: "Cargo transport and moving in Tallinn and Harjumaa | Furniture, removals and Peugeot Boxer 3.6 m",
+      metaDescription:
+        "Cargo transport and moving services in Tallinn and Harjumaa. Furniture, appliance and building material delivery with a clean Peugeot Boxer 3.6 m cargo van, fast contact and online booking.",
+      brandTag: "TRANSPORT",
+      navServices: "Services",
+      navPricing: "Prices",
+      navVan: "Van",
+      navGallery: "Gallery",
+      navBooking: "Book",
+      navContact: "Contacts",
+      callNow: "Call now",
 
-      heroTitle: "ARIDES — veebide ja rakenduste arenduse labor",
+      heroEyebrow: "Peugeot Boxer • 3.6 m cargo area • every day",
+      heroTitle: "Cargo transport and moving in Tallinn and Harjumaa",
       heroSubtitle:
-        "Loome veebilehti, mobiilirakendusi ja äriprotsesside automatiseerimist. Ideest kuni App Store’i ja Google Play avaldamiseni.",
-      ctaContact: "Võta ühendust",
-      ctaWorks: "Vaata töid",
-      heroMeta: "Kiire • korrektne • asjalik",
+        "A clean and spacious Peugeot Boxer is ready for moves, furniture delivery, home appliances, building materials and custom transport jobs. We work fast, carefully and without days off.",
+      heroCta: "Book online",
+      heroCall: "Call +372 5684 5377",
+      heroBadge1: "Tallinn and Harjumaa",
+      heroBadge2: "Routes with multiple stops",
+      heroBadge3: "Tie-down straps in the van",
+      metric1Value: "3.6 m",
+      metric1Label: "cargo length",
+      metric2Value: "from 30 EUR / h",
+      metric2Label: "inside the city",
+      metric3Value: "0.90 EUR / km",
+      metric3Label: "outside the city",
+      heroImgAlt: "Peugeot Boxer cargo van in Tallinn",
+      heroSideAlt: "Loading timber into the cargo van",
+      heroNotePriceTitle: "In the city",
+      heroNotePriceText: "from 30 EUR / hour",
+      heroNoteRouteTitle: "Flexible route",
+      heroNoteRouteText: "Add extra stops in the form",
 
-      servicesTitle: "Teenused",
+      trust1: "Apartment and office moving",
+      trust2: "Furniture, appliances and building material transport",
+      trust3: "We work with both private clients and companies and provide a service receipt",
+
+      servicesEyebrow: "Services",
+      servicesTitle: "What we can help with",
       servicesSubtitle:
-        "Teeme lahenduse algusest lõpuni: disain → arendus → lansseerimine.",
-      svc1Title: "Veebilehed ja landingud",
-      svc1Text:
-        "Kaasaegsed responsiivsed saidid, kiired lehed, vormid ja analüütika.",
-      svc2Title: "Androidi ja iOS-i rakendused",
-      svc2Text:
-        "Arendus ja avaldamine Google Play’s ja App Store’is. Stabiilne ja mugav.",
-      svc3Title: "UI/UX disain ja prototüüpimine",
-      svc3Text:
-        "Prototüübid, disainisüsteemid ja selged kasutusvood. Ilus ja kasutatav.",
-      svc4Title: "Integratsioonid, maksed, API",
-      svc4Text:
-        "Ühendame teenuseid, automatiseerime protsesse, teeme integratsioone ja backend-loogikat.",
-      svc5Title: "Tugi ja arendus",
-      svc5Text: "Uuendused, parandused ja uued funktsioonid pärast lansseerimist.",
+        "We handle everything from one large item to a full move. If needed, the route can include a shop, warehouse, worksite or recycling station stop.",
+      service1Title: "Apartment and office moving",
+      service1Text:
+        "Fast and careful moving help across Tallinn and Harjumaa. Good for boxes, furniture, electronics and work equipment.",
+      service2Title: "Furniture and appliance pickup from stores",
+      service2Text:
+        "We deliver purchases from IKEA, Depo, Bauhof and other stores straight to your home, office or worksite.",
+      service3Title: "Building material delivery",
+      service3Text:
+        "Long materials, packages, boards and tools travel safely. The van includes straps to secure the load properly.",
+      service4Title: "Old furniture and waste removal",
+      service4Text:
+        "We can take away old items or construction waste to a recycling station so your home or worksite gets cleared faster.",
+      service5Title: "Orders with multiple stops",
+      service5Text:
+        "Need a stop at a store, warehouse or another address on the way? You can add every extra point directly in the booking form.",
+      service6Title: "Clean van and reliable service",
+      service6Text:
+        "This Peugeot Boxer is clean, spacious and suitable for both private moving jobs and regular transport for businesses.",
 
-      stackTitle: "Tehnoloogia",
-      stackSubtitle: "Valime õige stack’i: kiire, turvaline, skaleeritav.",
+      pricingEyebrow: "Prices",
+      pricingTitle: "Clear pricing from the start",
+      pricingSubtitle:
+        "The final cost depends on the route, the type of cargo and the number of stops, but the base prices are visible right away.",
+      price1Label: "Inside Tallinn and nearby",
+      price1Value: "from 30 EUR / hour",
+      price1Text:
+        "Minimum order 1 hour. Suitable for moving, furniture delivery and transport of store purchases.",
+      price2Label: "Outside the city",
+      price2Value: "0.90 EUR / km",
+      price2Text:
+        "A good option if you need transport around Harjumaa or between several locations in one trip.",
+      pricingAsideTitle: "What is already included",
+      pricingFeat1: "Clean and spacious Peugeot Boxer",
+      pricingFeat2: "Tie-down straps for safe cargo securing",
+      pricingFeat3: "Option to add several stops to one route",
+      pricingFeat4: "Fast confirmation by phone, WhatsApp or Telegram",
+      pricingFeat5: "Transport trolley up to 250 kg for heavier items",
+      pricingFeat6: "Two comfortable passenger seats in the cab",
+      pricingFeat7: "We work with both private clients and companies",
+      pricingFeat8: "We provide a receipt for the completed service",
+      euTitle: "Transport inside the European Union is also possible",
+      euText: "International transport within the EU is available by agreement. Send your route and we will reply separately.",
+      pricingNote:
+        "Send the order through the form and we will confirm the route, time and final price with you directly.",
 
-      worksTitle: "Meie tööd",
-      worksSubtitle: "Ava projekt, et vaadata ekraane, tehtud töid ja live-linki.",
-      workCap1: "talcon.ee",
-      workTag1: "Raamatupidamisteenused",
-      workTitle1: "talcon.ee — Raamatupidamine",
-      workSummary1:
-        "Eesti turule loodud raamatupidamisteenuste veebileht äriklientide kalkulaatori, korteriühistute hinnavoo, palgakalkulaatori, päringuvormide, mobiilivaadete ja trükivalmis visiitkaartidega.",
-      workItems1: [
-        "Domeeni registreerimine, hostingu seadistus ja paigaldus serverisse",
-        "Veebilehe struktuur ja visuaalne disain Eesti turu jaoks",
-        "Äriklientide teenusekalkulaator koos päringuvormiga",
-        "Korteriühistute kalkulaator, kiire kontakt ja palgakalkulaator",
-        "Mobiilivaate optimeerimine ning trükivalmid visiitkaartide vektorfailid"
-      ],
-      workDetailsLabel: "Mida tegime",
-      workVisitSite: "Ava live-sait",
-      workCap2: "stiimulehitus.ee",
-      workTag2: "Teenuste veebileht ja tootekataloog",
-      workTitle2: "stiimulehitus.ee — teenuste ja kataloogi platvorm",
-      workSummary2:
-        "Mitmeleheline remondi- ja tootemüügi platvorm HTML-i, CSS-i ja JavaScripti peal: genereeritud kataloog, tootelehed, päringute API ning tooteandmestik, mis on valmis lao- ja tarnijainfo jaoks.",
-      workItems2: [
-        "Avaleht, teenuseplokid ja läbimõeldud mitmeleheline struktuur",
-        "Tootekataloog kategooriate, filtrite ja eraldi tootelehtedega",
-        "JSON-põhine tooteandmestik ja backend API päringute ning analüütika jaoks",
-        "PostgreSQL-iks ette valmistatud skeem toodete, variantide, tarnijate ja laoseisu jaoks",
-        "Kontakt- ja hinnapäringuvormid ning ET, RU ja EN keeletoetus"
-      ],
-      workCap3: "Disain",
-      workCap4: "Prototüüp",
+      vanEyebrow: "Van",
+      vanTitle:
+        "Peugeot Boxer 2012 that works well for both furniture and building materials",
+      vanSubtitle:
+        "The cargo area is 3.6 metres long and includes straps for securing the load. That means clean, organised and safer transport for everyday jobs.",
+      spec1Title: "3.6 m cargo length",
+      spec1Text:
+        "Suitable for longer items, furniture, materials and larger purchases from stores.",
+      spec2Title: "Clean and spacious interior",
+      spec2Text:
+        "A tidy cargo area makes the service look professional and keeps transport more organised.",
+      spec3Title: "Tie-down straps included",
+      spec3Text:
+        "Your cargo can be secured properly for a calmer and safer trip.",
+      spec4Title: "Built for everyday transport work",
+      spec4Text:
+        "Apartments, warehouses, shops, offices, worksites and recycling station runs all fit into one service.",
+      spec5Title: "Transport trolley up to 250 kg",
+      spec5Text:
+        "Makes moving heavier boxes, appliances, bundles and other items easier, safer and more efficient.",
+      spec6Title: "Two comfortable seats in the cab",
+      spec6Text:
+        "If needed, two passengers can ride with the driver, which makes moving day and cargo escort simpler.",
+      vanImgAlt: "Inside the cargo area with loaded materials",
 
-      contactTitle: "Kontakt",
-      contactSubtitle: "Kirjuta — vastame ja pakume sobiva lahenduse.",
+      galleryEyebrow: "Gallery",
+      galleryTitle: "Real van, real transport jobs",
+      gallerySubtitle:
+        "These photos show the kind of cargo and jobs the van is suited for. Click any image to open it larger.",
+      galleryCap1: "A clean and presentable van for everyday transport work.",
+      galleryCap2: "A high cargo van that works well for moves and larger items.",
+      galleryCap3: "Long materials and construction supplies fit comfortably inside.",
+      galleryCap4: "Cargo can be secured properly with straps for safer delivery.",
+      galleryCap5: "We also transport heavier building materials and worksite goods.",
+      galleryAlt1: "Peugeot Boxer side view",
+      galleryAlt2: "Peugeot Boxer front view",
+      galleryAlt3: "Timber loaded into the van",
+      galleryAlt4: "Building materials inside the cargo space",
+      galleryAlt5: "Paving blocks and hand trolley inside the van",
+
+      bookingEyebrow: "Online booking",
+      bookingTitle: "Send your order with date, time and addresses",
+      bookingSubtitle:
+        "Fill in the form, add the pickup and delivery addresses, and include any extra stops if needed. We will contact you and confirm the job.",
+      step1Title: "Fill in the route",
+      step1Text:
+        "Add the preferred date, time, pickup address, destination and every extra stop you need.",
+      step2Title: "Describe the cargo",
+      step2Text:
+        "Tell us what needs to be transported so we can review the route and timing more accurately.",
+      step3Title: "We confirm the booking",
+      step3Text:
+        "We will contact you by phone, WhatsApp or Telegram and confirm all details.",
+      contactTitle: "You can also contact us directly",
+      contactSubtitle:
+        "If the request is urgent, call or send us a message right away.",
       waTitle: "WhatsApp",
       tgTitle: "Telegram",
-      phTitle: "Telefon",
-      emTitle: "E-post",
+      phTitle: "Phone",
+      emTitle: "E-mail",
       fbTitle: "Facebook",
 
-      formName: "Nimi",
-      formNamePh: "Sinu nimi",
-      formEmail: "E-post",
-      formEmailPh: "sinu@email.com",
-      formMsg: "Sõnum",
-      formMsgPh: "Kirjelda ülesannet...",
-      formSend: "Saada",
-      formSending: "Saadan...",
-      formNote: "Ei mingit spämmi. Vastame peagi.",
+      formName: "Name",
+      formNamePh: "Your name",
+      formPhone: "Phone",
+      formPhonePh: "+372...",
+      formEmail: "E-mail (optional)",
+      formEmailPh: "name@email.com",
+      formService: "Service",
+      formDate: "Date",
+      formDatePh: "dd/mm/yyyy",
+      formTime: "Time",
+      formTimePh: "hh:mm",
+      formFrom: "Pickup address",
+      formFromPh: "For example Mustamae tee 10, Tallinn",
+      formStops: "Extra stops",
+      formTo: "Delivery address",
+      formToPh: "For example Parnu mnt 120, Tallinn",
+      formCargo: "What needs to be transported",
+      formCargoPh: "Describe the cargo: furniture, boxes, appliances, materials...",
+      formComment: "Additional details",
+      formCommentPh: "Floor, elevator, parking, special notes, number of stops, etc.",
+      formNeedHelp: "I need help with loading or unloading",
+      formSend: "Send booking request",
+      formSending: "Sending...",
+      formNote:
+        "After you send the request, we will contact you to confirm the route, time and price.",
+      progressEyebrow: "Booking progress",
+      progressTitle: "Fill in the details and watch the van drive to the finish",
+      progressStart: "Start",
+      progressEnd: "Finish",
+      estimateEyebrow: "Preliminary price",
+      quoteTitle: "Approximate price and order details",
+      estimatePendingValue: "Start filling out the form",
+      estimatePendingText: "Once the service and route details are added, an approximate price will appear here.",
+      estimateCityValue: "from 30 EUR",
+      estimateCityText: "If the job stays within Tallinn, pricing starts from 30 EUR / hour. The final amount depends on time, stops and cargo type.",
+      estimateDistanceValue: "from 0.90 EUR / km",
+      estimateDistanceText: "If the route goes outside Tallinn, we use distance-based pricing from 0.90 EUR / km. We confirm the final amount after review.",
+      estimateHelpSuffix: "Loading or unloading help was also requested, which may affect the final price.",
+      estimateStopsSuffix: "There are extra stops in the route, so the final price may be higher.",
+      summaryServiceLabel: "Service type",
+      summaryDateLabel: "Date",
+      summaryTimeLabel: "Time",
+      summaryFromLabel: "Pickup address",
+      summaryToLabel: "Delivery address",
+      summaryExtraLabel: "Extra details",
+      summaryPending: "Will be filled from the form",
+      summaryExtraEmpty: "No extra conditions",
+      summaryExtraStops: "Extra stops: {n}",
+      summaryExtraHelp: "Loading or unloading help requested",
+      summaryExtraBoth: "Extra stops: {n} • Loading help requested",
+      addStop: "+ Add stop",
+      removeStop: "Remove",
+      extraStopLabel: "Extra stop {n}",
+      extraStopPlaceholder: "For example a warehouse, store or another address",
+      serviceOptionDefault: "Choose a service",
+      serviceOptionMoving: "Apartment or office moving",
+      serviceOptionStore: "Pickup from store or warehouse",
+      serviceOptionMaterials: "Building material transport",
+      serviceOptionWaste: "Waste or old furniture removal",
+      serviceOptionCustom: "Other transport",
 
-      toastThanks: "Aitäh! Võtame ühendust.",
-      toastError: "Saatmine ebaõnnestus. Proovi uuesti.",
-      toastConfigError: "E-posti teenus pole veel seadistatud.",
+      summaryRequestType: "Service type",
+      summaryNeedHelp: "Help with loading or unloading",
+      commonYes: "Yes",
+      commonNo: "No",
 
-      footerLeft: "© ARIDES, 2026",
-      footerRight: "Tallinn, Eesti"
+      footerText:
+        "Cargo transport and moving in Tallinn and Harjumaa. Fast contact by phone, WhatsApp, Telegram or the online booking form.",
+
+      toastThanks: "Thank you! We will contact you shortly.",
+      toastError: "Sending failed. Please try again.",
+      toastConfigError: "The booking form is not configured yet.",
+      validationRequired: "Please fill out this field.",
+      validationEmail: "Please enter a valid email address.",
+      validationPhone: "Please enter a valid phone number.",
+      validationDateRequired: "Please choose a date.",
+      validationTimeRequired: "Please choose a time.",
+      validationDateInvalid: "Please enter the date in the format dd/mm/yyyy.",
+      validationDatePast: "Please enter today or a future date.",
+      validationTimeInvalid: "Please enter the time in the format hh:mm."
     }
   };
 
-  // ===== EmailJS config (YOUR REAL VALUES) =====
   const EMAILJS_PUBLIC_KEY = "ifm_c_GUeWOaCGmBj";
   const EMAILJS_SERVICE_ID = "service_iab26he";
   const EMAILJS_TEMPLATE_ID = "template_8idq3n2";
+  const FALLBACK_EMAIL = "no-email@arides.ee";
 
-  const supported = ["ru", "en", "et"];
+  const supported = ["et", "ru", "en"];
   const LS_KEY = "lang";
+  const localeMap = {
+    et: "et-EE",
+    ru: "ru-RU",
+    en: "en-GB"
+  };
+
   let refreshGalleryText = () => {};
+  let refreshStopsText = () => {};
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -297,16 +723,15 @@
       : [navigator.language]
     ).filter(Boolean);
 
-    const first = (langs[0] || "en").toLowerCase();
+    const first = (langs[0] || "et").toLowerCase();
     if (first.startsWith("ru")) return "ru";
-    if (first.startsWith("et")) return "et";
-    return "en";
+    if (first.startsWith("en")) return "en";
+    return "et";
   }
 
   function v(lang, key) {
-    const base = i18n.en || {};
-    const dict = i18n[lang] || base;
-    return dict[key] ?? base[key];
+    const dict = i18n[lang] || i18n.et;
+    return dict[key] ?? i18n.et[key] ?? "";
   }
 
   function t(lang, key) {
@@ -314,24 +739,189 @@
     return typeof value === "string" ? value : "";
   }
 
+  function getLocale(lang) {
+    return localeMap[lang] || localeMap.et;
+  }
+
+  function applyNativeLocale(lang) {
+    const locale = getLocale(lang);
+    document.documentElement.lang = locale;
+    document.body?.setAttribute("lang", locale);
+
+    $$("form, input, select, textarea, button").forEach((el) => {
+      el.setAttribute("lang", locale);
+    });
+  }
+
   function applyLang(lang) {
+    applyNativeLocale(lang);
+    document.documentElement.setAttribute("data-site-lang", lang);
+    localStorage.setItem(LS_KEY, lang);
+
     const label = $("#langLabel");
     if (label) label.textContent = lang.toUpperCase();
 
-    document.documentElement.lang = lang;
-
     $$("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      el.textContent = t(lang, key);
+      el.textContent = t(lang, el.getAttribute("data-i18n"));
     });
 
     $$("[data-i18n-ph]").forEach((el) => {
-      const key = el.getAttribute("data-i18n-ph");
-      el.setAttribute("placeholder", t(lang, key));
+      el.setAttribute("placeholder", t(lang, el.getAttribute("data-i18n-ph")));
     });
 
-    localStorage.setItem(LS_KEY, lang);
+    $$("[data-i18n-alt]").forEach((el) => {
+      el.setAttribute("alt", t(lang, el.getAttribute("data-i18n-alt")));
+    });
+
+    document.title = t(lang, "metaTitle");
+    const metaDescription = $('meta[name="description"]');
+    if (metaDescription) metaDescription.setAttribute("content", t(lang, "metaDescription"));
+
+    refreshStopsText();
     refreshGalleryText();
+  }
+
+  function getValidationMessage(input, lang) {
+    if (!input?.validity) return "";
+
+    if (input.validity.valueMissing) {
+      if (input.name === "move_date") return t(lang, "validationDateRequired");
+      if (input.name === "move_time") return t(lang, "validationTimeRequired");
+      return t(lang, "validationRequired");
+    }
+
+    if (input.validity.typeMismatch && input.type === "email") {
+      return t(lang, "validationEmail");
+    }
+
+    if (input.validity.patternMismatch || input.validity.badInput) {
+      if (input.type === "email") return t(lang, "validationEmail");
+      if (input.type === "tel") return t(lang, "validationPhone");
+    }
+
+    return "";
+  }
+
+  function parseDateValue(value, lang) {
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+
+    const match = trimmed.match(/^(\d{2})[./-](\d{2})[./-](\d{4})$/);
+    if (!match) return null;
+
+    const [, rawA, rawB, rawYear] = match;
+    const year = Number(rawYear);
+    let day = Number(rawA);
+    let month = Number(rawB);
+
+    if (lang === "en" && trimmed.includes("/")) {
+      day = Number(rawA);
+      month = Number(rawB);
+    }
+
+    if (!Number.isInteger(day) || !Number.isInteger(month) || !Number.isInteger(year)) {
+      return null;
+    }
+
+    const parsed = new Date(year, month - 1, day);
+    if (
+      parsed.getFullYear() !== year ||
+      parsed.getMonth() !== month - 1 ||
+      parsed.getDate() !== day
+    ) {
+      return null;
+    }
+
+    parsed.setHours(0, 0, 0, 0);
+    return parsed;
+  }
+
+  function isPastDate(date) {
+    if (!date) return false;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return date < today;
+  }
+
+  function isValidTimeValue(value) {
+    const trimmed = value.trim();
+    const match = trimmed.match(/^(\d{2}):(\d{2})$/);
+    if (!match) return false;
+
+    const hours = Number(match[1]);
+    const minutes = Number(match[2]);
+    return hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59;
+  }
+
+  function getCustomFieldMessage(input, lang) {
+    const value = typeof input?.value === "string" ? input.value.trim() : "";
+
+    if (input?.name === "move_date") {
+      if (!value) return "";
+      const parsedDate = parseDateValue(value, lang);
+      if (!parsedDate) return t(lang, "validationDateInvalid");
+      if (isPastDate(parsedDate)) return t(lang, "validationDatePast");
+    }
+
+    if (input?.name === "move_time") {
+      if (!value) return "";
+      if (!isValidTimeValue(value)) return t(lang, "validationTimeInvalid");
+    }
+
+    return "";
+  }
+
+  function applyFieldValidationState(input, lang) {
+    if (!(input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement || input instanceof HTMLSelectElement)) {
+      return;
+    }
+
+    const customMessage = getCustomFieldMessage(input, lang);
+    input.setCustomValidity(customMessage);
+  }
+
+  function validateBookingForm(form, lang) {
+    const fields = $$("input, select, textarea", form);
+    fields.forEach((field) => applyFieldValidationState(field, lang));
+
+    return typeof form.reportValidity === "function" ? form.reportValidity() : form.checkValidity();
+  }
+
+  function initLocalizedValidation(langGetter) {
+    const form = $("#bookingForm");
+    if (!form) return;
+
+    form.addEventListener(
+      "invalid",
+      (e) => {
+        const input = e.target;
+        if (!(input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement || input instanceof HTMLSelectElement)) {
+          return;
+        }
+
+        const message = getValidationMessage(input, langGetter());
+        input.setCustomValidity(getCustomFieldMessage(input, langGetter()) || message);
+      },
+      true
+    );
+
+    form.addEventListener("input", (e) => {
+      const input = e.target;
+      if (!(input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement || input instanceof HTMLSelectElement)) {
+        return;
+      }
+
+      applyFieldValidationState(input, langGetter());
+    });
+
+    form.addEventListener("change", (e) => {
+      const input = e.target;
+      if (!(input instanceof HTMLInputElement || input instanceof HTMLTextAreaElement || input instanceof HTMLSelectElement)) {
+        return;
+      }
+
+      applyFieldValidationState(input, langGetter());
+    });
   }
 
   function initLangMenu() {
@@ -356,10 +946,9 @@
     );
 
     menu.addEventListener("click", (e) => {
-      const b = e.target.closest("button[data-lang]");
-      if (!b) return;
-      const lang = b.getAttribute("data-lang");
-      applyLang(lang);
+      const target = e.target.closest("button[data-lang]");
+      if (!target) return;
+      applyLang(target.getAttribute("data-lang"));
       close();
       btn.focus();
     });
@@ -372,135 +961,107 @@
       if (e.key === "Escape" && menu.classList.contains("open")) {
         close();
         btn.focus();
-        return;
-      }
-      if (!menu.classList.contains("open")) return;
-
-      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-        e.preventDefault();
-        const items = $$("#langMenu button");
-        const active = document.activeElement;
-        const idx = items.indexOf(active);
-        const next = e.key === "ArrowDown" ? idx + 1 : idx - 1;
-        items[(next + items.length) % items.length]?.focus();
       }
     });
   }
 
+  function initStops(langGetter) {
+    const list = $("#extraStops");
+    const addBtn = $("#addStopBtn");
+    if (!list || !addBtn) return { addStop() {}, clear() {}, getValues() { return []; } };
+
+    const renumber = () => {
+      const lang = langGetter();
+      $$(".stopField", list).forEach((row, index) => {
+        const label = $(".stopField__label", row);
+        const input = $("input", row);
+        const remove = $(".stopField__remove", row);
+        if (label) {
+          label.textContent = t(lang, "extraStopLabel").replace("{n}", String(index + 1));
+        }
+        if (input) {
+          input.setAttribute("placeholder", t(lang, "extraStopPlaceholder"));
+        }
+        if (remove) {
+          remove.textContent = t(lang, "removeStop");
+        }
+      });
+    };
+
+    const addStop = (value = "") => {
+      const row = document.createElement("div");
+      row.className = "stopField";
+      row.innerHTML = `
+        <div>
+          <label class="stopField__label"></label>
+          <input type="text" name="extra_stop" />
+        </div>
+        <button class="stopField__remove" type="button"></button>
+      `;
+
+      $("input", row).value = value;
+      $(".stopField__remove", row).addEventListener("click", () => {
+        row.remove();
+        renumber();
+      });
+
+      list.appendChild(row);
+      renumber();
+      $("input", row)?.focus();
+    };
+
+    addBtn.addEventListener("click", () => addStop());
+
+    refreshStopsText = () => renumber();
+    renumber();
+
+    return {
+      addStop,
+      clear() {
+        list.replaceChildren();
+        renumber();
+      },
+      getValues() {
+        return $$('input[name="extra_stop"]', list)
+          .map((input) => input.value.trim())
+          .filter(Boolean);
+      }
+    };
+  }
+
   function initGallery(langGetter) {
-    const works = $$("[data-images]");
-    const modal = $("#modal");
-    const img = $("#modalImage");
-    const eyebrow = $("#modalEyebrow");
-    const title = $("#modalTitle");
-    const cap = $("#modalCaption");
-    const counter = $("#modalCounter");
-    const details = $("#modalDetails");
-    const detailsLabel = $("#modalDetailsLabel");
-    const list = $("#modalList");
-    const link = $("#modalLink");
-    const linkLabel = $("#modalLinkLabel");
-    const linkValue = $("#modalLinkValue");
+    const cards = $$(".galleryCard");
+    const modal = $("#galleryModal");
+    const modalImage = $("#modalImage");
+    const modalCaption = $("#modalCaption");
+    const modalCounter = $("#modalCounter");
     const btnClose = $("#modalClose");
     const btnPrev = $("#modalPrev");
     const btnNext = $("#modalNext");
-    const sidebar = $(".modal__sidebar", modal);
+    if (!cards.length || !modal || !modalImage || !modalCaption) return;
 
-    if (!works.length || !modal || !img || !btnClose) return;
-
+    let currentIndex = 0;
     let lastFocus = null;
-    let currentWork = null;
-    let projectImages = [];
-    let imgIndex = 0;
 
-    const getLang = () => langGetter();
+    const render = () => {
+      const card = cards[currentIndex];
+      if (!card) return;
+      const img = $("img", card);
+      const captionKey = card.getAttribute("data-caption-key");
+      const lang = langGetter();
 
-    const renderMeta = () => {
-      if (!currentWork) return;
-
-      const lang = getLang();
-      const capKey = currentWork.getAttribute("data-caption-key");
-      const tagKey = currentWork.getAttribute("data-tag-key");
-      const titleKey = currentWork.getAttribute("data-title-key");
-      const summaryKey = currentWork.getAttribute("data-summary-key");
-      const listKey = currentWork.getAttribute("data-list-key");
-      const linkHref = currentWork.getAttribute("data-link") || "";
-      const linkText = currentWork.getAttribute("data-link-text") || linkHref;
-      const items = Array.isArray(v(lang, listKey)) ? v(lang, listKey) : [];
-
-      if (eyebrow) {
-        eyebrow.textContent = tagKey ? t(lang, tagKey) : "";
-        eyebrow.hidden = !eyebrow.textContent;
+      modalImage.src = img?.getAttribute("src") || "";
+      modalImage.alt = img?.getAttribute("alt") || t(lang, captionKey);
+      modalCaption.textContent = t(lang, captionKey);
+      if (modalCounter) {
+        modalCounter.textContent = `${currentIndex + 1} / ${cards.length}`;
       }
-
-      if (title) {
-        title.textContent = titleKey ? t(lang, titleKey) : capKey ? t(lang, capKey) : "";
-      }
-
-      if (cap) {
-        cap.textContent = summaryKey ? t(lang, summaryKey) : capKey ? t(lang, capKey) : "";
-      }
-
-      if (detailsLabel) detailsLabel.textContent = t(lang, "workDetailsLabel");
-      if (details) details.hidden = !items.length;
-
-      if (list) {
-        list.replaceChildren();
-        items.forEach((item) => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          list.appendChild(li);
-        });
-      }
-
-      if (link) {
-        const showLink = Boolean(linkHref);
-        link.hidden = !showLink;
-        if (showLink) link.href = linkHref;
-      }
-      if (linkLabel) linkLabel.textContent = t(lang, "workVisitSite");
-      if (linkValue) linkValue.textContent = linkText;
     };
 
-    const renderImage = () => {
-      if (!projectImages.length) return;
-      img.src = projectImages[imgIndex];
-      img.alt = title?.textContent || cap?.textContent || "Selected work";
-
-      if (counter) {
-        counter.hidden = projectImages.length < 2;
-        counter.textContent = `${imgIndex + 1} / ${projectImages.length}`;
-      }
-
-      if (btnPrev) btnPrev.hidden = projectImages.length < 2;
-      if (btnNext) btnNext.hidden = projectImages.length < 2;
-    };
-
-    const openAt = (i) => {
-      const el = works[(i + works.length) % works.length];
-
-      projectImages = (el.getAttribute("data-images") || "")
-        .split(",")
-        .map((s) => s.trim())
-        .filter(Boolean);
-
-      if (!projectImages.length) {
-        const cover = $("img", el)?.getAttribute("src");
-        projectImages = cover ? [cover] : [];
-      }
-      if (!projectImages.length) return;
-
-      imgIndex = 0;
-      currentWork = el;
+    const open = (index) => {
+      currentIndex = index;
       lastFocus = document.activeElement;
-
-      renderMeta();
-      renderImage();
-
-      if (sidebar) sidebar.scrollTop = 0;
-      const panel = $(".modal__panel", modal);
-      if (panel) panel.scrollTop = 0;
-
+      render();
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
@@ -511,31 +1072,25 @@
       modal.classList.remove("open");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
-      currentWork = null;
       if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
     };
 
     const prev = () => {
-      if (!projectImages.length) return;
-      imgIndex = (imgIndex - 1 + projectImages.length) % projectImages.length;
-      renderImage();
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      render();
     };
 
     const next = () => {
-      if (!projectImages.length) return;
-      imgIndex = (imgIndex + 1) % projectImages.length;
-      renderImage();
+      currentIndex = (currentIndex + 1) % cards.length;
+      render();
     };
 
-    works.forEach((el, i) => {
-      el.setAttribute("draggable", "false");
-      el.addEventListener("contextmenu", (e) => e.preventDefault());
-      $("img", el)?.setAttribute("draggable", "false");
-      el.addEventListener("click", () => openAt(i));
-      el.addEventListener("keydown", (e) => {
+    cards.forEach((card, index) => {
+      card.addEventListener("click", () => open(index));
+      card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          openAt(i);
+          open(index);
         }
       });
     });
@@ -543,14 +1098,6 @@
     btnClose.addEventListener("click", close);
     btnPrev?.addEventListener("click", prev);
     btnNext?.addEventListener("click", next);
-    img.addEventListener("contextmenu", (e) => e.preventDefault());
-    img.addEventListener("dragstart", (e) => e.preventDefault());
-
-    refreshGalleryText = () => {
-      if (!modal.classList.contains("open")) return;
-      renderMeta();
-      renderImage();
-    };
 
     modal.addEventListener("click", (e) => {
       if (e.target === modal) close();
@@ -562,24 +1109,188 @@
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
     });
+
+    refreshGalleryText = () => {
+      if (modal.classList.contains("open")) render();
+    };
   }
 
-  // ===== Contact form: EmailJS sendForm + Toast =====
-  function initFormEmail(langGetter) {
-    const form = $("#contactForm");
+  function initBookingAssist(langGetter, stopsApi) {
+    const form = $("#bookingForm");
+    const road = $(".progressRoad", form);
+    const percent = $("#progressPercent");
+    const estimateValue = $("#estimateValue");
+    const estimateText = $("#estimateText");
+    const summaryService = $("#summaryService");
+    const summaryDate = $("#summaryDate");
+    const summaryTime = $("#summaryTime");
+    const summaryFrom = $("#summaryFrom");
+    const summaryTo = $("#summaryTo");
+    const summaryExtra = $("#summaryExtra");
+    if (!form || !road || !percent || !estimateValue || !estimateText || !summaryService || !summaryDate || !summaryTime || !summaryFrom || !summaryTo || !summaryExtra) return;
+
+    const requiredNames = [
+      "name",
+      "phone",
+      "service_type",
+      "move_date",
+      "move_time",
+      "from_address",
+      "to_address",
+      "cargo_details"
+    ];
+
+    const getFieldValue = (name) => {
+      const el = form.elements.namedItem(name);
+      return typeof el?.value === "string" ? el.value.trim() : "";
+    };
+
+    const isTallinnRoute = (from, to, stops) => {
+      const points = [from, to, ...stops].map((value) => value.toLowerCase());
+      if (!points.every(Boolean)) return false;
+      return points.every((value) =>
+        value.includes("tallinn") ||
+        value.includes("tln") ||
+        value.includes("харью") ||
+        value.includes("harju")
+      ) && points.some((value) => value.includes("tallinn") || value.includes("tln"));
+    };
+
+    const updateEstimate = (lang, from, to, stops) => {
+      const serviceType = getFieldValue("service_type");
+      const needHelp = Boolean(form.elements.namedItem("need_help")?.checked);
+      const hasRoute = Boolean(from && to);
+      const hasStops = stops.length > 0;
+
+      if (!serviceType || !hasRoute) {
+        estimateValue.textContent = t(lang, "estimatePendingValue");
+        estimateText.textContent = t(lang, "estimatePendingText");
+        return;
+      }
+
+      const cityRoute = hasRoute && isTallinnRoute(from, to, stops);
+      let description = cityRoute
+        ? t(lang, "estimateCityText")
+        : t(lang, "estimateDistanceText");
+
+      if (needHelp) {
+        description += ` ${t(lang, "estimateHelpSuffix")}`;
+      }
+
+      if (hasStops) {
+        description += ` ${t(lang, "estimateStopsSuffix")}`;
+      }
+
+      estimateValue.textContent = cityRoute
+        ? t(lang, "estimateCityValue")
+        : t(lang, "estimateDistanceValue");
+      estimateText.textContent = description;
+    };
+
+    const updateSummary = (lang, from, to, stops) => {
+      const serviceSelect = $('select[name="service_type"]', form);
+      const serviceText = serviceSelect?.selectedOptions?.[0]?.textContent?.trim() || t(lang, "summaryPending");
+      const dateText = getFieldValue("move_date") || t(lang, "summaryPending");
+      const timeText = getFieldValue("move_time") || "--:--";
+      const needHelp = Boolean(form.elements.namedItem("need_help")?.checked);
+
+      summaryService.textContent = serviceText;
+      summaryDate.textContent = dateText;
+      summaryTime.textContent = timeText;
+      summaryFrom.textContent = from || t(lang, "summaryPending");
+      summaryTo.textContent = to || t(lang, "summaryPending");
+
+      if (stops.length && needHelp) {
+        summaryExtra.textContent = t(lang, "summaryExtraBoth").replace("{n}", String(stops.length));
+        return;
+      }
+
+      if (stops.length) {
+        summaryExtra.textContent = t(lang, "summaryExtraStops").replace("{n}", String(stops.length));
+        return;
+      }
+
+      if (needHelp) {
+        summaryExtra.textContent = t(lang, "summaryExtraHelp");
+        return;
+      }
+
+      summaryExtra.textContent = t(lang, "summaryExtraEmpty");
+    };
+
+    const update = () => {
+      const lang = langGetter();
+      const completed = requiredNames.filter((name) => getFieldValue(name)).length;
+      const total = requiredNames.length;
+      const value = Math.round((completed / total) * 100);
+      road.style.setProperty("--progress", `${value}%`);
+      percent.textContent = `${value}%`;
+
+      const from = getFieldValue("from_address");
+      const to = getFieldValue("to_address");
+      const stops = stopsApi.getValues();
+      updateEstimate(lang, from, to, stops);
+      updateSummary(lang, from, to, stops);
+    };
+
+    form.addEventListener("input", update);
+    form.addEventListener("change", update);
+    $("#extraStops")?.addEventListener("click", () => {
+      queueMicrotask(update);
+    });
+
+    refreshStopsText = ((prev) => () => {
+      prev();
+      update();
+    })(refreshStopsText);
+
+    refreshGalleryText = ((prev) => () => {
+      prev();
+      update();
+    })(refreshGalleryText);
+
+    update();
+  }
+
+  function buildMessage(form, lang, stopsApi) {
+    const data = new FormData(form);
+    const serviceSelect = $('select[name="service_type"]', form);
+    const serviceLabel = serviceSelect?.selectedOptions?.[0]?.textContent?.trim() || "-";
+    const extraStops = stopsApi.getValues();
+    const lines = [
+      `${t(lang, "summaryRequestType")}: ${serviceLabel}`,
+      `${t(lang, "formName")}: ${data.get("name") || "-"}`,
+      `${t(lang, "formPhone")}: ${data.get("phone") || "-"}`,
+      `${t(lang, "formEmail")}: ${data.get("customer_email") || "-"}`,
+      `${t(lang, "formDate")}: ${data.get("move_date") || "-"}`,
+      `${t(lang, "formTime")}: ${data.get("move_time") || "-"}`,
+      `${t(lang, "formFrom")}: ${data.get("from_address") || "-"}`,
+      ...extraStops.map((stop, index) =>
+        `${t(lang, "extraStopLabel").replace("{n}", String(index + 1))}: ${stop}`
+      ),
+      `${t(lang, "formTo")}: ${data.get("to_address") || "-"}`,
+      `${t(lang, "formCargo")}: ${data.get("cargo_details") || "-"}`,
+      `${t(lang, "formComment")}: ${data.get("comment") || "-"}`,
+      `${t(lang, "summaryNeedHelp")}: ${data.get("need_help") ? t(lang, "commonYes") : t(lang, "commonNo")}`
+    ];
+
+    return lines.join("\n");
+  }
+
+  function initFormEmail(langGetter, stopsApi) {
+    const form = $("#bookingForm");
     const toast = $("#toast");
     if (!form || !toast) return;
 
+    const btn = $('button[type="submit"]', form);
     let timer = null;
 
-    const show = (msg) => {
-      toast.textContent = msg;
+    const show = (text) => {
+      toast.textContent = text;
       toast.classList.add("show");
       clearTimeout(timer);
-      timer = setTimeout(() => toast.classList.remove("show"), 2600);
+      timer = setTimeout(() => toast.classList.remove("show"), 2800);
     };
-
-    const btn = form.querySelector('button[type="submit"]');
 
     const configured =
       EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID;
@@ -592,13 +1303,20 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       const lang = langGetter();
-      const oldBtnText = btn ? btn.textContent : "";
+      const oldText = btn ? btn.textContent : "";
+
+      if (!validateBookingForm(form, lang)) {
+        return;
+      }
+
+      const visibleEmail = $('input[name="customer_email"]', form)?.value.trim() || "";
+      $('input[name="email"]', form).value = visibleEmail || FALLBACK_EMAIL;
+      $('textarea[name="message"]', form).value = buildMessage(form, lang, stopsApi);
 
       if (btn) {
         btn.disabled = true;
-        btn.textContent = t(lang, "formSending") || oldBtnText;
+        btn.textContent = t(lang, "formSending");
       }
 
       try {
@@ -607,10 +1325,11 @@
           return;
         }
 
-        // sendForm автоматически возьмёт поля name/email/message из формы
         await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
-
         form.reset();
+        $('input[name="email"]', form).value = "";
+        $('textarea[name="message"]', form).value = "";
+        stopsApi.clear();
         show(t(lang, "toastThanks"));
       } catch (err) {
         console.error("EmailJS error:", err);
@@ -618,16 +1337,16 @@
       } finally {
         if (btn) {
           btn.disabled = false;
-          btn.textContent = t(lang, "formSend") || oldBtnText;
+          btn.textContent = t(lang, "formSend") || oldText;
         }
       }
     });
   }
 
   function initSmoothScroll() {
-    $$('a[href^="#"]').forEach((a) => {
-      a.addEventListener("click", (e) => {
-        const href = a.getAttribute("href");
+    $$('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const href = link.getAttribute("href");
         if (!href || href === "#") return;
         const target = document.querySelector(href);
         if (!target) return;
@@ -639,20 +1358,21 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     let currentLang = detectLang();
-
-    initLangMenu();
-    applyLang(currentLang);
-
     const getLang = () => localStorage.getItem(LS_KEY) || currentLang;
 
+    initLangMenu();
+    const stopsApi = initStops(getLang);
     initGallery(getLang);
-    initFormEmail(getLang);
+    initBookingAssist(getLang, stopsApi);
+    initFormEmail(getLang, stopsApi);
+    initLocalizedValidation(getLang);
     initSmoothScroll();
+    applyLang(currentLang);
 
     $("#langMenu")?.addEventListener("click", (e) => {
-      const b = e.target.closest("button[data-lang]");
-      if (!b) return;
-      currentLang = b.getAttribute("data-lang") || currentLang;
+      const target = e.target.closest("button[data-lang]");
+      if (!target) return;
+      currentLang = target.getAttribute("data-lang") || currentLang;
     });
   });
 })();

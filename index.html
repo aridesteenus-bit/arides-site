@@ -1,43 +1,115 @@
 <!doctype html>
-<html lang="en">
+<html lang="et-EE">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ARIDES — лаборатория разработки сайтов и приложений. Websites, mobile apps, UI/UX, automation." />
+  <meta name="description" content="Kaubavedu ja kolimine Tallinnas ning Harjumaal. Mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga. Kiire kontakt ja online-broneerimine." />
   <link rel="canonical" href="https://arides.ee/" />
-  <meta name="theme-color" content="#0b0714" />
-  <title>ARIDES</title>
-  <link rel="icon" href="./favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#151c23" />
+  <title>Kaubavedu Tallinnas ja Harjumaal | Kolimine, mööblivedu ja Peugeot Boxer 3.6 m</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ARIDES Kaubavedu" />
+  <meta property="og:title" content="Kaubavedu Tallinnas ja Harjumaal | Kolimine ja mööblivedu" />
+  <meta property="og:description" content="Kaubavedu, kolimine, mööblivedu, ehitusmaterjalide transport ja vana mööbli äravedu Tallinnas ning Harjumaal." />
+  <meta property="og:url" content="https://arides.ee/" />
+  <meta property="og:image" content="https://arides.ee/img/transport/van-hero-side.jpg" />
+  <meta property="og:image:alt" content="Peugeot Boxer kaubik ARIDES kaubaveoteenuse jaoks" />
+  <meta property="og:locale" content="et_EE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kaubavedu Tallinnas ja Harjumaal | ARIDES" />
+  <meta name="twitter:description" content="Kiire kaubavedu, kolimine ja mööblivedu Tallinnas ning Harjumaal Peugeot Boxer kaubikuga." />
+  <meta name="twitter:image" content="https://arides.ee/img/transport/van-hero-side.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./favicon.ico?v=20260613b" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png?v=20260613b" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png?v=20260613b" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=20260613b" />
+  <link rel="manifest" href="./site.webmanifest?v=20260613b" />
   <link rel="stylesheet" href="./styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ARIDES Kaubavedu",
+      "url": "https://arides.ee/",
+      "image": "https://arides.ee/img/transport/van-hero-side.jpg",
+      "logo": "https://arides.ee/apple-touch-icon.png",
+      "telephone": "+37256845377",
+      "email": "aridesteenus@gmail.com",
+      "priceRange": "30 EUR/h - 0.90 EUR/km",
+      "areaServed": [
+        "Tallinn",
+        "Harjumaa",
+        "Estonia",
+        "European Union"
+      ],
+      "availableLanguage": [
+        "et",
+        "ru",
+        "en"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61587739392605",
+        "https://t.me/aridesitlab"
+      ],
+      "description": "Kaubavedu ja kolimine Tallinnas ning Harjumaal. Mööbli, tehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga.",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Kaubavedu Tallinnas",
+          "price": "30",
+          "priceCurrency": "EUR",
+          "description": "Linnas alates 30 EUR / tund."
+        },
+        {
+          "@type": "Offer",
+          "name": "Kaubavedu väljaspool Tallinna",
+          "price": "0.90",
+          "priceCurrency": "EUR",
+          "description": "Linnast välja alates 0.90 EUR / km."
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="ARIDES">
-      <span class="brand__mark">ARIDES</span>
-      <span class="brand__tag" data-i18n="brandTag">LAB</span>
-    </a>
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="ARIDES Kaubavedu">
+        <span class="brand__icon" aria-hidden="true">
+          <img src="./img/ui/logo-veoteenus.png" alt="" />
+        </span>
+        <span class="brand__stack">
+          <span class="brand__title">ARIDES</span>
+          <span class="brand__tag" data-i18n="brandTag">KAUBAVEDU</span>
+        </span>
+      </a>
 
-    <nav class="nav" aria-label="Primary">
-      <a href="#services" data-i18n="navServices">Услуги</a>
-      <a href="#stack" data-i18n="navStack">Стек</a>
-      <a href="#works" data-i18n="navWorks">Работы</a>
-      <a href="#contact" data-i18n="navContact">Контакты</a>
-    </nav>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services" data-i18n="navServices">Teenused</a>
+        <a href="#pricing" data-i18n="navPricing">Hinnad</a>
+        <a href="#van" data-i18n="navVan">Kaubik</a>
+        <a href="#gallery" data-i18n="navGallery">Galerii</a>
+        <a href="#booking" data-i18n="navBooking">Broneeri</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+      </nav>
 
-    <div class="actions">
-      <div class="lang" id="lang">
-        <button class="lang__btn" id="langBtn" type="button" aria-haspopup="menu" aria-expanded="false">
-          <span class="lang__icon" aria-hidden="true">🌐</span>
-          <span class="lang__label" id="langLabel">EN</span>
-        </button>
-        <div class="lang__menu" id="langMenu" role="menu" aria-label="Language">
-          <button role="menuitem" type="button" data-lang="ru">RU</button>
-          <button role="menuitem" type="button" data-lang="en">EN</button>
-          <button role="menuitem" type="button" data-lang="et">ET</button>
+      <div class="actions">
+        <a class="btn btn--dark btn--compact topbar__call" href="tel:+37256845377" data-i18n="callNow">Helista kohe</a>
+
+        <div class="lang" id="lang">
+          <button class="lang__btn" id="langBtn" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span class="lang__icon" aria-hidden="true">🌐</span>
+            <span class="lang__label" id="langLabel">ET</span>
+          </button>
+          <div class="lang__menu" id="langMenu" role="menu" aria-label="Language">
+            <button role="menuitem" type="button" data-lang="et">ET</button>
+            <button role="menuitem" type="button" data-lang="ru">RU</button>
+            <button role="menuitem" type="button" data-lang="en">EN</button>
+          </div>
         </div>
       </div>
     </div>
@@ -45,298 +117,549 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero__wrap">
-        <div class="hero__media">
-          <img class="hero__img" src="./img/hero-workspace.png" alt="ARIDES banner" />
-        </div>
-
+      <div class="container hero__grid">
         <div class="hero__content">
-          <h1 data-i18n="heroTitle">ARIDES — лаборатория разработки сайтов и приложений</h1>
+          <p class="eyebrow" data-i18n="heroEyebrow">Peugeot Boxer • 3.6 m kaubaruum • iga päev</p>
+          <h1 data-i18n="heroTitle">Kaubavedu ja kolimine Tallinnas ja Harjumaal</h1>
           <p class="lead" data-i18n="heroSubtitle">
-            Мы создаём сайты, мобильные приложения и автоматизацию бизнеса. От идеи до публикации в App Store и Google Play.
+            Puhas ja mahukas Peugeot Boxer aitab kolimiste, mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transportimisel. Töötame kiiresti, hoolikalt ja ilma puhkepäevadeta.
           </p>
 
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact" data-i18n="ctaContact">Связаться</a>
-            <a class="btn btn--ghost" href="#works" data-i18n="ctaWorks">Посмотреть работы</a>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#booking" data-i18n="heroCta">Broneeri online</a>
+            <a class="btn btn--ghost" href="tel:+37256845377" data-i18n="heroCall">Helista +372 5684 5377</a>
           </div>
 
-          <div class="hero__meta" data-i18n="heroMeta">
-            Быстро • аккуратно • по делу
+          <ul class="hero__badges" aria-label="Highlights">
+            <li data-i18n="heroBadge1">Tallinn ja Harjumaa</li>
+            <li data-i18n="heroBadge2">Mitme peatusega marsruudid</li>
+            <li data-i18n="heroBadge3">Kinnitusrihmad kaubikus</li>
+          </ul>
+
+          <div class="hero__metrics">
+            <article class="metric">
+              <div class="metric__value" data-i18n="metric1Value">3.6 m</div>
+              <div class="metric__label" data-i18n="metric1Label">kaubaruumi pikkus</div>
+            </article>
+            <article class="metric">
+              <div class="metric__value" data-i18n="metric2Value">30 € / h</div>
+              <div class="metric__label" data-i18n="metric2Label">alates linnas</div>
+            </article>
+            <article class="metric">
+              <div class="metric__value" data-i18n="metric3Value">0.90 € / km</div>
+              <div class="metric__label" data-i18n="metric3Label">linnast välja</div>
+            </article>
           </div>
         </div>
+
+        <div class="hero__visual">
+          <figure class="heroCard heroCard--main">
+            <img src="./img/transport/van-hero-side.jpg" alt="Peugeot Boxer kaubik Tallinnas" data-i18n-alt="heroImgAlt" />
+          </figure>
+
+          <figure class="heroCard heroCard--accent">
+            <img src="./img/transport/van-loading-lumber.jpg" alt="Puitmaterjali laadimine kaubikusse" data-i18n-alt="heroSideAlt" />
+          </figure>
+
+          <div class="heroNote heroNote--price">
+            <span class="heroNote__title" data-i18n="heroNotePriceTitle">Linnas</span>
+            <span class="heroNote__text" data-i18n="heroNotePriceText">alates 30 € / tund</span>
+          </div>
+
+          <div class="heroNote heroNote--route">
+            <span class="heroNote__title" data-i18n="heroNoteRouteTitle">Paindlik marsruut</span>
+            <span class="heroNote__text" data-i18n="heroNoteRouteText">Lisa online mitu peatust</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trustBar">
+      <div class="container trustBar__row">
+        <div class="trustBar__item" data-i18n="trust1">Korterite ja kontorite kolimine</div>
+        <div class="trustBar__item" data-i18n="trust2">Mööbli, tehnika ja ehitusmaterjalide vedu</div>
+        <div class="trustBar__item" data-i18n="trust3">Töötame nii eraklientide kui ettevõtetega ja väljastame kviitungi</div>
       </div>
     </section>
 
     <section class="section" id="services">
       <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="servicesTitle">Услуги</h2>
-          <p data-i18n="servicesSubtitle">Делаем продукт под задачу: дизайн → разработка → запуск.</p>
+        <div class="sectionHead">
+          <p class="sectionHead__eyebrow" data-i18n="servicesEyebrow">Teenused</p>
+          <h2 data-i18n="servicesTitle">Millega saame aidata</h2>
+          <p data-i18n="servicesSubtitle">Vedame nii üksikuid suuremaid esemeid kui ka terve kolimise. Vajadusel saab marsruudile lisada mitu peatust: pood, ladu, objekt või jäätmejaam.</p>
         </div>
 
-        <div class="grid">
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🧩</div>
-            <h3 data-i18n="svc1Title">Разработка сайтов и лендингов</h3>
-            <p data-i18n="svc1Text">Современные сайты, адаптивная верстка, быстрые страницы, формы и аналитика.</p>
+        <div class="serviceGrid">
+          <article class="serviceCard">
+            <div class="serviceCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M16 5 24 9.5V22.5L16 27 8 22.5V9.5L16 5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 9.5 16 14 24 9.5M16 14V27" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service1Title">Korterite ja kontorite kolimine</h3>
+            <p data-i18n="service1Text">Kiire ja rahulik kolimise abi Tallinnas ning Harjumaal. Sobib kastidele, mööblile, tehnikale ja töövahenditele.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">📱</div>
-            <h3 data-i18n="svc2Title">Приложения Android и iOS</h3>
-            <p data-i18n="svc2Text">Разработка и публикация в Google Play и App Store. Удобный интерфейс и стабильность.</p>
+          <article class="serviceCard">
+            <div class="serviceCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M16 27s7-7 7-13a7 7 0 1 0-14 0c0 6 7 13 7 13Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="16" cy="14" r="2.75" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service2Title">Mööbli ja kodutehnika vedu poodidest</h3>
+            <p data-i18n="service2Text">Toome kauba IKEA-st, Depo-st, Bauhofist ja teistest kauplustest otse koju, kontorisse või objektile.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🎨</div>
-            <h3 data-i18n="svc3Title">UI/UX дизайн и прототипирование</h3>
-            <p data-i18n="svc3Text">Прототипы, дизайн-системы, понятные сценарии. Красиво и понятно пользователю.</p>
+          <article class="serviceCard">
+            <div class="serviceCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M7 23.5h18M9.5 19.5h13M11.5 15.5h11M13.5 11.5h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 23.5V9h5.5v14.5M18.5 23.5v-11H24v11" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service3Title">Ehitusmaterjalide kohaletoimetamine</h3>
+            <p data-i18n="service3Text">Pikem materjal, plaadid, pakid ja töövahendid liiguvad turvaliselt. Kaubikus on kinnitusrihmad koorma fikseerimiseks.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">⚙️</div>
-            <h3 data-i18n="svc4Title">Интеграции, платежи, API</h3>
-            <p data-i18n="svc4Text">Подключаем сервисы, автоматизируем процессы, делаем интеграции и бэкенд-логику.</p>
+          <article class="serviceCard">
+            <div class="serviceCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M11 10h10M13 7h6M10 10l1 14h10l1-14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 14v6M18 14v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service4Title">Vana mööbli ja prügi äravedu</h3>
+            <p data-i18n="service4Text">Viime vanad esemed või ehitusprahi jäätmejaama, et objekt või kodu saaks kiiresti puhtaks.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🛠️</div>
-            <h3 data-i18n="svc5Title">Поддержка и развитие</h3>
-            <p data-i18n="svc5Text">Обновления, улучшения, новые функции. Не бросаем проект после запуска.</p>
+          <article class="serviceCard">
+            <div class="serviceCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <circle cx="8" cy="22" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="22" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M10.2 20.4 13.8 11.6M18.2 11.6 21.8 20.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service5Title">Mitme peatusega tellimused</h3>
+            <p data-i18n="service5Text">Võimalik on sõita vahepeal poodi, lattu või teisele aadressile ja alles siis lõpp-punkti. Online-vormis saad kõik peatused lisada.</p>
+          </article>
+
+          <article class="serviceCard serviceCard--highlight">
+            <div class="serviceCard__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M16 5 24 8V14c0 6-4.4 10.2-8 12-3.6-1.8-8-6-8-12V8l8-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="m12.5 15.8 2.2 2.2 4.8-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="service6Title">Puhas kaubik ja kindel teenindus</h3>
+            <p data-i18n="service6Text">Peugeot Boxer on puhas, mahukas ja sobib hästi nii kodukolimiseks kui ka igapäevasteks vedudeks ettevõtetele.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="stack">
+    <section class="section section--ink" id="pricing">
       <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="stackTitle">Стек</h2>
-          <p data-i18n="stackSubtitle">Подбираем стек под задачу: быстро, безопасно, масштабируемо.</p>
+        <div class="sectionHead sectionHead--light">
+          <p class="sectionHead__eyebrow" data-i18n="pricingEyebrow">Hinnad</p>
+          <h2 data-i18n="pricingTitle">Selged hinnad ilma keerutamata</h2>
+          <p data-i18n="pricingSubtitle">Lõplik hind sõltub marsruudist, koorma iseloomust ja peatuste arvust, kuid baashinnad on kohe nähtavad.</p>
         </div>
 
-        <div class="chips" aria-label="Tech stack">
-          <span class="chip">Flutter</span>
-          <span class="chip">Dart</span>
-          <span class="chip">Android Studio</span>
-          <span class="chip">Xcode</span>
-          <span class="chip">Visual Studio Code</span>
-          <span class="chip">Git</span>
-          <span class="chip">GitHub</span>
-          <span class="chip">Firebase</span>
-          <span class="chip">Node.js</span>
-          <span class="chip">Figma</span>
-          <span class="chip">REST API</span>
-          <span class="chip">App Store</span>
-          <span class="chip">Google Play</span>
+        <div class="pricingGrid">
+          <article class="priceCard">
+            <p class="priceCard__label" data-i18n="price1Label">Tallinnas ja lähiümbruses</p>
+            <div class="priceCard__value" data-i18n="price1Value">alates 30 € / tund</div>
+            <p class="priceCard__text" data-i18n="price1Text">Miinimumtellimus 1 tund. Sobib kolimiseks, mööbliveoks ja poeostude transpordiks.</p>
+          </article>
+
+          <article class="priceCard">
+            <p class="priceCard__label" data-i18n="price2Label">Linnast välja</p>
+            <div class="priceCard__value" data-i18n="price2Value">0.90 € / km</div>
+            <p class="priceCard__text" data-i18n="price2Text">Hea lahendus, kui vaja liikuda Harjumaal või vedada kaupa mitme asukoha vahel.</p>
+          </article>
+
+          <article class="priceAside">
+            <h3 data-i18n="pricingAsideTitle">Mis on teenuses juba olemas</h3>
+            <ul class="featureList">
+              <li data-i18n="pricingFeat1">Puhas ja mahukas Peugeot Boxer</li>
+              <li data-i18n="pricingFeat2">Kinnitusrihmad koorma turvaliseks kinnitamiseks</li>
+              <li data-i18n="pricingFeat3">Võimalus lisada marsruudile mitu peatust</li>
+              <li data-i18n="pricingFeat4">Kiire kinnitus telefoni, WhatsAppi või Telegrami kaudu</li>
+              <li data-i18n="pricingFeat5">Transportkäru kuni 250 kg raskema kauba liigutamiseks</li>
+              <li data-i18n="pricingFeat6">Kaks mugavat kõrvalistet kliendile kabiinis</li>
+              <li data-i18n="pricingFeat7">Töötame nii eraklientide kui ettevõtetega</li>
+              <li data-i18n="pricingFeat8">Väljastame kviitungi osutatud teenuse kohta</li>
+            </ul>
+            <p class="priceAside__note" data-i18n="pricingNote">Kui soovid, saada tellimus läbi vormi ja me kinnitame hinna ning aja eraldi üle.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="works">
-      <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="worksTitle">Наши работы</h2>
-          <p data-i18n="worksSubtitle">Несколько примеров. Нажми на картинку, чтобы увеличить.</p>
-        </div>
-      </div>
-
-      <div class="marquee" aria-label="Works carousel">
-        <div class="marquee__track" id="worksTrack">
-          <figure class="work work--featured" tabindex="0"
-            data-caption-key="workCap1"
-            data-tag-key="workTag1"
-            data-title-key="workTitle1"
-            data-summary-key="workSummary1"
-            data-list-key="workItems1"
-            data-link="https://talcon.ee"
-            data-link-text="talcon.ee"
-            data-images="img/works/project1/talcon-hero-et.png,img/works/project1/talcon-service-order-et.png,img/works/project1/talcon-association-calculator-et.png,img/works/project1/talcon-association-contact-et.png,img/works/project1/talcon-mobile-home-et.png,img/works/project1/talcon-mobile-payroll-et.png,img/works/project1/talcon-business-cards.png">
-            <img src="./img/works/project1/talcon-hero-et.png" alt="talcon.ee project preview" draggable="false" />
-            <figcaption class="work__caption work__caption--stacked">
-              <span class="work__title" data-i18n="workCap1">talcon.ee</span>
-              <span class="work__meta" data-i18n="workTag1">Сайт бухгалтерских услуг</span>
-            </figcaption>
-          </figure>
-
-          <figure class="work work--project2" tabindex="0"
-            data-caption-key="workCap2"
-            data-tag-key="workTag2"
-            data-title-key="workTitle2"
-            data-summary-key="workSummary2"
-            data-list-key="workItems2"
-            data-link="https://stiimulehitus.ee"
-            data-link-text="stiimulehitus.ee"
-            data-images="img/works/project2/01-home-et-hero-live.png,img/works/project2/02-windows-et-overview-live.png,img/works/project2/03-window-configurator-et-dimensions-live.png,img/works/project2/04-window-configurator-et-request-live.png,img/works/project2/05-repairs-gallery-et-live.png,img/works/project2/06-contact-chat-et-live.png,img/works/project2/07-doors-catalog-et-live.png,img/works/project2/08-door-detail-et-live.png">
-            <img src="./img/works/project2/01-home-et-hero-live.png" alt="stiimulehitus.ee project preview" draggable="false" />
-            <figcaption class="work__caption work__caption--stacked">
-              <span class="work__title" data-i18n="workCap2">stiimulehitus.ee</span>
-              <span class="work__meta" data-i18n="workTag2">Сайт услуг и каталог товаров</span>
-            </figcaption>
-          </figure>
-
-          <figure class="work" tabindex="0"
-            data-caption-key="workCap3"
-            data-images="img/works/project-placeholder.svg">
-            <img src="./img/works/project-placeholder.svg" alt="Project 3" draggable="false" />
-            <figcaption data-i18n="workCap3">Дизайн</figcaption>
-          </figure>
-
-          <figure class="work" tabindex="0"
-            data-caption-key="workCap4"
-            data-images="img/works/project-placeholder.svg">
-            <img src="./img/works/project-placeholder.svg" alt="Project 4" draggable="false" />
-            <figcaption data-i18n="workCap4">Прототип</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="contact">
-      <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="contactTitle">Контакты</h2>
-          <p data-i18n="contactSubtitle">Напиши — ответим и предложим решение под твою задачу.</p>
-        </div>
-
-        <div class="contactGrid">
-          <div class="contactCards">
-            <a class="contactCard" href="https://wa.me/37256845377" target="_blank" rel="noreferrer">
-              <div class="contactCard__icon contactCard__icon--wa" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill="currentColor" d="M19.05 4.94A9.77 9.77 0 0 0 12.09 2C6.69 2 2.3 6.38 2.3 11.79c0 1.73.45 3.42 1.31 4.91L2 22l5.45-1.57a9.83 9.83 0 0 0 4.64 1.18h.01c5.4 0 9.79-4.39 9.79-9.8a9.71 9.71 0 0 0-2.84-6.87ZM12.1 19.96h-.01a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.23.93.95-3.15-.2-.32a8.14 8.14 0 0 1-1.25-4.31 8.19 8.19 0 0 1 8.18-8.18 8.14 8.14 0 0 1 5.82 2.41 8.11 8.11 0 0 1 2.39 5.77 8.19 8.19 0 0 1-8.2 8.17Zm4.49-6.14c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.55.13-.16.24-.63.8-.77.97-.14.16-.28.18-.52.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.01-.38.11-.5.11-.11.25-.28.36-.42.12-.14.16-.24.24-.41.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.24-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.16 1.72 2.63 4.17 3.69.58.25 1.03.4 1.38.52.58.18 1.11.15 1.52.09.46-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.3Z"/>
-                </svg>
-              </div>
-              <div class="contactCard__body">
-                <div class="contactCard__title" data-i18n="waTitle">WhatsApp</div>
-                <div class="contactCard__value">+372 56845377</div>
-              </div>
-            </a>
-
-            <a class="contactCard" href="https://t.me/aridesitlab" target="_blank" rel="noreferrer" aria-label="Telegram">
-              <div class="contactCard__icon contactCard__icon--tg" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill="currentColor" d="M21.44 4.84c.32-.13.63.16.54.5l-3.05 14.37c-.08.38-.5.53-.79.3l-4.59-3.65-2.34 2.25c-.23.22-.62.06-.62-.26V15.1l7.73-7.08a.35.35 0 0 0-.42-.56l-9.36 5.92-4.05-1.31a.46.46 0 0 1-.02-.87l16.97-6.36Z"/>
-                </svg>
-              </div>
-              <div class="contactCard__body">
-                <div class="contactCard__title" data-i18n="tgTitle">Telegram</div>
-                <div class="contactCard__value">@aridesitlab</div>
-              </div>
-            </a>
-
-            <a class="contactCard" href="tel:+37256845377">
-              <div class="contactCard__icon contactCard__icon--phone" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.49c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.58.11.35.03.74-.24 1.01l-2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="contactCard__body">
-                <div class="contactCard__title" data-i18n="phTitle">Телефон</div>
-                <div class="contactCard__value">+372 56845377</div>
-              </div>
-            </a>
-
-            <a class="contactCard" href="mailto:aridesteenus@gmail.com">
-              <div class="contactCard__icon contactCard__icon--mail" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="m22 8-8.97 5.7a2 2 0 0 1-2.06 0L2 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="contactCard__body">
-                <div class="contactCard__title" data-i18n="emTitle">Почта</div>
-                <div class="contactCard__value">aridesteenus@gmail.com</div>
-              </div>
-            </a>
-
-            <a class="contactCard" href="https://www.facebook.com/profile.php?id=61587739392605" target="_blank" rel="noreferrer">
-              <div class="contactCard__icon contactCard__icon--fb" aria-hidden="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill="currentColor" d="M13.45 21v-7.18h2.42l.36-2.8h-2.78V9.24c0-.81.22-1.37 1.39-1.37H16V5.36c-.2-.03-.9-.08-1.72-.08-1.7 0-2.86 1.04-2.86 2.95v1.79H9v2.8h2.42V21h2.03Z"/>
-                </svg>
-              </div>
-              <div class="contactCard__body">
-                <div class="contactCard__title" data-i18n="fbTitle">Facebook</div>
-                <div class="contactCard__value">ARIDES</div>
-              </div>
-            </a>
+    <section class="section" id="van">
+      <div class="container vanSection">
+        <div class="vanSection__content">
+          <div class="sectionHead">
+            <p class="sectionHead__eyebrow" data-i18n="vanEyebrow">Kaubik</p>
+            <h2 data-i18n="vanTitle">Peugeot Boxer 2012, millega on mugav vedada nii mööblit kui materjali</h2>
+            <p data-i18n="vanSubtitle">Kaubaruumi pikkus on 3.6 meetrit ning koorma kinnitamiseks on kaubikus olemas rihmad. See tähendab, et vedu on korrastatud, puhas ja turvaline.</p>
           </div>
 
-          <form class="form" id="contactForm">
-            <label class="field">
-              <span data-i18n="formName">Имя</span>
-              <input type="text" name="name" autocomplete="name" required placeholder="Arides" data-i18n-ph="formNamePh" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="formEmail">Email</span>
-              <input type="email" name="email" autocomplete="email" required placeholder="name@email.com" data-i18n-ph="formEmailPh" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="formMsg">Сообщение</span>
-              <textarea name="message" rows="5" required placeholder="Опиши задачу..." data-i18n-ph="formMsgPh"></textarea>
-            </label>
-
-            <button class="btn btn--primary" type="submit" data-i18n="formSend">Отправить</button>
-            <p class="form__note" data-i18n="formNote">Без спама. Ответим в ближайшее время.</p>
-          </form>
+          <div class="specGrid">
+            <article class="specCard">
+              <h3 data-i18n="spec1Title">3.6 m kaubaruumi pikkus</h3>
+              <p data-i18n="spec1Text">Sobib pikemate esemete, mööbli, materjalide ja suuremate poeostude jaoks.</p>
+            </article>
+            <article class="specCard">
+              <h3 data-i18n="spec2Title">Puhas ja avar sisu</h3>
+              <p data-i18n="spec2Text">Korralik kaubaruum jätab hea mulje ning aitab vedada koormat ilma liigse segaduseta.</p>
+            </article>
+            <article class="specCard">
+              <h3 data-i18n="spec3Title">Kinnitusrihmad olemas</h3>
+              <p data-i18n="spec3Text">Koorem saab kindlalt fikseeritud, et transport oleks turvalisem ka pikemal marsruudil.</p>
+            </article>
+            <article class="specCard">
+              <h3 data-i18n="spec4Title">Sobib igapäevasteks töödeks</h3>
+              <p data-i18n="spec4Text">Korterid, laod, poed, kontorid, objektid ja jäätmejaam mahuvad ühe teenuse sisse.</p>
+            </article>
+            <article class="specCard">
+              <h3 data-i18n="spec5Title">Transportkäru kuni 250 kg</h3>
+              <p data-i18n="spec5Text">Aitab liigutada raskemaid pakke, tehnikat, kaste ja muid esemeid mugavamalt ning ohutumalt.</p>
+            </article>
+            <article class="specCard">
+              <h3 data-i18n="spec6Title">Kaks mugavat kohta kabiinis</h3>
+              <p data-i18n="spec6Text">Vajadusel saavad kaks reisijat sõita koos juhiga, mis teeb kolimise ja kauba saatmise lihtsamaks.</p>
+            </article>
+          </div>
         </div>
+
+        <figure class="vanSection__photo">
+          <img src="./img/transport/cargo-inside-yellow.jpg" alt="Kaubaruumi sisemus koos koormaga" data-i18n-alt="vanImgAlt" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--sand" id="gallery">
+      <div class="container">
+        <div class="sectionHead">
+          <p class="sectionHead__eyebrow" data-i18n="galleryEyebrow">Galerii</p>
+          <h2 data-i18n="galleryTitle">Päris kaubik, päris veod</h2>
+          <p data-i18n="gallerySubtitle">Kasuta fotosid orientiirina, millisteks vedudeks kaubik sobib. Vajuta pildile, et suuremalt vaadata.</p>
+        </div>
+
+        <div class="galleryGrid">
+          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap1">
+            <img src="./img/transport/van-hero-side.jpg" alt="Peugeot Boxer kõrvalvaates" data-i18n-alt="galleryAlt1" draggable="false" />
+            <figcaption data-i18n="galleryCap1">Puhas ja esinduslik kaubik igapäevaseks veoteenuseks.</figcaption>
+          </figure>
+
+          <figure class="galleryCard galleryCard--tall" tabindex="0" data-caption-key="galleryCap2">
+            <img src="./img/transport/van-front.jpg" alt="Peugeot Boxer eestvaates" data-i18n-alt="galleryAlt2" draggable="false" />
+            <figcaption data-i18n="galleryCap2">Kõrge kaubik, mis sobib hästi kolimisteks ja suuremate esemete veoks.</figcaption>
+          </figure>
+
+          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap3">
+            <img src="./img/transport/van-loading-lumber.jpg" alt="Puitmaterjal kaubikus" data-i18n-alt="galleryAlt3" draggable="false" />
+            <figcaption data-i18n="galleryCap3">Pikem materjal ja ehitustarbed mahuvad mugavalt peale.</figcaption>
+          </figure>
+
+          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap4">
+            <img src="./img/transport/cargo-inside-yellow.jpg" alt="Ehitusmaterjalid kaubaruumis" data-i18n-alt="galleryAlt4" draggable="false" />
+            <figcaption data-i18n="galleryCap4">Koorma saab rihmadega kindlalt paika panna.</figcaption>
+          </figure>
+
+          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap5">
+            <img src="./img/transport/cargo-bricks.jpg" alt="Sillutiskivid ja käsikäru kaubikus" data-i18n-alt="galleryAlt5" draggable="false" />
+            <figcaption data-i18n="galleryCap5">Vedame ka raskemaid ehitusmaterjale ja objektikaupa.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bookingSection" id="booking">
+      <div class="container bookingGrid">
+        <div class="bookingInfo">
+          <div class="sectionHead">
+            <p class="sectionHead__eyebrow" data-i18n="bookingEyebrow">Online tellimus</p>
+            <h2 data-i18n="bookingTitle">Saada tellimus koos kuupäeva, kellaaja ja aadressidega</h2>
+            <p data-i18n="bookingSubtitle">Täida vorm, lisa algus- ja lõpp-aadress ning vajadusel vahepeatused. Vastame telefoni või sõnumi teel ja kinnitame tellimuse.</p>
+          </div>
+
+          <div class="bookingSteps">
+            <article class="stepCard">
+              <span class="stepCard__num">1</span>
+              <div>
+                <h3 data-i18n="step1Title">Täida marsruut</h3>
+                <p data-i18n="step1Text">Lisa kuupäev, kellaaeg, alguspunkt, sihtpunkt ja kõik vajalikud lisapeatused.</p>
+              </div>
+            </article>
+
+            <article class="stepCard">
+              <span class="stepCard__num">2</span>
+              <div>
+                <h3 data-i18n="step2Title">Kirjelda koormat</h3>
+                <p data-i18n="step2Text">Kirjuta, mida on vaja vedada, et oskaksime marsruudi ja aja täpsemalt üle vaadata.</p>
+              </div>
+            </article>
+
+            <article class="stepCard">
+              <span class="stepCard__num">3</span>
+              <div>
+                <h3 data-i18n="step3Title">Kinnitame tellimuse</h3>
+                <p data-i18n="step3Text">Võtame ühendust telefoni, WhatsAppi või Telegrami kaudu ja lepime kõik detailid kokku.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="contactPanel" id="contact">
+            <h3 data-i18n="contactTitle">Võta ühendust ka otse</h3>
+            <p data-i18n="contactSubtitle">Kui on kiire, helista või kirjuta kohe sõnumitesse.</p>
+
+            <div class="contactPanel__grid">
+              <a class="contactLink" href="tel:+37256845377">
+                <span class="contactLink__label" data-i18n="phTitle">Telefon</span>
+                <span class="contactLink__value">+372 5684 5377</span>
+              </a>
+
+              <a class="contactLink" href="https://wa.me/37256845377" target="_blank" rel="noreferrer">
+                <span class="contactLink__label" data-i18n="waTitle">WhatsApp</span>
+                <span class="contactLink__value">+372 5684 5377</span>
+              </a>
+
+              <a class="contactLink" href="https://t.me/aridesitlab" target="_blank" rel="noreferrer">
+                <span class="contactLink__label" data-i18n="tgTitle">Telegram</span>
+                <span class="contactLink__value">@aridesitlab</span>
+              </a>
+
+              <a class="contactLink" href="mailto:aridesteenus@gmail.com">
+                <span class="contactLink__label" data-i18n="emTitle">E-mail</span>
+                <span class="contactLink__value">aridesteenus@gmail.com</span>
+              </a>
+
+              <a class="contactLink contactLink--facebook" href="https://www.facebook.com/profile.php?id=61587739392605" target="_blank" rel="noreferrer">
+                <span class="contactLink__label" data-i18n="fbTitle">Facebook</span>
+                <span class="contactLink__value">ARIDES</span>
+              </a>
+            </div>
+
+            <div class="euNotice">
+              <span class="euNotice__flag" aria-hidden="true">🇪🇺</span>
+              <div class="euNotice__content">
+                <strong data-i18n="euTitle">Võimalikud veod ka Euroopa Liidu sees</strong>
+                <p data-i18n="euText">Rahvusvahelised veod EL piires on võimalikud kokkuleppel. Kirjuta oma marsruut ja vastame eraldi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="bookingForm" id="bookingForm">
+          <section class="progressPanel" aria-label="Booking progress">
+            <div class="progressPanel__head">
+              <div>
+                <p class="progressPanel__eyebrow" data-i18n="progressEyebrow">Tellimuse progress</p>
+                <h3 data-i18n="progressTitle">Täida andmed ja buss liigub finiši poole</h3>
+              </div>
+              <strong class="progressPanel__percent" id="progressPercent">0%</strong>
+            </div>
+
+            <div class="progressRoad">
+              <div class="progressRoad__line"></div>
+              <div class="progressRoad__fill" id="progressFill"></div>
+              <div class="progressRoad__bus" id="progressBus" aria-hidden="true">
+                <img src="./img/ui/van-progress.png" alt="" />
+              </div>
+              <div class="progressRoad__start" data-i18n="progressStart">Start</div>
+              <div class="progressRoad__end" data-i18n="progressEnd">Finish</div>
+            </div>
+          </section>
+
+          <div class="formGrid">
+            <label class="field">
+              <span data-i18n="formName">Nimi</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="Teie nimi" data-i18n-ph="formNamePh" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="formPhone">Telefon</span>
+              <input type="tel" name="phone" autocomplete="tel" required placeholder="+372..." data-i18n-ph="formPhonePh" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="formEmail">E-mail (soovi korral)</span>
+              <input type="email" name="customer_email" autocomplete="email" placeholder="name@email.com" data-i18n-ph="formEmailPh" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="formService">Teenus</span>
+              <select name="service_type" required>
+                <option value="" selected disabled data-i18n="serviceOptionDefault">Vali teenus</option>
+                <option value="moving" data-i18n="serviceOptionMoving">Korteri või kontori kolimine</option>
+                <option value="store" data-i18n="serviceOptionStore">Kauba toomine poest või laost</option>
+                <option value="materials" data-i18n="serviceOptionMaterials">Ehitusmaterjalide vedu</option>
+                <option value="waste" data-i18n="serviceOptionWaste">Prügi või vana mööbli äravedu</option>
+                <option value="custom" data-i18n="serviceOptionCustom">Muu vedu</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="formDate">Kuupäev</span>
+              <input
+                id="moveDate"
+                type="text"
+                name="move_date"
+                required
+                inputmode="numeric"
+                autocomplete="off"
+                maxlength="10"
+                placeholder="pp.kk.aaaa"
+                data-i18n-ph="formDatePh"
+              />
+            </label>
+
+            <label class="field">
+              <span data-i18n="formTime">Kellaaeg</span>
+              <input
+                id="moveTime"
+                type="text"
+                name="move_time"
+                required
+                inputmode="numeric"
+                autocomplete="off"
+                maxlength="5"
+                placeholder="hh:mm"
+                data-i18n-ph="formTimePh"
+              />
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="formFrom">Aadress, kust laadida</span>
+              <input type="text" name="from_address" required placeholder="Näiteks Mustamäe tee 10, Tallinn" data-i18n-ph="formFromPh" />
+            </label>
+
+            <div class="field field--full">
+              <div class="field__topline">
+                <span data-i18n="formStops">Lisapeatused</span>
+                <button class="linkButton" id="addStopBtn" type="button" data-i18n="addStop">+ Lisa peatus</button>
+              </div>
+              <div class="stopsList" id="extraStops"></div>
+            </div>
+
+            <label class="field field--full">
+              <span data-i18n="formTo">Aadress, kuhu viia</span>
+              <input type="text" name="to_address" required placeholder="Näiteks Pärnu mnt 120, Tallinn" data-i18n-ph="formToPh" />
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="formCargo">Mida on vaja vedada</span>
+              <textarea name="cargo_details" rows="4" required placeholder="Kirjelda koormat: mööbel, kastid, tehnika, materjalid..." data-i18n-ph="formCargoPh"></textarea>
+            </label>
+
+            <label class="field field--full">
+              <span data-i18n="formComment">Lisainfo</span>
+              <textarea name="comment" rows="3" placeholder="Korrus, lift, parkimine, erisoovid, mitu peatust jne." data-i18n-ph="formCommentPh"></textarea>
+            </label>
+          </div>
+
+          <section class="quotePanel" aria-live="polite">
+            <div class="quotePanel__head">
+              <div>
+                <p class="quotePanel__eyebrow" data-i18n="estimateEyebrow">Eelhind</p>
+                <h3 data-i18n="quoteTitle">Ligikaudne hind ja tellimuse detailid</h3>
+              </div>
+            </div>
+
+            <div class="estimatePanel">
+              <div class="estimatePanel__head">
+                <p class="estimatePanel__eyebrow" data-i18n="estimateEyebrow">Eelhind</p>
+                <strong class="estimatePanel__value" id="estimateValue" data-i18n="estimatePendingValue">Alusta vormi täitmist</strong>
+              </div>
+              <p class="estimatePanel__text" id="estimateText" data-i18n="estimatePendingText">Lisame siia esialgse hinnaloogika kohe, kui marsruut ja teenus on sisestatud.</p>
+            </div>
+
+            <div class="orderSummary">
+              <div class="orderSummary__item">
+                <span class="orderSummary__label" data-i18n="summaryServiceLabel">Teenuse liik</span>
+                <strong class="orderSummary__value" id="summaryService" data-i18n="summaryPending">Täidetakse vormist</strong>
+              </div>
+              <div class="orderSummary__item">
+                <span class="orderSummary__label" data-i18n="summaryDateLabel">Kuupäev</span>
+                <strong class="orderSummary__value" id="summaryDate" data-i18n="summaryPending">Täidetakse vormist</strong>
+              </div>
+              <div class="orderSummary__item">
+                <span class="orderSummary__label" data-i18n="summaryTimeLabel">Kellaaeg</span>
+                <strong class="orderSummary__value" id="summaryTime">--:--</strong>
+              </div>
+              <div class="orderSummary__item">
+                <span class="orderSummary__label" data-i18n="summaryFromLabel">Laadimisaadress</span>
+                <strong class="orderSummary__value" id="summaryFrom" data-i18n="summaryPending">Täidetakse vormist</strong>
+              </div>
+              <div class="orderSummary__item">
+                <span class="orderSummary__label" data-i18n="summaryToLabel">Sihtaadress</span>
+                <strong class="orderSummary__value" id="summaryTo" data-i18n="summaryPending">Täidetakse vormist</strong>
+              </div>
+              <div class="orderSummary__item">
+                <span class="orderSummary__label" data-i18n="summaryExtraLabel">Lisad</span>
+                <strong class="orderSummary__value" id="summaryExtra" data-i18n="summaryExtraEmpty">Ilma lisadeta</strong>
+              </div>
+            </div>
+          </section>
+
+          <label class="checkRow">
+            <input type="checkbox" name="need_help" />
+            <span data-i18n="formNeedHelp">Vajan abi peale- või mahalaadimisel</span>
+          </label>
+
+          <input type="hidden" name="email" value="" />
+          <textarea name="message" hidden></textarea>
+
+          <button class="btn btn--primary bookingForm__submit" type="submit" data-i18n="formSend">Saada tellimus</button>
+          <p class="bookingForm__note" data-i18n="formNote">Pärast saatmist võtame ühendust, kinnitame marsruudi, aja ja hinna.</p>
+        </form>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container footer__row">
-        <div class="footer__left" data-i18n="footerLeft">© ARIDES, 2026</div>
-        <div class="footer__right" data-i18n="footerRight">Таллин, Эстония</div>
+        <div>
+          <div class="footer__brand">ARIDES</div>
+          <p class="footer__text" data-i18n="footerText">Kaubavedu ja kolimine Tallinnas ning Harjumaal. Kiire kontakt telefoni, WhatsAppi, Telegrami või online-vormi kaudu.</p>
+        </div>
+
+        <div class="footer__contacts">
+          <a href="tel:+37256845377">+372 5684 5377</a>
+          <a href="mailto:aridesteenus@gmail.com">aridesteenus@gmail.com</a>
+          <a href="https://t.me/aridesitlab" target="_blank" rel="noreferrer">@aridesitlab</a>
+        </div>
       </div>
     </footer>
   </main>
 
-  <!-- Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery">
-    <div class="modal__panel" role="document">
+  <div class="modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery">
+    <div class="modal__panel">
       <button class="iconBtn modal__close" id="modalClose" type="button" aria-label="Close">✕</button>
-
-      <div class="modal__layout">
-        <figure class="modal__figure">
-          <button class="iconBtn modal__nav modal__prev" id="modalPrev" type="button" aria-label="Previous">←</button>
-          <div class="modal__imageFrame">
-            <img id="modalImage" alt="Selected work" draggable="false" />
-            <div class="modal__counter" id="modalCounter" aria-live="polite"></div>
-          </div>
-          <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
-        </figure>
-
-        <aside class="modal__sidebar">
-          <div class="modal__eyebrow" id="modalEyebrow"></div>
-          <h3 class="modal__title" id="modalTitle"></h3>
-          <p class="modal__caption" id="modalCaption"></p>
-
-          <section class="modal__details" id="modalDetails">
-            <div class="modal__detailsLabel" id="modalDetailsLabel"></div>
-            <ul class="modal__list" id="modalList"></ul>
-          </section>
-
-          <a class="btn btn--primary modal__link" id="modalLink" href="#" target="_blank" rel="noopener noreferrer" hidden>
-            <span class="modal__linkLabel" id="modalLinkLabel"></span>
-            <span class="modal__linkValue" id="modalLinkValue"></span>
-          </a>
-        </aside>
+      <button class="iconBtn modal__nav modal__prev" id="modalPrev" type="button" aria-label="Previous">←</button>
+      <div class="modal__frame">
+        <img id="modalImage" alt="Gallery image" draggable="false" />
+        <div class="modal__counter" id="modalCounter"></div>
       </div>
+      <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
+      <p class="modal__caption" id="modalCaption"></p>
     </div>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Floating WhatsApp -->
-  <a class="waFloat" href="https://wa.me/37256845377" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-    💬
+  <a class="quickFloat" href="https://wa.me/37256845377" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M19.05 4.94A9.77 9.77 0 0 0 12.09 2C6.69 2 2.3 6.38 2.3 11.79c0 1.73.45 3.42 1.31 4.91L2 22l5.45-1.57a9.83 9.83 0 0 0 4.64 1.18h.01c5.4 0 9.79-4.39 9.79-9.8a9.71 9.71 0 0 0-2.84-6.87ZM12.1 19.96h-.01a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.23.93.95-3.15-.2-.32a8.14 8.14 0 0 1-1.25-4.31 8.19 8.19 0 0 1 8.18-8.18 8.14 8.14 0 0 1 5.82 2.41 8.11 8.11 0 0 1 2.39 5.77 8.19 8.19 0 0 1-8.2 8.17Zm4.49-6.14c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.55.13-.16.24-.63.8-.77.97-.14.16-.28.18-.52.06-.25-.12-1.04-.38-1.98-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.01-.38.11-.5.11-.11.25-.28.36-.42.12-.14.16-.24.24-.41.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.24-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.16 1.72 2.63 4.17 3.69.58.25 1.03.4 1.38.52.58.18 1.11.15 1.52.09.46-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.3Z"/>
+    </svg>
   </a>
 
-  <!-- EmailJS must be loaded BEFORE app.js -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="./app.js"></script>
 </body>
