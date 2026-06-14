@@ -1484,7 +1484,7 @@ body.quote-drawer-open .quoteOverlay{
 .quoteFloat{
   position:fixed;
   right:18px;
-  bottom:92px;
+  bottom:154px;
   z-index:92;
   display:inline-flex;
   align-items:center;
@@ -1564,6 +1564,11 @@ body.quote-drawer-open .quoteDrawer__close{
   color:var(--white);
   font-weight:800;
   box-shadow:0 22px 46px rgba(37,211,102,.28);
+}
+.quickFloat--phone{
+  bottom:86px;
+  background:linear-gradient(135deg, #238cff, #0a55df);
+  box-shadow:0 22px 46px rgba(35,140,255,.28);
 }
 .quickFloat svg{
   width:28px;
@@ -1845,12 +1850,22 @@ body.quote-drawer-open .quoteDrawer__close{
   }
   .quoteFloat{
     right:12px;
-    bottom:84px;
+    bottom:148px;
     min-width:124px;
     min-height:48px;
     padding:11px 14px;
     border-radius:16px;
     font-size:14px;
+  }
+  .quickFloat{
+    right:12px;
+    bottom:16px;
+    width:56px;
+    height:56px;
+    border-radius:17px;
+  }
+  .quickFloat--phone{
+    bottom:82px;
   }
   body.quote-drawer-open .bookingForm{
     top:76px;
