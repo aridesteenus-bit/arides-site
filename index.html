@@ -459,6 +459,7 @@
         </div>
 
         <form class="bookingForm" id="bookingForm" enctype="multipart/form-data">
+          <button class="quoteDrawer__close" id="quoteDrawerClose" type="button" data-i18n="quoteDrawerClose" aria-label="Close">Sulge</button>
           <section class="progressPanel" aria-label="Booking progress">
             <div class="progressPanel__head">
               <div>
@@ -589,7 +590,7 @@
 
             <label class="checkRow checkRow--boxed">
               <input type="checkbox" name="has_elevator" />
-              <span data-i18n="formElevator">Molemas aadressis on lift olemas</span>
+              <span data-i18n="formElevator">Mõlemas aadressis on lift olemas</span>
             </label>
 
             <label class="field field--full">
@@ -796,6 +797,9 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="quoteOverlay" id="quoteOverlay" aria-hidden="true"></div>
+  <button class="quoteFloat" id="quoteFloat" type="button" data-i18n="quoteFloat">Arvuta hind</button>
 
   <a class="quickFloat" href="https://wa.me/37256845377" target="_blank" rel="noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true">

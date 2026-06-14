@@ -12,6 +12,8 @@
       navBooking: "Broneeri",
       navContact: "Kontakt",
       callNow: "Helista kohe",
+      quoteFloat: "Arvuta hind",
+      quoteDrawerClose: "Sulge",
 
       heroEyebrow: "Peugeot Boxer • 3.6 m kaubaruum • iga päev",
       heroTitle: "Kaubavedu ja kolimine Tallinnas, Harjumaal ja üle Eesti",
@@ -171,7 +173,7 @@
       formPickupFloor: "Korrus laadimisel",
       formDeliveryFloor: "Korrus kohaletoimetamisel",
       formHelpers: "Abi laadimisel / kandmisel",
-      formElevator: "Molemas aadressis on lift olemas",
+      formElevator: "Mõlemas aadressis on lift olemas",
       helperOption0: "Abi ei ole vaja",
       helperOption1: "1 abiline",
       helperOption2: "2 abilist",
@@ -281,6 +283,8 @@
       navBooking: "Заказ",
       navContact: "Контакты",
       callNow: "Позвонить сейчас",
+      quoteFloat: "Узнать цену",
+      quoteDrawerClose: "Закрыть",
 
       heroEyebrow: "Peugeot Boxer • грузовой отсек 3.6 м • работаем каждый день",
       heroTitle: "Грузоперевозки и переезды по Таллинну, Harjumaa и всей Эстонии",
@@ -548,6 +552,8 @@
       navBooking: "Book",
       navContact: "Contacts",
       callNow: "Call now",
+      quoteFloat: "Get price",
+      quoteDrawerClose: "Close",
 
       heroEyebrow: "Peugeot Boxer • 3.6 m cargo area • every day",
       heroTitle: "Cargo transport and moving in Tallinn, Harjumaa and across Estonia",
@@ -2041,6 +2047,43 @@
     });
   }
 
+  function initQuoteDrawer() {
+    const openBtn = $("#quoteFloat");
+    const closeBtn = $("#quoteDrawerClose");
+    const overlay = $("#quoteOverlay");
+    const form = $("#bookingForm");
+    if (!openBtn || !closeBtn || !overlay || !form) return;
+
+    let lastFocus = null;
+
+    const open = () => {
+      lastFocus = document.activeElement;
+      document.body.classList.add("quote-drawer-open");
+      overlay.setAttribute("aria-hidden", "false");
+      window.setTimeout(() => {
+        $('input[name="name"]', form)?.focus();
+      }, 60);
+    };
+
+    const close = () => {
+      document.body.classList.remove("quote-drawer-open");
+      overlay.setAttribute("aria-hidden", "true");
+      if (lastFocus && typeof lastFocus.focus === "function") {
+        lastFocus.focus();
+      }
+    };
+
+    openBtn.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    overlay.addEventListener("click", close);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.body.classList.contains("quote-drawer-open")) {
+        close();
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     let currentLang = detectLang();
     const getLang = () => localStorage.getItem(LS_KEY) || currentLang;
@@ -2055,6 +2098,7 @@
     initLocalizedValidation(getLang);
     initLegalModal(getLang);
     initSmoothScroll();
+    initQuoteDrawer();
     applyLang(currentLang);
 
     $("#langMenu")?.addEventListener("click", (e) => {
