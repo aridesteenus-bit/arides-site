@@ -1031,9 +1031,77 @@ h1{
 .flatpickr-day.today{
   border-color:#2f64cb;
 }
+.flatpickr-day.has-busy-slots{
+  position:relative;
+  color:#b92525;
+  border-color:rgba(217,56,56,.55);
+  background:rgba(217,56,56,.1);
+}
+.flatpickr-day.has-busy-slots::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:4px;
+  width:5px;
+  height:5px;
+  border-radius:999px;
+  background:#d93838;
+  transform:translateX(-50%);
+}
+.flatpickr-day.has-busy-slots.selected,
+.flatpickr-day.has-busy-slots.selected:hover{
+  color:#fff;
+  background:#d93838;
+  border-color:#d93838;
+}
 .flatpickr-time input.flatpickr-hour,
 .flatpickr-time input.flatpickr-minute{
   font-weight:800;
+}
+.fieldHint{
+  min-height:18px;
+  font-size:12px;
+  line-height:1.45;
+  color:#6d7891;
+}
+.fieldHint.is-warning{
+  color:#b92525;
+  font-weight:800;
+}
+.uploadField input[type="file"]{
+  position:absolute;
+  width:1px;
+  height:1px;
+  opacity:0;
+  pointer-events:none;
+}
+.uploadField__box{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding:18px;
+  border:1px dashed rgba(47,100,203,.36);
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(47,100,203,.08), rgba(255,255,255,.94));
+  cursor:pointer;
+  transition:border-color .16s ease, background .16s ease, transform .16s ease;
+}
+.uploadField__box:hover{
+  border-color:rgba(47,100,203,.64);
+  background:linear-gradient(135deg, rgba(47,100,203,.12), rgba(255,255,255,.98));
+}
+.uploadField__box strong{
+  font-size:15px;
+  color:#2f64cb;
+}
+.uploadField__box small{
+  color:#6d7891;
+}
+.uploadField__box em{
+  font-style:normal;
+  color:#1f2e4d;
+  font-weight:800;
+  word-break:break-word;
 }
 .field__topline{
   display:flex;

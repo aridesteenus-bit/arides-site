@@ -458,7 +458,7 @@
           </div>
         </div>
 
-        <form class="bookingForm" id="bookingForm">
+        <form class="bookingForm" id="bookingForm" enctype="multipart/form-data">
           <section class="progressPanel" aria-label="Booking progress">
             <div class="progressPanel__head">
               <div>
@@ -547,6 +547,7 @@
                   </svg>
                 </button>
               </div>
+              <small class="fieldHint" id="timeAvailabilityHint" aria-live="polite"></small>
             </label>
 
             <label class="field field--full">
@@ -599,6 +600,16 @@
             <label class="field field--full">
               <span data-i18n="formComment">Lisainfo</span>
               <textarea name="comment" rows="3" placeholder="Korrus, lift, parkimine, erisoovid, mitu peatust jne." data-i18n-ph="formCommentPh"></textarea>
+            </label>
+
+            <label class="field field--full uploadField">
+              <span data-i18n="formPhotos">Fotod kaubast (soovi korral)</span>
+              <input id="orderPhotos" type="file" name="order_photos" accept="image/*" multiple />
+              <div class="uploadField__box">
+                <strong data-i18n="formPhotosText">Lisa fotod kaubast</strong>
+                <small data-i18n="formPhotosHint">Kuni 3 fotot, et oleks lihtsam hinnata, kas kaup mahub kaubikusse.</small>
+                <em id="photoFileSummary" data-i18n="photoEmpty">Fotosid pole valitud</em>
+              </div>
             </label>
           </div>
 

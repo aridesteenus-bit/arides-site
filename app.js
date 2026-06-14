@@ -179,6 +179,15 @@
       formCargoPh: "Kirjelda koormat: mööbel, kastid, tehnika, materjalid...",
       formComment: "Lisainfo",
       formCommentPh: "Korrus, lift, parkimine, erisoovid, mitu peatust jne.",
+      formPhotos: "Fotod kaubast (soovi korral)",
+      formPhotosText: "Lisa fotod kaubast",
+      formPhotosHint: "Kuni 3 fotot, et oleks lihtsam hinnata, kas kaup mahub kaubikusse.",
+      photoEmpty: "Fotosid pole valitud",
+      photoCount: "{n} fotot valitud",
+      busySlotsTitle: "Sellel kuupäeval on juba kinnitatud ajad: {slots}",
+      busySlotUnavailable: "See aeg on juba broneeritud. Palun valige teine kellaaeg.",
+      busySlotList: "Kinnitatud tellimused: {slots}",
+      busySlotDayTitle: "Sellel päeval on kinnitatud tellimus",
       formNeedHelp: "Vajan abi peale- või mahalaadimisel",
       formSend: "Saada tellimus arutamisele",
       formSending: "Saadan...",
@@ -253,7 +262,11 @@
       validationTimeRequired: "Palun valige kellaaeg.",
       validationDateInvalid: "Palun sisestage kuupäev kujul pp.kk.aaaa.",
       validationDatePast: "Palun sisestage tänane või tulevane kuupäev.",
-      validationTimeInvalid: "Palun sisestage kellaaeg kujul hh:mm."
+      validationTimeInvalid: "Palun sisestage kellaaeg kujul hh:mm.",
+      validationTimeUnavailable: "Valitud aeg on juba broneeritud.",
+      validationPhotosType: "Palun lisage ainult pildifailid.",
+      validationPhotosCount: "Palun lisage kuni 3 fotot.",
+      validationPhotosSize: "Ühe foto suurus võib olla kuni 8 MB."
     },
 
     ru: {
@@ -433,6 +446,15 @@
       formCargoPh: "Опишите груз: мебель, коробки, техника, материалы...",
       formComment: "Комментарии",
       formCommentPh: "Этаж, лифт, парковка, особые пожелания, сколько точек и т.д.",
+      formPhotos: "Фото груза (по желанию)",
+      formPhotosText: "Добавить фото груза",
+      formPhotosHint: "До 3 фото, чтобы было проще понять, влезет ли груз в фургон.",
+      photoEmpty: "Фото не выбраны",
+      photoCount: "Выбрано фото: {n}",
+      busySlotsTitle: "На эту дату уже есть подтвержденные заказы: {slots}",
+      busySlotUnavailable: "Это время уже занято. Пожалуйста, выберите другое время.",
+      busySlotList: "Подтвержденные заказы: {slots}",
+      busySlotDayTitle: "На этот день уже есть подтвержденный заказ",
       formNeedHelp: "Нужна помощь с погрузкой или разгрузкой",
       formSend: "Отправить заявку на рассмотрение",
       formSending: "Отправляем...",
@@ -507,7 +529,11 @@
       validationTimeRequired: "Пожалуйста, выберите время.",
       validationDateInvalid: "Пожалуйста, введите дату в формате дд.мм.гггг.",
       validationDatePast: "Пожалуйста, укажите сегодняшнюю или будущую дату.",
-      validationTimeInvalid: "Пожалуйста, введите время в формате чч:мм."
+      validationTimeInvalid: "Пожалуйста, введите время в формате чч:мм.",
+      validationTimeUnavailable: "Выбранное время уже занято.",
+      validationPhotosType: "Пожалуйста, добавляйте только изображения.",
+      validationPhotosCount: "Пожалуйста, добавьте не больше 3 фото.",
+      validationPhotosSize: "Размер одного фото может быть до 8 MB."
     },
 
     en: {
@@ -689,6 +715,15 @@
       formCargoPh: "Describe the cargo: furniture, boxes, appliances, materials...",
       formComment: "Additional details",
       formCommentPh: "Floor, elevator, parking, special notes, number of stops, etc.",
+      formPhotos: "Cargo photos (optional)",
+      formPhotosText: "Add cargo photos",
+      formPhotosHint: "Up to 3 photos, so it is easier to check whether the cargo fits in the van.",
+      photoEmpty: "No photos selected",
+      photoCount: "{n} photos selected",
+      busySlotsTitle: "This date already has confirmed jobs: {slots}",
+      busySlotUnavailable: "This time is already booked. Please choose another time.",
+      busySlotList: "Confirmed jobs: {slots}",
+      busySlotDayTitle: "This day already has a confirmed booking",
       formNeedHelp: "I need help with loading or unloading",
       formSend: "Send request for review",
       formSending: "Sending...",
@@ -763,7 +798,11 @@
       validationTimeRequired: "Please choose a time.",
       validationDateInvalid: "Please enter the date in the format dd/mm/yyyy.",
       validationDatePast: "Please enter today or a future date.",
-      validationTimeInvalid: "Please enter the time in the format hh:mm."
+      validationTimeInvalid: "Please enter the time in the format hh:mm.",
+      validationTimeUnavailable: "The selected time is already booked.",
+      validationPhotosType: "Please add image files only.",
+      validationPhotosCount: "Please add up to 3 photos.",
+      validationPhotosSize: "Each photo can be up to 8 MB."
     }
   };
 
@@ -784,6 +823,9 @@
   let refreshStopsText = () => {};
   let refreshDateTimePickers = () => {};
   let resetDateTimePickers = () => {};
+  let refreshPhotoUploadText = () => {};
+  let resetPhotoUpload = () => {};
+  let getBookingSlotConflict = () => null;
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -866,6 +908,7 @@
     refreshStopsText();
     refreshGalleryText();
     refreshDateTimePickers();
+    refreshPhotoUploadText();
   }
 
   function syncLangBlocks(lang) {
@@ -1024,6 +1067,12 @@
     return hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59;
   }
 
+  function timeToMinutes(value) {
+    const match = String(value || "").match(/^(\d{2}):(\d{2})$/);
+    if (!match) return null;
+    return Number(match[1]) * 60 + Number(match[2]);
+  }
+
   function getCustomFieldMessage(input, lang) {
     const value = typeof input?.value === "string" ? input.value.trim() : "";
 
@@ -1037,6 +1086,14 @@
     if (input?.name === "move_time") {
       if (!value) return "";
       if (!isValidTimeValue(value)) return t(lang, "validationTimeInvalid");
+      if (getBookingSlotConflict()) return t(lang, "validationTimeUnavailable");
+    }
+
+    if (input?.name === "order_photos") {
+      const files = Array.from(input.files || []);
+      if (files.length > 3) return t(lang, "validationPhotosCount");
+      if (files.some((file) => file.size > 8 * 1024 * 1024)) return t(lang, "validationPhotosSize");
+      if (files.some((file) => !file.type.startsWith("image/"))) return t(lang, "validationPhotosType");
     }
 
     return "";
@@ -1108,16 +1165,87 @@
     }).format(parsedDate);
   }
 
+  function formatDateKey(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+
   function initDateTimePickers(langGetter) {
     const dateInput = $("#moveDate");
     const timeInput = $("#moveTime");
     if (!dateInput || !timeInput || !window.flatpickr) return;
 
     const pickerButtons = $$("[data-picker-target]");
+    const timeAvailabilityHint = $("#timeAvailabilityHint");
+    const bookedSlotsByDate = new Map();
     const prevArrow =
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 6.3a1 1 0 0 1 0 1.4L10.41 12l4.3 4.3a1 1 0 1 1-1.42 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.42 0Z"/></svg>';
     const nextArrow =
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.3 17.7a1 1 0 0 1 0-1.4l4.29-4.3-4.3-4.3a1 1 0 1 1 1.42-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.42 0Z"/></svg>';
+
+    const normalizeSlot = (slot) => {
+      if (!slot?.date || !slot?.start || !slot?.end) return null;
+      const start = timeToMinutes(slot.start);
+      const end = timeToMinutes(slot.end);
+      if (start === null || end === null || end <= start) return null;
+      return {
+        date: slot.date,
+        start: slot.start,
+        end: slot.end,
+        startMinutes: start,
+        endMinutes: end,
+        label: slot.label || ""
+      };
+    };
+
+    const setBookedSlots = (slots) => {
+      bookedSlotsByDate.clear();
+      slots.map(normalizeSlot).filter(Boolean).forEach((slot) => {
+        const items = bookedSlotsByDate.get(slot.date) || [];
+        items.push(slot);
+        bookedSlotsByDate.set(slot.date, items);
+      });
+
+      bookedSlotsByDate.forEach((items) => {
+        items.sort((a, b) => a.startMinutes - b.startMinutes);
+      });
+    };
+
+    const formatSlotList = (dateKey) => {
+      const slots = bookedSlotsByDate.get(dateKey) || [];
+      return slots.map((slot) => `${slot.start}-${slot.end}`).join(", ");
+    };
+
+    const getSelectedDateKey = () => dateInput.value || "";
+
+    const findSlotConflict = () => {
+      const dateKey = getSelectedDateKey();
+      const selectedTime = timeToMinutes(timeInput.value);
+      if (!dateKey || selectedTime === null) return null;
+      return (bookedSlotsByDate.get(dateKey) || []).find(
+        (slot) => selectedTime >= slot.startMinutes && selectedTime < slot.endMinutes
+      ) || null;
+    };
+
+    const updateAvailabilityHint = () => {
+      const lang = langGetter();
+      const dateKey = getSelectedDateKey();
+      const slotList = formatSlotList(dateKey);
+      const conflict = findSlotConflict();
+
+      if (timeAvailabilityHint) {
+        timeAvailabilityHint.classList.toggle("is-warning", Boolean(conflict));
+        timeAvailabilityHint.textContent = slotList
+          ? t(lang, "busySlotList").replace("{slots}", slotList)
+          : "";
+      }
+
+      timeInput.setCustomValidity(conflict ? t(lang, "validationTimeUnavailable") : "");
+    };
+
+    getBookingSlotConflict = () => findSlotConflict();
 
     const datePicker = window.flatpickr(dateInput, {
       altInput: true,
@@ -1131,7 +1259,21 @@
       locale: getPickerLocale(langGetter()),
       prevArrow,
       nextArrow,
-      onChange: () => applyFieldValidationState(dateInput, langGetter())
+      onChange: () => {
+        applyFieldValidationState(dateInput, langGetter());
+        applyFieldValidationState(timeInput, langGetter());
+        updateAvailabilityHint();
+      },
+      onDayCreate: (_selectedDates, _dateStr, instance, dayElem) => {
+        const dateKey = formatDateKey(dayElem.dateObj);
+        if (!bookedSlotsByDate.has(dateKey)) return;
+
+        dayElem.classList.add("has-busy-slots");
+        dayElem.setAttribute(
+          "title",
+          t(langGetter(), "busySlotsTitle").replace("{slots}", formatSlotList(dateKey))
+        );
+      }
     });
 
     const timePicker = window.flatpickr(timeInput, {
@@ -1148,7 +1290,10 @@
       locale: getPickerLocale(langGetter()),
       prevArrow,
       nextArrow,
-      onChange: () => applyFieldValidationState(timeInput, langGetter())
+      onChange: () => {
+        applyFieldValidationState(timeInput, langGetter());
+        updateAvailabilityHint();
+      }
     });
 
     const syncPickerUi = (lang) => {
@@ -1172,6 +1317,7 @@
       const timeButton = $('[data-picker-target="moveTime"]');
       if (dateButton) dateButton.setAttribute("aria-label", t(lang, "pickerDateAria"));
       if (timeButton) timeButton.setAttribute("aria-label", t(lang, "pickerTimeAria"));
+      datePicker.redraw();
 
       if (datePicker.selectedDates.length) {
         datePicker.setDate(datePicker.selectedDates, false);
@@ -1180,6 +1326,8 @@
       if (timePicker.selectedDates.length) {
         timePicker.setDate(timeInput.value, false, "H:i");
       }
+
+      updateAvailabilityHint();
     };
 
     pickerButtons.forEach((button) => {
@@ -1194,9 +1342,21 @@
     resetDateTimePickers = () => {
       datePicker.clear();
       timePicker.clear();
+      updateAvailabilityHint();
     };
 
     syncPickerUi(langGetter());
+
+    fetch("./data/booked-slots.json", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : []))
+      .then((slots) => {
+        setBookedSlots(Array.isArray(slots) ? slots : []);
+        datePicker.redraw();
+        updateAvailabilityHint();
+      })
+      .catch(() => {
+        setBookedSlots([]);
+      });
   }
 
   function initLangMenu() {
@@ -1302,6 +1462,33 @@
           .filter(Boolean);
       }
     };
+  }
+
+  function initPhotoUpload(langGetter) {
+    const input = $("#orderPhotos");
+    const summary = $("#photoFileSummary");
+    if (!input || !summary) return;
+
+    const update = () => {
+      const lang = langGetter();
+      const files = Array.from(input.files || []);
+      const names = files.map((file) => file.name).join(", ");
+      const countText = files.length
+        ? t(lang, "photoCount").replace("{n}", String(files.length))
+        : t(lang, "photoEmpty");
+
+      summary.textContent = names ? `${countText}: ${names}` : countText;
+      applyFieldValidationState(input, lang);
+    };
+
+    input.addEventListener("change", update);
+    refreshPhotoUploadText = update;
+    resetPhotoUpload = () => {
+      input.value = "";
+      update();
+    };
+
+    update();
   }
 
   function initGallery(langGetter) {
@@ -1746,6 +1933,9 @@
     const serviceSelect = $('select[name="service_type"]', form);
     const serviceLabel = serviceSelect?.selectedOptions?.[0]?.textContent?.trim() || "-";
     const extraStops = stopsApi.getValues();
+    const photoFiles = Array.from($('input[name="order_photos"]', form)?.files || [])
+      .map((file) => file.name)
+      .join(", ");
     const lines = [
       `${t(lang, "summaryRequestType")}: ${serviceLabel}`,
       `${t(lang, "formName")}: ${data.get("name") || "-"}`,
@@ -1763,6 +1953,7 @@
       `${t(lang, "formHelpers")}: ${data.get("loader_count") || "0"}`,
       `${t(lang, "formElevator")}: ${data.get("has_elevator") ? t(lang, "commonYes") : t(lang, "commonNo")}`,
       `${t(lang, "formCargo")}: ${data.get("cargo_details") || "-"}`,
+      `${t(lang, "formPhotos")}: ${photoFiles || "-"}`,
       `${t(lang, "formComment")}: ${data.get("comment") || "-"}`
     ];
 
@@ -1820,6 +2011,7 @@
         await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
         form.reset();
         resetDateTimePickers();
+        resetPhotoUpload();
         $('input[name="email"]', form).value = "";
         $('textarea[name="message"]', form).value = "";
         stopsApi.clear();
@@ -1857,6 +2049,7 @@
     const stopsApi = initStops(getLang);
     initGallery(getLang);
     initDateTimePickers(getLang);
+    initPhotoUpload(getLang);
     initBookingAssist(getLang, stopsApi);
     initFormEmail(getLang, stopsApi);
     initLocalizedValidation(getLang);
