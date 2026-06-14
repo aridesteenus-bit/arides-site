@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#06111f" />
+  <title>ARIDES Operator</title>
+  <link rel="icon" href="./favicon.ico?v=20260614c" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=20260614c" />
+  <link rel="manifest" href="./operator.webmanifest?v=20260614" />
+  <link rel="stylesheet" href="./operator.css" />
+</head>
+<body>
+  <main class="appShell">
+    <header class="appHeader">
+      <div class="brandMini">
+        <img src="./img/ui/logo-veoteenus.png" alt="" />
+        <div>
+          <strong>ARIDES</strong>
+          <span>juhi töölaud</span>
+        </div>
+      </div>
+      <button class="ghostBtn" id="notifyBtn" type="button">Luba teavitused</button>
+    </header>
+
+    <section class="heroPanel">
+      <div>
+        <p class="eyebrow">Tellimused ja arved</p>
+        <h1>Kontrolli veotööd telefonist</h1>
+        <p>Lisa tellimus, muuda lõpphinda ja vormista kliendile eestikeelne arve. Andmed salvestatakse selles seadmes.</p>
+      </div>
+      <button class="primaryBtn" id="newOrderBtn" type="button">+ Uus tellimus</button>
+    </section>
+
+    <section class="statsGrid" aria-label="Ülevaade">
+      <article>
+        <span>Uued</span>
+        <strong id="statNew">0</strong>
+      </article>
+      <article>
+        <span>Töös</span>
+        <strong id="statActive">0</strong>
+      </article>
+      <article>
+        <span>Lõpetatud</span>
+        <strong id="statDone">0</strong>
+      </article>
+      <article>
+        <span>Arveid</span>
+        <strong id="statInvoices">0</strong>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <aside class="ordersPane">
+        <div class="paneHead">
+          <h2>Tellimused</h2>
+          <select id="statusFilter" aria-label="Filter">
+            <option value="all">Kõik</option>
+            <option value="new">Uued</option>
+            <option value="confirmed">Kinnitatud</option>
+            <option value="active">Töös</option>
+            <option value="done">Lõpetatud</option>
+            <option value="cancelled">Tühistatud</option>
+          </select>
+        </div>
+        <input class="searchInput" id="searchInput" type="search" placeholder="Otsi nime, telefoni või aadressi..." />
+        <div class="orderList" id="orderList"></div>
+      </aside>
+
+      <section class="detailPane">
+        <form class="orderForm" id="orderForm">
+          <input type="hidden" name="id" />
+          <div class="detailTop">
+            <div>
+              <p class="eyebrow">Tellimuse detailid</p>
+              <h2 id="detailTitle">Uus tellimus</h2>
+            </div>
+            <select name="status" aria-label="Staatus">
+              <option value="new">Uus</option>
+              <option value="confirmed">Kinnitatud</option>
+              <option value="active">Töös</option>
+              <option value="done">Lõpetatud</option>
+              <option value="cancelled">Tühistatud</option>
+            </select>
+          </div>
+
+          <div class="formGrid">
+            <label>
+              <span>Klient</span>
+              <input name="clientName" type="text" placeholder="Kliendi nimi" />
+            </label>
+            <label>
+              <span>Telefon</span>
+              <input name="clientPhone" type="tel" placeholder="+372..." />
+            </label>
+            <label>
+              <span>E-post</span>
+              <input name="clientEmail" type="email" placeholder="name@email.com" />
+            </label>
+            <label>
+              <span>Kliendi tüüp</span>
+              <select name="clientType">
+                <option value="private">Eraisik</option>
+                <option value="company">Ettevõte</option>
+              </select>
+            </label>
+            <label>
+              <span>Teenuse liik</span>
+              <select name="serviceType">
+                <option value="Kaubavedu">Kaubavedu</option>
+                <option value="Kolimisteenus">Kolimisteenus</option>
+                <option value="Mööbli ja tehnika vedu">Mööbli ja tehnika vedu</option>
+                <option value="Ehitusmaterjalide vedu">Ehitusmaterjalide vedu</option>
+                <option value="Vana mööbli ja prügi äravedu">Vana mööbli ja prügi äravedu</option>
+                <option value="Muu veoteenus">Muu veoteenus</option>
+              </select>
+            </label>
+            <label>
+              <span>Tellimuse kuupäev</span>
+              <input name="jobDate" type="date" />
+            </label>
+            <label>
+              <span>Algusaeg</span>
+              <input name="jobTime" type="time" />
+            </label>
+            <label>
+              <span>Kestus tundides</span>
+              <input name="hours" type="number" min="0" step="0.25" value="1" />
+            </label>
+            <label class="wide">
+              <span>Laadimisaadress</span>
+              <input name="pickupAddress" type="text" placeholder="Kust laadida" />
+            </label>
+            <label class="wide">
+              <span>Sihtaadress</span>
+              <input name="deliveryAddress" type="text" placeholder="Kuhu viia" />
+            </label>
+            <label class="wide">
+              <span>Lisapeatused</span>
+              <input name="extraStops" type="text" placeholder="Pood, ladu, teine aadress..." />
+            </label>
+            <label>
+              <span>Kilometraaž</span>
+              <input name="kilometers" type="number" min="0" step="0.1" value="0" />
+            </label>
+            <label>
+              <span>Tunnihind</span>
+              <input name="hourRate" type="number" min="0" step="1" value="30" />
+            </label>
+            <label>
+              <span>Km hind</span>
+              <input name="kmRate" type="number" min="0" step="0.01" value="0.90" />
+            </label>
+            <label>
+              <span>Laadimisabi tunnid</span>
+              <input name="helperHours" type="number" min="0" step="0.25" value="0" />
+            </label>
+            <label>
+              <span>Laadimisabi hind/h</span>
+              <input name="helperRate" type="number" min="0" step="1" value="12" />
+            </label>
+            <label>
+              <span>Lisatasud</span>
+              <input name="extraFee" type="number" min="0" step="1" value="0" />
+            </label>
+            <label>
+              <span>Lõpphind käsitsi</span>
+              <input name="finalPrice" type="number" min="0" step="1" placeholder="Kui vaja muuta" />
+            </label>
+            <label>
+              <span>Makse staatus</span>
+              <select name="paymentStatus">
+                <option value="unpaid">Tasumata</option>
+                <option value="paid">Tasutu</option>
+                <option value="pending">Ootel</option>
+              </select>
+            </label>
+            <label class="wide">
+              <span>Koorma kirjeldus</span>
+              <textarea name="cargoDetails" rows="3" placeholder="Mööbel, kastid, tehnika, materjalid..."></textarea>
+            </label>
+            <label class="wide">
+              <span>Märkmed juhile</span>
+              <textarea name="notes" rows="3" placeholder="Korrus, lift, parkimine, ooteaeg, kliendi soovid..."></textarea>
+            </label>
+          </div>
+
+          <div class="totalCard">
+            <span>Orienteeruv summa</span>
+            <strong id="orderTotal">0 €</strong>
+            <small id="orderTotalHint">Arvutus tekib sisestatud tundide, km ja lisatasude põhjal.</small>
+          </div>
+
+          <div class="actionGrid">
+            <button class="primaryBtn" type="submit">Salvesta</button>
+            <button class="ghostBtn" id="callClientBtn" type="button">Helista</button>
+            <button class="ghostBtn" id="whatsAppClientBtn" type="button">WhatsApp</button>
+            <button class="ghostBtn" id="mapsBtn" type="button">Marsruut</button>
+            <button class="ghostBtn" id="invoiceBtn" type="button">Loo arve</button>
+            <button class="dangerBtn" id="deleteBtn" type="button">Kustuta</button>
+          </div>
+        </form>
+
+        <section class="invoicePanel" id="invoicePanel" hidden>
+          <div class="invoiceActions">
+            <h2>Arve</h2>
+            <div>
+              <button class="ghostBtn" id="printInvoiceBtn" type="button">Prindi / PDF</button>
+              <button class="ghostBtn" id="downloadInvoiceBtn" type="button">Laadi HTML</button>
+            </div>
+          </div>
+          <article class="invoiceSheet" id="invoiceSheet"></article>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <template id="emptyOrdersTemplate">
+    <div class="emptyState">
+      <strong>Tellimusi veel ei ole</strong>
+      <span>Lisa esimene tellimus või hiljem ühendame selle otse veebivormiga.</span>
+    </div>
+  </template>
+
+  <script src="./operator.js"></script>
+</body>
+</html>

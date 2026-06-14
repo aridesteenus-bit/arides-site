@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /operator.html
 
 Sitemap: https://arides.ee/sitemap.xml
