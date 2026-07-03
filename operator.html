@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow" />
-  <meta name="theme-color" content="#06111f" />
-  <title>ARIDES Operator</title>
-  <link rel="icon" href="./favicon.ico?v=20260614c" sizes="any" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=20260614c" />
-  <link rel="manifest" href="./operator.webmanifest?v=20260614" />
+  <meta name="theme-color" content="#eef3f8" />
+  <title>ARIDES Cargo</title>
+  <link rel="icon" href="./favicon.ico?v=20260617a" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=20260617a" />
+  <link rel="manifest" href="./operator.webmanifest?v=20260617a" />
   <link rel="stylesheet" href="./operator.css" />
 </head>
 <body>
@@ -17,210 +17,539 @@
       <div class="brandMini">
         <img src="./img/ui/logo-veoteenus.png" alt="" />
         <div>
-          <strong>ARIDES</strong>
-          <span>juhi töölaud</span>
+          <strong>ARIDES Cargo</strong>
+          <span>operator</span>
         </div>
       </div>
-      <button class="ghostBtn" id="notifyBtn" type="button">Luba teavitused</button>
+      <div class="headerActions">
+        <button class="ghostBtn" id="syncOrdersBtn" type="button">Uuenda</button>
+        <button class="ghostBtn" id="notifyBtn" type="button">Teavitused</button>
+        <button class="primaryBtn" id="newOrderBtn" type="button">+ Uus</button>
+      </div>
     </header>
 
-    <section class="heroPanel">
-      <div>
-        <p class="eyebrow">Tellimused ja arved</p>
-        <h1>Kontrolli veotööd telefonist</h1>
-        <p>Lisa tellimus, muuda lõpphinda ja vormista kliendile eestikeelne arve. Andmed salvestatakse selles seadmes.</p>
-      </div>
-      <button class="primaryBtn" id="newOrderBtn" type="button">+ Uus tellimus</button>
+    <section class="syncBanner" id="syncBanner" aria-live="polite">
+      <span class="syncDot" id="syncDot"></span>
+      <strong id="syncTitle">Kontrollin ühendust</strong>
+      <small id="syncDetail">Andmed sünkroonitakse arides.ee tellimuste baasiga.</small>
     </section>
 
-    <section class="statsGrid" aria-label="Ülevaade">
-      <article>
-        <span>Uued</span>
-        <strong id="statNew">0</strong>
+    <nav class="appTabs" aria-label="ARIDES Cargo töölaud">
+      <button class="tabBtn is-active" type="button" data-tab="today">Ülevaade</button>
+      <button class="tabBtn" type="button" data-tab="orders">Reisid</button>
+      <button class="tabBtn" type="button" data-tab="invoices">Arved</button>
+      <button class="tabBtn" type="button" data-tab="expenses">Kulud</button>
+      <button class="tabBtn" type="button" data-tab="reports">Aruanded</button>
+      <button class="tabBtn" type="button" data-tab="calendar">Kalender</button>
+      <button class="tabBtn" type="button" data-tab="company">Firma</button>
+    </nav>
+
+    <section class="metricGrid" aria-label="Kiirülevaade">
+      <article class="metricCard metricCard--main">
+        <span>Täna plaanis</span>
+        <strong id="statTodayRevenue">0 €</strong>
+        <small id="statTodayCount">0 reisi</small>
       </article>
-      <article>
-        <span>Töös</span>
+      <article class="metricCard">
+        <span>Tasumata</span>
+        <strong id="statUnpaidRevenue">0 €</strong>
+        <small id="statInvoiceCount">0 arvet</small>
+      </article>
+      <article class="metricCard">
+        <span>Kuu töömaht</span>
+        <strong id="statMonthRevenue">0 €</strong>
+        <small id="statDoneCount">0 lõpetatud</small>
+      </article>
+      <article class="metricCard">
+        <span>Aktiivsed</span>
         <strong id="statActive">0</strong>
-      </article>
-      <article>
-        <span>Lõpetatud</span>
-        <strong id="statDone">0</strong>
-      </article>
-      <article>
-        <span>Arveid</span>
-        <strong id="statInvoices">0</strong>
+        <small id="statNewCount">0 uut</small>
       </article>
     </section>
 
-    <section class="workspace">
-      <aside class="ordersPane">
-        <div class="paneHead">
-          <h2>Tellimused</h2>
-          <select id="statusFilter" aria-label="Filter">
-            <option value="all">Kõik</option>
-            <option value="new">Uued</option>
-            <option value="confirmed">Kinnitatud</option>
-            <option value="active">Töös</option>
-            <option value="done">Lõpetatud</option>
-            <option value="cancelled">Tühistatud</option>
-          </select>
-        </div>
-        <input class="searchInput" id="searchInput" type="search" placeholder="Otsi nime, telefoni või aadressi..." />
-        <div class="orderList" id="orderList"></div>
-      </aside>
+    <section class="tabPanel is-active" id="tab-today" data-panel="today">
+      <section class="dashboardGrid">
+        <article class="dispatchCard dispatchCard--next" id="nextTripCard">
+          <p class="eyebrow">Järgmine sõit</p>
+          <h1>Laen tellimusi...</h1>
+        </article>
 
-      <section class="detailPane">
-        <form class="orderForm" id="orderForm">
-          <input type="hidden" name="id" />
-          <div class="detailTop">
+        <article class="dispatchCard">
+          <div class="cardHead">
             <div>
-              <p class="eyebrow">Tellimuse detailid</p>
-              <h2 id="detailTitle">Uus tellimus</h2>
+              <p class="eyebrow">Tänane töö</p>
+              <h2>Reisid järjekorras</h2>
             </div>
-            <select name="status" aria-label="Staatus">
-              <option value="new">Uus</option>
+            <button class="ghostBtn" id="quickNewOrderBtn" type="button">Lisa reis</button>
+          </div>
+          <div class="compactList" id="todayTripList"></div>
+        </article>
+
+        <article class="dispatchCard">
+          <div class="cardHead">
+            <div>
+              <p class="eyebrow">Raha</p>
+              <h2>Laekumised ja arved</h2>
+            </div>
+          </div>
+          <div class="moneyFlow" id="moneyFlowList"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tabPanel" id="tab-orders" data-panel="orders" hidden>
+      <section class="workspace">
+        <aside class="ordersPane">
+          <div class="paneHead">
+            <div>
+              <p class="eyebrow">Tellimused</p>
+              <h2>Reisid</h2>
+            </div>
+            <select id="statusFilter" aria-label="Filter">
+              <option value="all">Kõik</option>
+              <option value="new">Uued</option>
               <option value="confirmed">Kinnitatud</option>
               <option value="active">Töös</option>
               <option value="done">Lõpetatud</option>
               <option value="cancelled">Tühistatud</option>
             </select>
           </div>
+          <input class="searchInput" id="searchInput" type="search" placeholder="Otsi nime, telefoni või aadressi..." />
+          <div class="orderList" id="orderList"></div>
+        </aside>
 
-          <div class="formGrid">
-            <label>
-              <span>Klient</span>
-              <input name="clientName" type="text" placeholder="Kliendi nimi" />
-            </label>
-            <label>
-              <span>Telefon</span>
-              <input name="clientPhone" type="tel" placeholder="+372..." />
-            </label>
-            <label>
-              <span>E-post</span>
-              <input name="clientEmail" type="email" placeholder="name@email.com" />
-            </label>
-            <label>
-              <span>Kliendi tüüp</span>
-              <select name="clientType">
-                <option value="private">Eraisik</option>
-                <option value="company">Ettevõte</option>
+        <section class="detailPane">
+          <form class="orderForm" id="orderForm">
+            <input type="hidden" name="id" />
+            <input type="hidden" name="tripStage" value="to_pickup" />
+
+            <div class="detailTop">
+              <div>
+                <p class="eyebrow">Reisi kaart</p>
+                <h2 id="detailTitle">Uus tellimus</h2>
+              </div>
+              <select name="status" aria-label="Staatus">
+                <option value="new">Uus</option>
+                <option value="confirmed">Kinnitatud</option>
+                <option value="active">Töös</option>
+                <option value="done">Lõpetatud</option>
+                <option value="cancelled">Tühistatud</option>
               </select>
-            </label>
-            <label>
-              <span>Teenuse liik</span>
-              <select name="serviceType">
-                <option value="Kaubavedu">Kaubavedu</option>
-                <option value="Kolimisteenus">Kolimisteenus</option>
-                <option value="Mööbli ja tehnika vedu">Mööbli ja tehnika vedu</option>
-                <option value="Ehitusmaterjalide vedu">Ehitusmaterjalide vedu</option>
-                <option value="Vana mööbli ja prügi äravedu">Vana mööbli ja prügi äravedu</option>
-                <option value="Muu veoteenus">Muu veoteenus</option>
-              </select>
-            </label>
-            <label>
-              <span>Tellimuse kuupäev</span>
-              <input name="jobDate" type="date" />
-            </label>
-            <label>
-              <span>Algusaeg</span>
-              <input name="jobTime" type="time" />
-            </label>
-            <label>
-              <span>Kestus tundides</span>
-              <input name="hours" type="number" min="0" step="0.25" value="1" />
-            </label>
-            <label class="wide">
-              <span>Laadimisaadress</span>
-              <input name="pickupAddress" type="text" placeholder="Kust laadida" />
-            </label>
-            <label class="wide">
-              <span>Sihtaadress</span>
-              <input name="deliveryAddress" type="text" placeholder="Kuhu viia" />
-            </label>
-            <label class="wide">
-              <span>Lisapeatused</span>
-              <input name="extraStops" type="text" placeholder="Pood, ladu, teine aadress..." />
-            </label>
-            <label>
-              <span>Kilometraaž</span>
-              <input name="kilometers" type="number" min="0" step="0.1" value="0" />
-            </label>
-            <label>
-              <span>Tunnihind</span>
-              <input name="hourRate" type="number" min="0" step="1" value="30" />
-            </label>
-            <label>
-              <span>Km hind</span>
-              <input name="kmRate" type="number" min="0" step="0.01" value="0.90" />
-            </label>
-            <label>
-              <span>Laadimisabi tunnid</span>
-              <input name="helperHours" type="number" min="0" step="0.25" value="0" />
-            </label>
-            <label>
-              <span>Laadimisabi hind/h</span>
-              <input name="helperRate" type="number" min="0" step="1" value="12" />
-            </label>
-            <label>
-              <span>Lisatasud</span>
-              <input name="extraFee" type="number" min="0" step="1" value="0" />
-            </label>
-            <label>
-              <span>Lõpphind käsitsi</span>
-              <input name="finalPrice" type="number" min="0" step="1" placeholder="Kui vaja muuta" />
-            </label>
-            <label>
-              <span>Makse staatus</span>
-              <select name="paymentStatus">
-                <option value="unpaid">Tasumata</option>
-                <option value="paid">Tasutu</option>
-                <option value="pending">Ootel</option>
-              </select>
-            </label>
-            <label class="wide">
-              <span>Koorma kirjeldus</span>
-              <textarea name="cargoDetails" rows="3" placeholder="Mööbel, kastid, tehnika, materjalid..."></textarea>
-            </label>
-            <label class="wide">
-              <span>Märkmed juhile</span>
-              <textarea name="notes" rows="3" placeholder="Korrus, lift, parkimine, ooteaeg, kliendi soovid..."></textarea>
-            </label>
-          </div>
+            </div>
 
-          <div class="totalCard">
-            <span>Orienteeruv summa</span>
-            <strong id="orderTotal">0 €</strong>
-            <small id="orderTotalHint">Arvutus tekib sisestatud tundide, km ja lisatasude põhjal.</small>
-          </div>
+            <div class="routeCard">
+              <div>
+                <span id="routeStageTitle">Valmis laadima sõitma</span>
+                <strong id="routeTargetLabel">Aadress puudub</strong>
+                <small id="routeStageMeta">Waze avaneb siis, kui aadress on olemas.</small>
+              </div>
+              <p id="detailRouteLine">Lisa laadimis- ja sihtaadress.</p>
+            </div>
 
-          <div class="actionGrid">
-            <button class="primaryBtn" type="submit">Salvesta</button>
-            <button class="ghostBtn" id="callClientBtn" type="button">Helista</button>
-            <button class="ghostBtn" id="whatsAppClientBtn" type="button">WhatsApp</button>
-            <button class="ghostBtn" id="mapsBtn" type="button">Marsruut</button>
-            <button class="ghostBtn" id="invoiceBtn" type="button">Loo arve</button>
-            <button class="dangerBtn" id="deleteBtn" type="button">Kustuta</button>
-          </div>
-        </form>
+            <section class="orderSummaryCard" id="orderSummaryCard" aria-live="polite">
+              <div>
+                <span>Kiirvaade</span>
+                <strong id="orderSummaryTitle">Uus tellimus</strong>
+                <small id="orderSummaryMeta">Vajalikud väljad on hästi loetavas järjekorras.</small>
+              </div>
+              <div class="orderSummaryChips" id="orderSummaryChips"></div>
+            </section>
 
-        <section class="invoicePanel" id="invoicePanel" hidden>
-          <div class="invoiceActions">
-            <h2>Arve</h2>
+            <div class="websiteEstimateCard" id="websiteEstimateCard" hidden>
+              <div>
+                <span>Sait näitas kliendile</span>
+                <strong id="websiteEstimateTotal">0 €</strong>
+                <small id="websiteEstimateMeta">Saidi arvutuse detailid puuduvad.</small>
+              </div>
+              <a class="ghostBtn" id="websiteEstimateMap" href="#" target="_blank" rel="noopener" hidden>Marsruut</a>
+            </div>
+
+            <div class="quickStatusBar">
+              <button class="ghostBtn" id="confirmOrderBtn" type="button">Kinnita</button>
+              <button class="ghostBtn" id="startOrderBtn" type="button">Alusta tööd</button>
+              <button class="ghostBtn" id="finishOrderBtn" type="button">Lõpeta reis</button>
+              <button class="ghostBtn" id="depositInvoiceBtn" type="button">Ettemaks</button>
+              <button class="ghostBtn" id="markPaidBtn" type="button">Märgi tasutuks</button>
+            </div>
+
+            <section class="cargoPhotoPanel" id="cargoPhotoPanel">
+              <div class="cargoPhotoHead">
+                <div>
+                  <span>Koorma fotod</span>
+                  <strong>Tõend laadimisel</strong>
+                  <small id="cargoPhotoHint">Pildista koorem enne sõitu, et vaidluse korral oleks tõend olemas.</small>
+                </div>
+                <button class="ghostBtn" id="cargoPhotoBtn" type="button">Pildista koorem</button>
+                <input id="cargoPhotoInput" type="file" accept="image/*" capture="environment" hidden />
+              </div>
+              <div class="cargoPhotoGrid" id="cargoPhotoGrid"></div>
+            </section>
+
+            <div class="formSectionTitle">Klient</div>
+            <div class="formGrid">
+              <label>
+                <span>Klient</span>
+                <input name="clientName" type="text" placeholder="Kliendi nimi" />
+              </label>
+              <label>
+                <span>Telefon</span>
+                <input name="clientPhone" type="tel" placeholder="+372..." />
+              </label>
+              <label>
+                <span>E-post</span>
+                <input name="clientEmail" type="email" placeholder="name@email.com" />
+              </label>
+              <label>
+                <span>Kliendi tüüp</span>
+                <select name="clientType">
+                  <option value="private">Eraisik</option>
+                  <option value="company">Ettevõte</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="formSectionTitle">Tellimus</div>
+            <div class="formGrid">
+              <label>
+                <span>Teenuse liik</span>
+                <select name="serviceType">
+                  <option value="Kaubavedu">Kaubavedu</option>
+                  <option value="Kolimisteenus">Kolimisteenus</option>
+                  <option value="Mööbli ja tehnika vedu">Mööbli ja tehnika vedu</option>
+                  <option value="Ehitusmaterjalide vedu">Ehitusmaterjalide vedu</option>
+                  <option value="Vana mööbli ja prügi äravedu">Vana mööbli ja prügi äravedu</option>
+                  <option value="Muu veoteenus">Muu veoteenus</option>
+                </select>
+              </label>
+              <label>
+                <span>Tellimuse kuupäev</span>
+                <input name="jobDate" type="date" />
+              </label>
+              <label>
+                <span>Algusaeg</span>
+                <input name="jobTime" type="time" />
+              </label>
+              <label>
+                <span>Kestus tundides</span>
+                <input name="hours" type="number" min="0" step="0.25" value="1" />
+              </label>
+              <label>
+                <span>Kilometraaž</span>
+                <input name="kilometers" type="number" min="0" step="0.1" value="0" />
+              </label>
+              <label>
+                <span>Tunnihind</span>
+                <input name="hourRate" type="number" min="0" step="1" value="30" />
+              </label>
+              <label>
+                <span>Km hind</span>
+                <input name="kmRate" type="number" min="0" step="0.01" value="0.90" />
+              </label>
+            </div>
+
+            <div class="formSectionTitle">Marsruut</div>
+            <div class="formGrid">
+              <label class="wide">
+                <span>Laadimisaadress</span>
+                <input name="pickupAddress" type="text" placeholder="Kust laadida" />
+              </label>
+              <label class="wide">
+                <span>Sihtaadress</span>
+                <input name="deliveryAddress" type="text" placeholder="Kuhu viia" />
+              </label>
+              <label class="wide">
+                <span>Lisapeatused</span>
+                <input name="extraStops" type="text" placeholder="Pood, ladu, teine aadress..." />
+              </label>
+            </div>
+
+            <div class="formSectionTitle">Hind ja makse</div>
+            <div class="formGrid">
+              <label>
+                <span>Laadimisabi tunnid</span>
+                <input name="helperHours" type="number" min="0" step="0.25" value="0" />
+              </label>
+              <label>
+                <span>Laadimisabi hind/h</span>
+                <input name="helperRate" type="number" min="0" step="1" value="12" />
+              </label>
+              <label>
+                <span>Lisatasud</span>
+                <input name="extraFee" type="number" min="0" step="1" value="0" />
+              </label>
+              <label>
+                <span>Lõpphind käsitsi</span>
+                <input name="finalPrice" type="number" min="0" step="1" placeholder="Kui vaja muuta" />
+              </label>
+              <label>
+                <span>Ettemaks %</span>
+                <input name="depositPercent" type="number" min="0" step="1" value="0" placeholder="Näiteks 30" />
+              </label>
+              <label>
+                <span>Ettemaks €</span>
+                <input name="depositAmount" type="number" min="0" step="1" placeholder="Kui summa on juba kokku lepitud" />
+              </label>
+              <label>
+                <span>Ettemaksu märkus</span>
+                <input name="depositNote" type="text" placeholder="Näiteks kinnitamiseks enne sõitu" />
+              </label>
+              <label>
+                <span>Makse staatus</span>
+                <select name="paymentStatus">
+                  <option value="unpaid">Tasumata</option>
+                  <option value="paid">Tasutu</option>
+                  <option value="pending">Ootel</option>
+                </select>
+              </label>
+              <label>
+                <span>Maksetähtaeg päevades</span>
+                <input name="invoiceDueDays" type="number" min="0" step="1" value="7" />
+              </label>
+            </div>
+
+            <div class="formSectionTitle">Koorem ja märkmed</div>
+            <div class="formGrid">
+              <label class="wide">
+                <span>Koorma kirjeldus</span>
+                <textarea name="cargoDetails" rows="3" placeholder="Mööbel, kastid, tehnika, materjalid..."></textarea>
+              </label>
+              <label class="wide">
+                <span>Märkmed juhile</span>
+                <textarea name="notes" rows="3" placeholder="Korrus, lift, parkimine, ooteaeg, kliendi soovid..."></textarea>
+              </label>
+            </div>
+
+            <div class="totalCard">
+              <span>Reisi summa</span>
+              <strong id="orderTotal">0 €</strong>
+              <small id="orderTotalHint">Arvutus tekib sisestatud tundide, km ja lisatasude põhjal.</small>
+            </div>
+
+            <div class="actionGrid">
+              <button class="primaryBtn" type="submit">Salvesta</button>
+              <button class="ghostBtn" id="callClientBtn" type="button">Helista</button>
+              <button class="ghostBtn" id="emailClientBtn" type="button">E-post</button>
+              <button class="ghostBtn" id="whatsAppClientBtn" type="button">WhatsApp</button>
+              <button class="ghostBtn" id="wazeBtn" type="button">Waze laadima</button>
+              <button class="ghostBtn" id="arrivedPickupBtn" type="button">Saabusin laadimisele</button>
+              <button class="ghostBtn" id="mapsBtn" type="button">Marsruut</button>
+              <button class="ghostBtn" id="invoiceBtn" type="button">Loo arve</button>
+              <button class="dangerBtn" id="deleteBtn" type="button">Kustuta</button>
+            </div>
+          </form>
+
+          <section class="invoicePanel" id="invoicePanel" hidden>
+            <div class="invoiceActions">
+              <h2>Arve eelvaade</h2>
+              <div>
+                <button class="primaryBtn" id="invoiceFullscreenBtn" type="button">Täisekraan</button>
+                <button class="ghostBtn" id="invoicePanelGmailBtn" type="button">Gmail</button>
+                <button class="ghostBtn" id="printInvoiceBtn" type="button">Prindi / PDF</button>
+                <button class="ghostBtn" id="downloadInvoiceBtn" type="button">Laadi HTML</button>
+              </div>
+            </div>
+            <article class="invoiceSheet" id="invoiceSheet"></article>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="tabPanel" id="tab-invoices" data-panel="invoices" hidden>
+      <section class="invoiceDashboard">
+        <article class="dispatchCard">
+          <p class="eyebrow">Arved</p>
+          <h2>Sissetulek ja maksed</h2>
+          <div class="moneyFlow" id="invoiceMoneyFlow"></div>
+        </article>
+        <article class="dispatchCard invoiceListCard">
+          <div class="cardHead">
             <div>
-              <button class="ghostBtn" id="printInvoiceBtn" type="button">Prindi / PDF</button>
-              <button class="ghostBtn" id="downloadInvoiceBtn" type="button">Laadi HTML</button>
+              <p class="eyebrow">Kõik arved</p>
+              <h2>Maksete kontroll</h2>
             </div>
           </div>
-          <article class="invoiceSheet" id="invoiceSheet"></article>
-        </section>
+          <div class="invoiceList" id="invoiceList"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tabPanel" id="tab-calendar" data-panel="calendar" hidden>
+      <section class="calendarGrid">
+        <article class="busyPanel">
+          <div>
+            <p class="eyebrow">Aja broneeringud</p>
+            <h2>Pane aeg kliendi jaoks kinni</h2>
+          </div>
+          <div class="busyControls">
+            <input id="busyDate" type="date" aria-label="Kuupäev" />
+            <input id="busyStart" type="time" value="09:00" aria-label="Algus" />
+            <input id="busyEnd" type="time" value="11:00" aria-label="Lõpp" />
+            <input id="busyLabel" type="text" placeholder="Objekt, sõit, paus..." aria-label="Märkus" />
+            <button class="primaryBtn" id="addBusyBtn" type="button">Lisa kinni</button>
+          </div>
+          <div class="busyList" id="busyList"></div>
+        </article>
+
+        <article class="dispatchCard">
+          <p class="eyebrow">Kalender</p>
+          <h2>Lähemad ajad</h2>
+          <div class="compactList" id="calendarDayList"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tabPanel" id="tab-expenses" data-panel="expenses" hidden>
+      <section class="financeGrid">
+        <article class="dispatchCard">
+          <p class="eyebrow">Kulud</p>
+          <h2>Lisa ettevõtte kulu</h2>
+          <form class="expenseForm" id="expenseForm">
+            <input type="hidden" name="id" />
+            <label>
+              <span>Kuupäev</span>
+              <input name="date" type="date" />
+            </label>
+            <label>
+              <span>Kategooria</span>
+              <select name="category">
+                <option value="fuel">Kütus</option>
+                <option value="parking">Parkimine</option>
+                <option value="maintenance">Hooldus/remont</option>
+                <option value="tools">Töövahendid</option>
+                <option value="office">Kontor/admin</option>
+                <option value="other">Muu</option>
+              </select>
+            </label>
+            <label>
+              <span>Partner / pood</span>
+              <input name="vendor" type="text" placeholder="Circle K, töökoda..." />
+            </label>
+            <label>
+              <span>Summa</span>
+              <input name="amount" type="number" min="0" step="0.01" placeholder="0.00" />
+            </label>
+            <label>
+              <span>Makseviis</span>
+              <select name="paymentMethod">
+                <option value="card">Kaart</option>
+                <option value="cash">Sularaha</option>
+                <option value="bank">Pank</option>
+                <option value="other">Muu</option>
+              </select>
+            </label>
+            <label>
+              <span>Tšeki/arve nr</span>
+              <input name="receiptNumber" type="text" placeholder="Valikuline" />
+            </label>
+            <label class="wide">
+              <span>Kirjeldus</span>
+              <textarea name="description" rows="3" placeholder="Mille eest kulu tekkis"></textarea>
+            </label>
+            <div class="actionGrid actionGrid--compact">
+              <button class="primaryBtn" type="submit">Salvesta kulu</button>
+              <button class="ghostBtn" id="clearExpenseBtn" type="button">Tühjenda</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="dispatchCard">
+          <div class="cardHead">
+            <div>
+              <p class="eyebrow">Kuu ülevaade</p>
+              <h2>Kulud ja tulem</h2>
+            </div>
+            <input class="monthInput" id="expenseMonth" type="month" />
+          </div>
+          <div class="moneyFlow" id="expenseSummary"></div>
+          <div class="expenseList" id="expenseList"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tabPanel" id="tab-reports" data-panel="reports" hidden>
+      <section class="reportsGrid">
+        <article class="dispatchCard reportHeadCard">
+          <div>
+            <p class="eyebrow">Raamatupidamine</p>
+            <h2>Kuu koond ja eksport</h2>
+          </div>
+          <div class="reportControls">
+            <input class="monthInput" id="reportMonth" type="month" />
+            <button class="ghostBtn" id="exportAccountingBtn" type="button">Ekspordi raamatupidamise CSV</button>
+            <button class="ghostBtn" id="exportOrdersBtn" type="button">Ekspordi tellimused</button>
+          </div>
+        </article>
+
+        <div class="reportMetrics" id="reportMetrics"></div>
+
+        <article class="dispatchCard reportTableCard">
+          <div class="cardHead">
+            <div>
+              <p class="eyebrow">Svodka</p>
+              <h2>Tulud, arved ja kulud</h2>
+            </div>
+          </div>
+          <div class="reportRows" id="reportRows"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tabPanel" id="tab-company" data-panel="company" hidden>
+      <section class="companyGrid">
+        <article class="dispatchCard">
+          <p class="eyebrow">Firma</p>
+          <h2>ARIDES Cargo</h2>
+          <dl class="companyFacts">
+            <div><dt>Registrikood</dt><dd>12717973</dd></div>
+            <div><dt>KMKR</dt><dd>Puudub, käibemaksu ei lisandu</dd></div>
+            <div><dt>E-post</dt><dd>info@arides.ee</dd></div>
+            <div><dt>Telefon</dt><dd>+372 5684 5377</dd></div>
+            <div><dt>Aadress</dt><dd>Harju maakond, Harku vald, Tutermaa küla, Meistri tee 2-28, 76617</dd></div>
+          </dl>
+        </article>
+        <article class="dispatchCard">
+          <p class="eyebrow">Sünkroon</p>
+          <h2>arides.ee tellimused</h2>
+          <p class="mutedText">Veebivormi tellimused ja reisi staatused tulevad otse arides.ee andmebaasist. Uued broneeringud ilmuvad automaatselt ja käsitsi vajuta vajadusel Uuenda.</p>
+          <button class="primaryBtn" id="companySyncBtn" type="button">Uuenda kohe</button>
+        </article>
       </section>
     </section>
   </main>
 
+  <section class="invoiceModal" id="invoiceModal" role="dialog" aria-modal="true" aria-labelledby="invoiceModalTitle" hidden>
+    <div class="invoiceModal__panel">
+      <header class="invoiceModal__top">
+        <div>
+          <p class="eyebrow">Arve</p>
+          <h2 id="invoiceModalTitle">Täisekraani eelvaade</h2>
+        </div>
+        <div class="invoiceModal__actions">
+          <button class="ghostBtn" id="invoiceModalCloseBtn" type="button">Sulge</button>
+          <button class="ghostBtn" id="invoiceModalPrintBtn" type="button">Prindi / PDF</button>
+          <button class="ghostBtn" id="invoiceModalDownloadBtn" type="button">Laadi HTML</button>
+          <button class="primaryBtn" id="invoiceModalGmailBtn" type="button">Ava Gmail</button>
+        </div>
+      </header>
+
+      <div class="invoiceModal__bar">
+        <label>
+          <span>Kliendi e-post</span>
+          <input id="invoiceRecipientEmail" type="email" placeholder="client@example.com või jäta tühjaks" autocomplete="email" />
+        </label>
+        <p>Muuda arvet otse allpool. Gmail avaneb valmis kirjaga, vajadusel lisa aadress käsitsi.</p>
+      </div>
+
+      <div class="invoiceModal__body">
+        <article class="invoiceSheet invoiceSheet--fullscreen" id="invoiceModalSheet" contenteditable="true" spellcheck="true" aria-label="Muudetav arve eelvaade"></article>
+      </div>
+    </div>
+  </section>
+
   <template id="emptyOrdersTemplate">
     <div class="emptyState">
       <strong>Tellimusi veel ei ole</strong>
-      <span>Lisa esimene tellimus või hiljem ühendame selle otse veebivormiga.</span>
+      <span>Lisa esimene tellimus või vajuta Uuenda, et arides.ee tellimused laadida.</span>
     </div>
   </template>
 

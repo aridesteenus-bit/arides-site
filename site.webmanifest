@@ -1,6 +1,6 @@
 {
-  "name": "ARIDES Kaubavedu",
-  "short_name": "ARIDES",
+  "name": "ARIDES Cargo",
+  "short_name": "ARIDES Cargo",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",
@@ -15,7 +15,7 @@
   ],
   "start_url": "./",
   "scope": "./",
-  "theme_color": "#0b0714",
-  "background_color": "#0b0714",
+  "theme_color": "#06111f",
+  "background_color": "#eef3f8",
   "display": "standalone"
 }

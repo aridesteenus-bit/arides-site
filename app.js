@@ -1,9 +1,9 @@
 (() => {
   const i18n = {
     et: {
-      metaTitle: "Kaubavedu Tallinnas, Harjumaal ja üle Eesti | Kolimine, mööblivedu ja Peugeot Boxer 3.6 m",
+      metaTitle: "ARIDES Cargo | Kaubavedu Tallinnas, Harjumaal ja üle Eesti",
       metaDescription:
-        "Kaubavedu ja kolimine Tallinnas ning Harjumaal, kokkuleppel ka üle Eesti. Mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga. Kiire kontakt ja online-broneerimine.",
+        "ARIDES Cargo pakub kaubavedu ja kolimist Tallinnas ning Harjumaal, kokkuleppel ka üle Eesti. Mööbli, kodutehnika, ehitusmaterjalide ja eri veoste transport Peugeot Boxer 3.6 m kaubaruumiga. Kiire kontakt ja online-broneerimine.",
       brandTag: "KAUBAVEDU",
       navServices: "Teenused",
       navPricing: "Hinnad",
@@ -173,10 +173,15 @@
       formPickupFloor: "Korrus laadimisel",
       formDeliveryFloor: "Korrus kohaletoimetamisel",
       formHelpers: "Abi laadimisel / kandmisel",
+      formDepositType: "Ettemaks",
+      formDepositValue: "Ettemaksu suurus",
       formElevator: "Mõlemas aadressis on lift olemas",
       helperOption0: "Abi ei ole vaja",
       helperOption1: "1 abiline",
       helperOption2: "2 abilist",
+      depositOptionNone: "Pole vaja",
+      depositOptionPercent: "Protsent",
+      depositOptionAmount: "Kindel summa",
       formCargo: "Mida on vaja vedada",
       formCargoPh: "Kirjelda koormat: mööbel, kastid, tehnika, materjalid...",
       formComment: "Lisainfo",
@@ -190,6 +195,10 @@
       busySlotUnavailable: "See aeg on juba broneeritud. Palun valige teine kellaaeg.",
       busySlotList: "Kinnitatud tellimused: {slots}",
       busySlotDayTitle: "Sellel päeval on kinnitatud tellimus",
+      timeSlotsSelectDate: "Vali kuupäev, et näha vabu aegu.",
+      timeSlotsTitle: "Vabad ajad",
+      timeSlotFree: "vaba",
+      timeSlotBusy: "kinni",
       formNeedHelp: "Vajan abi peale- või mahalaadimisel",
       formSend: "Saada tellimus arutamisele",
       formSending: "Saadan...",
@@ -210,10 +219,10 @@
       estimateCityValue: "~ {price} EUR",
       estimateCityText: "Tallinna piires arvestame tunnihinda. Arvestusse lähevad marsruudi aeg, lisapeatused, korrused ja vajadusel abiline.",
       estimateDistanceValue: "~ {price} EUR",
-      estimateDistanceText: "Tallinnast väljaspool lähtume peamiselt kilometraažist. Arvestusse lähevad marsruut, lisapeatused, korrused ja vajadusel abiline.",
+      estimateDistanceText: "Tallinnast väljaspool arvestame auto tööaega, edasi-tagasi kilometraaži, lisapeatusi, korruseid ja vajadusel abilist.",
       estimateRouteText: "Marsruut ~ {km} km • sõiduaeg ~ {time}",
       estimateCityBreakdown: "Tallinna tsoon • tööaeg ~ {hours} h • kaubik {van} EUR • abilised {helpers} EUR",
-      estimateDistanceBreakdown: "Väljaspool Tallinna • {km} km × 0.90 EUR • kaubik {van} EUR • abilised {helpers} EUR",
+      estimateDistanceBreakdown: "Väljaspool Tallinna • tööaeg ~ {hours} h • edasi-tagasi {chargedKm} km × 0.90 EUR • kaubik {van} EUR • abilised {helpers} EUR",
       estimateFloorsSuffix: "Korruste lisatasu: {amount} EUR.",
       estimateStopsSuffix: "Lisapeatuste lisatasu: {amount} EUR.",
       estimateUnavailableText: "Aadresse ei õnnestunud automaatselt kaardilt tuvastada. Näitame baashinda ja kinnitame täpse summa pärast päringu ülevaatust.",
@@ -231,6 +240,7 @@
       summaryExtraStops: "Lisapeatused: {n}",
       summaryExtraHelp: "Abi peale- või mahalaadimisel",
       summaryExtraBoth: "Lisapeatused: {n} • Abi laadimisel",
+      summaryTitle: "Tellimuse kokkuvõte",
       addStop: "+ Lisa peatus",
       removeStop: "Eemalda",
       extraStopLabel: "Lisapeatus {n}",
@@ -272,9 +282,9 @@
     },
 
     ru: {
-      metaTitle: "Грузоперевозки в Таллинне, Harjumaa и по Эстонии | Переезды, мебель и Peugeot Boxer 3.6 м",
+      metaTitle: "ARIDES Cargo | Грузоперевозки в Таллинне, Harjumaa и по Эстонии",
       metaDescription:
-        "Грузоперевозки и переезды в Таллинне и Harjumaa, а также по договоренности по всей Эстонии. Перевозка мебели, техники, стройматериалов и других грузов на Peugeot Boxer 3.6 м. Быстрый контакт и online-заказ.",
+        "ARIDES Cargo выполняет грузоперевозки и переезды в Таллинне и Harjumaa, а также по договоренности по всей Эстонии. Перевозка мебели, техники, стройматериалов и других грузов на Peugeot Boxer 3.6 м. Быстрый контакт и online-заказ.",
       brandTag: "KAUBAVEDU",
       navServices: "Услуги",
       navPricing: "Цены",
@@ -442,10 +452,15 @@
       formPickupFloor: "Этаж погрузки",
       formDeliveryFloor: "Этаж доставки",
       formHelpers: "Помощь с погрузкой / переносом",
+      formDepositType: "Предоплата",
+      formDepositValue: "Сумма предоплаты",
       formElevator: "На обоих адресах есть лифт",
       helperOption0: "Помощь не нужна",
       helperOption1: "1 помощник",
       helperOption2: "2 помощника",
+      depositOptionNone: "Не нужна",
+      depositOptionPercent: "Процент",
+      depositOptionAmount: "Фиксированная сумма",
       formCargo: "Что нужно перевезти",
       formCargoPh: "Опишите груз: мебель, коробки, техника, материалы...",
       formComment: "Комментарии",
@@ -459,6 +474,10 @@
       busySlotUnavailable: "Это время уже занято. Пожалуйста, выберите другое время.",
       busySlotList: "Подтвержденные заказы: {slots}",
       busySlotDayTitle: "На этот день уже есть подтвержденный заказ",
+      timeSlotsSelectDate: "Выберите дату, чтобы увидеть свободное время.",
+      timeSlotsTitle: "Свободное время",
+      timeSlotFree: "свободно",
+      timeSlotBusy: "занято",
       formNeedHelp: "Нужна помощь с погрузкой или разгрузкой",
       formSend: "Отправить заявку на рассмотрение",
       formSending: "Отправляем...",
@@ -479,10 +498,10 @@
       estimateCityValue: "~ {price} EUR",
       estimateCityText: "В пределах Таллинна действует почасовая логика. В расчет входят время маршрута, дополнительные точки, этажи и при необходимости помощник.",
       estimateDistanceValue: "~ {price} EUR",
-      estimateDistanceText: "За пределами Таллинна расчет строится в основном по километражу. Учитываются маршрут, дополнительные точки, этажи и при необходимости помощник.",
+      estimateDistanceText: "За пределами Таллинна учитываем рабочее время машины, километры туда-обратно, дополнительные точки, этажи и при необходимости помощника.",
       estimateRouteText: "Маршрут ~ {km} км • время в пути ~ {time}",
       estimateCityBreakdown: "Таллинн • работа ~ {hours} ч • фургон {van} EUR • помощники {helpers} EUR",
-      estimateDistanceBreakdown: "За пределами Таллинна • {km} км × 0.90 EUR • фургон {van} EUR • помощники {helpers} EUR",
+      estimateDistanceBreakdown: "За пределами Таллинна • работа ~ {hours} ч • туда-обратно {chargedKm} км × 0.90 EUR • фургон {van} EUR • помощники {helpers} EUR",
       estimateFloorsSuffix: "Доплата за этажи: {amount} EUR.",
       estimateStopsSuffix: "Доплата за дополнительные точки: {amount} EUR.",
       estimateUnavailableText: "Не удалось автоматически определить адреса на карте. Показываем базовую оценку, а точную сумму подтвердим после просмотра заявки.",
@@ -500,6 +519,7 @@
       summaryExtraStops: "Доп. точки: {n}",
       summaryExtraHelp: "Нужна помощь с погрузкой или разгрузкой",
       summaryExtraBoth: "Доп. точки: {n} • Нужна помощь с погрузкой",
+      summaryTitle: "Сводка заказа",
       addStop: "+ Добавить точку",
       removeStop: "Удалить",
       extraStopLabel: "Дополнительная точка {n}",
@@ -541,9 +561,9 @@
     },
 
     en: {
-      metaTitle: "Cargo transport in Tallinn, Harjumaa and across Estonia | Furniture, removals and Peugeot Boxer 3.6 m",
+      metaTitle: "ARIDES Cargo | Cargo transport in Tallinn, Harjumaa and across Estonia",
       metaDescription:
-        "Cargo transport and moving services in Tallinn and Harjumaa, and across Estonia by agreement. Furniture, appliance and building material delivery with a clean Peugeot Boxer 3.6 m cargo van, fast contact and online booking.",
+        "ARIDES Cargo provides cargo transport and moving services in Tallinn and Harjumaa, and across Estonia by agreement. Furniture, appliance and building material delivery with a clean Peugeot Boxer 3.6 m cargo van, fast contact and online booking.",
       brandTag: "TRANSPORT",
       navServices: "Services",
       navPricing: "Prices",
@@ -713,10 +733,15 @@
       formPickupFloor: "Pickup floor",
       formDeliveryFloor: "Delivery floor",
       formHelpers: "Loading / carrying help",
+      formDepositType: "Deposit",
+      formDepositValue: "Deposit amount",
       formElevator: "There is an elevator at both addresses",
       helperOption0: "No helper needed",
       helperOption1: "1 helper",
       helperOption2: "2 helpers",
+      depositOptionNone: "No deposit",
+      depositOptionPercent: "Percent",
+      depositOptionAmount: "Fixed amount",
       formCargo: "What needs to be transported",
       formCargoPh: "Describe the cargo: furniture, boxes, appliances, materials...",
       formComment: "Additional details",
@@ -730,6 +755,10 @@
       busySlotUnavailable: "This time is already booked. Please choose another time.",
       busySlotList: "Confirmed jobs: {slots}",
       busySlotDayTitle: "This day already has a confirmed booking",
+      timeSlotsSelectDate: "Choose a date to see available times.",
+      timeSlotsTitle: "Available times",
+      timeSlotFree: "free",
+      timeSlotBusy: "busy",
       formNeedHelp: "I need help with loading or unloading",
       formSend: "Send request for review",
       formSending: "Sending...",
@@ -750,10 +779,10 @@
       estimateCityValue: "~ {price} EUR",
       estimateCityText: "Inside Tallinn we use hourly logic. The estimate includes route time, extra stops, floors and helper cost when needed.",
       estimateDistanceValue: "~ {price} EUR",
-      estimateDistanceText: "Outside Tallinn the estimate is mainly distance-based. The route, extra stops, floors and helper cost are included.",
+      estimateDistanceText: "Outside Tallinn the estimate includes vehicle work time, return-trip kilometers, extra stops, floors and helper cost when needed.",
       estimateRouteText: "Route ~ {km} km • drive time ~ {time}",
       estimateCityBreakdown: "Tallinn zone • work ~ {hours} h • van {van} EUR • helpers {helpers} EUR",
-      estimateDistanceBreakdown: "Outside Tallinn • {km} km × 0.90 EUR • van {van} EUR • helpers {helpers} EUR",
+      estimateDistanceBreakdown: "Outside Tallinn • work ~ {hours} h • return-trip {chargedKm} km × 0.90 EUR • van {van} EUR • helpers {helpers} EUR",
       estimateFloorsSuffix: "Floor surcharge: {amount} EUR.",
       estimateStopsSuffix: "Extra stop surcharge: {amount} EUR.",
       estimateUnavailableText: "We could not automatically resolve the addresses on the map. We are showing a base estimate and will confirm the exact amount after review.",
@@ -771,6 +800,7 @@
       summaryExtraStops: "Extra stops: {n}",
       summaryExtraHelp: "Loading or unloading help requested",
       summaryExtraBoth: "Extra stops: {n} • Loading help requested",
+      summaryTitle: "Order summary",
       addStop: "+ Add stop",
       removeStop: "Remove",
       extraStopLabel: "Extra stop {n}",
@@ -809,20 +839,301 @@
       validationPhotosType: "Please add image files only.",
       validationPhotosCount: "Please add up to 3 photos.",
       validationPhotosSize: "Each photo can be up to 8 MB."
+    },
+    fi: {
+      metaTitle: "ARIDES Cargo | Kuljetus Tallinnassa, Harjumaalla ja koko Virossa",
+      metaDescription:
+        "ARIDES Cargo tarjoaa kuljetus- ja muuttopalvelut Tallinnassa ja Harjumaalla, sopimuksen mukaan koko Virossa. Huonekalut, kodinkoneet, rakennusmateriaalit ja muut kuormat Peugeot Boxer 3,6 m tavaratilalla. Nopea yhteys ja online-varaus.",
+      brandTag: "CARGO",
+      navServices: "Palvelut",
+      navPricing: "Hinnat",
+      navVan: "Pakettiauto",
+      navGallery: "Galleria",
+      navBooking: "Varaa",
+      navContact: "Yhteystiedot",
+      callNow: "Soita nyt",
+      quoteFloat: "Laske hinta",
+      quoteDrawerClose: "Sulje",
+
+      heroEyebrow: "Peugeot Boxer • 3,6 m tavaratila • joka päivä",
+      heroTitle: "Kuljetus ja muutto Tallinnassa, Harjumaalla ja koko Virossa",
+      heroSubtitle:
+        "Siisti ja tilava Peugeot Boxer auttaa muutoissa, huonekalujen, kodinkoneiden, rakennusmateriaalien ja erikoiskuormien kuljetuksessa. Työskentelemme nopeasti, huolellisesti ja ilman vapaapäiviä.",
+      heroCta: "Varaa verkossa",
+      heroCall: "Soita +372 5684 5377",
+      heroBadge1: "Tallinna, Harjumaa ja koko Viro sopimuksen mukaan",
+      heroBadge2: "Reitit useilla pysähdyksillä",
+      heroBadge3: "Kuormaliinat autossa",
+      metric1Value: "3,6 m",
+      metric1Label: "tavaratilan pituus",
+      metric2Value: "alkaen 30 EUR / h",
+      metric2Label: "kaupungissa",
+      metric3Value: "0,90 EUR / km",
+      metric3Label: "kaupungin ulkopuolella",
+      heroImgAlt: "Peugeot Boxer -pakettiauto Tallinnassa",
+      heroSideAlt: "Puutavaran lastaus pakettiautoon",
+      heroNotePriceTitle: "Kaupungissa",
+      heroNotePriceText: "alkaen 30 EUR / tunti",
+      heroNoteRouteTitle: "Joustava reitti",
+      heroNoteRouteText: "Lisää pysähdykset lomakkeella",
+
+      trust1: "Asuntojen ja toimistojen muutot",
+      trust2: "Huonekalujen, kodinkoneiden ja rakennusmateriaalien kuljetus",
+      trust3: "Palvelemme yksityisiä ja yrityksiä sekä annamme kuitin",
+
+      servicesEyebrow: "Palvelut",
+      servicesTitle: "Missä voimme auttaa",
+      servicesSubtitle:
+        "Kuljetamme sekä yksittäisiä suuria tavaroita että kokonaisia muuttoja. Reitille voi tarvittaessa lisätä useita pysähdyksiä: kauppa, varasto, työmaa tai kierrätysasema.",
+      service1Title: "Asuntojen ja toimistojen muutot",
+      service1Text:
+        "Nopea ja rauhallinen muuttoapu Tallinnassa ja Harjumaalla, sopimuksen mukaan myös muualla Virossa. Sopii laatikoille, huonekaluille, tekniikalle ja työvälineille.",
+      service2Title: "Huonekalujen ja kodinkoneiden nouto kaupoista",
+      service2Text:
+        "Tuomme ostokset IKEAsta, Deposta, Bauhofista ja muista kaupoista suoraan kotiin, toimistoon tai työmaalle.",
+      service3Title: "Rakennusmateriaalien toimitus",
+      service3Text:
+        "Pitkät materiaalit, levyt, paketit ja työkalut kulkevat turvallisesti. Autossa on kuormaliinat kuorman kiinnittämistä varten.",
+      service4Title: "Vanhojen huonekalujen ja jätteen poisvienti",
+      service4Text:
+        "Viemme vanhat tavarat tai rakennusjätteen kierrätysasemalle, jotta koti tai työmaa saadaan nopeasti siistiksi.",
+      service5Title: "Tilaukset useilla pysähdyksillä",
+      service5Text:
+        "Voimme pysähtyä matkalla kaupassa, varastolla tai toisessa osoitteessa ennen lopullista määränpäätä. Kaikki pysähdykset voi lisätä online-lomakkeeseen.",
+      service6Title: "Siisti auto ja luotettava palvelu",
+      service6Text:
+        "Peugeot Boxer on siisti, tilava ja sopii hyvin sekä kotimuuttoihin että yritysten päivittäisiin kuljetuksiin.",
+
+      pricingEyebrow: "Hinnat",
+      pricingTitle: "Selkeät hinnat alusta asti",
+      pricingSubtitle:
+        "Lopullinen hinta riippuu reitistä, kuorman luonteesta ja pysähdysten määrästä, mutta perushinnat näkyvät heti.",
+      price1Label: "Tallinnassa ja lähialueella",
+      price1Value: "alkaen 30 EUR / tunti",
+      price1Text:
+        "Minimitilaus 1 tunti. Sopii muuttoon, huonekalukuljetukseen ja kauppaostosten kuljetukseen.",
+      price2Label: "Kaupungin ulkopuolelle",
+      price2Value: "0,90 EUR / km",
+      price2Text:
+        "Hyvä ratkaisu, kun kuljetus tarvitaan Harjumaalla, koko Virossa tai usean osoitteen välillä samalla tilauksella.",
+      pricingAsideTitle: "Mitä palveluun sisältyy",
+      pricingFeat1: "Siisti ja tilava Peugeot Boxer",
+      pricingFeat2: "Kuormaliinat turvalliseen kiinnitykseen",
+      pricingFeat3: "Mahdollisuus lisätä useita pysähdyksiä samaan reittiin",
+      pricingFeat4: "Nopea vahvistus puhelimella, WhatsAppissa tai Telegramissa",
+      pricingFeat5: "Kuljetuskärry jopa 250 kg painaville tavaroille",
+      pricingFeat6: "Kaksi mukavaa matkustajapaikkaa ohjaamossa",
+      pricingFeat7: "Palvelemme sekä yksityisiä että yrityksiä",
+      pricingFeat8: "Annamme kuitin suoritetusta palvelusta",
+      euTitle: "Kuljetukset myös Euroopan unionin sisällä",
+      euText: "Kuljetukset koko Virossa ja kansainväliset kuljetukset EU:n sisällä ovat mahdollisia sopimuksen mukaan. Lähetä reitti, niin vastaamme erikseen.",
+      pricingNote:
+        "Lähetä tilaus lomakkeella, niin vahvistamme reitin, ajan ja lopullisen hinnan erikseen.",
+
+      vanEyebrow: "Pakettiauto",
+      vanTitle:
+        "Peugeot Boxer, jolla huonekalut ja materiaalit kulkevat kätevästi",
+      vanSubtitle:
+        "Tavaratilan pituus on 3,6 metriä ja kuorman kiinnittämistä varten autossa on liinat. Kuljetus on siisti, järjestetty ja turvallinen.",
+      spec1Title: "3,6 m tavaratilan pituus",
+      spec1Text:
+        "Sopii pitkille tavaroille, huonekaluille, materiaaleille ja suuremmille kauppaostoksille.",
+      spec2Title: "Siisti ja tilava sisätila",
+      spec2Text:
+        "Hyvässä kunnossa oleva tavaratila antaa ammattimaisen vaikutelman ja auttaa pitämään kuljetuksen järjestyksessä.",
+      spec3Title: "Kuormaliinat mukana",
+      spec3Text:
+        "Kuorma voidaan kiinnittää kunnolla, jotta kuljetus on turvallisempi myös pidemmällä reitillä.",
+      spec4Title: "Sopii päivittäisiin kuljetustöihin",
+      spec4Text:
+        "Asunnot, varastot, kaupat, toimistot, työmaat ja kierrätysasemakäynnit mahtuvat samaan palveluun.",
+      spec5Title: "Kuljetuskärry jopa 250 kg",
+      spec5Text:
+        "Auttaa siirtämään painavampia paketteja, kodinkoneita, laatikoita ja muita tavaroita helpommin ja turvallisemmin.",
+      spec6Title: "Kaksi mukavaa paikkaa ohjaamossa",
+      spec6Text:
+        "Tarvittaessa kaksi matkustajaa voi kulkea kuljettajan mukana, mikä helpottaa muuttoa ja kuorman saattamista.",
+      vanImgAlt: "Tavaratilan sisäpuoli kuorman kanssa",
+
+      galleryEyebrow: "Galleria",
+      galleryTitle: "Oikea auto, oikeat kuljetukset",
+      gallerySubtitle:
+        "Kuvat näyttävät, millaisiin kuljetuksiin auto sopii. Klikkaa kuvaa nähdäksesi sen suurempana.",
+      galleryCap1: "Siisti ja edustava auto päivittäiseen kuljetuspalveluun.",
+      galleryCap2:
+        "Korkea pakettiauto, joka sopii hyvin muuttoihin ja suurempiin tavaroihin.",
+      galleryCap3: "Pitkät materiaalit ja rakennustarvikkeet mahtuvat hyvin kyytiin.",
+      galleryCap4: "Kuorma voidaan kiinnittää liinoilla turvallisesti.",
+      galleryCap5: "Kuljetamme myös painavampia rakennusmateriaaleja ja työmaakuormia.",
+      galleryAlt1: "Peugeot Boxer sivusta",
+      galleryAlt2: "Peugeot Boxer edestä",
+      galleryAlt3: "Puutavaraa pakettiautossa",
+      galleryAlt4: "Rakennusmateriaaleja tavaratilassa",
+      galleryAlt5: "Pihakiviä ja nokkakärry pakettiautossa",
+
+      bookingEyebrow: "Online-tilaus",
+      bookingTitle: "Lähetä tilaus päivämäärän, ajan ja osoitteiden kanssa",
+      bookingSubtitle:
+        "Täytä lomake, lisää nouto- ja toimitusosoite sekä tarvittaessa välipysähdykset. Otamme yhteyttä ja vahvistamme tilauksen.",
+      step1Title: "Täytä reitti",
+      step1Text:
+        "Lisää päivämäärä, kellonaika, lähtöosoite, määränpää ja kaikki tarvittavat lisäpysähdykset.",
+      step2Title: "Kuvaile kuorma",
+      step2Text:
+        "Kerro, mitä pitää kuljettaa, jotta voimme arvioida reitin ja ajan tarkemmin.",
+      step3Title: "Vahvistamme tilauksen",
+      step3Text:
+        "Otamme yhteyttä puhelimitse, WhatsAppissa tai Telegramissa ja sovimme yksityiskohdat.",
+      contactTitle: "Voit ottaa yhteyttä myös suoraan",
+      contactSubtitle: "Jos asialla on kiire, soita tai lähetä viesti heti.",
+      waTitle: "WhatsApp",
+      tgTitle: "Telegram",
+      phTitle: "Puhelin",
+      emTitle: "Sähköposti",
+      fbTitle: "Facebook",
+
+      formName: "Nimi",
+      formNamePh: "Nimesi",
+      formPhone: "Puhelin",
+      formPhonePh: "+372...",
+      formEmail: "Sähköposti (valinnainen)",
+      formEmailPh: "nimi@email.com",
+      formService: "Palvelu",
+      formDate: "Päivämäärä",
+      formDatePh: "pp.kk.vvvv",
+      formTime: "Kellonaika",
+      formTimePh: "hh:mm",
+      pickerDateAria: "Avaa päivämääräkalenteri",
+      pickerTimeAria: "Avaa ajan valinta",
+      formFrom: "Nouto-osoite",
+      formFromPh: "Esimerkiksi Mustamäe tee 10, Tallinn",
+      formStops: "Lisäpysähdykset",
+      formTo: "Toimitusosoite",
+      formToPh: "Esimerkiksi Pärnu mnt 120, Tallinn",
+      formPickupFloor: "Noutokerros",
+      formDeliveryFloor: "Toimituskerros",
+      formHelpers: "Apu lastauksessa / kantamisessa",
+      formDepositType: "Ennakkomaksu",
+      formDepositValue: "Ennakkomaksun summa",
+      formElevator: "Molemmissa osoitteissa on hissi",
+      helperOption0: "Apua ei tarvita",
+      helperOption1: "1 apulainen",
+      helperOption2: "2 apulaista",
+      depositOptionNone: "Ei tarvita",
+      depositOptionPercent: "Prosentti",
+      depositOptionAmount: "Kiinteä summa",
+      formCargo: "Mitä pitää kuljettaa",
+      formCargoPh: "Kuvaile kuorma: huonekalut, laatikot, kodinkoneet, materiaalit...",
+      formComment: "Lisätiedot",
+      formCommentPh: "Kerros, hissi, pysäköinti, erityistoiveet, pysähdysten määrä jne.",
+      formPhotos: "Kuvat kuormasta (valinnainen)",
+      formPhotosText: "Lisää kuvia kuormasta",
+      formPhotosHint: "Enintään 3 kuvaa, jotta on helpompi arvioida, mahtuuko kuorma autoon.",
+      photoEmpty: "Kuvia ei ole valittu",
+      photoCount: "{n} kuvaa valittu",
+      busySlotsTitle: "Tälle päivälle on jo vahvistettu aikoja: {slots}",
+      busySlotUnavailable: "Tämä aika on jo varattu. Valitse toinen aika.",
+      busySlotList: "Vahvistetut tilaukset: {slots}",
+      busySlotDayTitle: "Tälle päivälle on vahvistettu tilaus",
+      timeSlotsSelectDate: "Valitse päivämäärä nähdäksesi vapaat ajat.",
+      timeSlotsTitle: "Vapaat ajat",
+      timeSlotFree: "vapaa",
+      timeSlotBusy: "varattu",
+      formNeedHelp: "Tarvitsen apua lastauksessa tai purkamisessa",
+      formSend: "Lähetä tilaus tarkistettavaksi",
+      formSending: "Lähetetään...",
+      formNote:
+        "Lähetyksen jälkeen otamme yhteyttä ja vahvistamme reitin, ajan ja hinnan.",
+      progressEyebrow: "Nopea hinta-arvio",
+      progressTitle: "Täytä tiedot ja saat alustavan hinnan heti",
+      progressStart: "Lähtö",
+      progressEnd: "Määränpää",
+      estimateEyebrow: "Alustava hinta",
+      quoteTitle: "Arvioitu hinta ja tilauksen tiedot",
+      estimatePendingValue: "Aloita lomakkeen täyttö",
+      estimatePendingText: "Kun palvelu ja reitti on lisätty, alustava hinta näkyy tässä.",
+      estimateMetaPending: "Syötä osoitteet ja valinnat nähdäksesi alustavan reitin ja hintalogiikan.",
+      estimateMapLink: "Avaa reitti Google Mapsissa",
+      estimateCalculatingValue: "Lasketaan reittiä...",
+      estimateCalculatingText: "Tarkistamme osoitteita ja yritämme arvioida reitin Viron kartalla.",
+      estimateCityValue: "~ {price} EUR",
+      estimateCityText: "Tallinnan sisällä käytämme tuntihinnoittelua. Arviossa huomioidaan reitin aika, lisäpysähdykset, kerrokset ja tarvittaessa apulainen.",
+      estimateDistanceValue: "~ {price} EUR",
+      estimateDistanceText: "Tallinnan ulkopuolella arvio huomioi auton työajan, edestakaiset kilometrit, lisäpysähdykset, kerrokset ja tarvittaessa apulaisen.",
+      estimateRouteText: "Reitti ~ {km} km • ajoaika ~ {time}",
+      estimateCityBreakdown: "Tallinnan alue • työaika ~ {hours} h • auto {van} EUR • apulaiset {helpers} EUR",
+      estimateDistanceBreakdown: "Tallinnan ulkopuolella • työaika ~ {hours} h • edestakaisin {chargedKm} km × 0,90 EUR • auto {van} EUR • apulaiset {helpers} EUR",
+      estimateFloorsSuffix: "Kerroslisä: {amount} EUR.",
+      estimateStopsSuffix: "Lisäpysähdysten lisä: {amount} EUR.",
+      estimateUnavailableText: "Osoitteita ei voitu tunnistaa automaattisesti kartalta. Näytämme perusarvion ja vahvistamme tarkan summan tarkistuksen jälkeen.",
+      estimateFallbackMeta: "Automaattinen reittilaskenta ei vastannut. Lopullinen hinta vahvistetaan käsin.",
+      estimateNoServiceSelected: "Valitse palvelu ja syötä vähintään nouto- ja toimitusosoite.",
+      estimateHelperLine: "Apulaisten lisä: {amount} EUR.",
+      summaryServiceLabel: "Palvelun tyyppi",
+      summaryDateLabel: "Päivämäärä",
+      summaryTimeLabel: "Kellonaika",
+      summaryFromLabel: "Nouto-osoite",
+      summaryToLabel: "Toimitusosoite",
+      summaryExtraLabel: "Lisätiedot",
+      summaryPending: "Täyttyy lomakkeesta",
+      summaryExtraEmpty: "Ei lisäehtoja",
+      summaryExtraStops: "Lisäpysähdykset: {n}",
+      summaryExtraHelp: "Apu lastaukseen tai purkuun pyydetty",
+      summaryExtraBoth: "Lisäpysähdykset: {n} • lastausapu pyydetty",
+      summaryTitle: "Tilauksen yhteenveto",
+      addStop: "+ Lisää pysähdys",
+      removeStop: "Poista",
+      extraStopLabel: "Lisäpysähdys {n}",
+      extraStopPlaceholder: "Esimerkiksi varasto, kauppa tai väliosoite",
+      serviceOptionDefault: "Valitse palvelu",
+      serviceOptionMoving: "Asunnon tai toimiston muutto",
+      serviceOptionStore: "Nouto kaupasta tai varastosta",
+      serviceOptionMaterials: "Rakennusmateriaalien kuljetus",
+      serviceOptionWaste: "Jätteen tai vanhojen huonekalujen poisvienti",
+      serviceOptionCustom: "Muu kuljetus",
+
+      summaryRequestType: "Palvelun tyyppi",
+      summaryNeedHelp: "Apu lastauksessa tai purkamisessa",
+      commonYes: "Kyllä",
+      commonNo: "Ei",
+
+      footerText:
+        "Kuljetus ja muutto Tallinnassa ja Harjumaalla, sopimuksen mukaan koko Virossa. Nopea yhteys puhelimella, WhatsAppissa, Telegramissa tai online-lomakkeella.",
+      legalPrivacy: "Tietosuoja",
+      legalCookies: "Evästeet",
+      legalTerms: "Ehdot",
+
+      toastThanks: "Kiitos! Otamme pian yhteyttä.",
+      toastError: "Lähetys epäonnistui. Yritä uudelleen.",
+      toastConfigError: "Varauslomaketta ei ole vielä määritetty.",
+      validationRequired: "Täytä tämä kenttä.",
+      validationEmail: "Syötä kelvollinen sähköpostiosoite.",
+      validationPhone: "Syötä kelvollinen puhelinnumero.",
+      validationConsentRequired: "Vahvista, että hyväksyt tietosuojan ja sivuston ehdot.",
+      validationDateRequired: "Valitse päivämäärä.",
+      validationTimeRequired: "Valitse kellonaika.",
+      validationDateInvalid: "Syötä päivämäärä muodossa pp.kk.vvvv.",
+      validationDatePast: "Valitse tämä päivä tai tuleva päivämäärä.",
+      validationTimeInvalid: "Syötä aika muodossa hh:mm.",
+      validationTimeUnavailable: "Valittu aika on jo varattu.",
+      validationPhotosType: "Lisää vain kuvatiedostoja.",
+      validationPhotosCount: "Lisää enintään 3 kuvaa.",
+      validationPhotosSize: "Yhden kuvan koko voi olla enintään 8 MB."
     }
   };
 
-  const EMAILJS_PUBLIC_KEY = "ifm_c_GUeWOaCGmBj";
-  const EMAILJS_SERVICE_ID = "service_iab26he";
-  const EMAILJS_TEMPLATE_ID = "template_8idq3n2";
-  const FALLBACK_EMAIL = "no-email@arides.ee";
+  const BUSINESS_EMAIL = "info@arides.ee";
+  const FALLBACK_EMAIL = BUSINESS_EMAIL;
+  const ORDERS_ENDPOINT = "/api/orders/form";
+  const BUSY_SLOTS_ENDPOINT = "/data/booked-slots.json";
 
-  const supported = ["et", "ru", "en"];
+  const supported = ["et", "ru", "en", "fi"];
   const LS_KEY = "lang";
   const localeMap = {
     et: "et-EE",
     ru: "ru-RU",
-    en: "en-GB"
+    en: "en-GB",
+    fi: "fi-FI"
   };
 
   let refreshGalleryText = () => {};
@@ -848,6 +1159,7 @@
     const first = (langs[0] || "et").toLowerCase();
     if (first.startsWith("ru")) return "ru";
     if (first.startsWith("en")) return "en";
+    if (first.startsWith("fi")) return "fi";
     return "et";
   }
 
@@ -869,6 +1181,7 @@
     if (!window.flatpickr) return "default";
     if (lang === "ru" && window.flatpickr.l10ns?.ru) return window.flatpickr.l10ns.ru;
     if (lang === "et" && window.flatpickr.l10ns?.et) return window.flatpickr.l10ns.et;
+    if (lang === "fi" && window.flatpickr.l10ns?.fi) return window.flatpickr.l10ns.fi;
     return window.flatpickr.l10ns?.default || "default";
   }
 
@@ -1185,7 +1498,18 @@
 
     const pickerButtons = $$("[data-picker-target]");
     const timeAvailabilityHint = $("#timeAvailabilityHint");
+    const timeSlotPanel = document.createElement("div");
+    timeSlotPanel.className = "timeSlotPanel";
+    timeSlotPanel.setAttribute("aria-live", "polite");
+    if (timeAvailabilityHint) {
+      timeAvailabilityHint.insertAdjacentElement("afterend", timeSlotPanel);
+    }
+
     const bookedSlotsByDate = new Map();
+    const slotStartMinutes = 8 * 60;
+    const slotEndMinutes = 22 * 60;
+    const slotStepMinutes = 30;
+    let renderTimeSlots = () => {};
     const prevArrow =
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.7 6.3a1 1 0 0 1 0 1.4L10.41 12l4.3 4.3a1 1 0 1 1-1.42 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.42 0Z"/></svg>';
     const nextArrow =
@@ -1226,13 +1550,31 @@
 
     const getSelectedDateKey = () => dateInput.value || "";
 
-    const findSlotConflict = () => {
-      const dateKey = getSelectedDateKey();
-      const selectedTime = timeToMinutes(timeInput.value);
+    const minutesToTime = (minutes) => {
+      const hours = String(Math.floor(minutes / 60)).padStart(2, "0");
+      const mins = String(minutes % 60).padStart(2, "0");
+      return `${hours}:${mins}`;
+    };
+
+    const timeSlots = () => {
+      const slots = [];
+      for (let minutes = slotStartMinutes; minutes <= slotEndMinutes; minutes += slotStepMinutes) {
+        slots.push(minutes);
+      }
+      return slots;
+    };
+
+    const findSlotConflictAt = (dateKey, selectedTime) => {
       if (!dateKey || selectedTime === null) return null;
       return (bookedSlotsByDate.get(dateKey) || []).find(
         (slot) => selectedTime >= slot.startMinutes && selectedTime < slot.endMinutes
       ) || null;
+    };
+
+    const findSlotConflict = () => {
+      const dateKey = getSelectedDateKey();
+      const selectedTime = timeToMinutes(timeInput.value);
+      return findSlotConflictAt(dateKey, selectedTime);
     };
 
     const updateAvailabilityHint = () => {
@@ -1249,6 +1591,7 @@
       }
 
       timeInput.setCustomValidity(conflict ? t(lang, "validationTimeUnavailable") : "");
+      renderTimeSlots();
     };
 
     getBookingSlotConflict = () => findSlotConflict();
@@ -1302,6 +1645,76 @@
       }
     });
 
+    renderTimeSlots = () => {
+      if (!timeSlotPanel.isConnected) return;
+
+      const lang = langGetter();
+      const dateKey = getSelectedDateKey();
+      timeSlotPanel.replaceChildren();
+
+      if (!dateKey) {
+        const note = document.createElement("p");
+        note.className = "timeSlotPanel__empty";
+        note.textContent = t(lang, "timeSlotsSelectDate");
+        timeSlotPanel.append(note);
+        return;
+      }
+
+      const head = document.createElement("div");
+      head.className = "timeSlotPanel__head";
+
+      const title = document.createElement("strong");
+      title.textContent = t(lang, "timeSlotsTitle");
+      head.append(title);
+
+      const slotList = formatSlotList(dateKey);
+      if (slotList) {
+        const busy = document.createElement("span");
+        busy.textContent = t(lang, "busySlotList").replace("{slots}", slotList);
+        head.append(busy);
+      }
+
+      const grid = document.createElement("div");
+      grid.className = "timeSlotGrid";
+
+      timeSlots().forEach((minutes) => {
+        const value = minutesToTime(minutes);
+        const conflict = findSlotConflictAt(dateKey, minutes);
+        const isSelected = timeInput.value === value;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `timeSlotBtn${conflict ? " is-busy" : ""}${isSelected ? " is-selected" : ""}`;
+        button.disabled = Boolean(conflict);
+        button.setAttribute("aria-disabled", String(Boolean(conflict)));
+        button.setAttribute("aria-pressed", String(isSelected && !conflict));
+
+        const label = document.createElement("strong");
+        label.textContent = value;
+        const meta = document.createElement("small");
+        meta.textContent = conflict ? t(lang, "timeSlotBusy") : t(lang, "timeSlotFree");
+        button.append(label, meta);
+
+        if (conflict) {
+          button.title = conflict.label
+            ? `${value} ${t(lang, "timeSlotBusy")}: ${conflict.label}`
+            : `${value} ${t(lang, "timeSlotBusy")}`;
+        } else {
+          button.addEventListener("click", () => {
+            timePicker.setDate(value, true, "H:i");
+            timeInput.value = value;
+            timeInput.dispatchEvent(new Event("input", { bubbles: true }));
+            timeInput.dispatchEvent(new Event("change", { bubbles: true }));
+            applyFieldValidationState(timeInput, langGetter());
+            updateAvailabilityHint();
+          });
+        }
+
+        grid.append(button);
+      });
+
+      timeSlotPanel.append(head, grid);
+    };
+
     const syncPickerUi = (lang) => {
       const locale = getLocale(lang);
 
@@ -1353,16 +1766,30 @@
 
     syncPickerUi(langGetter());
 
-    fetch("./data/booked-slots.json", { cache: "no-store" })
-      .then((res) => (res.ok ? res.json() : []))
-      .then((slots) => {
-        setBookedSlots(Array.isArray(slots) ? slots : []);
-        datePicker.redraw();
-        updateAvailabilityHint();
-      })
-      .catch(() => {
-        setBookedSlots([]);
-      });
+    const loadBusySlots = async () => {
+      const urls = [
+        BUSY_SLOTS_ENDPOINT,
+        "./data/booked-slots.json"
+      ].filter(Boolean);
+
+      for (const url of urls) {
+        try {
+          const response = await fetch(url, { cache: "no-store" });
+          if (!response.ok) continue;
+          const slots = await response.json();
+          setBookedSlots(Array.isArray(slots) ? slots : []);
+          datePicker.redraw();
+          updateAvailabilityHint();
+          return;
+        } catch (_) {}
+      }
+
+      setBookedSlots([]);
+      datePicker.redraw();
+      updateAvailabilityHint();
+    };
+
+    loadBusySlots();
   }
 
   function initLangMenu() {
@@ -1591,6 +2018,7 @@
     const estimateText = $("#estimateText");
     const estimateMeta = $("#estimateMeta");
     const estimateMapLink = $("#estimateMapLink");
+    const depositValueField = $("#depositValueField");
     if (!form || !road || !percent || !estimateValue || !estimateText || !estimateMeta || !estimateMapLink) return;
 
     const PRICE = {
@@ -1598,7 +2026,7 @@
       outsideKm: 0.9,
       helperHourly: 12,
       minimumCityHours: 1,
-      minimumOutsideBase: 35,
+      minimumOutsideHours: 1.5,
       floorSurcharge: 4,
       stopSurcharge: 5
     };
@@ -1606,6 +2034,14 @@
     const routeCache = new Map();
     const geocodeCache = new Map();
     let routeSeq = 0;
+
+    const clearStoredEstimate = () => {
+      form.dataset.websiteEstimateTotal = "";
+    };
+
+    const storeEstimate = (total) => {
+      form.dataset.websiteEstimateTotal = Number.isFinite(total) && total > 0 ? String(total) : "";
+    };
 
     const requiredNames = [
       "name",
@@ -1626,6 +2062,119 @@
     const getNumberField = (name) => {
       const value = Number(getFieldValue(name));
       return Number.isFinite(value) && value >= 0 ? value : 0;
+    };
+
+    const getDepositSelection = () => {
+      const type = String(getFieldValue("deposit_type") || "none");
+      const valueRaw = getFieldValue("deposit_value");
+      const value = Number(valueRaw);
+      const hasValue = Number.isFinite(value) && value > 0;
+
+      if (type === "percent" && hasValue) {
+        return {
+          type,
+          value: String(value),
+          percent: value,
+          amount: "",
+          note: `${value}% ${t(langGetter(), "formDepositType").toLowerCase()}`
+        };
+      }
+
+      if (type === "amount" && hasValue) {
+        return {
+          type,
+          value: String(value),
+          percent: "",
+          amount: value,
+          note: `${formatNumber(langGetter(), value)} EUR ${t(langGetter(), "formDepositType").toLowerCase()}`
+        };
+      }
+
+      return {
+        type: "none",
+        value: "",
+        percent: "",
+        amount: "",
+        note: ""
+      };
+    };
+
+    const syncDepositFields = () => {
+      const deposit = getDepositSelection();
+      const percentField = form.elements.namedItem("deposit_percent");
+      const amountField = form.elements.namedItem("deposit_amount");
+      const noteField = form.elements.namedItem("deposit_note");
+      if (percentField) percentField.value = deposit.percent || "";
+      if (amountField) amountField.value = deposit.amount || "";
+      if (noteField) noteField.value = deposit.note || "";
+      return deposit;
+    };
+
+    const updateOrderSummary = () => {
+      const lang = langGetter();
+      const summaryTitle = $("#orderSummaryTitle");
+      const summaryPrice = $("#orderSummaryPrice");
+      const summaryText = $("#orderSummaryText");
+      const summaryChips = $("#orderSummaryChips");
+      if (!summaryTitle || !summaryPrice || !summaryText || !summaryChips) return;
+
+      const serviceLabel = form.elements.namedItem("service_type")?.selectedOptions?.[0]?.textContent?.trim() || t(lang, "summaryPending");
+      const extraStops = stopsApi.getValues();
+      const deposit = syncDepositFields();
+      const estimate = getVisibleEstimatePayload();
+      const from = getFieldValue("from_address");
+      const to = getFieldValue("to_address");
+      const helperCount = getNumberField("loader_count");
+      const summaryPieces = [];
+
+      summaryTitle.textContent = getFieldValue("name") || t(lang, "summaryPending");
+      summaryPrice.textContent = estimate.total ? `~ ${formatNumber(lang, Number(estimate.total), 0)} EUR` : "0 €";
+      if (depositValueField) {
+        depositValueField.hidden = deposit.type === "none";
+      }
+
+      if (extraStops.length) {
+        summaryPieces.push(
+          t(lang, extraStops.length > 1 ? "summaryExtraBoth" : "summaryExtraStops")
+            .replace("{n}", String(extraStops.length))
+        );
+      } else {
+        summaryPieces.push(t(lang, "summaryExtraEmpty"));
+      }
+
+      if (helperCount > 0) {
+        summaryPieces.push(t(lang, "summaryExtraHelp"));
+      }
+
+      if (deposit.type === "percent") {
+        summaryPieces.push(`${t(lang, "formDepositType")}: ${deposit.value}%`);
+      } else if (deposit.type === "amount") {
+        summaryPieces.push(`${t(lang, "formDepositType")}: ${formatNumber(lang, deposit.amount, 0)} EUR`);
+      } else {
+        summaryPieces.push(t(lang, "depositOptionNone"));
+      }
+
+      summaryText.textContent = [serviceLabel, from && to ? `${from} → ${to}` : t(lang, "summaryPending")].join(" · ");
+
+      summaryChips.replaceChildren();
+      [
+        `${t(lang, "summaryServiceLabel")}: ${serviceLabel}`,
+        `${t(lang, "summaryDateLabel")}: ${getFieldValue("move_date") || t(lang, "summaryPending")}`,
+        `${t(lang, "summaryTimeLabel")}: ${getFieldValue("move_time") || t(lang, "summaryPending")}`,
+        `${t(lang, "summaryFromLabel")}: ${from || t(lang, "summaryPending")}`,
+        `${t(lang, "summaryToLabel")}: ${to || t(lang, "summaryPending")}`,
+        ...summaryPieces
+      ].forEach((text, index) => {
+        const chip = document.createElement("span");
+        chip.className = `orderSummaryChip${index >= 5 ? " orderSummaryChip--accent" : ""}`;
+        chip.textContent = text;
+        summaryChips.append(chip);
+      });
+
+      if (estimate.text || estimate.meta) {
+        const detail = [estimate.text, estimate.meta].filter(Boolean).join(" · ");
+        summaryText.textContent = detail;
+      }
     };
 
     const normalizeAddress = (value) => {
@@ -1656,6 +2205,12 @@
       }
 
       if (lang === "et") {
+        if (!hours) return `${mins} min`;
+        if (!mins) return `${hours} h`;
+        return `${hours} h ${mins} min`;
+      }
+
+      if (lang === "fi") {
         if (!hours) return `${mins} min`;
         if (!mins) return `${hours} h`;
         return `${hours} h ${mins} min`;
@@ -1821,13 +2376,21 @@
           .replace("{van}", formatNumber(lang, roundMoney(vanCost)))
           .replace("{helpers}", formatNumber(lang, roundMoney(helpersCost)));
       } else {
-        vanCost = Math.max(PRICE.minimumOutsideBase, distanceKm * PRICE.outsideKm);
-        const helperHours = roundQuarter(Math.max(1, durationMin / 60));
-        helpersCost = helperHours * loaderCount * PRICE.helperHourly;
-        total = roundMoney(vanCost + helpersCost + floorSurcharge + stopSurcharge);
+        const routeHours = roundQuarter(
+          Math.max(
+            PRICE.minimumOutsideHours,
+            0.75 + durationMin / 60 + stops.length * 0.25 + floorSum * 0.12 + loaderCount * 0.15
+          )
+        );
+        const chargedKm = distanceKm * 2;
+        const kilometerCost = chargedKm * PRICE.outsideKm;
+        vanCost = routeHours * PRICE.cityHourly;
+        helpersCost = routeHours * loaderCount * PRICE.helperHourly;
+        total = roundMoney(vanCost + kilometerCost + helpersCost + floorSurcharge + stopSurcharge);
         mainText = t(lang, "estimateDistanceText");
         metaText = t(lang, "estimateDistanceBreakdown")
-          .replace("{km}", formatNumber(lang, distanceKm, 1))
+          .replace("{hours}", formatNumber(lang, routeHours, routeHours % 1 ? 2 : 0))
+          .replace("{chargedKm}", formatNumber(lang, chargedKm, 1))
           .replace("{van}", formatNumber(lang, roundMoney(vanCost)))
           .replace("{helpers}", formatNumber(lang, roundMoney(helpersCost)));
       }
@@ -1843,6 +2406,7 @@
       }
 
       return {
+        total,
         value: (cityRoute ? t(lang, "estimateCityValue") : t(lang, "estimateDistanceValue")).replace(
           "{price}",
           formatNumber(lang, total)
@@ -1861,6 +2425,7 @@
       setMapLink(routePoints);
 
       if (!serviceType || !hasRoute) {
+        clearStoredEstimate();
         estimateValue.textContent = t(lang, "estimatePendingValue");
         estimateText.textContent = t(lang, "estimateNoServiceSelected");
         estimateMeta.textContent = t(lang, "estimateMetaPending");
@@ -1869,6 +2434,7 @@
       }
 
       const currentSeq = ++routeSeq;
+      clearStoredEstimate();
       estimateValue.textContent = t(lang, "estimateCalculatingValue");
       estimateText.textContent = t(lang, "estimateCalculatingText");
       estimateMeta.textContent = t(lang, "estimateMetaPending");
@@ -1883,12 +2449,13 @@
           ? 0
           : floorSum * PRICE.floorSurcharge;
         const fallbackTotal = roundMoney(
-          PRICE.minimumOutsideBase +
+          PRICE.minimumOutsideHours * PRICE.cityHourly +
           loaderCount * PRICE.helperHourly +
           floorSurcharge +
           stops.length * PRICE.stopSurcharge
         );
 
+        storeEstimate(fallbackTotal);
         estimateValue.textContent = t(lang, "estimateDistanceValue").replace("{price}", formatNumber(lang, fallbackTotal));
         estimateText.textContent = t(lang, "estimateUnavailableText");
         estimateMeta.textContent = t(lang, "estimateFallbackMeta");
@@ -1896,6 +2463,7 @@
       }
 
       const result = buildEstimate(lang, routeData, stops);
+      storeEstimate(result.total);
       estimateValue.textContent = result.value;
       estimateText.textContent = result.text;
       estimateMeta.textContent = result.meta;
@@ -1913,6 +2481,7 @@
       const to = getFieldValue("to_address");
       const stops = stopsApi.getValues();
       await updateEstimate(lang, from, to, stops);
+      updateOrderSummary();
     };
 
     form.addEventListener("input", update);
@@ -1939,6 +2508,10 @@
     const serviceSelect = $('select[name="service_type"]', form);
     const serviceLabel = serviceSelect?.selectedOptions?.[0]?.textContent?.trim() || "-";
     const extraStops = stopsApi.getValues();
+    const websiteEstimate = getVisibleEstimatePayload();
+    const depositType = String(data.get("deposit_type") || "none");
+    const depositValue = String(data.get("deposit_value") || "").trim();
+    const depositNote = String(data.get("deposit_note") || "").trim();
     const photoFiles = Array.from($('input[name="order_photos"]', form)?.files || [])
       .map((file) => file.name)
       .join(", ");
@@ -1958,12 +2531,130 @@
       `${t(lang, "formDeliveryFloor")}: ${data.get("delivery_floor") || "0"}`,
       `${t(lang, "formHelpers")}: ${data.get("loader_count") || "0"}`,
       `${t(lang, "formElevator")}: ${data.get("has_elevator") ? t(lang, "commonYes") : t(lang, "commonNo")}`,
+      depositType !== "none" && depositValue ? `${t(lang, "formDepositType")}: ${depositType === "percent" ? `${depositValue}%` : `${depositValue} EUR`}` : "",
+      depositNote ? `${t(lang, "formDepositType")}: ${depositNote}` : "",
+      ...(websiteEstimate.value ? [
+        `Website estimate: ${websiteEstimate.value}`,
+        websiteEstimate.text ? `Estimate text: ${websiteEstimate.text}` : "",
+        websiteEstimate.meta ? `Estimate details: ${websiteEstimate.meta}` : ""
+      ].filter(Boolean) : []),
       `${t(lang, "formCargo")}: ${data.get("cargo_details") || "-"}`,
       `${t(lang, "formPhotos")}: ${photoFiles || "-"}`,
       `${t(lang, "formComment")}: ${data.get("comment") || "-"}`
     ];
 
     return lines.join("\n");
+  }
+
+  function parseEstimateAmount(value) {
+    const normalized = String(value || "")
+      .replace(/\s/g, "")
+      .replace(",", ".");
+    const match = normalized.match(/(\d+(?:\.\d+)?)/);
+    return match ? match[1] : "";
+  }
+
+  function getVisibleEstimatePayload() {
+    const form = $("#bookingForm");
+    const estimateValue = $("#estimateValue")?.textContent?.trim() || "";
+    const estimateText = $("#estimateText")?.textContent?.trim() || "";
+    const estimateMeta = $("#estimateMeta")?.textContent?.trim() || "";
+    const estimateMapLink = $("#estimateMapLink");
+    const storedTotal = form?.dataset.websiteEstimateTotal || "";
+    const valueLooksPriced = /\d/.test(estimateValue) && /eur|€/i.test(estimateValue);
+
+    return {
+      total: storedTotal || (valueLooksPriced ? parseEstimateAmount(estimateValue) : ""),
+      value: valueLooksPriced ? estimateValue : "",
+      text: valueLooksPriced ? estimateText : "",
+      meta: valueLooksPriced ? estimateMeta : "",
+      mapUrl: estimateMapLink && !estimateMapLink.hidden ? estimateMapLink.href : ""
+    };
+  }
+
+  function prepareBookingPayload(form, lang, stopsApi) {
+    const data = new FormData(form);
+    const serviceSelect = $('select[name="service_type"]', form);
+    const serviceLabel = serviceSelect?.selectedOptions?.[0]?.textContent?.trim() || "";
+    const extraStops = stopsApi.getValues();
+    const websiteEstimate = getVisibleEstimatePayload();
+    const visibleEmail = $('input[name="customer_email"]', form)?.value.trim() || "";
+    const replyEmail = visibleEmail || FALLBACK_EMAIL;
+    const depositType = String(data.get("deposit_type") || "none");
+    const depositValue = String(data.get("deposit_value") || "").trim();
+    const depositPercent = depositType === "percent" && depositValue ? depositValue : "";
+    const depositAmount = depositType === "amount" && depositValue ? depositValue : "";
+    const depositNote = depositType !== "none" && depositValue
+      ? (depositType === "percent" ? `${depositValue}% ${t(lang, "formDepositType").toLowerCase()}` : `${depositValue} EUR ${t(lang, "formDepositType").toLowerCase()}`)
+      : "";
+    const photoFiles = Array.from($('input[name="order_photos"]', form)?.files || [])
+      .map((file) => file.name)
+      .join(", ");
+
+    return {
+      recipient_email: BUSINESS_EMAIL,
+      reply_to: replyEmail,
+      email: replyEmail,
+      customer_email: visibleEmail,
+      language: lang,
+      service_type: data.get("service_type") || "",
+      service_label: serviceLabel,
+      name: data.get("name") || "",
+      phone: data.get("phone") || "",
+      move_date: data.get("move_date") || "",
+      move_time: data.get("move_time") || "",
+      from_address: data.get("from_address") || "",
+      extra_stops: extraStops.join("\n"),
+      to_address: data.get("to_address") || "",
+      pickup_floor: data.get("pickup_floor") || "0",
+      delivery_floor: data.get("delivery_floor") || "0",
+      loader_count: data.get("loader_count") || "0",
+      has_elevator: data.get("has_elevator") ? "yes" : "no",
+      deposit_type: depositType,
+      deposit_value: depositValue,
+      deposit_percent: depositPercent,
+      deposit_amount: depositAmount,
+      deposit_note: depositNote,
+      cargo_details: data.get("cargo_details") || "",
+      comment: data.get("comment") || "",
+      photo_files: photoFiles,
+      website_estimate_total: websiteEstimate.total,
+      website_estimate_value: websiteEstimate.value,
+      website_estimate_text: websiteEstimate.text,
+      website_estimate_meta: websiteEstimate.meta,
+      website_estimate_map_url: websiteEstimate.mapUrl,
+      company_website: data.get("company_website") || "",
+      message: buildMessage(form, lang, stopsApi),
+      submitted_at: new Date().toISOString(),
+      page_url: window.location.href
+    };
+  }
+
+  async function sendBookingOrder(form) {
+    const body = new FormData(form);
+    const websiteEstimate = getVisibleEstimatePayload();
+    const depositType = String(body.get("deposit_type") || "none");
+    const depositValue = String(body.get("deposit_value") || "").trim();
+
+    body.set("website_estimate_total", websiteEstimate.total);
+    body.set("website_estimate_value", websiteEstimate.value);
+    body.set("website_estimate_text", websiteEstimate.text);
+    body.set("website_estimate_meta", websiteEstimate.meta);
+    body.set("website_estimate_map_url", websiteEstimate.mapUrl);
+    body.set("deposit_percent", depositType === "percent" ? depositValue : "");
+    body.set("deposit_amount", depositType === "amount" ? depositValue : "");
+    body.set("deposit_note", depositType !== "none" && depositValue
+      ? (depositType === "percent" ? `${depositValue}% ettemaks` : `${depositValue} EUR ettemaks`)
+      : "");
+
+    const response = await fetch(ORDERS_ENDPOINT, {
+      method: "POST",
+      body
+    });
+
+    if (!response.ok) {
+      throw new Error(`Order API responded ${response.status}`);
+    }
   }
 
   function initFormEmail(langGetter, stopsApi) {
@@ -1981,15 +2672,6 @@
       timer = setTimeout(() => toast.classList.remove("show"), 2800);
     };
 
-    const configured =
-      EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID;
-
-    if (window.emailjs && configured) {
-      try {
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-      } catch (_) {}
-    }
-
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const lang = langGetter();
@@ -1999,9 +2681,10 @@
         return;
       }
 
-      const visibleEmail = $('input[name="customer_email"]', form)?.value.trim() || "";
-      $('input[name="email"]', form).value = visibleEmail || FALLBACK_EMAIL;
-      $('textarea[name="message"]', form).value = buildMessage(form, lang, stopsApi);
+      const payload = prepareBookingPayload(form, lang, stopsApi);
+      $('input[name="email"]', form).value = payload.email;
+      $('input[name="reply_to"]', form).value = payload.reply_to;
+      $('textarea[name="message"]', form).value = payload.message;
 
       if (btn) {
         btn.disabled = true;
@@ -2009,18 +2692,23 @@
       }
 
       try {
-        if (!window.emailjs || !configured) {
+        if (!ORDERS_ENDPOINT) {
           show(t(lang, "toastConfigError"));
           return;
         }
 
-        await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+        await sendBookingOrder(form);
         form.reset();
         resetDateTimePickers();
         resetPhotoUpload();
         $('input[name="email"]', form).value = "";
+        $('input[name="reply_to"]', form).value = "";
+        $('input[name="deposit_percent"]', form).value = "";
+        $('input[name="deposit_amount"]', form).value = "";
+        $('input[name="deposit_note"]', form).value = "";
         $('textarea[name="message"]', form).value = "";
         stopsApi.clear();
+        form.dispatchEvent(new Event("input", { bubbles: true }));
         show(t(lang, "toastThanks"));
       } catch (err) {
         console.error("EmailJS error:", err);
