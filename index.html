@@ -38,6 +38,12 @@
   <link rel="manifest" href="./site.webmanifest?v=20260617a" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <link rel="stylesheet" href="./styles.css" />
+  <script>
+    window.ARIDES_CONFIG = {
+      googleMapsApiKey: "AIzaSyDYmyGgtstfAP7Bc3aiFcmV83j1I9pX8Hw",
+      googleMapsCountry: "EE"
+    };
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -413,8 +419,8 @@
             <article class="stepCard">
               <span class="stepCard__num">2</span>
               <div>
-                <h3 data-i18n="step2Title">Kirjelda koormat</h3>
-                <p data-i18n="step2Text">Kirjuta, mida on vaja vedada, et oskaksime marsruudi ja aja täpsemalt üle vaadata.</p>
+                <h3 data-i18n="step2Title">Kirjelda lühidalt</h3>
+                <p data-i18n="step2Text">Kirjuta kommentaaridesse, mida veame, mis on oluline ja kas on midagi, millele peaksime arvestuses tähelepanu pöörama.</p>
               </div>
             </article>
 
@@ -630,13 +636,8 @@
             </label>
 
             <label class="field field--full">
-              <span data-i18n="formCargo">Mida on vaja vedada</span>
-              <textarea name="cargo_details" rows="4" required placeholder="Kirjelda koormat: mööbel, kastid, tehnika, materjalid..." data-i18n-ph="formCargoPh"></textarea>
-            </label>
-
-            <label class="field field--full">
-              <span data-i18n="formComment">Lisainfo</span>
-              <textarea name="comment" rows="3" placeholder="Korrus, lift, parkimine, erisoovid, mitu peatust jne." data-i18n-ph="formCommentPh"></textarea>
+              <span data-i18n="formComment">Kirjeldus ja kommentaarid</span>
+              <textarea name="comment" rows="4" required placeholder="Kirjuta, mida on vaja vedada, mitu eset on, kas on raskeid asju, erisoovid, parkimine, lift, mitu peatust jne." data-i18n-ph="formCommentPh"></textarea>
             </label>
 
             <label class="field field--full uploadField">
@@ -653,12 +654,40 @@
           <section class="quotePanel" aria-live="polite">
             <div class="estimatePanel">
               <div class="estimatePanel__head">
-                <p class="estimatePanel__eyebrow" data-i18n="estimateEyebrow">Eelhind</p>
-                <strong class="estimatePanel__value" id="estimateValue" data-i18n="estimatePendingValue">Alusta vormi täitmist</strong>
+                <div>
+                  <p class="estimatePanel__eyebrow" data-i18n="estimateEyebrow">Eelhind</p>
+                  <strong class="estimatePanel__value" id="estimateValue" data-i18n="estimatePendingValue">Alusta vormi täitmist</strong>
+                </div>
+                <div class="estimatePanel__badge" id="estimateBadge" data-i18n="estimateBadgeReady">Marsruut ja hind siin</div>
               </div>
               <p class="estimatePanel__text" id="estimateText" data-i18n="estimatePendingText">Lisame siia esialgse hinnaloogika kohe, kui marsruut ja teenus on sisestatud.</p>
               <p class="estimatePanel__meta" id="estimateMeta" data-i18n="estimateMetaPending">Sisesta aadressid ja valikud, et näha ligikaudset marsruuti ning hinnaloogikat.</p>
+              <div class="estimatePanel__stats" aria-label="Route details">
+                <div class="estimateStat">
+                  <span class="estimateStat__label" data-i18n="estimateDistanceLabel">Kaugus</span>
+                  <strong class="estimateStat__value" id="estimateDistanceValue">—</strong>
+                </div>
+                <div class="estimateStat">
+                  <span class="estimateStat__label" data-i18n="estimateDurationLabel">Aeg</span>
+                  <strong class="estimateStat__value" id="estimateDurationValue">—</strong>
+                </div>
+                <div class="estimateStat">
+                  <span class="estimateStat__label" data-i18n="estimateStopsLabel">Peatused</span>
+                  <strong class="estimateStat__value" id="estimateStopsValue">—</strong>
+                </div>
+              </div>
+              <div class="estimatePanel__mapFrame">
+                <div class="estimatePanel__mapFrameHead">
+                  <span class="estimatePanel__mapFrameLabel" data-i18n="estimateMapLabel">Маршрут на карте</span>
+                  <span class="estimatePanel__mapFrameHint" data-i18n="estimateMapHint">Обновляется автоматически</span>
+                </div>
+                <div class="routeMap" id="routeMap" aria-hidden="true"></div>
+              </div>
               <a class="estimatePanel__link" id="estimateMapLink" href="#" target="_blank" rel="noreferrer" hidden data-i18n="estimateMapLink">Ava marsruut Google Mapsis</a>
+              <div class="estimatePanel__footer">
+                <span class="estimatePanel__footerTag" data-i18n="estimateLiveNote">Цена и маршрут обновляются автоматически</span>
+                <span class="estimatePanel__footerTag estimatePanel__footerTag--strong" data-i18n="estimateManualNote">Финальную сумму подтверждаем после проверки</span>
+              </div>
             </div>
           </section>
 
@@ -674,6 +703,7 @@
 
           <input type="hidden" name="email" value="" />
           <input type="hidden" name="reply_to" value="" />
+          <input type="hidden" name="cargo_details" value="" />
           <input type="hidden" name="deposit_percent" value="" />
           <input type="hidden" name="deposit_amount" value="" />
           <input type="hidden" name="deposit_note" value="" />

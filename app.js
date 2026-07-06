@@ -138,9 +138,9 @@
       step1Title: "Täida marsruut",
       step1Text:
         "Lisa kuupäev, kellaaeg, alguspunkt, sihtpunkt ja kõik vajalikud lisapeatused.",
-      step2Title: "Kirjelda koormat",
+      step2Title: "Kirjelda lühidalt",
       step2Text:
-        "Kirjuta, mida on vaja vedada, et oskaksime marsruudi ja aja täpsemalt üle vaadata.",
+        "Kirjuta kommentaaridesse olulised detailid: parkimine, lift, rasked esemed, pakendamine, eritingimused ja muu, mida peaksime teadma.",
       step3Title: "Kinnitame tellimuse",
       step3Text:
         "Võtame ühendust telefoni, WhatsAppi või Telegrami kaudu ja lepime kõik detailid kokku.",
@@ -182,10 +182,16 @@
       depositOptionNone: "Pole vaja",
       depositOptionPercent: "Protsent",
       depositOptionAmount: "Kindel summa",
-      formCargo: "Mida on vaja vedada",
-      formCargoPh: "Kirjelda koormat: mööbel, kastid, tehnika, materjalid...",
-      formComment: "Lisainfo",
-      formCommentPh: "Korrus, lift, parkimine, erisoovid, mitu peatust jne.",
+      formComment: "Kirjeldus ja kommentaarid",
+      formCommentPh: "Lisa olulised märkused: lift, parkimine, rasked esemed, pakendamine, eritingimused.",
+      estimateBadgeReady: "Marsruut ja hind siin",
+      estimateDistanceLabel: "Kaugus",
+      estimateDurationLabel: "Aeg",
+      estimateStopsLabel: "Peatused",
+      estimateMapLabel: "Marsruut kaardil",
+      estimateMapHint: "Uueneb automaatselt",
+      estimateLiveNote: "Hind ja marsruut uuenevad automaatselt",
+      estimateManualNote: "Lõpliku summa kinnitame pärast kontrolli",
       formPhotos: "Fotod kaubast (soovi korral)",
       formPhotosText: "Lisa fotod kaubast",
       formPhotosHint: "Kuni 3 fotot, et oleks lihtsam hinnata, kas kaup mahub kaubikusse.",
@@ -417,9 +423,9 @@
       step1Title: "Укажите маршрут",
       step1Text:
         "Добавьте дату, время, стартовый адрес, адрес доставки и при необходимости все промежуточные точки.",
-      step2Title: "Опишите груз",
+      step2Title: "Опишите кратко",
       step2Text:
-        "Напишите, что нужно везти, чтобы мы быстрее оценили маршрут и время.",
+        "Напишите в комментариях важные детали: парковка, лифт, тяжёлые вещи, упаковка, особые условия и всё, что нужно учесть.",
       step3Title: "Мы подтвердим заказ",
       step3Text:
         "Свяжемся по телефону, WhatsApp или Telegram и согласуем все детали.",
@@ -461,10 +467,16 @@
       depositOptionNone: "Не нужна",
       depositOptionPercent: "Процент",
       depositOptionAmount: "Фиксированная сумма",
-      formCargo: "Что нужно перевезти",
-      formCargoPh: "Опишите груз: мебель, коробки, техника, материалы...",
-      formComment: "Комментарии",
-      formCommentPh: "Этаж, лифт, парковка, особые пожелания, сколько точек и т.д.",
+      formComment: "Описание и комментарии",
+      formCommentPh: "Добавьте важные детали: лифт, парковка, тяжёлые вещи, упаковка, особые условия.",
+      estimateBadgeReady: "Маршрут и цена здесь",
+      estimateDistanceLabel: "Расстояние",
+      estimateDurationLabel: "Время",
+      estimateStopsLabel: "Точки",
+      estimateMapLabel: "Маршрут на карте",
+      estimateMapHint: "Обновляется автоматически",
+      estimateLiveNote: "Цена и маршрут обновляются автоматически",
+      estimateManualNote: "Финальную сумму подтверждаем после проверки",
       formPhotos: "Фото груза (по желанию)",
       formPhotosText: "Добавить фото груза",
       formPhotosHint: "До 3 фото, чтобы было проще понять, влезет ли груз в фургон.",
@@ -697,9 +709,9 @@
       step1Title: "Fill in the route",
       step1Text:
         "Add the preferred date, time, pickup address, destination and every extra stop you need.",
-      step2Title: "Describe the cargo",
+      step2Title: "Describe briefly",
       step2Text:
-        "Tell us what needs to be transported so we can review the route and timing more accurately.",
+        "Write the important details in the comments: parking, lift, heavy items, packing, special conditions and anything else we should know.",
       step3Title: "We confirm the booking",
       step3Text:
         "We will contact you by phone, WhatsApp or Telegram and confirm all details.",
@@ -742,10 +754,16 @@
       depositOptionNone: "No deposit",
       depositOptionPercent: "Percent",
       depositOptionAmount: "Fixed amount",
-      formCargo: "What needs to be transported",
-      formCargoPh: "Describe the cargo: furniture, boxes, appliances, materials...",
-      formComment: "Additional details",
-      formCommentPh: "Floor, elevator, parking, special notes, number of stops, etc.",
+      formComment: "Description and comments",
+      formCommentPh: "Add the important notes: elevator, parking, heavy items, packing, special conditions.",
+      estimateBadgeReady: "Route and price here",
+      estimateDistanceLabel: "Distance",
+      estimateDurationLabel: "Time",
+      estimateStopsLabel: "Stops",
+      estimateMapLabel: "Route on the map",
+      estimateMapHint: "Updates automatically",
+      estimateLiveNote: "Price and route update automatically",
+      estimateManualNote: "We confirm the final amount after review",
       formPhotos: "Cargo photos (optional)",
       formPhotosText: "Add cargo photos",
       formPhotosHint: "Up to 3 photos, so it is easier to check whether the cargo fits in the van.",
@@ -978,9 +996,9 @@
       step1Title: "Täytä reitti",
       step1Text:
         "Lisää päivämäärä, kellonaika, lähtöosoite, määränpää ja kaikki tarvittavat lisäpysähdykset.",
-      step2Title: "Kuvaile kuorma",
+      step2Title: "Kuvaile lyhyesti",
       step2Text:
-        "Kerro, mitä pitää kuljettaa, jotta voimme arvioida reitin ja ajan tarkemmin.",
+        "Kirjoita kommentteihin tärkeät tiedot: pysäköinti, hissi, painavat tavarat, pakkaus, erityisvaatimukset ja muu huomioitava.",
       step3Title: "Vahvistamme tilauksen",
       step3Text:
         "Otamme yhteyttä puhelimitse, WhatsAppissa tai Telegramissa ja sovimme yksityiskohdat.",
@@ -1022,10 +1040,16 @@
       depositOptionNone: "Ei tarvita",
       depositOptionPercent: "Prosentti",
       depositOptionAmount: "Kiinteä summa",
-      formCargo: "Mitä pitää kuljettaa",
-      formCargoPh: "Kuvaile kuorma: huonekalut, laatikot, kodinkoneet, materiaalit...",
-      formComment: "Lisätiedot",
-      formCommentPh: "Kerros, hissi, pysäköinti, erityistoiveet, pysähdysten määrä jne.",
+      formComment: "Kuvaus ja kommentit",
+      formCommentPh: "Lisää tärkeät tiedot: hissi, pysäköinti, painavat esineet, pakkaus, erityisvaatimukset.",
+      estimateBadgeReady: "Reitti ja hinta tässä",
+      estimateDistanceLabel: "Etäisyys",
+      estimateDurationLabel: "Aika",
+      estimateStopsLabel: "Pysähdykset",
+      estimateMapLabel: "Reitti kartalla",
+      estimateMapHint: "Päivittyy automaattisesti",
+      estimateLiveNote: "Hinta ja reitti päivittyvät automaattisesti",
+      estimateManualNote: "Vahvistamme lopullisen summan tarkistuksen jälkeen",
       formPhotos: "Kuvat kuormasta (valinnainen)",
       formPhotosText: "Lisää kuvia kuormasta",
       formPhotosHint: "Enintään 3 kuvaa, jotta on helpompi arvioida, mahtuuko kuorma autoon.",
@@ -1126,6 +1150,9 @@
   const FALLBACK_EMAIL = BUSINESS_EMAIL;
   const ORDERS_ENDPOINT = "/api/orders/form";
   const BUSY_SLOTS_ENDPOINT = "/data/booked-slots.json";
+  const SITE_CONFIG = window.ARIDES_CONFIG || {};
+  const GOOGLE_MAPS_API_KEY = String(SITE_CONFIG.googleMapsApiKey || "").trim();
+  const GOOGLE_MAPS_COUNTRY = String(SITE_CONFIG.googleMapsCountry || "EE").trim() || "EE";
 
   const supported = ["et", "ru", "en", "fi"];
   const LS_KEY = "lang";
@@ -2015,11 +2042,16 @@
     const road = $(".progressRoad", form);
     const percent = $("#progressPercent");
     const estimateValue = $("#estimateValue");
+    const estimateBadge = $("#estimateBadge");
     const estimateText = $("#estimateText");
     const estimateMeta = $("#estimateMeta");
+    const estimateDistanceValue = $("#estimateDistanceValue");
+    const estimateDurationValue = $("#estimateDurationValue");
+    const estimateStopsValue = $("#estimateStopsValue");
     const estimateMapLink = $("#estimateMapLink");
+    const routeMap = $("#routeMap");
     const depositValueField = $("#depositValueField");
-    if (!form || !road || !percent || !estimateValue || !estimateText || !estimateMeta || !estimateMapLink) return;
+    if (!form || !road || !percent || !estimateValue || !estimateBadge || !estimateText || !estimateMeta || !estimateDistanceValue || !estimateDurationValue || !estimateStopsValue || !estimateMapLink || !routeMap) return;
 
     const PRICE = {
       cityHourly: 30,
@@ -2033,6 +2065,13 @@
 
     const routeCache = new Map();
     const geocodeCache = new Map();
+    let googleMapsPromise = null;
+    let googleMap = null;
+    let googleRoutePolyline = null;
+    let googleRouteOriginMarker = null;
+    let googleRouteDestinationMarker = null;
+    let autocompleteReadyPromise = null;
+    const placeState = new WeakMap();
     let routeSeq = 0;
 
     const clearStoredEstimate = () => {
@@ -2051,7 +2090,7 @@
       "move_time",
       "from_address",
       "to_address",
-      "cargo_details"
+      "comment"
     ];
 
     const getFieldValue = (name) => {
@@ -2125,6 +2164,7 @@
       const from = getFieldValue("from_address");
       const to = getFieldValue("to_address");
       const helperCount = getNumberField("loader_count");
+      const comment = getFieldValue("comment");
       const summaryPieces = [];
 
       summaryTitle.textContent = getFieldValue("name") || t(lang, "summaryPending");
@@ -2175,6 +2215,13 @@
         const detail = [estimate.text, estimate.meta].filter(Boolean).join(" · ");
         summaryText.textContent = detail;
       }
+
+      if (comment) {
+        const commentEl = document.createElement("div");
+        commentEl.className = "orderSummaryPanel__comment";
+        commentEl.textContent = comment;
+        summaryChips.append(commentEl);
+      }
     };
 
     const normalizeAddress = (value) => {
@@ -2184,7 +2231,7 @@
       return `${trimmed}, Estonia`;
     };
 
-    const roundMoney = (value) => Math.max(0, Math.ceil(value));
+    const roundMoney = (value, step = 5) => Math.max(0, Math.ceil(value / step) * step);
     const roundQuarter = (value) => Math.ceil(value * 4) / 4;
 
     const formatNumber = (lang, value, digits = 0) =>
@@ -2244,6 +2291,214 @@
       estimateMapLink.hidden = false;
     };
 
+    const hideRouteMap = () => {
+      routeMap.classList.remove("is-visible");
+      routeMap.setAttribute("aria-hidden", "true");
+    };
+
+    const loadGoogleMapsApi = () => {
+      if (!GOOGLE_MAPS_API_KEY) return Promise.resolve(false);
+      if (window.google?.maps) return Promise.resolve(true);
+      if (googleMapsPromise) return googleMapsPromise;
+
+      googleMapsPromise = new Promise((resolve) => {
+        const existing = document.querySelector('script[data-arides-google-maps="true"]');
+        if (existing) {
+          existing.addEventListener("load", () => resolve(Boolean(window.google?.maps)), { once: true });
+          existing.addEventListener("error", () => resolve(false), { once: true });
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.defer = true;
+        script.dataset.aridesGoogleMaps = "true";
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(GOOGLE_MAPS_API_KEY)}&libraries=places&v=weekly`;
+        script.onload = () => resolve(Boolean(window.google?.maps));
+        script.onerror = () => resolve(false);
+        document.head.append(script);
+      });
+
+      return googleMapsPromise;
+    };
+
+    const ensureRouteMap = async () => {
+      if (!GOOGLE_MAPS_API_KEY) {
+        hideRouteMap();
+        return false;
+      }
+
+      const loaded = await loadGoogleMapsApi();
+      if (!loaded || !window.google?.maps) {
+        hideRouteMap();
+        return false;
+      }
+
+      if (!googleMap) {
+        googleMap = new google.maps.Map(routeMap, {
+          center: { lat: 59.437, lng: 24.7536 },
+          zoom: 10,
+          disableDefaultUI: true,
+          gestureHandling: "cooperative",
+          mapTypeControl: false,
+          streetViewControl: false,
+          fullscreenControl: false
+        });
+      }
+
+      routeMap.classList.add("is-visible");
+      routeMap.setAttribute("aria-hidden", "false");
+      return true;
+    };
+
+    const renderRouteMap = async (routeData) => {
+      if (!routeData || routeData.provider !== "google" || !routeData.polylinePath?.length) {
+        hideRouteMap();
+        return;
+      }
+
+      const ready = await ensureRouteMap();
+      if (!ready || !googleMap) return;
+
+      if (googleRoutePolyline) googleRoutePolyline.setMap(null);
+      if (googleRouteOriginMarker) googleRouteOriginMarker.setMap(null);
+      if (googleRouteDestinationMarker) googleRouteDestinationMarker.setMap(null);
+
+      googleRoutePolyline = new google.maps.Polyline({
+        path: routeData.polylinePath,
+        geodesic: false,
+        strokeColor: "#1f79ff",
+        strokeOpacity: 0.95,
+        strokeWeight: 5,
+        map: googleMap
+      });
+
+      googleRouteOriginMarker = new google.maps.Marker({
+        position: routeData.polylinePath[0],
+        map: googleMap,
+        title: routeData.originLabel || "Start"
+      });
+
+      googleRouteDestinationMarker = new google.maps.Marker({
+        position: routeData.polylinePath[routeData.polylinePath.length - 1],
+        map: googleMap,
+        title: routeData.destinationLabel || "Finish"
+      });
+
+      const bounds = new google.maps.LatLngBounds();
+      routeData.polylinePath.forEach((point) => bounds.extend(point));
+      googleMap.fitBounds(bounds, 48);
+      if (routeData.polylinePath.length === 1) {
+        googleMap.setCenter(routeData.polylinePath[0]);
+        googleMap.setZoom(13);
+      }
+    };
+
+    const decodePolyline = (encoded) => {
+      const path = [];
+      let index = 0;
+      let lat = 0;
+      let lng = 0;
+
+      while (index < encoded.length) {
+        let b;
+        let shift = 0;
+        let result = 0;
+
+        do {
+          b = encoded.charCodeAt(index++) - 63;
+          result |= (b & 0x1f) << shift;
+          shift += 5;
+        } while (b >= 0x20);
+
+        const deltaLat = result & 1 ? ~(result >> 1) : result >> 1;
+        lat += deltaLat;
+
+        shift = 0;
+        result = 0;
+
+        do {
+          b = encoded.charCodeAt(index++) - 63;
+          result |= (b & 0x1f) << shift;
+          shift += 5;
+        } while (b >= 0x20);
+
+        const deltaLng = result & 1 ? ~(result >> 1) : result >> 1;
+        lng += deltaLng;
+
+        path.push({ lat: lat / 1e5, lng: lng / 1e5 });
+      }
+
+      return path;
+    };
+
+    const getPlaceSnapshot = (input) => placeState.get(input) || null;
+
+    const setPlaceSnapshot = (input, snapshot) => {
+      if (!input) return;
+      if (snapshot) {
+        placeState.set(input, snapshot);
+      } else {
+        placeState.delete(input);
+      }
+    };
+
+    const attachAutocomplete = async (input) => {
+      if (!input || input.dataset.autocompleteReady === "true") return;
+      const loaded = await loadGoogleMapsApi();
+      if (!loaded || !window.google?.maps?.places?.Autocomplete) return;
+
+      input.dataset.autocompleteReady = "true";
+      const autocomplete = new google.maps.places.Autocomplete(input, {
+        componentRestrictions: { country: GOOGLE_MAPS_COUNTRY },
+        fields: ["place_id", "geometry", "formatted_address", "name"],
+        types: ["address"]
+      });
+
+      autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        const geometry = place?.geometry?.location;
+        const label = place.formatted_address || place.name || input.value.trim();
+        setPlaceSnapshot(input, geometry ? {
+          placeId: place.place_id || "",
+          lat: geometry.lat(),
+          lng: geometry.lng(),
+          label
+        } : null);
+        if (label) {
+          input.value = label;
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      });
+
+      input.addEventListener("input", () => {
+        setPlaceSnapshot(input, null);
+      });
+
+      input.addEventListener("change", () => {
+        if (!input.value.trim()) setPlaceSnapshot(input, null);
+      });
+    };
+
+    const waitForAutocomplete = async () => {
+      if (autocompleteReadyPromise) return autocompleteReadyPromise;
+      autocompleteReadyPromise = (async () => {
+        const loaded = await loadGoogleMapsApi();
+        if (!loaded || !window.google?.maps?.places?.Autocomplete) return false;
+
+        const inputs = [
+          $('input[name="from_address"]', form),
+          $('input[name="to_address"]', form),
+          ...$$('#extraStops input[name="extra_stop"]', form)
+        ].filter(Boolean);
+        await Promise.all(inputs.map((input) => attachAutocomplete(input)));
+
+        return true;
+      })();
+
+      return autocompleteReadyPromise;
+    };
+
     const geocodeAddress = async (address) => {
       const query = normalizeAddress(address);
       if (!query) return null;
@@ -2277,11 +2532,105 @@
       return promise;
     };
 
-    const getRouteData = async (addresses) => {
+    const getGoogleRouteData = async (routeInputs) => {
+      if (!GOOGLE_MAPS_API_KEY) return null;
+      const ready = await waitForAutocomplete();
+      if (!ready) return null;
+
+      const snapshots = routeInputs.map(({ input }) => getPlaceSnapshot(input));
+
+      if (snapshots.some((snapshot) => !Number.isFinite(snapshot?.lat) || !Number.isFinite(snapshot?.lng))) {
+        return null;
+      }
+
+      const origin = snapshots[0];
+      const destination = snapshots[snapshots.length - 1];
+      const intermediates = snapshots.slice(1, -1).map((snapshot) => ({
+        location: {
+          latLng: {
+            latitude: snapshot.lat,
+            longitude: snapshot.lng
+          }
+        }
+      }));
+
+      const payload = {
+        origin: {
+          location: {
+            latLng: {
+              latitude: origin.lat,
+              longitude: origin.lng
+            }
+          }
+        },
+        destination: {
+          location: {
+            latLng: {
+              latitude: destination.lat,
+              longitude: destination.lng
+            }
+          }
+        },
+        intermediates,
+        travelMode: "DRIVE",
+        routingPreference: "TRAFFIC_AWARE",
+        polylineQuality: "OVERVIEW",
+        polylineEncoding: "ENCODED_POLYLINE",
+        computeAlternativeRoutes: false,
+        languageCode: document.documentElement.lang || "en-US",
+        regionCode: GOOGLE_MAPS_COUNTRY,
+        units: "METRIC"
+      };
+
+      const response = await fetch("https://routes.googleapis.com/directions/v2:computeRoutes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Goog-Api-Key": GOOGLE_MAPS_API_KEY,
+          "X-Goog-FieldMask": "routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) return null;
+
+      const data = await response.json();
+      const route = Array.isArray(data.routes) ? data.routes[0] : null;
+      const encodedPolyline = route?.polyline?.encodedPolyline || "";
+      if (!route || !encodedPolyline) return null;
+
+      const durationSeconds = Number(String(route.duration || "").replace(/s$/, "")) || 0;
+      const polylinePath = decodePolyline(encodedPolyline);
+
+      return {
+        provider: "google",
+        routePoints: routeInputs.map(({ value }) => value),
+        distanceKm: Number(route.distanceMeters || 0) / 1000,
+        durationMin: durationSeconds / 60,
+        polylinePath,
+        originLabel: origin.label,
+        destinationLabel: destination.label,
+        geocoded: snapshots.map((snapshot) => ({
+          label: snapshot.label,
+          lat: snapshot.lat,
+          lon: snapshot.lng
+        }))
+      };
+    };
+
+    const getRouteData = async (routeInputs) => {
+      const isStructured = Array.isArray(routeInputs) && typeof routeInputs[0] === "object" && routeInputs[0] !== null && "input" in routeInputs[0];
+      const addresses = isStructured
+        ? routeInputs.map((entry) => entry.value)
+        : routeInputs;
       const key = addresses.map((value) => normalizeAddress(value)).join(" -> ");
       if (routeCache.has(key)) return routeCache.get(key);
 
-      const promise = Promise.all(addresses.map((address) => geocodeAddress(address))).then(async (points) => {
+      const promise = (async () => {
+        const googleRoute = isStructured ? await getGoogleRouteData(routeInputs) : null;
+        if (googleRoute) return googleRoute;
+
+        const points = await Promise.all(addresses.map((address) => geocodeAddress(address)));
         if (points.some((point) => !point)) return null;
 
         const coordinates = points.map((point) => `${point.lon},${point.lat}`).join(";");
@@ -2299,6 +2648,8 @@
           if (!route) return null;
 
           return {
+            provider: "osrm",
+            routePoints: addresses,
             distanceKm: route.distance / 1000,
             durationMin: route.duration / 60,
             geocoded: points
@@ -2306,7 +2657,7 @@
         } catch {
           return null;
         }
-      });
+      })();
 
       routeCache.set(key, promise);
       return promise;
@@ -2314,9 +2665,10 @@
 
     const isTallinnOnly = (routeData) => {
       const points = routeData?.geocoded || [];
+      const routePoints = routeData?.routePoints || [];
       if (points.length < 2) return false;
 
-      return points.every((point) => {
+      return points.every((point, index) => {
         const label = (point?.label || "").toLowerCase();
         const lat = Number(point?.lat);
         const lon = Number(point?.lon);
@@ -2337,7 +2689,10 @@
           lat <= 59.49 &&
           lon >= 24.54 &&
           lon <= 24.93;
-        return byName || byBounds;
+        if (byName || byBounds) return true;
+
+        const fallbackLabel = String(routePoints[index] || "").toLowerCase();
+        return fallbackLabel.includes("tallinn") || fallbackLabel.includes("eesti");
       });
     };
 
@@ -2418,17 +2773,38 @@
       };
     };
 
+    const setRouteStats = (lang, routeData, stops) => {
+      if (!routeData || !routeData.distanceKm) {
+        estimateDistanceValue.textContent = "—";
+        estimateDurationValue.textContent = "—";
+        estimateStopsValue.textContent = "—";
+        return;
+      }
+
+      estimateDistanceValue.textContent = `${formatNumber(lang, routeData.distanceKm, 1)} km`;
+      estimateDurationValue.textContent = formatDuration(lang, routeData.durationMin);
+      estimateStopsValue.textContent = String(stops.length);
+    };
+
     const updateEstimate = async (lang, from, to, stops) => {
       const serviceType = getFieldValue("service_type");
       const hasRoute = Boolean(from && to);
       const routePoints = [from, ...stops, to].filter(Boolean);
       setMapLink(routePoints);
+      const routeInputs = [
+        { input: $('input[name="from_address"]', form), value: from },
+        ...$$('#extraStops input[name="extra_stop"]', form).map((input) => ({ input, value: input.value.trim() })),
+        { input: $('input[name="to_address"]', form), value: to }
+      ].filter((entry) => entry.value);
 
       if (!serviceType || !hasRoute) {
         clearStoredEstimate();
+        hideRouteMap();
         estimateValue.textContent = t(lang, "estimatePendingValue");
+        estimateBadge.textContent = t(lang, "estimateBadgeReady");
         estimateText.textContent = t(lang, "estimateNoServiceSelected");
         estimateMeta.textContent = t(lang, "estimateMetaPending");
+        setRouteStats(lang, null, stops);
         estimateMapLink.hidden = true;
         return;
       }
@@ -2436,13 +2812,15 @@
       const currentSeq = ++routeSeq;
       clearStoredEstimate();
       estimateValue.textContent = t(lang, "estimateCalculatingValue");
+      estimateBadge.textContent = t(lang, "estimateCalculatingValue");
       estimateText.textContent = t(lang, "estimateCalculatingText");
       estimateMeta.textContent = t(lang, "estimateMetaPending");
 
-      const routeData = await getRouteData(routePoints);
+      const routeData = await getRouteData(routeInputs.length >= 2 ? routeInputs : routePoints);
       if (currentSeq !== routeSeq) return;
 
       if (!routeData || !routeData.distanceKm) {
+        hideRouteMap();
         const loaderCount = getNumberField("loader_count");
         const floorSum = getNumberField("pickup_floor") + getNumberField("delivery_floor");
         const floorSurcharge = Boolean(form.elements.namedItem("has_elevator")?.checked)
@@ -2457,16 +2835,26 @@
 
         storeEstimate(fallbackTotal);
         estimateValue.textContent = t(lang, "estimateDistanceValue").replace("{price}", formatNumber(lang, fallbackTotal));
+        estimateBadge.textContent = estimateValue.textContent;
         estimateText.textContent = t(lang, "estimateUnavailableText");
         estimateMeta.textContent = t(lang, "estimateFallbackMeta");
+        setRouteStats(lang, null, stops);
         return;
+      }
+
+      if (routeData.provider === "google") {
+        await renderRouteMap(routeData);
+      } else {
+        hideRouteMap();
       }
 
       const result = buildEstimate(lang, routeData, stops);
       storeEstimate(result.total);
       estimateValue.textContent = result.value;
+      estimateBadge.textContent = result.value;
       estimateText.textContent = result.text;
       estimateMeta.textContent = result.meta;
+      setRouteStats(lang, routeData, stops);
     };
 
     const update = async () => {
@@ -2499,6 +2887,34 @@
       prev();
       update();
     })(refreshGalleryText);
+
+    const stopsList = $("#extraStops");
+    if (stopsList && window.MutationObserver) {
+      const observer = new MutationObserver(() => {
+        queueMicrotask(() => {
+          const inputs = [
+            $('input[name="from_address"]', form),
+            $('input[name="to_address"]', form),
+            ...$$('#extraStops input[name="extra_stop"]', form)
+          ].filter(Boolean);
+          inputs.forEach((input) => {
+            void attachAutocomplete(input);
+          });
+        });
+      });
+      observer.observe(stopsList, { childList: true, subtree: true });
+    }
+
+    queueMicrotask(() => {
+      const inputs = [
+        $('input[name="from_address"]', form),
+        $('input[name="to_address"]', form),
+        ...$$('#extraStops input[name="extra_stop"]', form)
+      ].filter(Boolean);
+      inputs.forEach((input) => {
+        void attachAutocomplete(input);
+      });
+    });
 
     update();
   }
@@ -2538,7 +2954,6 @@
         websiteEstimate.text ? `Estimate text: ${websiteEstimate.text}` : "",
         websiteEstimate.meta ? `Estimate details: ${websiteEstimate.meta}` : ""
       ].filter(Boolean) : []),
-      `${t(lang, "formCargo")}: ${data.get("cargo_details") || "-"}`,
       `${t(lang, "formPhotos")}: ${photoFiles || "-"}`,
       `${t(lang, "formComment")}: ${data.get("comment") || "-"}`
     ];
@@ -2615,7 +3030,7 @@
       deposit_percent: depositPercent,
       deposit_amount: depositAmount,
       deposit_note: depositNote,
-      cargo_details: data.get("cargo_details") || "",
+      cargo_details: data.get("comment") || "",
       comment: data.get("comment") || "",
       photo_files: photoFiles,
       website_estimate_total: websiteEstimate.total,
@@ -2633,9 +3048,11 @@
   async function sendBookingOrder(form) {
     const body = new FormData(form);
     const websiteEstimate = getVisibleEstimatePayload();
+    const commentText = String(body.get("comment") || "").trim();
     const depositType = String(body.get("deposit_type") || "none");
     const depositValue = String(body.get("deposit_value") || "").trim();
 
+    body.set("cargo_details", commentText);
     body.set("website_estimate_total", websiteEstimate.total);
     body.set("website_estimate_value", websiteEstimate.value);
     body.set("website_estimate_text", websiteEstimate.text);

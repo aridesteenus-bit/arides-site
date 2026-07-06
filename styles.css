@@ -831,14 +831,20 @@ h1{
 
 .bookingForm{
   position:relative;
-  padding:17px;
-  border-radius:28px;
+  padding:18px;
+  border-radius:30px;
   background:
     radial-gradient(160px 120px at 100% 0%, rgba(47,100,203,.08), transparent 62%),
     linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,250,255,.98));
   border:1px solid rgba(47,100,203,.12);
-  box-shadow:0 18px 48px rgba(18,34,68,.12);
+  box-shadow:0 22px 60px rgba(18,34,68,.14);
   overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+.bookingForm{
+  position:sticky;
+  top:92px;
+  align-self:start;
 }
 .bookingForm::before{
   content:"";
@@ -950,6 +956,17 @@ h1{
   background:#fff7e0;
   border-color:#fde68a;
   color:#8b5a00;
+}
+.orderSummaryPanel__comment{
+  margin:0;
+  width:100%;
+  padding:11px 12px;
+  border-radius:16px;
+  background:#f7fbff;
+  border:1px solid rgba(47,100,203,.12);
+  color:#35507e;
+  font-size:12px;
+  line-height:1.45;
 }
 .progressPanel__head{
   display:flex;
@@ -1424,20 +1441,41 @@ h1{
   border:0;
 }
 .estimatePanel{
-  padding:16px;
-  border-radius:22px;
+  display:grid;
+  gap:12px;
+  padding:18px;
+  border-radius:24px;
   background:
     radial-gradient(220px 120px at 100% 0%, rgba(111,173,255,.22), transparent 58%),
     linear-gradient(145deg, rgba(22,35,61,.98), rgba(43,76,137,.94));
   border:1px solid rgba(117,170,255,.22);
-  box-shadow:0 22px 42px rgba(18,34,68,.18);
+  box-shadow:0 24px 48px rgba(18,34,68,.2);
+  position:relative;
+  overflow:hidden;
+}
+.estimatePanel::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:3px;
+  background:linear-gradient(90deg, rgba(255,255,255,.25), rgba(125,178,255,.9), rgba(255,176,90,.9));
+}
+.estimatePanel::after{
+  content:"";
+  position:absolute;
+  right:-32px;
+  top:70px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,.08), transparent 68%);
+  pointer-events:none;
 }
 .estimatePanel__head{
   display:flex;
   justify-content:space-between;
   gap:14px;
-  align-items:flex-end;
-  margin-bottom:8px;
+  align-items:flex-start;
 }
 .estimatePanel__eyebrow{
   margin:0;
@@ -1448,11 +1486,86 @@ h1{
   color:#95bbff;
 }
 .estimatePanel__value{
+  display:block;
+  margin-top:4px;
   color:var(--white);
   font-family:"Space Grotesk", sans-serif;
-  font-size:clamp(19px, 2vw, 25px);
-  line-height:1.05;
-  text-align:right;
+  font-size:clamp(22px, 2.4vw, 30px);
+  line-height:1;
+  text-align:left;
+  max-width:12ch;
+}
+.estimatePanel__badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.1);
+  color:#dbe9ff;
+  border:1px solid rgba(255,255,255,.12);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.estimatePanel__stats{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:10px;
+}
+.estimateStat{
+  padding:11px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.1);
+}
+.estimateStat__label{
+  display:block;
+  margin-bottom:6px;
+  color:rgba(219,233,255,.72);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.estimateStat__value{
+  display:block;
+  color:var(--white);
+  font-family:"Space Grotesk", sans-serif;
+  font-size:18px;
+  line-height:1;
+}
+.estimatePanel__mapFrame{
+  display:grid;
+  gap:8px;
+  padding:12px;
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+.estimatePanel__mapFrameHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.estimatePanel__mapFrameLabel{
+  color:#f2f7ff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.estimatePanel__mapFrameHint{
+  color:rgba(219,233,255,.62);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
 }
 .estimatePanel__text{
   margin:0;
@@ -1466,6 +1579,33 @@ h1{
   font-size:13px;
   line-height:1.45;
 }
+.routeMap{
+  display:none;
+  width:100%;
+  min-height:320px;
+  height:clamp(320px, 42vw, 420px);
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(122,175,255,.2);
+  background:
+    radial-gradient(180px 120px at 50% 50%, rgba(47,100,203,.18), transparent 70%),
+    linear-gradient(145deg, rgba(10,17,28,.98), rgba(21,39,71,.95));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.routeMap.is-visible{
+  display:block;
+}
+.routeMap__fallback{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  padding:16px;
+  text-align:center;
+  color:rgba(255,255,255,.8);
+  font-size:13px;
+  line-height:1.45;
+}
 .estimatePanel__link{
   display:inline-flex;
   margin-top:8px;
@@ -1473,6 +1613,31 @@ h1{
   font-weight:700;
   text-decoration:underline;
   text-underline-offset:3px;
+}
+
+.estimatePanel__link::after{
+  content:"↗";
+  margin-left:6px;
+  font-size:12px;
+  opacity:.8;
+}
+.estimatePanel__footer{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:8px;
+}
+.estimatePanel__footerTag{
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+  color:rgba(235,242,255,.86);
+  font-size:12px;
+  line-height:1.4;
+}
+.estimatePanel__footerTag--strong{
+  background:linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+  color:#fff;
 }
 
 .footer{
@@ -1803,6 +1968,10 @@ body.quote-drawer-open .quoteDrawer__close{
   .bookingGrid{
     grid-template-columns:1fr;
   }
+  .bookingForm{
+    position:relative;
+    top:auto;
+  }
   .bookingInfo{
     order:2;
   }
@@ -1885,6 +2054,12 @@ body.quote-drawer-open .quoteDrawer__close{
   .orderSummaryPanel__head strong{
     white-space:normal;
   }
+  .estimatePanel__stats{
+    grid-template-columns:1fr;
+  }
+  .estimatePanel__footer{
+    grid-template-columns:1fr;
+  }
   .legalModal__panel{
     padding:22px;
   }
@@ -1906,6 +2081,13 @@ body.quote-drawer-open .quoteDrawer__close{
   .estimatePanel__text,
   .estimatePanel__meta{
     overflow-wrap:break-word;
+  }
+  .estimatePanel__mapFrame{
+    padding:10px;
+  }
+  .estimatePanel__mapFrameHead{
+    flex-direction:column;
+    align-items:flex-start;
   }
   .topbar__inner{
     min-height:70px;
