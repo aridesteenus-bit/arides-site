@@ -37,7 +37,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=20260617a" />
   <link rel="manifest" href="./site.webmanifest?v=20260617a" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20260706c" />
   <script>
     window.ARIDES_CONFIG = {
       googleMapsApiKey: "AIzaSyDYmyGgtstfAP7Bc3aiFcmV83j1I9pX8Hw",
@@ -476,6 +476,18 @@
 
         <form class="bookingForm" id="bookingForm" enctype="multipart/form-data">
           <button class="quoteDrawer__close" id="quoteDrawerClose" type="button" data-i18n="quoteDrawerClose" aria-label="Close">Sulge</button>
+          <section class="bookingForm__hero">
+            <p class="bookingForm__eyebrow" data-i18n="bookingEyebrow">Online booking</p>
+            <div class="bookingForm__heroRow">
+              <h3 class="bookingForm__title" data-i18n="quoteTitle">Approximate price and order details</h3>
+              <div class="bookingForm__pillRow" aria-label="Pricing summary">
+                <span class="bookingForm__pill" data-i18n="bookingPillCity">30 € / h city</span>
+                <span class="bookingForm__pill" data-i18n="bookingPillOutside">0.90 € / km outside</span>
+              </div>
+            </div>
+            <p class="bookingForm__lead" data-i18n="bookingSubtitle">Fill in the form, add the pickup and delivery addresses, and include any extra stops if needed. We will contact you and confirm the job.</p>
+          </section>
+
           <section class="progressPanel" aria-label="Booking progress">
             <div class="progressPanel__head">
               <div>
@@ -918,6 +930,6 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/et.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fi.js"></script>
-  <script src="./app.js"></script>
+  <script src="./app.js?v=20260706c"></script>
 </body>
 </html>
