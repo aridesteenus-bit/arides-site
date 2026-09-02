@@ -101,7 +101,6 @@
         <a href="#services" data-i18n="navServices">Teenused</a>
         <a href="#pricing" data-i18n="navPricing">Hinnad</a>
         <a href="#van" data-i18n="navVan">Kaubik</a>
-        <a href="#gallery" data-i18n="navGallery">Galerii</a>
         <a href="#booking" data-i18n="navBooking">Kontakt</a>
         <a href="#contact" data-i18n="navContact">Kontakt</a>
       </nav>
@@ -354,43 +353,6 @@
       </div>
     </section>
 
-    <section class="section section--sand" id="gallery">
-      <div class="container">
-        <div class="sectionHead">
-          <p class="sectionHead__eyebrow" data-i18n="galleryEyebrow">Galerii</p>
-          <h2 data-i18n="galleryTitle">Päris kaubik, päris veod</h2>
-          <p data-i18n="gallerySubtitle">Kasuta fotosid orientiirina, millisteks vedudeks kaubik sobib. Vajuta pildile, et suuremalt vaadata.</p>
-        </div>
-
-        <div class="galleryGrid">
-          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap1">
-            <img src="./img/transport/van-hero-side.jpg" alt="Peugeot Boxer kõrvalvaates" data-i18n-alt="galleryAlt1" draggable="false" />
-            <figcaption data-i18n="galleryCap1">Puhas ja esinduslik kaubik igapäevaseks veoteenuseks.</figcaption>
-          </figure>
-
-          <figure class="galleryCard galleryCard--tall" tabindex="0" data-caption-key="galleryCap2">
-            <img src="./img/transport/van-front.jpg" alt="Peugeot Boxer eestvaates" data-i18n-alt="galleryAlt2" draggable="false" />
-            <figcaption data-i18n="galleryCap2">Kõrge kaubik, mis sobib hästi kolimisteks ja suuremate esemete veoks.</figcaption>
-          </figure>
-
-          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap3">
-            <img src="./img/transport/van-loading-lumber.jpg" alt="Puitmaterjal kaubikus" data-i18n-alt="galleryAlt3" draggable="false" />
-            <figcaption data-i18n="galleryCap3">Pikem materjal ja ehitustarbed mahuvad mugavalt peale.</figcaption>
-          </figure>
-
-          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap4">
-            <img src="./img/transport/cargo-inside-yellow.jpg" alt="Ehitusmaterjalid kaubaruumis" data-i18n-alt="galleryAlt4" draggable="false" />
-            <figcaption data-i18n="galleryCap4">Koorma saab rihmadega kindlalt paika panna.</figcaption>
-          </figure>
-
-          <figure class="galleryCard" tabindex="0" data-caption-key="galleryCap5">
-            <img src="./img/transport/cargo-bricks.jpg" alt="Sillutiskivid ja käsikäru kaubikus" data-i18n-alt="galleryAlt5" draggable="false" />
-            <figcaption data-i18n="galleryCap5">Vedame ka raskemaid ehitusmaterjale ja objektikaupa.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
     <section class="section bookingSection" id="booking">
       <div class="container bookingGrid">
         <div class="bookingInfo">
@@ -482,174 +444,9 @@
           <a href="mailto:info@arides.ee">info@arides.ee</a>
           <a href="https://t.me/aridesveod" target="_blank" rel="noreferrer">@aridesveod</a>
         </div>
-
-        <div class="footer__legal">
-          <a href="#legal" data-legal-open="privacy" data-i18n="legalPrivacy">Privaatsus</a>
-          <a href="#legal" data-legal-open="cookies" data-i18n="legalCookies">Küpsised</a>
-          <a href="#legal" data-legal-open="terms" data-i18n="legalTerms">Tingimused</a>
-        </div>
       </div>
     </footer>
   </main>
-
-  <div class="modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery">
-    <div class="modal__panel">
-      <button class="iconBtn modal__close" id="modalClose" type="button" aria-label="Close">✕</button>
-      <button class="iconBtn modal__nav modal__prev" id="modalPrev" type="button" aria-label="Previous">←</button>
-      <div class="modal__frame">
-        <img id="modalImage" alt="Gallery image" draggable="false" />
-        <div class="modal__counter" id="modalCounter"></div>
-      </div>
-      <button class="iconBtn modal__nav modal__next" id="modalNext" type="button" aria-label="Next">→</button>
-      <p class="modal__caption" id="modalCaption"></p>
-    </div>
-  </div>
-
-  <div class="modal legalModal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Legal information">
-    <div class="modal__panel legalModal__panel">
-      <button class="iconBtn modal__close" id="legalClose" type="button" aria-label="Close">✕</button>
-
-      <div class="legalModal__header">
-        <p class="legalModal__eyebrow">
-          <span data-lang-block="et">Oluline info</span>
-          <span data-lang-block="ru">Важная информация</span>
-          <span data-lang-block="en">Important information</span>
-          <span data-lang-block="fi">Tärkeää tietoa</span>
-        </p>
-        <h3 class="legalModal__title">
-          <span data-lang-block="et">Privaatsus, küpsised ja kasutustingimused</span>
-          <span data-lang-block="ru">Конфиденциальность, cookies и правила сайта</span>
-          <span data-lang-block="en">Privacy, cookies and site terms</span>
-          <span data-lang-block="fi">Tietosuoja, evästeet ja sivuston ehdot</span>
-        </h3>
-
-        <div class="legalTabs" role="tablist" aria-label="Legal sections">
-          <button class="legalTab is-active" id="legalTabPrivacy" type="button" role="tab" aria-selected="true" data-legal-tab="privacy" data-i18n="legalPrivacy">Privaatsus</button>
-          <button class="legalTab" id="legalTabCookies" type="button" role="tab" aria-selected="false" data-legal-tab="cookies" data-i18n="legalCookies">Küpsised</button>
-          <button class="legalTab" id="legalTabTerms" type="button" role="tab" aria-selected="false" data-legal-tab="terms" data-i18n="legalTerms">Tingimused</button>
-        </div>
-      </div>
-
-      <div class="legalBody">
-        <section class="legalSection is-active" data-legal-section="privacy" role="tabpanel" aria-labelledby="legalTabPrivacy">
-          <div data-lang-block="et">
-            <p>ARIDES Cargo kasutab kliendi andmeid ainult päringu töötlemiseks, kliendiga ühenduse võtmiseks, marsruudi täpsustamiseks, hinna kinnitamiseks ja teenuse osutamiseks.</p>
-            <ul>
-              <li>Kogume ainult tellimuse jaoks vajalikke andmeid: nimi, telefon, e-post soovi korral, aadressid, kuupäev, kellaaeg ja tellimuse kirjeldus.</li>
-              <li>Andmeid ei müüda ega jagata reklaami või kõrvaliste turunduskanalite jaoks.</li>
-              <li>Tehnilised teenusepakkujad võivad andmeid töödelda ainult ulatuses, mis on vajalik päringu saatmiseks, vastuse edastamiseks või töökorralduseks.</li>
-              <li>Andmeid säilitatakse ainult nii kaua, kui see on vajalik päringu menetlemiseks, suhtluseks ja vajadusel seadusest tulenevate kohustuste täitmiseks.</li>
-              <li>Kui soovid oma andmeid parandada või kustutada, võta ühendust: <a href="mailto:info@arides.ee">info@arides.ee</a>.</li>
-            </ul>
-          </div>
-          <div data-lang-block="ru">
-            <p>ARIDES Cargo использует данные клиента только для обработки заявки, связи с клиентом, уточнения маршрута, подтверждения цены и оказания услуги.</p>
-            <ul>
-              <li>Мы собираем только те данные, которые нужны для заказа: имя, телефон, e-mail при желании, адреса, дату, время и описание перевозки.</li>
-              <li>Данные не продаются и не передаются для рекламы или стороннего маркетинга.</li>
-              <li>Технические сервисы могут обрабатывать данные только в той мере, в которой это нужно для отправки заявки, передачи ответа или организации работы.</li>
-              <li>Данные хранятся только столько, сколько нужно для обработки заявки, связи с клиентом и, при необходимости, выполнения обязательств по закону.</li>
-              <li>Если вы хотите исправить или удалить свои данные, свяжитесь с нами: <a href="mailto:info@arides.ee">info@arides.ee</a>.</li>
-            </ul>
-          </div>
-          <div data-lang-block="en">
-            <p>ARIDES Cargo uses customer data only to process the request, contact the customer, clarify the route, confirm pricing and provide the service.</p>
-            <ul>
-              <li>We collect only the data needed for the order: name, phone, optional email, addresses, date, time and cargo description.</li>
-              <li>Data is not sold or shared for advertising or unrelated marketing purposes.</li>
-              <li>Technical service providers may process data only to the extent required to send the request, deliver a response or organize the service.</li>
-              <li>Data is kept only as long as necessary for request handling, customer communication and, where required, compliance with legal obligations.</li>
-              <li>If you want to correct or delete your data, contact us at <a href="mailto:info@arides.ee">info@arides.ee</a>.</li>
-            </ul>
-          </div>
-          <div data-lang-block="fi">
-            <p>ARIDES Cargo käyttää asiakkaan tietoja vain pyynnön käsittelyyn, yhteydenottoon, reitin tarkentamiseen, hinnan vahvistamiseen ja palvelun tuottamiseen.</p>
-            <ul>
-              <li>Keräämme vain tilauksen kannalta tarpeelliset tiedot: nimi, puhelin, valinnainen sähköposti, osoitteet, päivämäärä, kellonaika ja kuljetuksen kuvaus.</li>
-              <li>Tietoja ei myydä eikä jaeta mainontaan tai ulkopuoliseen markkinointiin.</li>
-              <li>Tekniset palveluntarjoajat voivat käsitellä tietoja vain siinä laajuudessa, joka tarvitaan pyynnön lähettämiseen, vastauksen toimittamiseen tai työn järjestämiseen.</li>
-              <li>Tietoja säilytetään vain niin kauan kuin se on tarpeen pyynnön käsittelyyn, asiakasviestintään ja tarvittaessa lakisääteisten velvoitteiden täyttämiseen.</li>
-              <li>Jos haluat korjata tai poistaa tietojasi, ota yhteyttä: <a href="mailto:info@arides.ee">info@arides.ee</a>.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="legalSection" data-legal-section="cookies" role="tabpanel" aria-labelledby="legalTabCookies" hidden>
-          <div data-lang-block="et">
-            <p>Praegu ei kasuta see veebileht reklaami- ega analüütikaküpsiseid. Veebileht kasutab ainult tehnilisi lahendusi, mis on vajalikud saidi toimimiseks ja keelevaliku meelespidamiseks.</p>
-            <ul>
-              <li>Keelesätet võidakse salvestada brauseri lokaalsesse salvestusse, et järgmine külastus oleks mugavam.</li>
-              <li>Ilma selliste tehniliste salvestusteta ei pruugi keelevalik või osa vormi mugavusfunktsioone õigesti toimida.</li>
-              <li>Kui tulevikus lisame analüütika või reklaamiküpsised, uuendame seda teavet eraldi.</li>
-            </ul>
-          </div>
-          <div data-lang-block="ru">
-            <p>Сейчас этот сайт не использует рекламные или аналитические cookies. Сайт использует только технические механизмы, необходимые для работы страницы и запоминания выбранного языка.</p>
-            <ul>
-              <li>Выбранный язык может сохраняться в локальном хранилище браузера, чтобы сайт открывался удобнее при следующем посещении.</li>
-              <li>Без такого технического хранения настройка языка и часть удобных функций формы могут работать некорректно.</li>
-              <li>Если в будущем будут добавлены аналитические или рекламные cookies, эта информация будет обновлена отдельно.</li>
-            </ul>
-          </div>
-          <div data-lang-block="en">
-            <p>This website currently does not use advertising or analytics cookies. It only uses technical storage needed for the site to function and to remember the selected language.</p>
-            <ul>
-              <li>Your language preference may be stored in the browser's local storage to make future visits more convenient.</li>
-              <li>Without such technical storage, language settings and some form convenience features may not work correctly.</li>
-              <li>If analytics or advertising cookies are added in the future, this information will be updated separately.</li>
-            </ul>
-          </div>
-          <div data-lang-block="fi">
-            <p>Tämä verkkosivusto ei tällä hetkellä käytä mainonta- tai analytiikkaevästeitä. Sivusto käyttää vain teknistä tallennusta, joka tarvitaan sivuston toimintaan ja valitun kielen muistamiseen.</p>
-            <ul>
-              <li>Kielivalinta voidaan tallentaa selaimen paikalliseen tallennustilaan, jotta seuraava käynti olisi mukavampi.</li>
-              <li>Ilman tällaista teknistä tallennusta kieliasetus ja osa lomakkeen mukavuustoiminnoista eivät välttämättä toimi oikein.</li>
-              <li>Jos lisäämme tulevaisuudessa analytiikka- tai mainontaevästeitä, päivitämme tämän tiedon erikseen.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="legalSection" data-legal-section="terms" role="tabpanel" aria-labelledby="legalTabTerms" hidden>
-          <div data-lang-block="et">
-            <p>Veebilehel kuvatud hinnad ja kirjeldused on informatiivsed. Lõplik hind, aeg ja marsruut kinnitatakse pärast päringu ülevaatamist.</p>
-            <ul>
-              <li>Klient peab esitama õiged kontaktandmed, aadressid ja koorma kirjelduse.</li>
-              <li>Kui tellimus sisaldab eritingimusi, lisapeatusi, raskemat koormat või pikemat marsruuti, täpsustatakse hind eraldi.</li>
-              <li>Veod üle Eesti ja Euroopa Liidu sees toimuvad kokkuleppel.</li>
-              <li>Teenusepakkuja võib keelduda tellimusest, kui see on ohtlik, ebaseaduslik või ei vasta tegelikele võimalustele.</li>
-            </ul>
-          </div>
-          <div data-lang-block="ru">
-            <p>Цены и описания на сайте носят ориентировочный и информационный характер. Финальная цена, время и маршрут подтверждаются после рассмотрения заявки.</p>
-            <ul>
-              <li>Клиент должен указать корректные контактные данные, адреса и описание груза.</li>
-              <li>Если заказ включает особые условия, дополнительные точки, более тяжёлый груз или длинный маршрут, цена уточняется отдельно.</li>
-              <li>Перевозки по Эстонии и внутри Европейского Союза выполняются по договоренности.</li>
-              <li>Исполнитель вправе отказаться от заказа, если он является опасным, незаконным или не соответствует фактическим возможностям перевозки.</li>
-            </ul>
-          </div>
-          <div data-lang-block="en">
-            <p>Prices and descriptions on the website are indicative and informational. The final price, time and route are confirmed after the request is reviewed.</p>
-            <ul>
-              <li>The customer must provide correct contact details, addresses and cargo information.</li>
-              <li>If the order includes special conditions, extra stops, heavier cargo or a longer route, pricing is confirmed separately.</li>
-              <li>Transport across Estonia and within the European Union is provided by agreement.</li>
-              <li>The service provider may refuse an order if it is unsafe, unlawful or does not match the actual transport capabilities.</li>
-            </ul>
-          </div>
-          <div data-lang-block="fi">
-            <p>Sivustolla näkyvät hinnat ja kuvaukset ovat suuntaa antavia ja informatiivisia. Lopullinen hinta, aika ja reitti vahvistetaan pyynnön tarkistamisen jälkeen.</p>
-            <ul>
-              <li>Asiakkaan tulee antaa oikeat yhteystiedot, osoitteet ja kuorman tiedot.</li>
-              <li>Jos tilaus sisältää erityisehtoja, lisäpysähdyksiä, raskaamman kuorman tai pidemmän reitin, hinta vahvistetaan erikseen.</li>
-              <li>Kuljetukset Virossa ja Euroopan unionin sisällä tehdään sopimuksen mukaan.</li>
-              <li>Palveluntarjoaja voi kieltäytyä tilauksesta, jos se on vaarallinen, lainvastainen tai ei vastaa todellisia kuljetusmahdollisuuksia.</li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
 
   <a class="quickFloat quickFloat--phone" href="tel:+37258536770" aria-label="Call +372 58536770">
     <svg viewBox="0 0 24 24" aria-hidden="true">
