@@ -1112,6 +1112,86 @@
     });
   }
 
+  function initGallery() {
+    const cards = $$(".galleryCard");
+    const modal = $("#galleryModal");
+    const closeBtn = $("#modalClose");
+    const prevBtn = $("#modalPrev");
+    const nextBtn = $("#modalNext");
+    const image = $("#modalImage");
+    const caption = $("#modalCaption");
+    const counter = $("#modalCounter");
+    if (!cards.length || !modal || !closeBtn || !prevBtn || !nextBtn || !image || !caption || !counter) return;
+
+    const slides = cards.map((card) => {
+      const img = $("img", card);
+      const captionEl = $("figcaption", card);
+      return {
+        src: img?.getAttribute("src") || "",
+        alt: img?.getAttribute("alt") || captionEl?.textContent?.trim() || "Gallery image",
+        caption: captionEl?.textContent?.trim() || ""
+      };
+    });
+
+    let currentIndex = 0;
+
+    const render = () => {
+      const slide = slides[currentIndex];
+      if (!slide) return;
+      image.src = slide.src;
+      image.alt = slide.alt || "Gallery image";
+      caption.textContent = slide.caption;
+      counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+    };
+
+    const openAt = (index) => {
+      currentIndex = (index + slides.length) % slides.length;
+      render();
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const close = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      image.removeAttribute("src");
+    };
+
+    const move = (delta) => {
+      currentIndex = (currentIndex + delta + slides.length) % slides.length;
+      render();
+    };
+
+    cards.forEach((card, index) => {
+      card.addEventListener("click", () => openAt(index));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openAt(index);
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", () => move(-1));
+    nextBtn.addEventListener("click", () => move(1));
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") move(-1);
+      if (e.key === "ArrowRight") move(1);
+    });
+
+    refreshGalleryText = () => {
+      if (modal.classList.contains("open")) render();
+    };
+  }
+
   function initSmoothScroll() {
     $$('a[href^="#"]').forEach((link) => {
       link.addEventListener("click", (e) => {
