@@ -9,7 +9,7 @@
   <link rel="icon" href="./favicon.ico">
   <title>ARIDES Transport | Kaubavedu Eestis</title>
   <style>
-    :root{--bg:#07111c;--orange:#ff5a0a;--orange2:#ff781f}
+    :root{--bg:#07111c;--orange:#ff5a0a}
     *{box-sizing:border-box}
     html{background:var(--bg);scroll-behavior:smooth}
     body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
@@ -18,17 +18,22 @@
     .poster>img{
       position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;
       user-select:none;-webkit-user-drag:none;
-      filter:contrast(1.075) saturate(1.07) brightness(1.015);
+      filter:contrast(1.095) saturate(1.085) brightness(1.018);
       image-rendering:auto;
-      -webkit-font-smoothing:antialiased;
       transform:translateZ(0);
     }
-    .poster:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent 18%,transparent 82%,rgba(0,0,0,.025));mix-blend-mode:soft-light}
+    .poster:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.018),transparent 20%,transparent 82%,rgba(0,0,0,.02));mix-blend-mode:soft-light}
     .loading{position:absolute;inset:0;z-index:30;display:grid;place-items:center;background:#07111c;color:#fff;font-size:13px;font-weight:800;letter-spacing:.18em}
     .loading span:after{content:'...';color:var(--orange)}
     .ready .loading{opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
 
-    .hotspot{position:absolute;z-index:10;display:block;background:transparent;border:0;color:transparent;font-size:0;text-decoration:none;cursor:pointer;border-radius:16px}
+    .hotspot{
+      position:absolute;z-index:10;display:block;background:transparent;border:0;color:transparent;
+      font-size:0;text-decoration:none;cursor:pointer;border-radius:16px;
+      transition:box-shadow .18s ease,background .18s ease,transform .18s ease;
+    }
+    .hotspot:hover{box-shadow:inset 0 0 0 2px rgba(255,255,255,.22),0 0 22px rgba(255,90,10,.15);background:rgba(255,255,255,.015)}
+    .hotspot:active{transform:scale(.995)}
     .hotspot:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
     .nav-home{left:29.3%;top:3.0%;width:5.0%;height:3.5%}
@@ -44,45 +49,14 @@
     .service-move{left:20.0%;top:53.6%;width:15.6%;height:6.1%}
     .service-build{left:37.1%;top:53.6%;width:15.2%;height:6.1%}
 
-    .action{
-      display:flex;align-items:center;justify-content:center;gap:.65em;
-      color:#fff;font-size:clamp(8px,1.05vw,16px);font-weight:800;line-height:1;
-      text-shadow:0 1px 2px rgba(0,0,0,.35);
-      transition:transform .18s ease,box-shadow .18s ease,filter .18s ease,border-color .18s ease;
-      backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
-    }
-    .action:hover{transform:translateY(-2px) scale(1.015);filter:brightness(1.08)}
-    .action:active{transform:translateY(0) scale(.995)}
-    .phone.action{
-      background:linear-gradient(180deg,rgba(11,22,35,.97),rgba(5,13,22,.96));
-      border:1px solid rgba(255,255,255,.42);
-      box-shadow:0 8px 24px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.1);
-    }
-    .mail.action,.cta.action{
-      background:linear-gradient(135deg,#ff4f05 0%,#ff6810 55%,#ff7b22 100%);
-      border:1px solid rgba(255,170,100,.68);
-      box-shadow:0 9px 26px rgba(255,75,0,.35),inset 0 1px 0 rgba(255,255,255,.22);
-    }
-    .cta.action{font-size:clamp(9px,1.15vw,18px);letter-spacing:.01em;border-radius:18px}
-    .cta .arrow{font-size:1.45em;line-height:.7;margin-left:.2em}
-    .whatsapp.action{
-      background:linear-gradient(180deg,rgba(13,23,34,.96),rgba(5,12,20,.96));
-      border:1.5px solid rgba(255,255,255,.72);
-      box-shadow:0 8px 24px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.09);
-      font-size:clamp(9px,1.12vw,17px)
-    }
-    .action .icon{display:inline-grid;place-items:center;width:1.35em;height:1.35em;font-size:1.1em;flex:0 0 auto}
-
     #services,#about,#coverage{position:absolute;left:0;width:1px;height:1px;pointer-events:none}
     #services{top:51%}#about{top:62%}#coverage{top:70%}
 
     @media(max-width:700px){
       .poster{width:100vw;max-width:none;aspect-ratio:1448/1086}
       .hotspot{border-radius:6px}
-      .action{font-size:clamp(5px,1.2vw,10px);gap:.35em}
-      .cta.action,.whatsapp.action{font-size:clamp(6px,1.4vw,11px)}
     }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ready .loading{transition:none}.action{transition:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ready .loading{transition:none}.hotspot{transition:none}}
   </style>
 </head>
 <body>
@@ -95,13 +69,12 @@
       <a class="hotspot nav-services" href="#services" aria-label="Teenused">Teenused</a>
       <a class="hotspot nav-about" href="#about" aria-label="Meist">Meist</a>
       <a class="hotspot nav-contact" href="mailto:info@arides.ee" aria-label="Kontakt">Kontakt</a>
-
-      <a class="hotspot phone action" href="tel:+37258536770" aria-label="Helista +372 5853 6770"><span class="icon">☎</span><span>+372 5853 6770</span></a>
-      <a class="hotspot mail action" href="mailto:info@arides.ee" aria-label="Kirjuta info@arides.ee"><span class="icon">✉</span><span>info@arides.ee</span></a>
+      <a class="hotspot phone" href="tel:+37258536770" aria-label="Helista +372 5853 6770">Telefon</a>
+      <a class="hotspot mail" href="mailto:info@arides.ee" aria-label="Kirjuta info@arides.ee">E-post</a>
       <a class="hotspot lang" href="#top" aria-label="Eesti keel">ET</a>
 
-      <a class="hotspot cta action" href="tel:+37258536770" aria-label="Võta ühendust"><span>VÕTA ÜHENDUST</span><span class="arrow">→</span></a>
-      <a class="hotspot whatsapp action" href="https://wa.me/37258536770" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="icon">◉</span><span>WhatsApp</span></a>
+      <a class="hotspot cta" href="tel:+37258536770" aria-label="Võta ühendust">Võta ühendust</a>
+      <a class="hotspot whatsapp" href="https://wa.me/37258536770" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
 
       <a class="hotspot service-freight" href="tel:+37258536770" aria-label="Kaubavedu">Kaubavedu</a>
       <a class="hotspot service-move" href="tel:+37258536770" aria-label="Kolimised">Kolimised</a>
@@ -115,7 +88,7 @@
 
   <script>
     (()=>{
-      const VERSION='20260916-premium4';
+      const VERSION='20260916-premium5';
       const poster=document.getElementById('top');
       const loading=document.querySelector('.loading');
       const img=document.getElementById('visual');
