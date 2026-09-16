@@ -21,24 +21,25 @@
     .ready .loading{opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
     .hotspot{position:absolute;z-index:10;display:block;background:transparent;border:0;color:transparent;font-size:0;text-decoration:none;cursor:pointer;border-radius:16px}
     .hotspot:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-    .nav-home{left:29.0%;top:2.2%;width:5.0%;height:4.0%}
-    .nav-services{left:35.3%;top:2.2%;width:6.2%;height:4.0%}
-    .nav-about{left:42.6%;top:2.2%;width:4.8%;height:4.0%}
-    .nav-contact{left:48.2%;top:2.2%;width:5.6%;height:4.0%}
-    .phone{left:59.8%;top:1.6%;width:13.8%;height:4.7%}
-    .mail{left:74.0%;top:1.6%;width:13.0%;height:4.7%}
-    .lang{left:90.6%;top:1.9%;width:3.2%;height:4.0%}
-    .cta{left:4.1%;top:42.0%;width:17.6%;height:5.5%}
-    .whatsapp{left:22.6%;top:42.0%;width:13.4%;height:5.5%}
-    .service-freight{left:4.0%;top:53.3%;width:14.2%;height:7.2%}
-    .service-move{left:19.3%;top:53.3%;width:14.7%;height:7.2%}
-    .service-build{left:36.2%;top:53.3%;width:18.0%;height:7.2%}
-    .trust-1{left:3.5%;top:64.3%;width:18.8%;height:7.0%}
-    .trust-2{left:24.5%;top:64.3%;width:18.8%;height:7.0%}
-    .trust-3{left:46.0%;top:64.3%;width:18.8%;height:7.0%}
-    .trust-4{left:69.2%;top:64.3%;width:25.5%;height:7.0%}
+
+    .nav-home{left:29.3%;top:3.0%;width:5.0%;height:3.5%}
+    .nav-services{left:36.0%;top:3.0%;width:5.3%;height:3.5%}
+    .nav-about{left:43.4%;top:3.0%;width:4.0%;height:3.5%}
+    .nav-contact{left:49.0%;top:3.0%;width:4.8%;height:3.5%}
+    .phone{left:61.4%;top:2.0%;width:13.7%;height:4.5%}
+    .mail{left:75.8%;top:2.0%;width:12.5%;height:4.5%}
+    .lang{left:91.5%;top:2.4%;width:2.4%;height:3.7%}
+
+    .cta{left:4.2%;top:42.2%;width:17.6%;height:5.4%}
+    .whatsapp{left:23.0%;top:42.2%;width:12.8%;height:5.4%}
+
+    .service-freight{left:4.2%;top:53.6%;width:14.4%;height:6.1%}
+    .service-move{left:20.0%;top:53.6%;width:15.6%;height:6.1%}
+    .service-build{left:37.1%;top:53.6%;width:15.2%;height:6.1%}
+
     #services,#about,#coverage{position:absolute;left:0;width:1px;height:1px;pointer-events:none}
-    #services{top:51%}#about{top:63%}#coverage{top:72%}
+    #services{top:51%}#about{top:62%}#coverage{top:70%}
+
     @media(max-width:700px){
       .poster{width:100vw;max-width:none;aspect-ratio:1448/1086}
       .hotspot{border-radius:6px}
@@ -66,10 +67,6 @@
       <a class="hotspot service-freight" href="tel:+37258536770" aria-label="Kaubavedu">Kaubavedu</a>
       <a class="hotspot service-move" href="tel:+37258536770" aria-label="Kolimised">Kolimised</a>
       <a class="hotspot service-build" href="tel:+37258536770" aria-label="Ehitusmaterjalide transport">Ehitusmaterjalid</a>
-      <a class="hotspot trust-1" href="tel:+37258536770" aria-label="Usaldusväärne transport">Usaldusväärne</a>
-      <a class="hotspot trust-2" href="tel:+37258536770" aria-label="Õigeaegne transport">Õigeaegne</a>
-      <a class="hotspot trust-3" href="tel:+37258536770" aria-label="Paindlik transport">Paindlik</a>
-      <a class="hotspot trust-4" href="tel:+37258536770" aria-label="Teenindame kõikjal Eestis">Kõikjal Eestis</a>
 
       <span id="services" aria-hidden="true"></span>
       <span id="about" aria-hidden="true"></span>
@@ -79,13 +76,13 @@
 
   <script>
     (()=>{
-      const VERSION='20260916-exact2';
+      const VERSION='20260916-premium3';
       const poster=document.getElementById('top');
       const loading=document.querySelector('.loading');
       const img=document.getElementById('visual');
       const name=n=>String(n).padStart(2,'0');
-      const local=n=>`./data/hero_exact_${name(n)}.txt?v=${VERSION}`;
-      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_${name(n)}.txt?v=${VERSION}`;
+      const local=n=>`./data/premium_${name(n)}.txt?v=${VERSION}`;
+      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/premium_${name(n)}.txt?v=${VERSION}`;
 
       async function getPart(n){
         for(const url of [local(n),raw(n)]){
