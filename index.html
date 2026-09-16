@@ -23,11 +23,7 @@
     .loading{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:700;letter-spacing:.14em;font-size:13px;background:#07111c;z-index:5}
     .loading span:after{content:'...';color:#ff6414}
     .ready .loading{display:none}
-    @media(max-width:700px){
-      .page{align-items:flex-start}
-      .poster{width:100vw}
-      .hotspot{border-radius:8px}
-    }
+    @media(max-width:700px){.poster{width:100vw}.hotspot{border-radius:8px}}
   </style>
 </head>
 <body>
@@ -42,18 +38,46 @@
     </div>
   </main>
   <script>
-    (async()=>{
-      const files=[1,2,3,4,5,6,7].map(n=>`./data/hero_exact_0${n}.txt`);
+    (()=>{
+      const VERSION='58d0ea3b';
+      const poster=document.getElementById('poster');
       const loading=document.querySelector('.loading');
-      try{
-        const parts=await Promise.all(files.map(f=>fetch(f,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(f);return r.text()})));
-        const img=document.getElementById('hero');
-        img.onload=()=>document.getElementById('poster').classList.add('ready');
-        img.onerror=()=>{loading.innerHTML='<span>ARIDES — pildi laadimine ebaõnnestus</span>'};
-        img.src='data:image/jpeg;base64,'+parts.map(s=>s.trim()).join('');
-      }catch(e){
+      const img=document.getElementById('hero');
+      const local=n=>`./data/hero_exact_0${n}.txt?v=${VERSION}`;
+      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_0${n}.txt?v=${VERSION}`;
+
+      async function getPart(n){
+        const urls=[local(n),raw(n)];
+        for(const url of urls){
+          try{
+            const r=await fetch(url,{cache:'no-store'});
+            if(r.ok){
+              const t=(await r.text()).trim();
+              if(t.length>100) return t;
+            }
+          }catch(_){ }
+        }
+        throw new Error('part '+n);
+      }
+
+      async function load(){
+        for(let attempt=1;attempt<=4;attempt++){
+          try{
+            const parts=await Promise.all([1,2,3,4,5,6,7].map(getPart));
+            img.onload=()=>poster.classList.add('ready');
+            img.onerror=()=>{loading.innerHTML='<span>ARIDES — pildi laadimine ebaõnnestus</span>'};
+            img.src='data:image/jpeg;base64,'+parts.join('');
+            return;
+          }catch(e){
+            if(attempt<4){
+              loading.innerHTML=`<span>ARIDES TRANSPORT · ${attempt}/4</span>`;
+              await new Promise(r=>setTimeout(r,1800));
+            }
+          }
+        }
         loading.innerHTML='<span>ARIDES — laadimine ebaõnnestus</span>';
       }
+      load();
     })();
   </script>
 </body>
