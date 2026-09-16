@@ -2,117 +2,134 @@
 <html lang="et">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#081522">
-  <meta name="description" content="ARIDES Transport — kaubavedu, kolimised ja ehitusmaterjalide transport üle Eesti. Telefon +372 5853 6770.">
-  <title>ARIDES Transport | Kaubavedu Eestis</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111c">
+  <meta id="metaDescription" name="description" content="ARIDES Transport — kaubavedu, kolimised ja ehitusmaterjalide transport üle Eesti. Telefon +372 5853 6770.">
   <link rel="canonical" href="https://arides.ee/">
-  <style>
-    :root{--orange:#ff5a0a;--navy:#081522}
-    *{box-sizing:border-box}
-    html{background:var(--navy);scroll-behavior:smooth}
-    body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--navy);overflow-x:hidden}
-    a{-webkit-tap-highlight-color:transparent}
-
-    .page{width:100%;min-height:100vh;background:var(--navy);display:flex;justify-content:center;align-items:flex-start}
-    .poster{position:relative;width:min(100vw,1484px);aspect-ratio:1484/1060;background:var(--navy);overflow:hidden}
-    .poster img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
-
-    .hotspot{position:absolute;z-index:4;display:block;background:transparent;border:0;color:transparent;font-size:0;cursor:pointer;border-radius:18px;text-decoration:none}
-    .hotspot:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
-
-    /* Header */
-    .nav-home{left:29.6%;top:2.5%;width:6.3%;height:4.4%}
-    .nav-services{left:36.0%;top:2.5%;width:7.7%;height:4.4%}
-    .nav-about{left:43.4%;top:2.5%;width:5.7%;height:4.4%}
-    .nav-contact{left:49.0%;top:2.5%;width:6.3%;height:4.4%}
-    .phone{left:61.0%;top:2.0%;width:14.7%;height:5.3%}
-    .mail{left:76.2%;top:2.0%;width:13.7%;height:5.3%}
-    .lang{left:93.1%;top:2.3%;width:3.1%;height:4.5%}
-
-    /* Hero actions */
-    .cta{left:4.25%;top:44.75%;width:17.85%;height:5.65%}
-    .whatsapp{left:23.4%;top:44.75%;width:13.2%;height:5.65%}
-
-    /* Service cards */
-    .service-freight{left:4.0%;top:56.0%;width:14.0%;height:8.7%}
-    .service-move{left:19.3%;top:56.0%;width:15.5%;height:8.7%}
-    .service-build{left:36.7%;top:56.0%;width:17.0%;height:8.7%}
-
-    .loading{position:absolute;inset:0;z-index:6;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em}
-    .loading span:after{content:'...';color:var(--orange)}
-    .ready .loading{opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
-
-    @media(max-width:760px){
-      .poster{width:100vw;aspect-ratio:1484/1060}
-      .hotspot{border-radius:8px}
-      .page{min-height:auto}
-    }
-
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ready .loading{transition:none}}
-  </style>
+  <title>ARIDES Transport | Kaubavedu Eestis</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./estonia.css?v=20260916c">
 </head>
 <body>
-  <main class="page">
-    <section class="poster" id="home" aria-label="ARIDES Transport — kaubavedu Eestis">
-      <div class="loading" aria-live="polite"><span>ARIDES TRANSPORT</span></div>
-      <img id="hero" alt="ARIDES Transport — kaubavedu Eestis" decoding="async">
+<header class="siteHeader">
+  <div class="shell headerRow">
+    <a class="brand" href="#top" aria-label="ARIDES Transport">
+      <span class="brandMark"><i></i></span>
+      <span class="brandText"><b>ARIDES</b><small>TRANSPORT</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#top" data-t="navHome">Avaleht</a>
+      <a href="#services" data-t="navServices">Teenused</a>
+      <a href="#coverage" data-t="navCoverage">Piirkond</a>
+      <a href="#contact" data-t="navContact">Kontakt</a>
+    </nav>
+    <div class="headerRight">
+      <a class="contactPill" href="tel:+37258536770">☎ <span>+372 5853 6770</span></a>
+      <a class="contactPill contactPill--mail" href="mailto:info@arides.ee">✉ <span>info@arides.ee</span></a>
+      <div class="langs" aria-label="Language">
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="et">ET</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-      <a class="hotspot nav-home" href="#home" aria-label="Avaleht">Avaleht</a>
-      <a class="hotspot nav-services" href="#services" aria-label="Teenused">Teenused</a>
-      <a class="hotspot nav-about" href="#about" aria-label="Meist">Meist</a>
-      <a class="hotspot nav-contact" href="mailto:info@arides.ee" aria-label="Kontakt">Kontakt</a>
-      <a class="hotspot phone" href="tel:+37258536770" aria-label="Helista +372 5853 6770">+372 5853 6770</a>
-      <a class="hotspot mail" href="mailto:info@arides.ee" aria-label="Kirjuta info@arides.ee">info@arides.ee</a>
-      <a class="hotspot lang" href="#home" aria-label="Eesti keel">ET</a>
+<main>
+<section class="hero" id="top">
+  <div class="heroShade"></div>
+  <div class="shell heroInner">
+    <div class="heroCopy">
+      <p class="eyebrow" data-t="eyebrow">USALDUSVÄÄRNE PARTNER</p>
+      <h1><span data-t="hero1">KAUBAVEDU</span><em data-t="hero2">EESTIS</em></h1>
+      <div class="orangeLine"></div>
+      <p class="heroLead" data-t="heroLead">Teie kaup – meie hoole all. Kaubavedu, kolimised ja ehitusmaterjalide transport üle Eesti.</p>
+      <div class="heroActions">
+        <a class="btn btnPrimary" href="#contact"><span data-t="contactUs">VÕTA ÜHENDUST</span> →</a>
+        <a class="btn btnGlass" href="https://wa.me/37258536770" target="_blank" rel="noreferrer">◉ WhatsApp</a>
+      </div>
+    </div>
 
-      <a class="hotspot cta" href="tel:+37258536770" aria-label="Võta ühendust">Võta ühendust</a>
-      <a class="hotspot whatsapp" href="https://wa.me/37258536770" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+    <div class="serviceCards" id="services">
+      <article><div class="svcIcon">▣</div><div><h3 data-t="svc1Title">KAUBAVEDU</h3><p data-t="svc1Text">Väike- ja keskmise mahu kaubad</p></div></article>
+      <article><div class="svcIcon">⌂</div><div><h3 data-t="svc2Title">KOLIMISED</h3><p data-t="svc2Text">Kodud, kontorid ja laod</p></div></article>
+      <article><div class="svcIcon">▦</div><div><h3 data-t="svc3Title">EHITUSMATERJALID</h3><p data-t="svc3Text">Poest või laost otse objektile</p></div></article>
+    </div>
+  </div>
 
-      <a class="hotspot service-freight" id="services" href="tel:+37258536770" aria-label="Kaubavedu">Kaubavedu</a>
-      <a class="hotspot service-move" href="tel:+37258536770" aria-label="Kolimised">Kolimised</a>
-      <a class="hotspot service-build" href="tel:+37258536770" aria-label="Ehitusmaterjalide transport">Ehitusmaterjalid</a>
+  <div class="trustBar">
+    <div class="shell trustGrid">
+      <div class="trustItem"><span>◇</span><div><b data-t="trust1Title">USALDUSVÄÄRNE</b><small data-t="trust1Text">Teie kaup on kindlates kätes</small></div></div>
+      <div class="trustItem"><span>◷</span><div><b data-t="trust2Title">ÕIGEAEGNE</b><small data-t="trust2Text">Peame kokkulepetest kinni</small></div></div>
+      <div class="trustItem"><span>✓</span><div><b data-t="trust3Title">PAINDLIK</b><small data-t="trust3Text">Leiame lahenduse teie vajadustele</small></div></div>
+      <div class="trustItem"><span>⌖</span><div><b data-t="trust4Title">ÜLE EESTI</b><small data-t="trust4Text">Sõidame sinna, kuhu vaja</small></div></div>
+    </div>
+  </div>
+</section>
 
-      <span id="about" style="position:absolute;left:0;top:73%;width:1px;height:1px" aria-hidden="true"></span>
-    </section>
-  </main>
+<section class="coverageSection" id="coverage">
+  <div class="shell coverageGrid">
+    <div class="coverageCopy">
+      <p class="sectionKicker">ARIDES TRANSPORT</p>
+      <h2 data-t="coverageTitle">Lihtne lahendus teie veovajadustele</h2>
+      <div class="miniLine"></div>
+      <p data-t="coverageText">Veame kaupu, aitame kolimistega ja toome ehitusmaterjalid kohale üle Eesti. Marsruudi ja hinna lepime kokku enne sõitu.</p>
+      <div class="coverageFacts">
+        <div><b>Peugeot Boxer L3H2</b><span data-t="factVan">Mahukas kaubaruum</span></div>
+        <div><b>Harjumaa + Eesti</b><span data-t="factArea">Teenindame üle riigi</span></div>
+        <div><b>WhatsApp</b><span data-t="factWa">Saada kauba foto ette</span></div>
+      </div>
+    </div>
 
-  <script>
-    (()=>{
-      const VERSION='20260916-1';
-      const poster=document.getElementById('home');
-      const loading=document.querySelector('.loading');
-      const img=document.getElementById('hero');
-      const partName=n=>String(n).padStart(2,'0');
-      const local=n=>`./data/hero_exact_${partName(n)}.txt?v=${VERSION}`;
-      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_${partName(n)}.txt?v=${VERSION}`;
+    <div class="mapCard">
+      <div class="mapHead">
+        <div><b data-t="mapTitle">Teenindame kogu Eestis</b><span data-t="mapText">Peamised linnad ja sagedased suunad</span></div>
+        <span class="mapBadge">ESTONIA</span>
+      </div>
+      <svg viewBox="0 0 700 430" class="routeMap" role="img" aria-label="Estonia route network">
+        <defs>
+          <filter id="glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <linearGradient id="mapFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14283a"/><stop offset="1" stop-color="#09131e"/></linearGradient>
+        </defs>
+        <path class="estoniaShape" d="M120 101 L176 70 248 71 304 50 371 70 435 65 501 92 560 123 608 161 625 212 600 258 626 309 585 349 520 344 469 379 402 364 353 392 298 363 236 375 186 342 135 344 106 300 77 264 92 214 68 167 98 136 Z"/>
+        <path class="island" d="M84 287 L43 300 31 331 54 355 91 345 110 318 Z"/>
+        <path class="island small" d="M46 260 L24 268 18 287 39 293 58 279 Z"/>
+        <g class="routes" filter="url(#glow)">
+          <path d="M284 115 Q232 169 172 223"/><path d="M284 115 Q343 155 430 194"/><path d="M284 115 Q392 104 504 137"/><path d="M284 115 Q199 104 132 174"/><path d="M172 223 Q266 244 363 253"/><path d="M363 253 Q424 231 430 194"/><path d="M430 194 Q495 185 545 181"/><path d="M363 253 Q402 307 452 329"/><path d="M172 223 Q118 270 72 321"/>
+        </g>
+        <g class="city"><circle cx="284" cy="115" r="8"/><text x="294" y="103">Tallinn</text></g>
+        <g class="city"><circle cx="132" cy="174" r="7"/><text x="77" y="166">Haapsalu</text></g>
+        <g class="city"><circle cx="172" cy="223" r="7"/><text x="135" y="248">Pärnu</text></g>
+        <g class="city"><circle cx="363" cy="253" r="7"/><text x="330" y="280">Viljandi</text></g>
+        <g class="city"><circle cx="430" cy="194" r="7"/><text x="443" y="211">Tartu</text></g>
+        <g class="city"><circle cx="504" cy="137" r="7"/><text x="515" y="129">Rakvere</text></g>
+        <g class="city"><circle cx="545" cy="181" r="7"/><text x="557" y="178">Narva</text></g>
+        <g class="city"><circle cx="72" cy="321" r="7"/><text x="37" y="348">Kuressaare</text></g>
+        <g class="city"><circle cx="250" cy="129" r="6"/><text x="211" y="117">Keila</text></g>
+        <g class="city"><circle cx="452" cy="329" r="6"/><text x="464" y="346">Võru</text></g>
+      </svg>
+      <div class="mapFoot" data-t="mapFoot">Marsruudi ja hinna kinnitame enne väljasõitu.</div>
+    </div>
+  </div>
+</section>
 
-      async function getPart(n){
-        for(const url of [local(n),raw(n)]){
-          try{
-            const response=await fetch(url,{cache:'no-store'});
-            if(!response.ok) continue;
-            const text=(await response.text()).replace(/\s+/g,'');
-            if(text.length>100) return text;
-          }catch(_){ }
-        }
-        throw new Error(`Image part ${n} unavailable`);
-      }
+<section class="contactSection" id="contact">
+  <div class="shell contactGrid">
+    <div>
+      <p class="sectionKicker">ARIDES TRANSPORT</p>
+      <h2 data-t="contactTitle">Vajad vedu?</h2>
+      <p data-t="contactText">Helista või kirjuta. Saada lähtekoht, sihtkoht ja kauba kirjeldus — vastame võimalikult kiiresti.</p>
+    </div>
+    <div class="contactActions">
+      <a href="tel:+37258536770" class="contactBig"><span>☎</span><div><small data-t="phoneLabel">Telefon</small><b>+372 5853 6770</b></div></a>
+      <a href="https://wa.me/37258536770" target="_blank" rel="noreferrer" class="contactBig"><span>◉</span><div><small>WhatsApp</small><b data-t="writeUs">Kirjuta meile</b></div></a>
+      <a href="mailto:info@arides.ee" class="contactBig"><span>✉</span><div><small>E-mail</small><b>info@arides.ee</b></div></a>
+    </div>
+  </div>
+</section>
+</main>
 
-      async function loadHero(){
-        try{
-          const parts=await Promise.all(Array.from({length:11},(_,i)=>getPart(i+1)));
-          img.onload=()=>poster.classList.add('ready');
-          img.onerror=()=>{loading.innerHTML='<span>ARIDES — pildi laadimine ebaõnnestus</span>'};
-          img.src='data:image/webp;base64,'+parts.join('');
-        }catch(error){
-          console.error(error);
-          loading.innerHTML='<span>ARIDES — laadimine ebaõnnestus</span>';
-        }
-      }
-
-      loadHero();
-    })();
-  </script>
+<footer><div class="shell footerRow"><span>© ARIDES TRANSPORT</span><span>Harjumaa • Eesti</span><span>RU • ET • EN</span></div></footer>
+<script src="./estonia.js?v=20260916c"></script>
 </body>
 </html>
