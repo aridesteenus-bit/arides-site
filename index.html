@@ -39,20 +39,20 @@
   </main>
   <script>
     (()=>{
-      const VERSION='58d0ea3b';
+      const VERSION='828ce4b1';
       const poster=document.getElementById('poster');
       const loading=document.querySelector('.loading');
       const img=document.getElementById('hero');
-      const local=n=>`./data/hero_exact_0${n}.txt?v=${VERSION}`;
-      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_0${n}.txt?v=${VERSION}`;
+      const name=n=>String(n).padStart(2,'0');
+      const local=n=>`./data/hero_exact_${name(n)}.txt?v=${VERSION}`;
+      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_${name(n)}.txt?v=${VERSION}`;
 
       async function getPart(n){
-        const urls=[local(n),raw(n)];
-        for(const url of urls){
+        for(const url of [local(n),raw(n)]){
           try{
             const r=await fetch(url,{cache:'no-store'});
             if(r.ok){
-              const t=(await r.text()).trim();
+              const t=(await r.text()).replace(/\s+/g,'');
               if(t.length>100) return t;
             }
           }catch(_){ }
@@ -61,21 +61,14 @@
       }
 
       async function load(){
-        for(let attempt=1;attempt<=4;attempt++){
-          try{
-            const parts=await Promise.all([1,2,3,4,5,6,7].map(getPart));
-            img.onload=()=>poster.classList.add('ready');
-            img.onerror=()=>{loading.innerHTML='<span>ARIDES — pildi laadimine ebaõnnestus</span>'};
-            img.src='data:image/jpeg;base64,'+parts.join('');
-            return;
-          }catch(e){
-            if(attempt<4){
-              loading.innerHTML=`<span>ARIDES TRANSPORT · ${attempt}/4</span>`;
-              await new Promise(r=>setTimeout(r,1800));
-            }
-          }
+        try{
+          const parts=await Promise.all(Array.from({length:11},(_,i)=>getPart(i+1)));
+          img.onload=()=>poster.classList.add('ready');
+          img.onerror=()=>{loading.innerHTML='<span>ARIDES — pildi laadimine ebaõnnestus</span>'};
+          img.src='data:image/webp;base64,'+parts.join('');
+        }catch(e){
+          loading.innerHTML='<span>ARIDES — laadimine ebaõnnestus</span>';
         }
-        loading.innerHTML='<span>ARIDES — laadimine ebaõnnestus</span>';
       }
       load();
     })();
