@@ -3,74 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#07111c">
+  <meta name="theme-color" content="#081522">
   <meta name="description" content="ARIDES Transport — kaubavedu, kolimised ja ehitusmaterjalide transport üle Eesti. Telefon +372 5853 6770.">
   <title>ARIDES Transport | Kaubavedu Eestis</title>
   <link rel="canonical" href="https://arides.ee/">
   <style>
+    :root{--orange:#ff5a0a;--navy:#081522}
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:#07111c}
-    body{font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
-    .page{width:100%;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;background:#07111c}
-    .poster{position:relative;width:min(100vw,1448px);aspect-ratio:4/3;background:#07111c;overflow:hidden}
-    .poster img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
-    .hotspot{position:absolute;z-index:4;display:block;background:transparent;border:0;text-indent:-9999px;overflow:hidden;cursor:pointer;border-radius:18px}
-    .hotspot:focus-visible{outline:3px solid #ff6414;outline-offset:2px}
-    .phone{left:61.2%;top:2.0%;width:14.5%;height:5.2%}
-    .mail{left:75.8%;top:2.0%;width:12.8%;height:5.2%}
-    .cta{left:4.1%;top:42.15%;width:17.7%;height:5.5%}
-    .whatsapp{left:22.9%;top:42.15%;width:13.0%;height:5.5%}
-    .loading{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:700;letter-spacing:.14em;font-size:13px;background:#07111c;z-index:5}
-    .loading span:after{content:'...';color:#ff6414}
-    .ready .loading{display:none}
-    @media(max-width:700px){.poster{width:100vw}.hotspot{border-radius:8px}}
+    html{background:var(--navy);scroll-behavior:smooth}
+    body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--navy);overflow-x:hidden}
+    a{-webkit-tap-highlight-color:transparent}
+
+    .page{width:100%;min-height:100vh;background:var(--navy);display:flex;justify-content:center;align-items:flex-start}
+    .poster{position:relative;width:min(100vw,1484px);aspect-ratio:1484/1060;background:var(--navy);overflow:hidden}
+    .poster img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+
+    .hotspot{position:absolute;z-index:4;display:block;background:transparent;border:0;color:transparent;font-size:0;cursor:pointer;border-radius:18px;text-decoration:none}
+    .hotspot:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+    /* Header */
+    .nav-home{left:29.6%;top:2.5%;width:6.3%;height:4.4%}
+    .nav-services{left:36.0%;top:2.5%;width:7.7%;height:4.4%}
+    .nav-about{left:43.4%;top:2.5%;width:5.7%;height:4.4%}
+    .nav-contact{left:49.0%;top:2.5%;width:6.3%;height:4.4%}
+    .phone{left:61.0%;top:2.0%;width:14.7%;height:5.3%}
+    .mail{left:76.2%;top:2.0%;width:13.7%;height:5.3%}
+    .lang{left:93.1%;top:2.3%;width:3.1%;height:4.5%}
+
+    /* Hero actions */
+    .cta{left:4.25%;top:44.75%;width:17.85%;height:5.65%}
+    .whatsapp{left:23.4%;top:44.75%;width:13.2%;height:5.65%}
+
+    /* Service cards */
+    .service-freight{left:4.0%;top:56.0%;width:14.0%;height:8.7%}
+    .service-move{left:19.3%;top:56.0%;width:15.5%;height:8.7%}
+    .service-build{left:36.7%;top:56.0%;width:17.0%;height:8.7%}
+
+    .loading{position:absolute;inset:0;z-index:6;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em}
+    .loading span:after{content:'...';color:var(--orange)}
+    .ready .loading{opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+
+    @media(max-width:760px){
+      .poster{width:100vw;aspect-ratio:1484/1060}
+      .hotspot{border-radius:8px}
+      .page{min-height:auto}
+    }
+
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ready .loading{transition:none}}
   </style>
 </head>
 <body>
   <main class="page">
-    <div class="poster" id="poster" aria-label="ARIDES Transport">
-      <div class="loading"><span>ARIDES TRANSPORT</span></div>
+    <section class="poster" id="home" aria-label="ARIDES Transport — kaubavedu Eestis">
+      <div class="loading" aria-live="polite"><span>ARIDES TRANSPORT</span></div>
       <img id="hero" alt="ARIDES Transport — kaubavedu Eestis" decoding="async">
-      <a class="hotspot phone" href="tel:+37258536770" aria-label="Helista +372 5853 6770">Helista</a>
-      <a class="hotspot mail" href="mailto:info@arides.ee" aria-label="Kirjuta info@arides.ee">E-post</a>
-      <a class="hotspot cta" href="https://wa.me/37258536770" target="_blank" rel="noopener" aria-label="Võta ühendust WhatsAppis">Võta ühendust</a>
-      <a class="hotspot whatsapp" href="https://wa.me/37258536770" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
-    </div>
+
+      <a class="hotspot nav-home" href="#home" aria-label="Avaleht">Avaleht</a>
+      <a class="hotspot nav-services" href="#services" aria-label="Teenused">Teenused</a>
+      <a class="hotspot nav-about" href="#about" aria-label="Meist">Meist</a>
+      <a class="hotspot nav-contact" href="mailto:info@arides.ee" aria-label="Kontakt">Kontakt</a>
+      <a class="hotspot phone" href="tel:+37258536770" aria-label="Helista +372 5853 6770">+372 5853 6770</a>
+      <a class="hotspot mail" href="mailto:info@arides.ee" aria-label="Kirjuta info@arides.ee">info@arides.ee</a>
+      <a class="hotspot lang" href="#home" aria-label="Eesti keel">ET</a>
+
+      <a class="hotspot cta" href="tel:+37258536770" aria-label="Võta ühendust">Võta ühendust</a>
+      <a class="hotspot whatsapp" href="https://wa.me/37258536770" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+
+      <a class="hotspot service-freight" id="services" href="tel:+37258536770" aria-label="Kaubavedu">Kaubavedu</a>
+      <a class="hotspot service-move" href="tel:+37258536770" aria-label="Kolimised">Kolimised</a>
+      <a class="hotspot service-build" href="tel:+37258536770" aria-label="Ehitusmaterjalide transport">Ehitusmaterjalid</a>
+
+      <span id="about" style="position:absolute;left:0;top:73%;width:1px;height:1px" aria-hidden="true"></span>
+    </section>
   </main>
+
   <script>
     (()=>{
-      const VERSION='828ce4b1';
-      const poster=document.getElementById('poster');
+      const VERSION='20260916-1';
+      const poster=document.getElementById('home');
       const loading=document.querySelector('.loading');
       const img=document.getElementById('hero');
-      const name=n=>String(n).padStart(2,'0');
-      const local=n=>`./data/hero_exact_${name(n)}.txt?v=${VERSION}`;
-      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_${name(n)}.txt?v=${VERSION}`;
+      const partName=n=>String(n).padStart(2,'0');
+      const local=n=>`./data/hero_exact_${partName(n)}.txt?v=${VERSION}`;
+      const raw=n=>`https://raw.githubusercontent.com/aridesteenus-bit/arides-site/main/data/hero_exact_${partName(n)}.txt?v=${VERSION}`;
 
       async function getPart(n){
         for(const url of [local(n),raw(n)]){
           try{
-            const r=await fetch(url,{cache:'no-store'});
-            if(r.ok){
-              const t=(await r.text()).replace(/\s+/g,'');
-              if(t.length>100) return t;
-            }
+            const response=await fetch(url,{cache:'no-store'});
+            if(!response.ok) continue;
+            const text=(await response.text()).replace(/\s+/g,'');
+            if(text.length>100) return text;
           }catch(_){ }
         }
-        throw new Error('part '+n);
+        throw new Error(`Image part ${n} unavailable`);
       }
 
-      async function load(){
+      async function loadHero(){
         try{
           const parts=await Promise.all(Array.from({length:11},(_,i)=>getPart(i+1)));
           img.onload=()=>poster.classList.add('ready');
           img.onerror=()=>{loading.innerHTML='<span>ARIDES — pildi laadimine ebaõnnestus</span>'};
           img.src='data:image/webp;base64,'+parts.join('');
-        }catch(e){
+        }catch(error){
+          console.error(error);
           loading.innerHTML='<span>ARIDES — laadimine ebaõnnestus</span>';
         }
       }
-      load();
+
+      loadHero();
     })();
   </script>
 </body>
