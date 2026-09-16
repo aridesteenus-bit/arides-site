@@ -1,83 +1,203 @@
 <!doctype html>
-<html lang="et">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="ARIDES Cargo – kaubavedu ja kolimine Tallinnas, Harjumaal ja üle Eesti Peugeot Boxer L3H2 kaubikuga. Telefon +372 58536770.">
-  <title>ARIDES Cargo | Kaubavedu Eestis</title>
-  <link rel="stylesheet" href="./estonia.css">
+  <meta name="theme-color" content="#0b1015">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="description" id="metaDescription" content="ARIDES Transport — грузоперевозки, переезды и доставка стройматериалов по Эстонии. Peugeot Boxer L3H2. Телефон +372 58536770.">
+  <link rel="canonical" href="https://arides.ee/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ARIDES Transport">
+  <meta property="og:url" content="https://arides.ee/">
+  <meta property="og:image" content="https://arides.ee/img/seo/arides-og-20260617.jpg">
+  <title>ARIDES Transport | Перевозки по Эстонии</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./estonia.css?v=20260916b">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap top__row">
-      <a class="brand" href="#top"><span class="brand__mark">A</span><span>ARIDES Cargo</span></a>
-      <nav class="nav"><a href="#services">Teenused</a><a href="#pricing">Hinnad</a><a href="#van">Kaubik</a><a href="#contact">Kontakt</a></nav>
-      <div class="top__actions"><button class="btn btn--ghost lang" id="langBtn" type="button">RU</button><a class="btn btn--dark" href="tel:+37258536770">58536770</a></div>
+  <header class="topbar">
+    <div class="wrap topbar__row">
+      <a class="brand" href="#top" aria-label="ARIDES Transport">
+        <span class="brand__mark"><i></i></span>
+        <span class="brand__text"><strong>ARIDES</strong><small>TRANSPORT</small></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#services" data-t="navServices">Услуги</a>
+        <a href="#pricing" data-t="navPrices">Цены</a>
+        <a href="#van" data-t="navVan">Автомобиль</a>
+        <a href="#contact" data-t="navContact">Контакты</a>
+      </nav>
+
+      <div class="topbar__right">
+        <div class="langs" aria-label="Language">
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="et">ET</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="phoneMini" href="tel:+37258536770">5853 6770</a>
+      </div>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
+      <div class="hero__glow"></div>
       <div class="wrap hero__grid">
-        <div>
-          <p class="eyebrow" data-t="eyebrow">Eesti-sisesed veod • iga päev</p>
-          <h1 data-t="title">Kaubavedu ja kolimine üle Eesti</h1>
-          <p class="lead" data-t="lead">Kiire ja paindlik veoteenus Peugeot Boxer L3H2 kaubikuga. Mööbel, tehnika, ehitusmaterjalid, kolimised ja muud kaubad Tallinnas, Harjumaal ning üle Eesti.</p>
-          <div class="hero__buttons"><a class="btn btn--primary" href="tel:+37258536770" data-t="call">Helista 58536770</a><a class="btn btn--ghost" href="https://wa.me/37258536770" target="_blank" rel="noreferrer" data-t="write">Kirjuta WhatsAppi</a></div>
-          <div class="facts">
-            <div class="fact"><strong>3.6 m</strong><span>kaubaruumi pikkus</span></div>
-            <div class="fact"><strong>30 € / h</strong><span>Tallinnas alates</span></div>
-            <div class="fact"><strong>0.90 € / km</strong><span>linnast välja</span></div>
+        <div class="hero__copy">
+          <p class="kicker"><span></span><b data-t="kicker">Перевозки по Эстонии • каждый день</b></p>
+          <h1>
+            <span data-t="heroLine1">Твой груз —</span>
+            <em data-t="heroLine2">наша забота.</em>
+          </h1>
+          <p class="hero__lead" data-t="heroLead">Грузоперевозки, переезды, мебель, техника и стройматериалы на вместительном Peugeot Boxer L3H2.</p>
+
+          <div class="hero__buttons">
+            <a class="btn btn--orange" href="tel:+37258536770">
+              <span class="btn__icon">☎</span><span data-t="callNow">Позвонить</span>
+            </a>
+            <a class="btn btn--outline" href="https://wa.me/37258536770" target="_blank" rel="noreferrer">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="hero__features">
+            <article>
+              <div class="roundIcon">▣</div>
+              <strong data-t="featCargoTitle">Перевозка грузов</strong>
+              <span data-t="featCargoText">По Таллинну, Харьюмаа и всей Эстонии</span>
+            </article>
+            <article>
+              <div class="roundIcon">⌂</div>
+              <strong data-t="featMoveTitle">Переезды</strong>
+              <span data-t="featMoveText">Квартиры, офисы, склады</span>
+            </article>
+            <article>
+              <div class="roundIcon">▦</div>
+              <strong data-t="featBuildTitle">Стройматериалы</strong>
+              <span data-t="featBuildText">Доставка на объект и с магазина</span>
+            </article>
           </div>
         </div>
-        <div class="hero__photo"><img src="./img/transport/van-hero-side.jpg" alt="ARIDES Cargo Peugeot Boxer"><div class="photoBadge"><strong>Peugeot Boxer L3H2</strong><span>Tallinn • Harjumaa • kogu Eesti</span></div></div>
+
+        <div class="hero__visual">
+          <div class="heroPhoto">
+            <img src="./img/transport/van-front.jpg" alt="ARIDES Transport Peugeot Boxer">
+            <div class="heroPhoto__shade"></div>
+            <div class="heroPhoto__tag">
+              <strong>Peugeot Boxer L3H2</strong>
+              <span data-t="vanTag">Вместительный фургон для ежедневной работы</span>
+            </div>
+          </div>
+          <div class="orangeSlash"></div>
+        </div>
+      </div>
+
+      <div class="wrap hero__bottom">
+        <a class="bigPhone" href="tel:+37258536770">
+          <span class="bigPhone__icon">☎</span>
+          <span><strong>5853 6770</strong><small data-t="phoneSub">Звоните или пишите в WhatsApp</small></span>
+        </a>
+        <div class="location">
+          <span class="pin">●</span>
+          <span><strong>Harjumaa, Eesti</strong><small data-t="locationSub">Быстро. Надёжно. Честно.</small></span>
+        </div>
+        <div class="slogan"><strong data-t="slogan">Двигаем ваши планы!</strong></div>
       </div>
     </section>
 
-    <section class="strip"><div class="wrap strip__row"><div class="strip__item">Kolimine</div><div class="strip__item">Mööblivedu</div><div class="strip__item">Ehitusmaterjalid</div><div class="strip__item">Ettevõtete veod</div></div></section>
-
-    <section class="section section--white" id="services">
+    <section class="serviceSection" id="services">
       <div class="wrap">
-        <div class="section__head"><h2 data-t="servicesTitle">Mida veame</h2><p data-t="servicesText">Üks ese või terve kolimine — lepime marsruudi ja hinna kiiresti kokku.</p></div>
-        <div class="cards">
-          <article class="card"><div class="card__icon">📦</div><h3>Kolimine</h3><p>Korterid, kontorid, kastid, mööbel ja kodutehnika.</p></article>
-          <article class="card"><div class="card__icon">🛋️</div><h3>Mööbel ja tehnika</h3><p>Poest, laost või eraisikult koju või objektile.</p></article>
-          <article class="card"><div class="card__icon">🧱</div><h3>Ehitusmaterjalid</h3><p>Pikem materjal, pakid, tööriistad ja objektikaubad.</p></article>
-          <article class="card"><div class="card__icon">🗑️</div><h3>Äravedu</h3><p>Vana mööbel, kasutatud esemed ja jäätmejaama vedu.</p></article>
-          <article class="card"><div class="card__icon">📍</div><h3>Mitu peatust</h3><p>Võime ühe tellimusega läbida mitu aadressi.</p></article>
-          <article class="card"><div class="card__icon">🏢</div><h3>Ettevõtetele</h3><p>Regulaarsed või ühekordsed veod firmadele üle Eesti.</p></article>
+        <div class="sectionHead sectionHead--dark">
+          <p class="eyebrow" data-t="servicesEyebrow">УСЛУГИ</p>
+          <h2 data-t="servicesTitle">Перевезём то, что нужно</h2>
+          <p data-t="servicesLead">От одного предмета до полного переезда. Согласуем маршрут, время и цену до выезда.</p>
+        </div>
+
+        <div class="serviceGrid">
+          <article class="serviceCard serviceCard--featured"><div class="serviceCard__num">01</div><div class="serviceCard__icon">📦</div><h3 data-t="service1Title">Грузоперевозки</h3><p data-t="service1Text">Коробки, паллеты, техника, инструменты и другие грузы по Эстонии.</p></article>
+          <article class="serviceCard"><div class="serviceCard__num">02</div><div class="serviceCard__icon">🏠</div><h3 data-t="service2Title">Переезды</h3><p data-t="service2Text">Квартиры, дома, офисы и небольшие склады. Можно с несколькими адресами.</p></article>
+          <article class="serviceCard"><div class="serviceCard__num">03</div><div class="serviceCard__icon">🧱</div><h3 data-t="service3Title">Стройматериалы</h3><p data-t="service3Text">Доски, плиты, инструмент, упаковки и материалы для стройки.</p></article>
+          <article class="serviceCard"><div class="serviceCard__num">04</div><div class="serviceCard__icon">🛋</div><h3 data-t="service4Title">Мебель и техника</h3><p data-t="service4Text">Заберём из магазина, склада или у частного продавца и доставим по адресу.</p></article>
+          <article class="serviceCard"><div class="serviceCard__num">05</div><div class="serviceCard__icon">📍</div><h3 data-t="service5Title">Несколько остановок</h3><p data-t="service5Text">Можем заехать в магазин, на склад или по нескольким адресам в одной поездке.</p></article>
+          <article class="serviceCard"><div class="serviceCard__num">06</div><div class="serviceCard__icon">🏢</div><h3 data-t="service6Title">Для компаний</h3><p data-t="service6Text">Разовые и регулярные перевозки для бизнеса с понятной коммуникацией.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="pricing">
+    <section class="pricingSection" id="pricing">
       <div class="wrap">
-        <div class="section__head"><h2 data-t="pricesTitle">Lihtsad hinnad</h2><p data-t="pricesText">Baashinnad on kohe nähtavad. Täpne hind sõltub marsruudist, ajast ja koormast.</p></div>
-        <div class="priceGrid">
-          <article class="price"><small>Tallinn ja lähiümbrus</small><strong>alates 30 € / h</strong><p>Miinimumtellimus 1 tund.</p></article>
-          <article class="price price--accent"><small>Väljaspool Tallinna</small><strong>0.90 € / km</strong><p>Täpse arvestuse kinnitame enne sõitu.</p></article>
-          <aside class="estimator"><h3 data-t="calc">Kiire hinnang</h3><div class="field"><label data-t="hours">Tunnid Tallinnas</label><input id="hours" type="number" min="0" step="0.5" value="0"></div><div class="field"><label data-t="distance">Kilomeetrid väljaspool Tallinna</label><input id="km" type="number" min="0" step="1" value="0"></div><div class="estimate"><span data-t="estimate">Esialgne hind</span><br><strong id="estimateValue">—</strong></div></aside>
+        <div class="sectionHead">
+          <p class="eyebrow" data-t="pricesEyebrow">ЦЕНЫ</p>
+          <h2 data-t="pricesTitle">Просто и понятно</h2>
+          <p data-t="pricesLead">Базовый расчёт можно посмотреть сразу. Финальную цену подтверждаем после маршрута и деталей груза.</p>
+        </div>
+
+        <div class="pricingGrid">
+          <article class="priceCard"><span class="priceCard__label" data-t="cityLabel">Таллинн и ближайшие районы</span><strong>30 € <small>/ h</small></strong><p data-t="cityText">От 30 € в час. Минимальный заказ — 1 час.</p></article>
+          <article class="priceCard priceCard--orange"><span class="priceCard__label" data-t="outsideLabel">За пределами Таллинна</span><strong>0.90 € <small>/ km</small></strong><p data-t="outsideText">Для маршрутов по Харьюмаа и другим регионам Эстонии.</p></article>
+          <aside class="calcCard">
+            <div class="calcCard__head"><span class="calcDot"></span><h3 data-t="calcTitle">Быстрый расчёт</h3></div>
+            <label><span data-t="hoursLabel">Часы в Таллинне</span><input id="hours" type="number" min="0" step="0.5" value="0"></label>
+            <label><span data-t="kmLabel">Километры за Таллинном</span><input id="km" type="number" min="0" step="1" value="0"></label>
+            <div class="calcResult"><span data-t="estimateLabel">Предварительно</span><strong id="estimateValue">—</strong></div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="section section--white" id="van">
+    <section class="vanSection" id="van">
       <div class="wrap vanGrid">
-        <img src="./img/transport/cargo-inside-yellow.jpg" alt="Peugeot Boxer kaubaruum">
-        <div><div class="section__head"><h2 data-t="vanTitle">Peugeot Boxer L3H2</h2><p data-t="vanText">Mahukas kaubik igapäevasteks vedudeks Eestis.</p></div><div class="specs"><div class="spec"><strong>3.6 m pikk kaubaruum</strong><span>Sobib ka pikematele esemetele.</span></div><div class="spec"><strong>Kinnitusrihmad</strong><span>Koorem saab turvaliselt fikseeritud.</span></div><div class="spec"><strong>Transportkäru kuni 250 kg</strong><span>Raskemate esemete liigutamiseks.</span></div><div class="spec"><strong>2 kõrvalistet</strong><span>Vajadusel saab klient kaasa sõita.</span></div></div></div>
+        <div class="vanGallery">
+          <img class="vanGallery__main" src="./img/transport/van-hero-side.jpg" alt="Peugeot Boxer ARIDES Transport">
+          <img class="vanGallery__small" src="./img/transport/cargo-inside-yellow.jpg" alt="Peugeot Boxer cargo area">
+        </div>
+        <div class="vanInfo">
+          <p class="eyebrow" data-t="vanEyebrow">АВТОМОБИЛЬ</p>
+          <h2>Peugeot Boxer <em>L3H2</em></h2>
+          <p class="vanInfo__lead" data-t="vanLead">Большой грузовой отсек, крепёжные ремни и тележка — всё для нормальной рабочей перевозки.</p>
+          <div class="specGrid">
+            <div><strong>3.6 m</strong><span data-t="spec1">длина грузового отсека</span></div>
+            <div><strong>250 kg</strong><span data-t="spec2">транспортная тележка</span></div>
+            <div><strong>2</strong><span data-t="spec3">места для пассажиров</span></div>
+            <div><strong>Estonia</strong><span data-t="spec4">работаем по всей стране</span></div>
+          </div>
+          <ul class="checks"><li data-t="check1">Крепёжные ремни для фиксации груза</li><li data-t="check2">Подходит для длинных и объёмных предметов</li><li data-t="check3">Можно заранее отправить фото груза в WhatsApp</li></ul>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="wrap cta">
-        <div><h2 data-t="contactTitle">Saada vedu kohe arutamisele</h2><p data-t="contactText">Kirjuta lähte- ja sihtaadress, soovitud aeg ning lühidalt, mida on vaja vedada.</p><div class="cta__links"><a class="btn btn--primary" href="tel:+37258536770">📞 +372 58536770</a><a class="btn btn--ghost" href="https://wa.me/37258536770" target="_blank" rel="noreferrer">WhatsApp</a></div></div>
-        <form class="formBox" id="requestForm"><div class="field"><label data-t="from">Lähtekoht</label><input name="from" required placeholder="Tallinn, Mustamäe..."></div><div class="field"><label data-t="to">Sihtkoht</label><input name="to" required placeholder="Tartu, Pärnu..."></div><div class="field"><label data-t="date">Soovitud aeg</label><input name="date" placeholder="Kuupäev / kellaaeg"></div><div class="field"><label data-t="cargo">Mida veame?</label><textarea name="cargo" rows="4" placeholder="Mööbel, tehnika, materjal..."></textarea></div><button class="btn btn--primary" type="submit" data-t="send">Saada WhatsAppi</button></form>
+    <section class="contactSection" id="contact">
+      <div class="wrap contactGrid">
+        <div class="contactCopy">
+          <p class="eyebrow" data-t="contactEyebrow">ЗАКАЗАТЬ ПЕРЕВОЗКУ</p>
+          <h2 data-t="contactTitle">Расскажите, что и куда нужно отвезти</h2>
+          <p data-t="contactLead">Заполните четыре поля — заявка откроется готовым сообщением в WhatsApp.</p>
+          <a class="contactPhone" href="tel:+37258536770"><span>☎</span><strong>+372 5853 6770</strong></a>
+          <p class="contactNote" data-t="contactNote">Если срочно — лучше звоните.</p>
+        </div>
+
+        <form class="orderForm" id="requestForm">
+          <label><span data-t="fromLabel">Откуда</span><input name="from" required data-ph="fromPh" placeholder="Например: Mustamäe, Tallinn"></label>
+          <label><span data-t="toLabel">Куда</span><input name="to" required data-ph="toPh" placeholder="Например: Keila"></label>
+          <label><span data-t="timeLabel">Когда</span><input name="date" data-ph="timePh" placeholder="Дата и время"></label>
+          <label><span data-t="cargoLabel">Что везём</span><textarea name="cargo" rows="4" data-ph="cargoPh" placeholder="Коротко опишите груз"></textarea></label>
+          <button class="btn btn--orange btn--full" type="submit"><span data-t="sendWhatsApp">Отправить в WhatsApp</span> ↗</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer__row"><strong>ARIDES Cargo</strong><span>Kaubavedu Eestis • +372 58536770</span></div></footer>
-  <a class="btn btn--primary mobileCall" href="tel:+37258536770">📞 58536770</a>
-  <script src="./estonia.js"></script>
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <div class="brand brand--footer"><span class="brand__mark"><i></i></span><span class="brand__text"><strong>ARIDES</strong><small>TRANSPORT</small></span></div>
+      <div class="footer__copy"><strong data-t="footerLine">Перевозки по Эстонии</strong><span>+372 5853 6770 • Harjumaa, Eesti</span></div>
+      <div class="footer__langs">RU • ET • EN</div>
+    </div>
+  </footer>
+
+  <a class="mobileCall" href="tel:+37258536770"><span>☎</span><strong>5853 6770</strong></a>
+  <script src="./estonia.js?v=20260916b"></script>
 </body>
 </html>
