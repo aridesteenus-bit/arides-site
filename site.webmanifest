@@ -1,6 +1,8 @@
 {
-  "name": "ARIDES Cargo",
-  "short_name": "ARIDES Cargo",
+  "name": "ARIDES Transport",
+  "short_name": "ARIDES",
+  "description": "Kaubavedu ja kolimised üle Eesti",
+  "lang": "et",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",
@@ -15,7 +17,7 @@
   ],
   "start_url": "./",
   "scope": "./",
-  "theme_color": "#06111f",
-  "background_color": "#eef3f8",
+  "theme_color": "#07111c",
+  "background_color": "#07111c",
   "display": "standalone"
 }
