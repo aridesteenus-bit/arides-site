@@ -1,190 +1,215 @@
 <!doctype html>
-<html lang="et">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <meta name="description" content="ARIDES — kaubavedu, kolimised, mööbli ja ehitusmaterjalide transport üle Eesti.">
+  <meta name="description" content="ARIDES — грузоперевозки, переезды, мебель и стройматериалы по Эстонии.">
   <link rel="canonical" href="https://arides.ee/">
   <link rel="icon" href="./favicon.ico">
-  <link rel="stylesheet" href="./transport-site.css?v=20260920-3">
-  <title>ARIDES Transport | Kaubavedu Eestis</title>
+  <link rel="stylesheet" href="./transport-site.css?v=20260920-4">
+  <title>ARIDES | Грузоперевозки по Эстонии</title>
 </head>
 <body>
-<header class="topbar">
-  <div class="wrap nav">
+<header class="site-header">
+  <div class="shell header-row">
     <a class="brand" href="#top" aria-label="ARIDES">
       <strong>ARIDES</strong>
-      <small>Transport<br>Estonia</small>
+      <span>Двигаем<br>ваши планы</span>
     </a>
 
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#services" data-i18n="nav_services">Teenused</a>
-      <a href="#prices" data-i18n="nav_prices">Hinnad</a>
-      <a href="#about" data-i18n="nav_about">Meist</a>
-      <a href="mailto:info@arides.ee" data-i18n="nav_business">Ettevõtetele</a>
-      <a href="#contacts" data-i18n="nav_contacts">Kontakt</a>
+    <nav class="main-nav" aria-label="Главное меню">
+      <a href="#services">Услуги <span class="chev">⌄</span></a>
+      <a href="#prices">Цены</a>
+      <a href="#about">О нас</a>
+      <a href="mailto:info@arides.ee">Для бизнеса</a>
+      <a href="#contacts">Контакты</a>
     </nav>
 
-    <div class="navright">
-      <a class="phone" href="tel:+37258536770">+372 5853 6770</a>
-      <div class="langs" aria-label="Language">
-        <button class="lang-btn active" type="button" data-lang="et">ET</button>
-        <button class="lang-btn" type="button" data-lang="ru">RU</button>
-        <button class="lang-btn" type="button" data-lang="en">EN</button>
+    <div class="header-contact">
+      <span class="phone-icon">☎</span>
+      <div>
+        <a href="tel:+37258536770">+372 58 536 770</a>
+        <small>Ежедневно 8:00 – 22:00</small>
       </div>
-      <button class="cta scroll-order" type="button" data-i18n="order">Telli vedu</button>
+      <a class="green-btn header-cta" href="#order">Заказать перевозку <b>→</b></a>
     </div>
   </div>
 </header>
 
-<main>
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
+<main id="top">
+<section class="hero">
+  <div class="shell hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow" data-i18n="eyebrow">Kaubavedu üle Eesti</span>
-      <h1 data-i18n="hero_title">Kaubavedu üle Eesti</h1>
-      <p class="hero-lead" data-i18n="hero_lead">Usaldusväärne transport, kolimised ja kohaletoimetamine. Kiirelt, hoolikalt ja selge hinnaga.</p>
+      <h1>Грузоперевозки<br>по Эстонии</h1>
+      <p class="hero-sub">Надёжные перевозки, переезды и доставка.<br>Быстро, аккуратно, по честным ценам.</p>
 
-      <form class="order-card" id="order">
-        <div class="field">
-          <label for="from" data-i18n="from_label">Kust kaup peale võtta?</label>
-          <input id="from" name="from" autocomplete="street-address" required data-i18n-placeholder="from_ph" placeholder="Tallinn">
+      <form class="order-box" id="order">
+        <label>
+          <span class="field-icon">●</span>
+          <span class="field-copy">
+            <small>Откуда забрать груз?</small>
+            <input id="from" name="from" value="Таллинн" required>
+          </span>
+        </label>
+        <label>
+          <span class="field-icon">●</span>
+          <span class="field-copy">
+            <small>Куда доставить?</small>
+            <input id="to" name="to" value="Тарту" required>
+          </span>
+        </label>
+        <label>
+          <span class="field-icon cube">◆</span>
+          <span class="field-copy">
+            <small>Тип услуги</small>
+            <select id="service" name="service">
+              <option>Переезд (квартира/дом)</option>
+              <option>Перевозка мебели</option>
+              <option>Доставка стройматериалов</option>
+              <option>Грузовое такси</option>
+              <option>Помощь с погрузкой</option>
+            </select>
+          </span>
+        </label>
+
+        <button class="green-btn order-submit" type="submit">Заказать перевозку <b>→</b></button>
+
+        <div class="order-meta">
+          <span>⬟ Быстрое подтверждение</span>
+          <i></i>
+          <span>Без скрытых платежей</span>
         </div>
-        <div class="field">
-          <label for="to" data-i18n="to_label">Kuhu viia?</label>
-          <input id="to" name="to" autocomplete="street-address" required data-i18n-placeholder="to_ph" placeholder="Tartu">
-        </div>
-        <div class="field">
-          <label for="service" data-i18n="service_label">Teenuse tüüp</label>
-          <select id="service" name="service" required>
-            <option value="move" data-i18n="service_move">Kolimine (korter / maja)</option>
-            <option value="furniture" data-i18n="service_furniture">Mööbli transport</option>
-            <option value="building" data-i18n="service_build">Ehitusmaterjalid</option>
-            <option value="taxi" data-i18n="service_taxi">Kaubatakso</option>
-            <option value="help" data-i18n="service_help">Abi laadimisel</option>
-          </select>
-        </div>
-        <button class="cta" type="submit" data-i18n="submit">Telli vedu →</button>
-        <p class="order-note">
-          <span data-i18n="fast_confirm">Kiire kinnitus</span>
-          <span data-i18n="no_hidden">Varjatud tasusid ei ole</span>
-        </p>
       </form>
     </div>
 
-    <div class="van-stage" aria-label="Peugeot Boxer">
-      <div class="van-glow"></div>
-      <img class="van-photo" src="./img/transport/van-hero-side.jpg" alt="ARIDES Peugeot Boxer" fetchpriority="high">
-      <div class="van-badge">
-        <strong data-i18n="van_badge">Peugeot Boxer L3H2</strong>
-        <span data-i18n="van_badge2">Kaubavedu ja kolimised</span>
-      </div>
+    <div class="hero-visual">
+      <div class="van-haze"></div>
+      <img class="boxer" src="./img/mockup/boxer-white.webp" alt="Peugeot Boxer">
     </div>
 
-    <aside class="hero-points">
-      <h3 data-i18n="list_title">Mida veame</h3>
-      <div class="point"><i>✓</i><span data-i18n="service_move">Kolimine (korter / maja)</span></div>
-      <div class="point"><i>✓</i><span data-i18n="service_furniture">Mööbli transport</span></div>
-      <div class="point"><i>✓</i><span data-i18n="service_build">Ehitusmaterjalid</span></div>
-      <div class="point"><i>✓</i><span data-i18n="service_taxi">Kaubatakso</span></div>
-      <div class="point"><i>✓</i><span data-i18n="service_help">Abi laadimisel</span></div>
-      <div class="hand" data-i18n="hand">Rohkem kui lihtsalt vedu</div>
+    <aside class="hero-right">
+      <div class="check-list">
+        <div><span>✓</span>Переезды</div>
+        <div><span>✓</span>Перевозка мебели</div>
+        <div><span>✓</span>Доставка стройматериалов</div>
+        <div><span>✓</span>Грузовое такси</div>
+        <div><span>✓</span>Помощь с погрузкой</div>
+      </div>
+      <div class="skyline-wrap">
+        <img src="./img/mockup/tallinn-skyline.webp" alt="" aria-hidden="true">
+        <div class="hand-note hand-note-top">По всей<br>Эстонии</div>
+        <div class="hand-arrow">↙</div>
+        <div class="hand-note hand-note-bottom">Больше,<br>чем просто перевозки</div>
+        <div class="green-stroke"></div>
+      </div>
     </aside>
   </div>
 </section>
 
-<section class="services" id="services">
-  <div class="wrap service-grid">
-    <button class="service-card" type="button" data-service="move">
-      <span class="service-icon">📦</span>
-      <span><strong data-i18n="sc_move_t">Kolimised</strong><span data-i18n="sc_move_d">Korterid, majad, kontorid</span></span>
-      <span class="arrow">→</span>
+<section class="services-strip" id="services">
+  <div class="shell services-grid">
+    <button class="service-card" data-service="Переезд (квартира/дом)">
+      <div class="service-art boxes-art"><span></span><span></span><span></span><span></span></div>
+      <div class="service-copy"><strong>Переезды</strong><small>Квартиры, дома,<br>офисы</small></div>
+      <b class="round-arrow">→</b>
     </button>
-    <button class="service-card" type="button" data-service="furniture">
-      <span class="service-icon">🛋️</span>
-      <span><strong data-i18n="sc_furn_t">Mööbli transport</strong><span data-i18n="sc_furn_d">Hoolikas vedu ja paigutus</span></span>
-      <span class="arrow">→</span>
+
+    <button class="service-card" data-service="Перевозка мебели">
+      <div class="service-art sofa-art"><span></span></div>
+      <div class="service-copy"><strong>Перевозка мебели</strong><small>Аккуратная транспортировка<br>и сборка</small></div>
+      <b class="round-arrow">→</b>
     </button>
-    <button class="service-card" type="button" data-service="building">
-      <span class="service-icon">🧱</span>
-      <span><strong data-i18n="sc_build_t">Ehitusmaterjalid</strong><span data-i18n="sc_build_d">Kiirelt objektile</span></span>
-      <span class="arrow">→</span>
+
+    <button class="service-card" data-service="Доставка стройматериалов">
+      <div class="service-art build-art"><span></span><span></span><span></span></div>
+      <div class="service-copy"><strong>Доставка<br>стройматериалов</strong><small>Быстро и надёжно</small></div>
+      <b class="round-arrow">→</b>
     </button>
-    <button class="service-card" type="button" data-service="taxi">
-      <span class="service-icon">🚚</span>
-      <span><strong data-i18n="sc_taxi_t">Kaubatakso</strong><span data-i18n="sc_taxi_d">Kui on vaja juba täna</span></span>
-      <span class="arrow">→</span>
+
+    <button class="service-card" data-service="Грузовое такси">
+      <div class="service-art trolley-art"><span></span><span></span></div>
+      <div class="service-copy"><strong>Грузовое такси</strong><small>Когда нужно<br>уже сегодня</small></div>
+      <b class="round-arrow">→</b>
     </button>
-    <button class="service-card" type="button" data-service="help">
-      <span class="service-icon">💪</span>
-      <span><strong data-i18n="sc_help_t">Abi laadimisel</strong><span data-i18n="sc_help_d">Kogenud ja hoolikas abi</span></span>
-      <span class="arrow">→</span>
+
+    <button class="service-card" data-service="Помощь с погрузкой">
+      <div class="service-art loader-art"><span>👨🏻‍🔧</span><i></i></div>
+      <div class="service-copy"><strong>Помощь с погрузкой</strong><small>Опытные и аккуратные<br>грузчики</small></div>
+      <b class="round-arrow">→</b>
     </button>
   </div>
 </section>
 
-<section class="wrap dashboard" id="about">
-  <article class="panel route-map">
-    <div class="route-top">📍 Tallinn <span>→</span> Tartu <small data-i18n="route_time">~ 2 h 15 min</small></div>
-    <svg class="route-svg" viewBox="0 0 560 270" role="img" aria-label="Tallinn to Tartu route">
-      <path d="M120 72 C190 68 218 108 272 119 C333 132 354 175 430 197" fill="none" stroke="#10b969" stroke-width="7" stroke-linecap="round"/>
-      <circle cx="120" cy="72" r="12" fill="#10b969" stroke="#fff" stroke-width="6"/>
-      <circle cx="430" cy="197" r="12" fill="#10b969" stroke="#fff" stroke-width="6"/>
-      <text x="137" y="69" font-size="18" font-weight="800" fill="#1d2939">Tallinn</text>
-      <text x="447" y="202" font-size="18" font-weight="800" fill="#1d2939">Tartu</text>
-    </svg>
-    <div class="route-footer">
-      <strong data-i18n="all_estonia">Sõidame üle Eesti</strong>
-      <span data-i18n="all_estonia_d">Tallinn, Tartu, Harjumaa, Pärnu, Narva ja teised linnad</span>
-    </div>
-  </article>
+<section class="lower-section" id="about">
+  <div class="shell lower-grid">
+    <article class="map-card">
+      <div class="map-bg">
+        <div class="map-pill">
+          <span class="pin">●</span>
+          <div><strong>Таллинн → Тарту</strong><small>~ 2 ч 15 мин &nbsp;(186 км)</small></div>
+        </div>
 
-  <article class="panel panel-pad">
-    <h2 data-i18n="why">Miks valida ARIDES?</h2>
-    <div class="features">
-      <div class="feature"><span class="feature-icon">✓</span><span><b data-i18n="reliable">Usaldusväärne</b><span data-i18n="reliable_d">Teie kaup on hoitud</span></span></div>
-      <div class="feature"><span class="feature-icon">⚡</span><span><b data-i18n="fast">Kiire</b><span data-i18n="fast_d">Tuleme kokkulepitud ajal</span></span></div>
-      <div class="feature"><span class="feature-icon">👥</span><span><b data-i18n="team">Kogenud</b><span data-i18n="team_d">Praktiline veokogemus</span></span></div>
-      <div class="feature"><span class="feature-icon">€</span><span><b data-i18n="clear">Selge hind</b><span data-i18n="clear_d">Ilma peidetud kuludeta</span></span></div>
-    </div>
-    <div class="quote">
-      <span data-i18n="quote">“Aitame nii väikese veoga kui ka terve kolimisega. Kõigepealt lepime töö ja hinna selgelt kokku.”</span>
-      <strong>ARIDES Transport</strong>
-    </div>
-  </article>
+        <svg class="route-map" viewBox="0 0 520 245" aria-label="Маршрут Таллинн Тарту">
+          <path class="land" d="M-20,20 C90,-5 170,25 215,55 C260,85 295,70 360,95 C430,120 468,165 540,190 L540,270 L-20,270Z"/>
+          <path class="water" d="M0,15 C78,7 106,50 160,47 C203,43 222,91 280,96 C334,101 370,68 432,84 C485,97 502,142 540,150"/>
+          <path class="route" d="M235,54 C267,77 281,99 307,113 C335,128 347,160 384,182"/>
+          <circle class="city-dot" cx="235" cy="54" r="10"/>
+          <circle class="city-dot" cx="384" cy="182" r="10"/>
+          <text x="251" y="56">Таллинн</text>
+          <text x="398" y="185">Тарту</text>
+          <text class="est-label" x="225" y="150">ЭСТОНИЯ</text>
+        </svg>
 
-  <article class="panel panel-pad price-panel" id="prices">
-    <h2 data-i18n="prices">Näidishinnad</h2>
-    <div class="price-list">
-      <div class="price-row"><span data-i18n="p1">Kaubatakso (linnas)</span><b data-i18n="from30">al 30 € / h</b></div>
-      <div class="price-row"><span data-i18n="p2">Korteri kolimine</span><b data-i18n="from80">al 80 €</b></div>
-      <div class="price-row"><span data-i18n="p3">Mööbli transport</span><b data-i18n="from40">al 40 €</b></div>
-      <div class="price-row"><span data-i18n="p4">Ehitusmaterjalide vedu</span><b data-i18n="from50">al 50 €</b></div>
-      <div class="price-row"><span data-i18n="p5">Laadimisabi</span><b data-i18n="from25">al 25 € / h</b></div>
-    </div>
-    <button class="cta scroll-order" type="button" data-i18n="exact">Küsi täpset hinda →</button>
-  </article>
+        <div class="map-footer">
+          <span class="car-dot">🚐</span>
+          <div><strong>Перевозим по всей Эстонии</strong><small>Таллинн, Тарту, Нарва, Пярну и другие города</small></div>
+          <b>›</b>
+        </div>
+      </div>
+    </article>
+
+    <article class="why-card">
+      <h2>Почему выбирают ARIDES?</h2>
+      <div class="why-grid">
+        <div><span class="why-icon shield">✓</span><p><strong>Надёжно</strong><small>Ваш груз в безопасности</small></p></div>
+        <div><span class="why-icon">⚡</span><p><strong>Быстро</strong><small>Подача в удобное время</small></p></div>
+        <div><span class="why-icon">👥</span><p><strong>Опытная команда</strong><small>Аккуратные грузчики</small></p></div>
+        <div><span class="why-icon">▣</span><p><strong>Прозрачные цены</strong><small>Никаких скрытых платежей</small></p></div>
+      </div>
+
+      <div class="review">
+        <button>‹</button>
+        <div>
+          <p>“Отличный сервис! Помогли с переездом из Таллинна в Тарту.<br>Всё вовремя, аккуратно и по адекватной цене. Рекомендую!”</p>
+          <strong>Анна К. <span>★★★★★</span></strong>
+        </div>
+        <button>›</button>
+      </div>
+      <div class="dots"><i class="active"></i><i></i><i></i><i></i></div>
+    </article>
+
+    <article class="price-card" id="prices">
+      <div class="price-head"><h2>Примерные цены</h2><a href="#order">Все цены →</a></div>
+      <div class="price-row"><span>🚚</span><p>Грузовое такси (по городу)</p><b>от 30 € <small>/ час</small></b></div>
+      <div class="price-row"><span>📦</span><p>Переезд квартиры</p><b>от 80 €</b></div>
+      <div class="price-row"><span>🛋️</span><p>Перевозка мебели</p><b>от 40 €</b></div>
+      <div class="price-row"><span>🧱</span><p>Доставка стройматериалов</p><b>от 50 €</b></div>
+      <div class="price-row"><span>👤</span><p>Помощь грузчиков</p><b>от 25 € <small>/ час</small></b></div>
+      <a class="green-btn exact-btn" href="#order">▣ &nbsp; Узнать точную стоимость <b>→</b></a>
+    </article>
+  </div>
 </section>
 </main>
 
-<footer class="footer" id="contacts">
-  <div class="wrap footer-grid">
-    <div>
-      <div class="brand"><strong>ARIDES</strong></div>
-      <p data-i18n="footer">Kaubavedu ja kolimised Eestis</p>
-      <p>+372 5853 6770 · info@arides.ee</p>
-    </div>
-    <div class="footer-actions">
-      <a class="cta secondary" href="mailto:info@arides.ee" data-i18n="email">Kirjuta</a>
-      <a class="cta" href="tel:+37258536770" data-i18n="call">Helista</a>
-    </div>
+<footer id="contacts">
+  <div class="shell footer-row">
+    <strong>ARIDES</strong>
+    <span>+372 5853 6770 · info@arides.ee</span>
   </div>
 </footer>
 
-<script src="./transport-site.js?v=20260920-3" defer></script>
+<script src="./transport-site.js?v=20260920-4" defer></script>
 </body>
 </html>
