@@ -29,7 +29,7 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public
-          cp index.html estonia.js estonia.css robots.txt sitemap.xml site.webmanifest public/
+          cp index.html transport-site.js transport-site.css estonia.js estonia.css robots.txt sitemap.xml site.webmanifest public/
           cp favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png android-chrome-192x192.png android-chrome-512x512.png public/
           cp -R img images data public/
           touch public/.nojekyll
