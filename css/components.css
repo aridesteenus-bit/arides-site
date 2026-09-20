@@ -1,0 +1,18 @@
+/* Temporary wireframe styles. These are intentionally minimal.
+   We will replace them section by section from the approved mockup. */
+
+.wire{
+  border:1px dashed #cbd5e1;
+  border-radius:14px;
+  background:#f8fafc;
+}
+.brand-slot{min-height:42px}
+.nav-slot{min-height:36px}
+.header-actions{display:flex;justify-content:flex-end;gap:12px}
+.hero-copy,.hero-media,.hero-side{padding:18px}
+.order-form{min-height:250px;margin-top:18px}
+.hero-media-slot{min-height:360px}
+.hero-side-slot{min-height:300px}
+.service-card{min-height:100px}
+.map-panel,.why-panel,.prices-panel{padding:18px}
+.footer-inner{font-size:14px;color:#64748b}
