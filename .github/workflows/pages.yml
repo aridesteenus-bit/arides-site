@@ -1,4 +1,4 @@
-name: Deploy static site
+name: Deploy blank site
 
 on:
   push:
@@ -16,7 +16,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,27 +28,17 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare site
+      - name: Prepare blank site
         run: |
           rm -rf public
           mkdir -p public
-          cp index.html transport-site.js transport-site.css estonia.js estonia.css robots.txt sitemap.xml site.webmanifest public/
-          cp favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png android-chrome-192x192.png android-chrome-512x512.png public/
-          cp -R img images data public/
-          touch public/.nojekyll
+          cp index.html CNAME .nojekyll public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
